@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated bxml -->
+      <package
+            uri="platform:/resource/bxml-emf/xml/bxml.xsd"
+            class="bxml.BxmlPackage"
+            genModel="metamodel/bxml.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated bxml -->
+      <parser
+            type="bxml"
+            class="bxml.util.BxmlResourceFactoryImpl"/>
+   </extension>
+</plugin>
