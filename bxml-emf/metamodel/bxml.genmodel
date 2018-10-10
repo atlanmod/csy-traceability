@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/bxml-emf/src" modelPluginID="bxml-emf" modelName="Bxml"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>../xml/bxml.xsd</foreignModel>
+  <genPackages prefix="Bxml" resource="XML" disposableProviderFactory="true" loadInitialization="true"
+      literalsInterface="false" ecorePackage="Bxml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//BinaryExpOp">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_2"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_3"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_4"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_5"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_6"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_7"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_8"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_9"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_10"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_11"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_12"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_13"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_14"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_15"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_16"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_17"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_18"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_19"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_20"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_21"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_22"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_23"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_24"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_25"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_26"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_27"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_28"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/mod"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_29"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_30"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_31"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_32"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_33"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_34"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/_35"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/rplus"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/rminus"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/rmul"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/rdiv"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryExpOp/rpow"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//BinaryPredOp">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryPredOp/_"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryPredOp/or"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryPredOp/_1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryPredOp/_2"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinaryPredOp/cand"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//BinarySubOp">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinarySubOp/_"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinarySubOp/_1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//BinarySubOp/CHOICE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//ComparisonOp">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_2"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_3"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_4"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_5"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_6"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_7"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_8"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_9"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_10"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/_11"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/rgt"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/rlt"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/rle"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//ComparisonOp/rge"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//MachineType">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//MachineType/abstraction"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//MachineType/refinement"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//MachineType/implementation"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//NaryExpOp">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//NaryExpOp/_"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//NaryExpOp/_1"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//NaryOp">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//NaryOp/_"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//OpVarSub">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//OpVarSub/ANY"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//OpVarSub/LET"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//QuantifiedExpOp">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//QuantifiedExpOp/_"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//QuantifiedExpOp/SIGMA"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//QuantifiedExpOp/PI"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//QuantifiedExpOp/RSIGMA"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//QuantifiedExpOp/RPI"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//QuantifiedExpOp/INTER"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//QuantifiedExpOp/UNION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//QuantifiedPredOp">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//QuantifiedPredOp/_"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//QuantifiedPredOp/_1"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//UnaryExpOp">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/max"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/min"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/card"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/dom"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/ran"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/POW"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/POW1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/FIN"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/FIN1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/union"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/inter"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/seq"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/seq1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/iseq"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/iseq1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/_"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/_1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/size"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/prj1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/prj2"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/perm"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/first"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/last"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/id"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/iterate"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/closure"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/closure1"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/tail"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/front"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/rev"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/struct"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/record"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/conc"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/succ"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/pred"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/rel"/>
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryExpOp/fnc"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Bxml.ecore#//UnaryPredOp">
+      <genEnumLiterals ecoreEnumLiteral="Bxml.ecore#//UnaryPredOp/not"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="Bxml.ecore#//BinaryExpOpObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//BinaryPredOpObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//BinarySubOpObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//ComparisonOpObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//MachineTypeObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//NaryExpOpObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//NaryOpObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//OpVarSubObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//QuantifiedExpOpObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//QuantifiedPredOpObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//UnaryExpOpObject"/>
+    <genDataTypes ecoreDataType="Bxml.ecore#//UnaryPredOpObject"/>
+    <genClasses ecoreClass="Bxml.ecore#//AbstractConstantsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//AbstractConstantsType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//AbstractConstantsType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//AbstractionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//AbstractionType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//AbstractionType/path"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//AbstractVariablesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//AbstractVariablesType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//AbstractVariablesType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ANYSubType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ANYSubType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ANYSubType/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ANYSubType/pred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ANYSubType/then"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//AssertionsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//AssertionsType/pred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//AssertionsType/binaryPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//AssertionsType/expComparison"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//AssertionsType/quantifiedPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//AssertionsType/unaryPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//AssertionsType/naryPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//AssertionsType/set"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//AssertSubType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//AssertSubType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//AssertSubType/guard"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//AssertSubType/body"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//AssignementSubstitutionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//AssignementSubstitutionType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//AssignementSubstitutionType/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//AssignementSubstitutionType/values"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//AttributesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//AttributesType/any"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//BecomesInType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BecomesInType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BecomesInType/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BecomesInType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//BecomesSuchThatType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BecomesSuchThatType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BecomesSuchThatType/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BecomesSuchThatType/pred"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//BinaryExpressionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/binaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/naryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/booleanLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/booleanExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/emptySet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/emptySeq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/integerLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/quantifiedExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/quantifiedSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/sTRINGLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/unaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/struct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/record"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/binaryExp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/naryExp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/booleanLiteral1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/booleanExp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/emptySet1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/emptySeq1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/id1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/integerLiteral1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/quantifiedExp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/quantifiedSet1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/sTRINGLiteral1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/unaryExp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/struct1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryExpressionType/record1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//BinaryExpressionType/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//BinaryPredicateType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryPredicateType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//BinaryPredicateType/pred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryPredicateType/binaryPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryPredicateType/expComparison"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryPredicateType/quantifiedPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryPredicateType/unaryPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryPredicateType/naryPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinaryPredicateType/set"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//BinaryPredicateType/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//BinarySubType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//BinarySubType/sub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/blocSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/skip"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/assertSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/ifSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/becomesSuchThat"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/assignementSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/select"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/caseSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/aNYSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/lETSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/becomesIn"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/vARIN"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/binarySub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/narySub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/operationCall"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//BinarySubType/while"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//BinarySubType/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//CallParamatersType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//CallParamatersType/exp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/binaryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/naryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/booleanLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/booleanExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/emptySet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/emptySeq"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/id"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/integerLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/quantifiedExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/quantifiedSet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/sTRINGLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/unaryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/struct"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//CallParamatersType/record"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//CaseSubType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//CaseSubType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//CaseSubType/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//CaseSubType/choices"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//CaseSubType/else"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ChoicesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ChoicesType/choice"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ChoiceType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ChoiceType/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ChoiceType/then"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ConcreteConstantsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ConcreteConstantsType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ConcreteConstantsType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ConcreteVariablesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ConcreteVariablesType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ConcreteVariablesType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/aNYSub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/becomesIn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/binarySub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/caseSub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/lETSub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/machine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/naryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/operation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/quantifiedExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/quantifiedPred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/quantifiedSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/record"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/select"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/struct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/vARIN"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//DocumentRoot/while"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//EnumeratedValuesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//EnumeratedValuesType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ExpComparisonType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/binaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/naryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/booleanLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/booleanExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/emptySet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/emptySeq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/integerLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/quantifiedExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/quantifiedSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/sTRINGLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/unaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/struct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/record"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/binaryExp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/naryExp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/booleanLiteral1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/booleanExp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/emptySet1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/emptySeq1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/id1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/integerLiteral1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/quantifiedExp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/quantifiedSet1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/sTRINGLiteral1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/unaryExp1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/struct1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpComparisonType/record1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//ExpComparisonType/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ExpType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/binaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/naryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/booleanLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/booleanExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/emptySet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/emptySeq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/integerLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/quantifiedExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/quantifiedSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/sTRINGLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/unaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/struct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ExpType/record"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//IdentifierType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//IdentifierType/attr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//IdentifierType/suffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//IdentifierType/typref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//IdentifierType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//IfSubType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//IfSubType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//IfSubType/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//IfSubType/then"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//IfSubType/else"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//IfSubType/elseif"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//InfoTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//InfoTypeType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//InfoTypeType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//InputParametersType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//InputParametersType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//LETSubType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//LETSubType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//LETSubType/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//LETSubType/values"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//LETSubType/then"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//LiteralType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//LiteralType/attr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//LiteralType/typref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//LiteralType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//LocalOperationsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//LocalOperationsType/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//MachineType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/abstraction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/constraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/includes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/extends"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/uses"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/sees"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/promotes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/values"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/sets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/abstractConstants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/concreteConstants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/abstractVariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/concreteVariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/invariant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/initialisation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/assertions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/localOperations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/operations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//MachineType1/typeInfos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//MachineType1/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//MachineType1/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//NameType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//NameType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//NaryExpType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//NaryExpType/exp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/binaryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/naryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/booleanLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/booleanExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/emptySet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/emptySeq"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/id"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/integerLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/quantifiedExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/quantifiedSet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/sTRINGLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/unaryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/struct"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryExpType/record"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//NaryExpType/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//NaryPredicateType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//NaryPredicateType/pred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryPredicateType/binaryPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryPredicateType/expComparison"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryPredicateType/quantifiedPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryPredicateType/unaryPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryPredicateType/naryPred"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NaryPredicateType/set"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//NaryPredicateType/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//NarySubstitutionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//NarySubstitutionType/sub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/blocSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/skip"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/assertSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/ifSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/becomesSuchThat"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/assignementSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/select"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/caseSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/aNYSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/lETSub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/becomesIn"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/vARIN"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/binarySub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/narySub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/operationCall"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//NarySubstitutionType/while"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//NarySubstitutionType/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//OperationCallType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationCallType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationCallType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationCallType/inputParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationCallType/outputParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationCallType/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//OperationsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationsType/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//OperationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationType/refines"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationType/outputParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationType/inputParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationType/precondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OperationType/body"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//OperationType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//OutputParametersType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//OutputParametersType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ParametersType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//ParametersType/exp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/binaryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/naryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/booleanLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/booleanExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/emptySet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/emptySeq"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/id"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/integerLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/quantifiedExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/quantifiedSet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/sTRINGLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/unaryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/struct"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType/record"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ParametersType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType1/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ParametersType1/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//PredicateType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//PredicateType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//PredicateType/binaryPred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//PredicateType/expComparison"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//PredicateType/quantifiedPred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//PredicateType/unaryPred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//PredicateType/naryPred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//PredicateType/set"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//PromotesType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//PromotesType/promotedOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//QuantifiedExpType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//QuantifiedExpType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//QuantifiedExpType/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//QuantifiedExpType/pred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//QuantifiedExpType/body"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//QuantifiedExpType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//QuantifiedPredType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//QuantifiedPredType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//QuantifiedPredType/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//QuantifiedPredType/body"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//QuantifiedPredType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//QuantifiedSetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//QuantifiedSetType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//QuantifiedSetType/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//QuantifiedSetType/body"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//RecordItemType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/binaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/naryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/booleanLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/booleanExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/emptySet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/emptySeq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/integerLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/quantifiedExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/quantifiedSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/sTRINGLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/unaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/struct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordItemType/record"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//RecordItemType/label"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//RecordType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RecordType/recordItem"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ReferencedMachineType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//ReferencedMachineType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//ReferencedMachineType/instance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ReferencedMachineType/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//ReferencedMachineType/path"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ReferencedMachineType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ReferencedMachineType1/attr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//ReferencedMachineType1/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//ReferencedMachineType1/rename"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//ReferencedMachineType1/path"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ReferencedMachineType2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ReferencedMachineType2/referencedMachine"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//RefinesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RefinesType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//RefinesType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//SeesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SeesType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SeesType/referencedMachine"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//SelectType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SelectType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SelectType/whenClauses"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SelectType/else"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//SetsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SetsType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SetsType/set"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//SetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SetType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SetType/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SetType/enumeratedValues"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//StringLiteralType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//StringLiteralType/attr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//StringLiteralType/typref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//StringLiteralType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//StructType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//StructType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//StructType/recordItem"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//SubstitutionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/blocSub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/skip"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/assertSub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/ifSub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/becomesSuchThat"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/assignementSub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/select"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/caseSub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/aNYSub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/lETSub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/becomesIn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/vARIN"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/binarySub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/narySub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/operationCall"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//SubstitutionType/while"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//TerminalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//TerminalType/attr"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//TypeInfosType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//TypeInfosType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//UnaryExpressionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/binaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/naryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/booleanLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/booleanExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/emptySet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/emptySeq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/integerLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/quantifiedExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/quantifiedSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/sTRINGLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/unaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/struct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryExpressionType/record"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//UnaryExpressionType/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//UnaryPredicateType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryPredicateType/binaryPred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryPredicateType/expComparison"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryPredicateType/quantifiedPred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryPredicateType/unaryPred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryPredicateType/naryPred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//UnaryPredicateType/set"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//UnaryPredicateType/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ValuationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/binaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/naryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/booleanLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/booleanExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/emptySet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/emptySeq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/integerLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/quantifiedExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/quantifiedSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/sTRINGLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/unaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/struct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType/record"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//ValuationType/ident"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ValuationType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/binaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/naryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/booleanLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/booleanExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/emptySet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/emptySeq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/integerLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/quantifiedExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/quantifiedSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/sTRINGLiteral"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/unaryExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/struct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuationType1/record"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//ValuationType1/ident"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ValuesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType/valuation"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ValuesType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType1/valuation"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//ValuesType2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//ValuesType2/exp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/binaryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/naryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/booleanLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/booleanExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/emptySet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/emptySeq"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/id"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/integerLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/quantifiedExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/quantifiedSet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/sTRINGLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/unaryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/struct"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//ValuesType2/record"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//VariablesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute Bxml.ecore#//VariablesType/exp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/binaryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/naryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/booleanLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/booleanExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/emptySet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/emptySeq"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/id"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/integerLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/quantifiedExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/quantifiedSet"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/sTRINGLiteral"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/unaryExp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/struct"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType/record"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//VariablesType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType1/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//VariablesType1/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//VARINType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//VARINType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//VARINType/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//VARINType/body"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Bxml.ecore#//VARINType/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//WhenClausesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//WhenClausesType/when"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//WhenType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//WhenType/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//WhenType/then"/>
+    </genClasses>
+    <genClasses ecoreClass="Bxml.ecore#//WhileType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//WhileType/attr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//WhileType/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//WhileType/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//WhileType/invariant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Bxml.ecore#//WhileType/variant"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
