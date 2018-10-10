@@ -50,7 +50,7 @@ public class BxmlResourceFactoryImpl extends ResourceFactoryImpl {
    * Creates an instance of the resource.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
+   * @generated NOT
    */
   @Override
   public Resource createResource(URI uri) {
@@ -64,6 +64,7 @@ public class BxmlResourceFactoryImpl extends ResourceFactoryImpl {
     result.getDefaultSaveOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
 
     result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_LEXICAL_HANDLER, Boolean.TRUE);
+    result.getDefaultLoadOptions().put(XMLResource.OPTION_SUPPRESS_DOCUMENT_ROOT, Boolean.TRUE);
     return result;
   }
 
