@@ -1,0 +1,355 @@
+<Machine name='Train_i' type='implementation'>
+<Abstraction>Train</Abstraction>
+<Sees>
+<Referenced_Machine>
+<Name>Inputs</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>Utils</Name>
+</Referenced_Machine>
+</Sees>
+<Values>
+<Valuation ident='POSITION_DELTA'>
+<Integer_Literal value='100' typref='2701647786'/>
+</Valuation>
+<Valuation ident='SPEED_DELTA'>
+<Integer_Literal value='100' typref='2701647786'/>
+</Valuation>
+<Valuation ident='PAR_POSITION'>
+<Integer_Literal value='32768' typref='2701647786'/>
+</Valuation>
+</Values>
+<Concrete_Constants>
+<Id value='POSITION_DELTA'/>
+<Id value='SPEED_DELTA'/>
+<Id value='PAR_POSITION'/>
+</Concrete_Constants>
+<Properties>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='POSITION_DELTA'/>
+<Id value='NAT1' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='SPEED_DELTA'/>
+<Id value='NAT1' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='PAR_POSITION'/>
+<Id value='NAT1' typref='3603043417'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Properties>
+<Local_Operations>
+<Operation name='abs'>
+<Output_Parameters>
+<Id value='res'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='xx'/>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Id value='xx'/>
+<Id value='INT' typref='3603043417'/>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Becomes_Such_That>
+<Variables>
+<Id value='res'/>
+</Variables>
+<Pred>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='res'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='&lt;'>
+<Id value='xx'/>
+<Integer_Literal value='0' typref='2701647786'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='res'/>
+<Unary_Exp op='-'>
+<Id value='xx'/>
+</Unary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='&gt;='>
+<Id value='xx'/>
+<Integer_Literal value='0' typref='2701647786'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='res'/>
+<Id value='xx'/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+</Becomes_Such_That>
+</Body>
+</Operation>
+</Local_Operations>
+<Operations>
+<Operation name='abs'>
+<Output_Parameters>
+<Id value='res'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='xx'/>
+</Input_Parameters>
+<Body>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='&lt;'>
+<Id value='xx'/>
+<Integer_Literal value='0' typref='2701647786'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Variables>
+<Id value='res'/>
+</Variables>
+<Values>
+<Unary_Exp op='-'>
+<Id value='xx'/>
+</Unary_Exp>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Variables>
+<Id value='res'/>
+</Variables>
+<Values>
+<Id value='xx'/>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Body>
+</Operation>
+<Operation name='is_train_in_par'>
+<Output_Parameters>
+<Id value='in_par'/>
+</Output_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='dd'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='abs'/>
+</Name>
+<Input_Parameters>
+<Binary_Exp op='-'>
+<Id value='M21_Position'/>
+<Id value='M24_Position'/>
+</Binary_Exp>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='dd'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='&lt;'>
+<Id value='dd'/>
+<Id value='POSITION_DELTA'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<VAR_IN>
+<Variables>
+<Id value='par1'/>
+<Id value='par2'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='abs'/>
+</Name>
+<Input_Parameters>
+<Binary_Exp op='-'>
+<Id value='M21_Position'/>
+<Id value='PAR_POSITION'/>
+</Binary_Exp>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='par1'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='abs'/>
+</Name>
+<Input_Parameters>
+<Binary_Exp op='-'>
+<Id value='M24_Position'/>
+<Id value='PAR_POSITION'/>
+</Binary_Exp>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='par2'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;'>
+<Id value='par1'/>
+<Id value='POSITION_DELTA'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;'>
+<Id value='par2'/>
+<Id value='POSITION_DELTA'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Variables>
+<Id value='in_par'/>
+</Variables>
+<Values>
+<Id value='IN_PAR'/>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Variables>
+<Id value='in_par'/>
+</Variables>
+<Values>
+<Id value='NOT_IN_PAR'/>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Then>
+<Else>
+<Assignement_Sub>
+<Variables>
+<Id value='in_par'/>
+</Variables>
+<Values>
+<Id value='INCONS_POSITION'/>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='is_train_stopped'>
+<Output_Parameters>
+<Id value='stopped'/>
+</Output_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='dd'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='abs'/>
+</Name>
+<Input_Parameters>
+<Binary_Exp op='-'>
+<Id value='M21_Speed'/>
+<Id value='M24_Speed'/>
+</Binary_Exp>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='dd'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='&lt;'>
+<Id value='dd'/>
+<Id value='SPEED_DELTA'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<If_Sub elseif='no'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;'>
+<Id value='M21_Speed'/>
+<Id value='SPEED_DELTA'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;'>
+<Id value='M24_Speed'/>
+<Id value='SPEED_DELTA'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Variables>
+<Id value='stopped'/>
+</Variables>
+<Values>
+<Id value='STOPPED'/>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Variables>
+<Id value='stopped'/>
+</Variables>
+<Values>
+<Id value='MOVING'/>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Variables>
+<Id value='stopped'/>
+</Variables>
+<Values>
+<Id value='INCONS_SPEED'/>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

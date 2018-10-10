@@ -1,0 +1,188 @@
+<Machine name='Doors' type='abstraction'>
+<Sees>
+<Referenced_Machine>
+<Name>Inputs</Name>
+</Referenced_Machine>
+</Sees>
+<Operations>
+<Operation name='are_doors_opening'>
+<Output_Parameters>
+<Id value='opening'/>
+</Output_Parameters>
+<Body>
+<Becomes_Such_That>
+<Variables>
+<Id value='opening'/>
+</Variables>
+<Pred>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='opening'/>
+<Id value='BOOL' typref='4282494527'/>
+</Exp_Comparison>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='opening'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Nary_Pred op='&amp;'>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsVisible'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsOpening'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsClosed'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsClosing'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsOpening'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsClosed'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsClosing'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsClosed'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsOpening'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsClosing'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsClosing'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsOpening'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='M22_DoorsClosed'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op='&amp;'>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsVisible'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsOpening'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsClosed'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsClosing'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsOpening'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsClosed'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsClosing'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsClosed'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsOpening'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsClosing'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsClosing'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsOpening'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='M23_DoorsClosed'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+</Becomes_Such_That>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='4282494527'>
+<Unary_Exp op='POW'>
+<Id value='BOOL'/>
+</Unary_Exp>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+</TypeInfos>
+
+</Machine>

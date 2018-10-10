@@ -1,0 +1,11 @@
+<Machine name='Main' type='abstraction'>
+<Operations>
+<Operation name='do_cycle'>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos/>
+
+</Machine>

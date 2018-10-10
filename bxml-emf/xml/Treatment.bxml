@@ -1,0 +1,69 @@
+<Machine name='Treatment' type='abstraction'>
+<Sets>
+<Set>
+<Id value='FALLBACKS' typref='3142449164'/>
+<Enumerated_Values>
+<Id value='INCONSISTENT_POSITION' typref='3340245943'/>
+<Id value='INCONSISTENT_SPEED' typref='3340245943'/>
+<Id value='NOMINAL' typref='3340245943'/>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Operations>
+<Operation name='aopp_authorization'>
+<Output_Parameters>
+<Id value='aopp'/>
+<Id value='fallback'/>
+</Output_Parameters>
+<Body>
+<Becomes_Such_That>
+<Variables>
+<Id value='aopp'/>
+<Id value='fallback'/>
+</Variables>
+<Pred>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='aopp'/>
+<Id value='BOOL' typref='4282494527'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='fallback'/>
+<Id value='FALLBACKS'/>
+</Exp_Comparison>
+<Binary_Pred op='=&gt;'>
+<Exp_Comparison op='='>
+<Id value='aopp'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='fallback'/>
+<Id value='NOMINAL'/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+</Becomes_Such_That>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='3142449164'>
+<Unary_Exp op='POW'>
+<Id value='FALLBACKS'/>
+</Unary_Exp>
+</Type>
+<Type id='3340245943'>
+<Id value='FALLBACKS'/>
+</Type>
+<Type id='4282494527'>
+<Unary_Exp op='POW'>
+<Id value='BOOL'/>
+</Unary_Exp>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+</TypeInfos>
+
+</Machine>
