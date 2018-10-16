@@ -1,0 +1,113 @@
+// Copyright (C) 2018 Clearsy
+//
+// This file is part of MockPilot.
+//
+// MockPilot is free software; you can redistribute it and/or modify it
+// under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 3 of the License, or
+// (at your option) any later version.
+//
+// MockPilot is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+// or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+// License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+IMPLEMENTATION Train_i
+REFINES Train
+
+SEES Inputs, Utils
+
+CONCRETE_CONSTANTS
+    // tolerance between position and speed measures from sensors
+    POSITION_DELTA,
+    SPEED_DELTA,
+    
+    // PAR position
+    PAR_POSITION
+
+PROPERTIES
+    POSITION_DELTA: NAT1 &
+    SPEED_DELTA: NAT1 &
+    PAR_POSITION: NAT1
+
+VALUES
+    // 10 cm
+    POSITION_DELTA = 100;
+    // 1 km/h
+    SPEED_DELTA = 100;
+
+    PAR_POSITION = 32768 // (UINT16_MAX+1)/2
+
+LOCAL_OPERATIONS
+    // absolute value (specification)
+    res <-- abs(xx) = 
+    PRE
+        xx: INT
+    THEN
+        res :( res: NAT & (xx < 0 => res = -xx) & (xx >= 0 => res = xx) )
+    END
+
+OPERATIONS
+    
+    // absolute value (implementation)
+    res <-- abs(xx) =
+    IF
+        xx < 0
+    THEN
+        res := -xx
+    ELSE
+        res := xx
+    END;
+    
+    // PAR_POSITION and positions from sensors should be within POSITION_DELTA from each other
+    in_par <-- is_train_in_par =
+    VAR
+        dd
+    IN
+        dd <-- abs(M21_Position - M24_Position);
+        IF
+            dd < POSITION_DELTA
+        THEN
+            VAR
+                par1, par2
+            IN
+                par1 <-- abs(M21_Position - PAR_POSITION);
+                par2 <-- abs(M24_Position - PAR_POSITION);
+                IF
+                    par1 < POSITION_DELTA & par2 < POSITION_DELTA
+                THEN
+                    in_par := IN_PAR
+                ELSE
+                    in_par := NOT_IN_PAR
+                END
+            END
+        ELSE
+            in_par := INCONS_POSITION
+        END
+    END
+    ;
+
+    // speeds from sensors should be within SPEED_DELTA, and both below SPEED_DELTA
+    stopped <-- is_train_stopped =
+    VAR
+        dd
+    IN
+        dd <-- abs(M21_Speed - M24_Speed);
+        IF
+            dd < SPEED_DELTA
+        THEN
+            IF
+                M21_Speed < SPEED_DELTA & M24_Speed < SPEED_DELTA
+            THEN
+                stopped := STOPPED
+            ELSE
+                stopped := MOVING
+            END
+        ELSE
+            stopped := INCONS_SPEED
+        END
+    END
+END

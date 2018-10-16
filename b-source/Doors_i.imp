@@ -1,0 +1,90 @@
+// Copyright (C) 2018 Clearsy
+//
+// This file is part of MockPilot.
+//
+// MockPilot is free software; you can redistribute it and/or modify it
+// under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 3 of the License, or
+// (at your option) any later version.
+//
+// MockPilot is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+// or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+// License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+IMPLEMENTATION Doors_i
+REFINES Doors
+
+SEES
+    Inputs, Utils
+
+DEFINITIONS
+    DOOR_SENSOR_CONSISTENT(visible, opening, closed, closing) == ((visible = FALSE => (opening = FALSE & closed = FALSE & closing = FALSE)) &
+                                                                  (opening = TRUE => (closed = FALSE & closing = FALSE)) &
+                                                                  (closed = TRUE => (opening = FALSE & closing = FALSE)) &
+                                                                  (closing = TRUE => (opening = FALSE & closed = FALSE)))
+
+LOCAL_OPERATIONS
+    // check consistency of the door status reported by a single sensor
+    //    a door opening/closing/closed must be visible
+    //    a closing (resp. opening, closed) door cannot be opened nor opening (resp. closing nor closed, opening nor closing) at the same time
+    cons <-- door_consistency(visible, opening, closed, closing) =
+    PRE
+        visible: BOOL &
+        opening: BOOL &
+        closed: BOOL &
+        closing: BOOL
+    THEN
+        cons :( cons: BOOL & cons = bool(DOOR_SENSOR_CONSISTENT(visible, opening, closed, closing)) )
+    END
+
+OPERATIONS
+    cons <-- door_consistency(visible, opening, closed, closing) =
+    IF
+        visible = FALSE
+    THEN
+        cons := bool(opening = FALSE & closed = FALSE & closing = FALSE)
+    ELSE
+        IF
+            opening = TRUE
+        THEN
+            cons := bool(closing = FALSE & closed = FALSE)
+        ELSE
+            IF
+                closing = TRUE
+            THEN
+                cons := bool(closed = FALSE & opening = FALSE)
+            ELSE
+                // opening is false and closing is false
+                cons := TRUE
+            END
+        END
+    END
+    ;
+
+    opening <-- are_doors_opening =
+    VAR
+        M22_cons, M23_cons
+    IN
+        M22_cons <-- door_consistency(M22_DoorsVisible, M22_DoorsOpening, M22_DoorsClosed, M22_DoorsClosing);
+        M23_cons <-- door_consistency(M23_DoorsVisible, M23_DoorsOpening, M23_DoorsClosed, M23_DoorsClosing);
+
+        IF
+            M22_cons = TRUE & M23_cons = TRUE
+        THEN
+            IF
+                M22_DoorsOpening = TRUE & M23_DoorsOpening = TRUE
+            THEN
+                opening := TRUE
+            ELSE
+                opening := FALSE
+            END
+        ELSE
+            opening := FALSE
+        END
+    END
+
+END

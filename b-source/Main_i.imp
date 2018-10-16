@@ -1,0 +1,55 @@
+// Copyright (C) 2018 Clearsy
+//
+// This file is part of MockPilot.
+//
+// MockPilot is free software; you can redistribute it and/or modify it
+// under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 3 of the License, or
+// (at your option) any later version.
+//
+// MockPilot is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+// or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+// License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+IMPLEMENTATION Main_i
+REFINES Main
+
+IMPORTS
+    Utils, Inputs, Outputs, Treatment
+
+OPERATIONS
+
+    do_cycle =
+    BEGIN
+        get_inputs;
+        VAR
+            aopp, fb
+        IN
+            aopp, fb <-- aopp_authorization;
+            set_aopp(aopp);
+
+            // report fallback situations
+            // 0: NOMINAL
+            // 1: INCONSISTENT_POSITION
+            // 2: INCONSISTENT_SPEED
+            CASE fb OF
+            EITHER NOMINAL               THEN
+                IF
+                    aopp = TRUE
+                THEN
+                    print("M11", "aopp", "2")
+                ELSE
+                    print("M11", "aopp", "1")
+                END
+            OR     INCONSISTENT_POSITION THEN print("M11", "fallback", "1")
+            OR     INCONSISTENT_SPEED    THEN print("M11", "fallback", "2")
+            END
+            END
+        END
+    END
+
+END

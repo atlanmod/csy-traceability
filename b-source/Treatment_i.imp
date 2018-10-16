@@ -1,0 +1,49 @@
+// Copyright (C) 2018 Clearsy
+//
+// This file is part of MockPilot.
+//
+// MockPilot is free software; you can redistribute it and/or modify it
+// under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 3 of the License, or
+// (at your option) any later version.
+//
+// MockPilot is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+// or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+// License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+IMPLEMENTATION Treatment_i
+REFINES Treatment
+
+IMPORTS
+    Train, Doors
+
+OPERATIONS
+
+    aopp, fallback <-- aopp_authorization =
+    VAR
+        train_in_par, train_stopped, doors_opening
+    IN
+        train_in_par <-- is_train_in_par;            
+        train_stopped <-- is_train_stopped;
+        doors_opening <-- are_doors_opening;
+        
+        // TODO check sequence consistency
+   
+        aopp := bool(train_in_par = IN_PAR & train_stopped = STOPPED & doors_opening = TRUE);
+        IF
+            train_in_par = INCONS_POSITION
+        THEN
+            fallback := INCONSISTENT_POSITION
+        ELSIF
+            train_stopped = INCONS_SPEED
+        THEN
+            fallback := INCONSISTENT_SPEED
+        ELSE
+            fallback := NOMINAL
+        END
+    END
+END
