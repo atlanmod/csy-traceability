@@ -1,0 +1,314 @@
+<!--
+  Copyright (C) 2018 Clearsy
+
+  This file is part of MockPilot.
+
+  MockPilot is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  MockPilot is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+  License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Machine name='Inputs' type='abstraction'>
+  <Sees>
+    <Referenced_Machine>
+      <Name>Utils</Name>
+    </Referenced_Machine>
+  </Sees>
+  <Concrete_Variables>
+    <Id value='M21_Position' typref='2701647786'/>
+    <Id value='M21_Speed' typref='2701647786'/>
+    <Id value='M22_DoorsVisible' typref='2043437594'/>
+    <Id value='M22_DoorsOpening' typref='2043437594'/>
+    <Id value='M22_DoorsClosing' typref='2043437594'/>
+    <Id value='M22_DoorsClosed' typref='2043437594'/>
+    <Id value='M23_DoorsVisible' typref='2043437594'/>
+    <Id value='M23_DoorsOpening' typref='2043437594'/>
+    <Id value='M23_DoorsClosing' typref='2043437594'/>
+    <Id value='M23_DoorsClosed' typref='2043437594'/>
+    <Id value='M24_Position' typref='2701647786'/>
+    <Id value='M24_Speed' typref='2701647786'/>
+  </Concrete_Variables>
+  <Invariant>
+    <Nary_Pred op='&amp;'>
+      <Exp_Comparison op=':'>
+        <Id value='M21_Position' typref='2701647786'/>
+        <Id value='uint16_t' typref='3603043417'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M21_Speed' typref='2701647786'/>
+        <Id value='uint16_t' typref='3603043417'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M22_DoorsVisible' typref='2043437594'/>
+        <Id value='BOOL' typref='4282494527'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M22_DoorsOpening' typref='2043437594'/>
+        <Id value='BOOL' typref='4282494527'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M22_DoorsClosing' typref='2043437594'/>
+        <Id value='BOOL' typref='4282494527'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M22_DoorsClosed' typref='2043437594'/>
+        <Id value='BOOL' typref='4282494527'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M23_DoorsVisible' typref='2043437594'/>
+        <Id value='BOOL' typref='4282494527'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M23_DoorsOpening' typref='2043437594'/>
+        <Id value='BOOL' typref='4282494527'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M23_DoorsClosing' typref='2043437594'/>
+        <Id value='BOOL' typref='4282494527'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M23_DoorsClosed' typref='2043437594'/>
+        <Id value='BOOL' typref='4282494527'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M24_Position' typref='2701647786'/>
+        <Id value='uint16_t' typref='3603043417'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='M24_Speed' typref='2701647786'/>
+        <Id value='uint16_t' typref='3603043417'/>
+      </Exp_Comparison>
+    </Nary_Pred>
+  </Invariant>
+  <Initialisation>
+    <Nary_Sub op='||'>
+      <Becomes_In>
+        <Variables>
+          <Id value='M21_Position' typref='2701647786'/>
+        </Variables>
+        <Value>
+          <Id value='uint16_t' typref='3603043417'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M21_Speed' typref='2701647786'/>
+        </Variables>
+        <Value>
+          <Id value='uint16_t' typref='3603043417'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M22_DoorsVisible' typref='2043437594'/>
+        </Variables>
+        <Value>
+          <Id value='BOOL' typref='4282494527'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M22_DoorsOpening' typref='2043437594'/>
+        </Variables>
+        <Value>
+          <Id value='BOOL' typref='4282494527'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M22_DoorsClosing' typref='2043437594'/>
+        </Variables>
+        <Value>
+          <Id value='BOOL' typref='4282494527'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M22_DoorsClosed' typref='2043437594'/>
+        </Variables>
+        <Value>
+          <Id value='BOOL' typref='4282494527'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M23_DoorsVisible' typref='2043437594'/>
+        </Variables>
+        <Value>
+          <Id value='BOOL' typref='4282494527'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M23_DoorsOpening' typref='2043437594'/>
+        </Variables>
+        <Value>
+          <Id value='BOOL' typref='4282494527'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M23_DoorsClosing' typref='2043437594'/>
+        </Variables>
+        <Value>
+          <Id value='BOOL' typref='4282494527'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M23_DoorsClosed' typref='2043437594'/>
+        </Variables>
+        <Value>
+          <Id value='BOOL' typref='4282494527'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M24_Position' typref='2701647786'/>
+        </Variables>
+        <Value>
+          <Id value='uint16_t' typref='3603043417'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='M24_Speed' typref='2701647786'/>
+        </Variables>
+        <Value>
+          <Id value='uint16_t' typref='3603043417'/>
+        </Value>
+      </Becomes_In>
+    </Nary_Sub>
+  </Initialisation>
+  <Operations>
+    <Operation name='get_inputs'>
+      <Body>
+        <Nary_Sub op='||'>
+          <Becomes_In>
+            <Variables>
+              <Id value='M21_Position' typref='2701647786'/>
+            </Variables>
+            <Value>
+              <Id value='uint16_t' typref='3603043417'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M21_Speed' typref='2701647786'/>
+            </Variables>
+            <Value>
+              <Id value='uint16_t' typref='3603043417'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M22_DoorsVisible' typref='2043437594'/>
+            </Variables>
+            <Value>
+              <Id value='BOOL' typref='4282494527'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M22_DoorsOpening' typref='2043437594'/>
+            </Variables>
+            <Value>
+              <Id value='BOOL' typref='4282494527'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M22_DoorsClosing' typref='2043437594'/>
+            </Variables>
+            <Value>
+              <Id value='BOOL' typref='4282494527'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M22_DoorsClosed' typref='2043437594'/>
+            </Variables>
+            <Value>
+              <Id value='BOOL' typref='4282494527'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M23_DoorsVisible' typref='2043437594'/>
+            </Variables>
+            <Value>
+              <Id value='BOOL' typref='4282494527'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M23_DoorsOpening' typref='2043437594'/>
+            </Variables>
+            <Value>
+              <Id value='BOOL' typref='4282494527'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M23_DoorsClosing' typref='2043437594'/>
+            </Variables>
+            <Value>
+              <Id value='BOOL' typref='4282494527'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M23_DoorsClosed' typref='2043437594'/>
+            </Variables>
+            <Value>
+              <Id value='BOOL' typref='4282494527'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M24_Position' typref='2701647786'/>
+            </Variables>
+            <Value>
+              <Id value='uint16_t' typref='3603043417'/>
+            </Value>
+          </Becomes_In>
+          <Becomes_In>
+            <Variables>
+              <Id value='M24_Speed' typref='2701647786'/>
+            </Variables>
+            <Value>
+              <Id value='uint16_t' typref='3603043417'/>
+            </Value>
+          </Becomes_In>
+        </Nary_Sub>
+      </Body>
+    </Operation>
+  </Operations>
+  <TypeInfos>
+  <Type id='2701647786'>
+    <Id value='INTEGER'/>
+    </Type>
+  <Type id='2043437594'>
+    <Id value='BOOL'/>
+    </Type>
+  <Type id='3603043417'>
+    <Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+    </Type>
+  <Type id='4282494527'>
+    <Unary_Exp op='POW'>
+<Id value='BOOL'/>
+</Unary_Exp>
+    </Type>
+</TypeInfos>
+
+</Machine>

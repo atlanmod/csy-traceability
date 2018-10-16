@@ -1,0 +1,209 @@
+<!--
+  Copyright (C) 2018 Clearsy
+
+  This file is part of MockPilot.
+
+  MockPilot is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  MockPilot is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+  License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Machine name='Doors' type='abstraction'>
+  <Sees>
+    <Referenced_Machine>
+      <Name>Inputs</Name>
+    </Referenced_Machine>
+  </Sees>
+  <Initialisation>
+    <Skip/>
+  </Initialisation>
+  <Operations>
+    <Operation name='are_doors_opening'>
+      <Output_Parameters>
+        <Id value='opening' typref='2043437594'/>
+      </Output_Parameters>
+      <Body>
+        <Becomes_Such_That>
+          <Variables>
+            <Id value='opening' typref='2043437594'/>
+          </Variables>
+          <Pred>
+            <Nary_Pred op='&amp;'>
+              <Exp_Comparison op=':'>
+                <Id value='opening' typref='2043437594'/>
+                <Id value='BOOL' typref='4282494527'/>
+              </Exp_Comparison>
+              <Binary_Pred op='=&gt;'>
+                <Exp_Comparison op='='>
+                  <Id value='opening' typref='2043437594'/>
+                  <Boolean_Literal value='TRUE' typref='2043437594'/>
+                </Exp_Comparison>
+                <Nary_Pred op='&amp;'>
+                  <Nary_Pred op='&amp;'>
+                    <Binary_Pred op='=&gt;'>
+                      <Exp_Comparison op='='>
+                        <Id value='M22_DoorsVisible' typref='2043437594'/>
+                        <Boolean_Literal value='FALSE' typref='2043437594'/>
+                      </Exp_Comparison>
+                      <Nary_Pred op='&amp;'>
+                        <Exp_Comparison op='='>
+                          <Id value='M22_DoorsOpening' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='='>
+                          <Id value='M22_DoorsClosed' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='='>
+                          <Id value='M22_DoorsClosing' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                      </Nary_Pred>
+                    </Binary_Pred>
+                    <Binary_Pred op='=&gt;'>
+                      <Exp_Comparison op='='>
+                        <Id value='M22_DoorsOpening' typref='2043437594'/>
+                        <Boolean_Literal value='TRUE' typref='2043437594'/>
+                      </Exp_Comparison>
+                      <Nary_Pred op='&amp;'>
+                        <Exp_Comparison op='='>
+                          <Id value='M22_DoorsClosed' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='='>
+                          <Id value='M22_DoorsClosing' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                      </Nary_Pred>
+                    </Binary_Pred>
+                    <Binary_Pred op='=&gt;'>
+                      <Exp_Comparison op='='>
+                        <Id value='M22_DoorsClosed' typref='2043437594'/>
+                        <Boolean_Literal value='TRUE' typref='2043437594'/>
+                      </Exp_Comparison>
+                      <Nary_Pred op='&amp;'>
+                        <Exp_Comparison op='='>
+                          <Id value='M22_DoorsOpening' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='='>
+                          <Id value='M22_DoorsClosing' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                      </Nary_Pred>
+                    </Binary_Pred>
+                    <Binary_Pred op='=&gt;'>
+                      <Exp_Comparison op='='>
+                        <Id value='M22_DoorsClosing' typref='2043437594'/>
+                        <Boolean_Literal value='TRUE' typref='2043437594'/>
+                      </Exp_Comparison>
+                      <Nary_Pred op='&amp;'>
+                        <Exp_Comparison op='='>
+                          <Id value='M22_DoorsOpening' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='='>
+                          <Id value='M22_DoorsClosed' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                      </Nary_Pred>
+                    </Binary_Pred>
+                  </Nary_Pred>
+                  <Nary_Pred op='&amp;'>
+                    <Binary_Pred op='=&gt;'>
+                      <Exp_Comparison op='='>
+                        <Id value='M23_DoorsVisible' typref='2043437594'/>
+                        <Boolean_Literal value='FALSE' typref='2043437594'/>
+                      </Exp_Comparison>
+                      <Nary_Pred op='&amp;'>
+                        <Exp_Comparison op='='>
+                          <Id value='M23_DoorsOpening' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='='>
+                          <Id value='M23_DoorsClosed' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='='>
+                          <Id value='M23_DoorsClosing' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                      </Nary_Pred>
+                    </Binary_Pred>
+                    <Binary_Pred op='=&gt;'>
+                      <Exp_Comparison op='='>
+                        <Id value='M23_DoorsOpening' typref='2043437594'/>
+                        <Boolean_Literal value='TRUE' typref='2043437594'/>
+                      </Exp_Comparison>
+                      <Nary_Pred op='&amp;'>
+                        <Exp_Comparison op='='>
+                          <Id value='M23_DoorsClosed' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='='>
+                          <Id value='M23_DoorsClosing' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                      </Nary_Pred>
+                    </Binary_Pred>
+                    <Binary_Pred op='=&gt;'>
+                      <Exp_Comparison op='='>
+                        <Id value='M23_DoorsClosed' typref='2043437594'/>
+                        <Boolean_Literal value='TRUE' typref='2043437594'/>
+                      </Exp_Comparison>
+                      <Nary_Pred op='&amp;'>
+                        <Exp_Comparison op='='>
+                          <Id value='M23_DoorsOpening' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='='>
+                          <Id value='M23_DoorsClosing' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                      </Nary_Pred>
+                    </Binary_Pred>
+                    <Binary_Pred op='=&gt;'>
+                      <Exp_Comparison op='='>
+                        <Id value='M23_DoorsClosing' typref='2043437594'/>
+                        <Boolean_Literal value='TRUE' typref='2043437594'/>
+                      </Exp_Comparison>
+                      <Nary_Pred op='&amp;'>
+                        <Exp_Comparison op='='>
+                          <Id value='M23_DoorsOpening' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='='>
+                          <Id value='M23_DoorsClosed' typref='2043437594'/>
+                          <Boolean_Literal value='FALSE' typref='2043437594'/>
+                        </Exp_Comparison>
+                      </Nary_Pred>
+                    </Binary_Pred>
+                  </Nary_Pred>
+                </Nary_Pred>
+              </Binary_Pred>
+            </Nary_Pred>
+          </Pred>
+        </Becomes_Such_That>
+      </Body>
+    </Operation>
+  </Operations>
+  <TypeInfos>
+  <Type id='2043437594'>
+    <Id value='BOOL'/>
+    </Type>
+  <Type id='4282494527'>
+    <Unary_Exp op='POW'>
+<Id value='BOOL'/>
+</Unary_Exp>
+    </Type>
+</TypeInfos>
+
+</Machine>

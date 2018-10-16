@@ -1,0 +1,163 @@
+<!--
+  Copyright (C) 2018 Clearsy
+
+  This file is part of MockPilot.
+
+  MockPilot is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  MockPilot is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+  License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Machine name='Treatment_i' type='implementation'>
+  <Abstraction>Treatment</Abstraction>
+  <Imports>
+    <Referenced_Machine>
+      <Name>Train</Name>
+    </Referenced_Machine>
+    <Referenced_Machine>
+      <Name>Doors</Name>
+    </Referenced_Machine>
+  </Imports>
+  <Initialisation>
+    <Skip/>
+  </Initialisation>
+  <Operations>
+    <Operation name='aopp_authorization'>
+      <Output_Parameters>
+        <Id value='aopp' typref='2043437594'/>
+        <Id value='fallback' typref='3340245943'/>
+      </Output_Parameters>
+      <Body>
+        <VAR_IN>
+          <Variables>
+            <Id value='train_in_par' typref='4119209065'/>
+            <Id value='train_stopped' typref='1134906831'/>
+            <Id value='doors_opening' typref='2043437594'/>
+          </Variables>
+          <Body>
+            <Nary_Sub op=';'>
+              <Operation_Call>
+                <Name>
+                  <Id value='is_train_in_par'/>
+                </Name>
+                <Output_Parameters>
+                  <Id value='train_in_par' typref='4119209065'/>
+                </Output_Parameters>
+              </Operation_Call>
+              <Operation_Call>
+                <Name>
+                  <Id value='is_train_stopped'/>
+                </Name>
+                <Output_Parameters>
+                  <Id value='train_stopped' typref='1134906831'/>
+                </Output_Parameters>
+              </Operation_Call>
+              <Operation_Call>
+                <Name>
+                  <Id value='are_doors_opening'/>
+                </Name>
+                <Output_Parameters>
+                  <Id value='doors_opening' typref='2043437594'/>
+                </Output_Parameters>
+              </Operation_Call>
+              <Assignement_Sub>
+                <Variables>
+                  <Id value='aopp' typref='2043437594'/>
+                </Variables>
+                <Values>
+                  <Boolean_Exp typref='2043437594'>
+                    <Nary_Pred op='&amp;'>
+                      <Exp_Comparison op='='>
+                        <Id value='train_in_par' typref='4119209065'/>
+                        <Id value='IN_PAR' typref='4119209065'/>
+                      </Exp_Comparison>
+                      <Exp_Comparison op='='>
+                        <Id value='train_stopped' typref='1134906831'/>
+                        <Id value='STOPPED' typref='1134906831'/>
+                      </Exp_Comparison>
+                      <Exp_Comparison op='='>
+                        <Id value='doors_opening' typref='2043437594'/>
+                        <Boolean_Literal value='TRUE' typref='2043437594'/>
+                      </Exp_Comparison>
+                    </Nary_Pred>
+                  </Boolean_Exp>
+                </Values>
+              </Assignement_Sub>
+              <If_Sub elseif='no'>
+                <Condition>
+                  <Exp_Comparison op='='>
+                    <Id value='train_in_par' typref='4119209065'/>
+                    <Id value='INCONS_POSITION' typref='4119209065'/>
+                  </Exp_Comparison>
+                </Condition>
+                <Then>
+                  <Assignement_Sub>
+                    <Variables>
+                      <Id value='fallback' typref='3340245943'/>
+                    </Variables>
+                    <Values>
+                      <Id value='INCONSISTENT_POSITION' typref='3340245943'/>
+                    </Values>
+                  </Assignement_Sub>
+                </Then>
+                <Else>
+                  <If_Sub elseif='yes'>
+                    <Condition>
+                      <Exp_Comparison op='='>
+                        <Id value='train_stopped' typref='1134906831'/>
+                        <Id value='INCONS_SPEED' typref='1134906831'/>
+                      </Exp_Comparison>
+                    </Condition>
+                    <Then>
+                      <Assignement_Sub>
+                        <Variables>
+                          <Id value='fallback' typref='3340245943'/>
+                        </Variables>
+                        <Values>
+                          <Id value='INCONSISTENT_SPEED' typref='3340245943'/>
+                        </Values>
+                      </Assignement_Sub>
+                    </Then>
+                    <Else>
+                      <Assignement_Sub>
+                        <Variables>
+                          <Id value='fallback' typref='3340245943'/>
+                        </Variables>
+                        <Values>
+                          <Id value='NOMINAL' typref='3340245943'/>
+                        </Values>
+                      </Assignement_Sub>
+                    </Else>
+                  </If_Sub>
+                </Else>
+              </If_Sub>
+            </Nary_Sub>
+          </Body>
+        </VAR_IN>
+      </Body>
+    </Operation>
+  </Operations>
+  <TypeInfos>
+  <Type id='2043437594'>
+    <Id value='BOOL'/>
+    </Type>
+  <Type id='3340245943'>
+    <Id value='FALLBACKS'/>
+    </Type>
+  <Type id='4119209065'>
+    <Id value='PAR_RESULT'/>
+    </Type>
+  <Type id='1134906831'>
+    <Id value='SPEED_RESULT'/>
+    </Type>
+</TypeInfos>
+
+</Machine>

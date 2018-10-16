@@ -1,0 +1,170 @@
+<!--
+  Copyright (C) 2018 Clearsy
+
+  This file is part of MockPilot.
+
+  MockPilot is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  MockPilot is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+  License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Machine name='Main_i' type='implementation'>
+  <Abstraction>Main</Abstraction>
+  <Imports>
+    <Referenced_Machine>
+      <Name>Utils</Name>
+    </Referenced_Machine>
+    <Referenced_Machine>
+      <Name>Inputs</Name>
+    </Referenced_Machine>
+    <Referenced_Machine>
+      <Name>Outputs</Name>
+    </Referenced_Machine>
+    <Referenced_Machine>
+      <Name>Treatment</Name>
+    </Referenced_Machine>
+  </Imports>
+  <Initialisation>
+    <Skip/>
+  </Initialisation>
+  <Operations>
+    <Operation name='do_cycle'>
+      <Body>
+        <Nary_Sub op=';'>
+          <Operation_Call>
+            <Name>
+              <Id value='get_inputs'/>
+            </Name>
+          </Operation_Call>
+          <VAR_IN>
+            <Variables>
+              <Id value='aopp' typref='2043437594'/>
+              <Id value='fb' typref='3340245943'/>
+            </Variables>
+            <Body>
+              <Nary_Sub op=';'>
+                <Operation_Call>
+                  <Name>
+                    <Id value='aopp_authorization'/>
+                  </Name>
+                  <Output_Parameters>
+                    <Id value='aopp' typref='2043437594'/>
+                    <Id value='fb' typref='3340245943'/>
+                  </Output_Parameters>
+                </Operation_Call>
+                <Operation_Call>
+                  <Name>
+                    <Id value='set_aopp'/>
+                  </Name>
+                  <Input_Parameters>
+                    <Id value='aopp' typref='2043437594'/>
+                  </Input_Parameters>
+                </Operation_Call>
+                <Case_Sub>
+                  <Value>
+                    <Id value='fb' typref='3340245943'/>
+                  </Value>
+                  <Choices>
+                    <Choice>
+                      <Value>
+                        <Id value='NOMINAL' typref='3340245943'/>
+                      </Value>
+                      <Then>
+                        <If_Sub elseif='no'>
+                          <Condition>
+                            <Exp_Comparison op='='>
+                              <Id value='aopp' typref='2043437594'/>
+                              <Boolean_Literal value='TRUE' typref='2043437594'/>
+                            </Exp_Comparison>
+                          </Condition>
+                          <Then>
+                            <Operation_Call>
+                              <Name>
+                                <Id value='print'/>
+                              </Name>
+                              <Input_Parameters>
+                                <STRING_Literal value='M11' typref='3239339507'/>
+                                <STRING_Literal value='aopp' typref='3239339507'/>
+                                <STRING_Literal value='2' typref='3239339507'/>
+                              </Input_Parameters>
+                            </Operation_Call>
+                          </Then>
+                          <Else>
+                            <Operation_Call>
+                              <Name>
+                                <Id value='print'/>
+                              </Name>
+                              <Input_Parameters>
+                                <STRING_Literal value='M11' typref='3239339507'/>
+                                <STRING_Literal value='aopp' typref='3239339507'/>
+                                <STRING_Literal value='1' typref='3239339507'/>
+                              </Input_Parameters>
+                            </Operation_Call>
+                          </Else>
+                        </If_Sub>
+                      </Then>
+                    </Choice>
+                    <Choice>
+                      <Value>
+                        <Id value='INCONSISTENT_POSITION' typref='3340245943'/>
+                      </Value>
+                      <Then>
+                        <Operation_Call>
+                          <Name>
+                            <Id value='print'/>
+                          </Name>
+                          <Input_Parameters>
+                            <STRING_Literal value='M11' typref='3239339507'/>
+                            <STRING_Literal value='fallback' typref='3239339507'/>
+                            <STRING_Literal value='1' typref='3239339507'/>
+                          </Input_Parameters>
+                        </Operation_Call>
+                      </Then>
+                    </Choice>
+                    <Choice>
+                      <Value>
+                        <Id value='INCONSISTENT_SPEED' typref='3340245943'/>
+                      </Value>
+                      <Then>
+                        <Operation_Call>
+                          <Name>
+                            <Id value='print'/>
+                          </Name>
+                          <Input_Parameters>
+                            <STRING_Literal value='M11' typref='3239339507'/>
+                            <STRING_Literal value='fallback' typref='3239339507'/>
+                            <STRING_Literal value='2' typref='3239339507'/>
+                          </Input_Parameters>
+                        </Operation_Call>
+                      </Then>
+                    </Choice>
+                  </Choices>
+                </Case_Sub>
+              </Nary_Sub>
+            </Body>
+          </VAR_IN>
+        </Nary_Sub>
+      </Body>
+    </Operation>
+  </Operations>
+  <TypeInfos>
+  <Type id='2043437594'>
+    <Id value='BOOL'/>
+    </Type>
+  <Type id='3340245943'>
+    <Id value='FALLBACKS'/>
+    </Type>
+  <Type id='3239339507'>
+    <Id value='STRING'/>
+    </Type>
+</TypeInfos>
+
+</Machine>

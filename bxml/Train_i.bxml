@@ -1,0 +1,382 @@
+<!--
+  Copyright (C) 2018 Clearsy
+
+  This file is part of MockPilot.
+
+  MockPilot is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  MockPilot is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+  License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Machine name='Train_i' type='implementation'>
+  <Abstraction>Train</Abstraction>
+  <Sees>
+    <Referenced_Machine>
+      <Name>Inputs</Name>
+    </Referenced_Machine>
+    <Referenced_Machine>
+      <Name>Utils</Name>
+    </Referenced_Machine>
+  </Sees>
+  <Values>
+    <Valuation ident='POSITION_DELTA' typref='2701647786'>
+      <Integer_Literal value='100' typref='2701647786'/>
+    </Valuation>
+    <Valuation ident='SPEED_DELTA' typref='2701647786'>
+      <Integer_Literal value='100' typref='2701647786'/>
+    </Valuation>
+    <Valuation ident='PAR_POSITION' typref='2701647786'>
+      <Integer_Literal value='32768' typref='2701647786'/>
+    </Valuation>
+  </Values>
+  <Concrete_Constants>
+    <Id value='POSITION_DELTA' typref='2701647786'/>
+    <Id value='SPEED_DELTA' typref='2701647786'/>
+    <Id value='PAR_POSITION' typref='2701647786'/>
+  </Concrete_Constants>
+  <Properties>
+    <Nary_Pred op='&amp;'>
+      <Exp_Comparison op=':'>
+        <Id value='POSITION_DELTA' typref='2701647786'/>
+        <Id value='NAT1' typref='3603043417'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='SPEED_DELTA' typref='2701647786'/>
+        <Id value='NAT1' typref='3603043417'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='PAR_POSITION' typref='2701647786'/>
+        <Id value='NAT1' typref='3603043417'/>
+      </Exp_Comparison>
+    </Nary_Pred>
+  </Properties>
+  <Initialisation>
+    <Skip/>
+  </Initialisation>
+  <Local_Operations>
+    <Operation name='abs'>
+      <Output_Parameters>
+        <Id value='res' typref='2701647786'/>
+      </Output_Parameters>
+      <Input_Parameters>
+        <Id value='xx' typref='2701647786'/>
+      </Input_Parameters>
+      <Precondition>
+        <Exp_Comparison op=':'>
+          <Id value='xx' typref='2701647786'/>
+          <Id value='INT' typref='3603043417'/>
+        </Exp_Comparison>
+      </Precondition>
+      <Body>
+        <Becomes_Such_That>
+          <Variables>
+            <Id value='res' typref='2701647786'/>
+          </Variables>
+          <Pred>
+            <Nary_Pred op='&amp;'>
+              <Exp_Comparison op=':'>
+                <Id value='res' typref='2701647786'/>
+                <Id value='NAT' typref='3603043417'/>
+              </Exp_Comparison>
+              <Binary_Pred op='=&gt;'>
+                <Exp_Comparison op='&lt;'>
+                  <Id value='xx' typref='2701647786'/>
+                  <Integer_Literal value='0' typref='2701647786'/>
+                </Exp_Comparison>
+                <Exp_Comparison op='='>
+                  <Id value='res' typref='2701647786'/>
+                  <Unary_Exp op='-' typref='2701647786'>
+                    <Id value='xx' typref='2701647786'/>
+                  </Unary_Exp>
+                </Exp_Comparison>
+              </Binary_Pred>
+              <Binary_Pred op='=&gt;'>
+                <Exp_Comparison op='&gt;='>
+                  <Id value='xx' typref='2701647786'/>
+                  <Integer_Literal value='0' typref='2701647786'/>
+                </Exp_Comparison>
+                <Exp_Comparison op='='>
+                  <Id value='res' typref='2701647786'/>
+                  <Id value='xx' typref='2701647786'/>
+                </Exp_Comparison>
+              </Binary_Pred>
+            </Nary_Pred>
+          </Pred>
+        </Becomes_Such_That>
+      </Body>
+    </Operation>
+  </Local_Operations>
+  <Operations>
+    <Operation name='abs'>
+      <Output_Parameters>
+        <Id value='res' typref='2701647786'/>
+      </Output_Parameters>
+      <Input_Parameters>
+        <Id value='xx' typref='2701647786'/>
+      </Input_Parameters>
+      <Body>
+        <If_Sub elseif='no'>
+          <Condition>
+            <Exp_Comparison op='&lt;'>
+              <Id value='xx' typref='2701647786'/>
+              <Integer_Literal value='0' typref='2701647786'/>
+            </Exp_Comparison>
+          </Condition>
+          <Then>
+            <Assignement_Sub>
+              <Variables>
+                <Id value='res' typref='2701647786'/>
+              </Variables>
+              <Values>
+                <Unary_Exp op='-' typref='2701647786'>
+                  <Id value='xx' typref='2701647786'/>
+                </Unary_Exp>
+              </Values>
+            </Assignement_Sub>
+          </Then>
+          <Else>
+            <Assignement_Sub>
+              <Variables>
+                <Id value='res' typref='2701647786'/>
+              </Variables>
+              <Values>
+                <Id value='xx' typref='2701647786'/>
+              </Values>
+            </Assignement_Sub>
+          </Else>
+        </If_Sub>
+      </Body>
+    </Operation>
+    <Operation name='is_train_in_par'>
+      <Output_Parameters>
+        <Id value='in_par' typref='4119209065'/>
+      </Output_Parameters>
+      <Body>
+        <VAR_IN>
+          <Variables>
+            <Id value='dd' typref='2701647786'/>
+          </Variables>
+          <Body>
+            <Nary_Sub op=';'>
+              <Operation_Call>
+                <Name>
+                  <Id value='abs'/>
+                </Name>
+                <Input_Parameters>
+                  <Binary_Exp op='-' typref='2701647786'>
+                    <Id value='M21_Position' typref='2701647786'/>
+                    <Id value='M24_Position' typref='2701647786'/>
+                  </Binary_Exp>
+                </Input_Parameters>
+                <Output_Parameters>
+                  <Id value='dd' typref='2701647786'/>
+                </Output_Parameters>
+              </Operation_Call>
+              <If_Sub elseif='no'>
+                <Condition>
+                  <Exp_Comparison op='&lt;'>
+                    <Id value='dd' typref='2701647786'/>
+                    <Id value='POSITION_DELTA' typref='2701647786'/>
+                  </Exp_Comparison>
+                </Condition>
+                <Then>
+                  <VAR_IN>
+                    <Variables>
+                      <Id value='par1' typref='2701647786'/>
+                      <Id value='par2' typref='2701647786'/>
+                    </Variables>
+                    <Body>
+                      <Nary_Sub op=';'>
+                        <Operation_Call>
+                          <Name>
+                            <Id value='abs'/>
+                          </Name>
+                          <Input_Parameters>
+                            <Binary_Exp op='-' typref='2701647786'>
+                              <Id value='M21_Position' typref='2701647786'/>
+                              <Id value='PAR_POSITION' typref='2701647786'/>
+                            </Binary_Exp>
+                          </Input_Parameters>
+                          <Output_Parameters>
+                            <Id value='par1' typref='2701647786'/>
+                          </Output_Parameters>
+                        </Operation_Call>
+                        <Operation_Call>
+                          <Name>
+                            <Id value='abs'/>
+                          </Name>
+                          <Input_Parameters>
+                            <Binary_Exp op='-' typref='2701647786'>
+                              <Id value='M24_Position' typref='2701647786'/>
+                              <Id value='PAR_POSITION' typref='2701647786'/>
+                            </Binary_Exp>
+                          </Input_Parameters>
+                          <Output_Parameters>
+                            <Id value='par2' typref='2701647786'/>
+                          </Output_Parameters>
+                        </Operation_Call>
+                        <If_Sub elseif='no'>
+                          <Condition>
+                            <Nary_Pred op='&amp;'>
+                              <Exp_Comparison op='&lt;'>
+                                <Id value='par1' typref='2701647786'/>
+                                <Id value='POSITION_DELTA' typref='2701647786'/>
+                              </Exp_Comparison>
+                              <Exp_Comparison op='&lt;'>
+                                <Id value='par2' typref='2701647786'/>
+                                <Id value='POSITION_DELTA' typref='2701647786'/>
+                              </Exp_Comparison>
+                            </Nary_Pred>
+                          </Condition>
+                          <Then>
+                            <Assignement_Sub>
+                              <Variables>
+                                <Id value='in_par' typref='4119209065'/>
+                              </Variables>
+                              <Values>
+                                <Id value='IN_PAR' typref='4119209065'/>
+                              </Values>
+                            </Assignement_Sub>
+                          </Then>
+                          <Else>
+                            <Assignement_Sub>
+                              <Variables>
+                                <Id value='in_par' typref='4119209065'/>
+                              </Variables>
+                              <Values>
+                                <Id value='NOT_IN_PAR' typref='4119209065'/>
+                              </Values>
+                            </Assignement_Sub>
+                          </Else>
+                        </If_Sub>
+                      </Nary_Sub>
+                    </Body>
+                  </VAR_IN>
+                </Then>
+                <Else>
+                  <Assignement_Sub>
+                    <Variables>
+                      <Id value='in_par' typref='4119209065'/>
+                    </Variables>
+                    <Values>
+                      <Id value='INCONS_POSITION' typref='4119209065'/>
+                    </Values>
+                  </Assignement_Sub>
+                </Else>
+              </If_Sub>
+            </Nary_Sub>
+          </Body>
+        </VAR_IN>
+      </Body>
+    </Operation>
+    <Operation name='is_train_stopped'>
+      <Output_Parameters>
+        <Id value='stopped' typref='1134906831'/>
+      </Output_Parameters>
+      <Body>
+        <VAR_IN>
+          <Variables>
+            <Id value='dd' typref='2701647786'/>
+          </Variables>
+          <Body>
+            <Nary_Sub op=';'>
+              <Operation_Call>
+                <Name>
+                  <Id value='abs'/>
+                </Name>
+                <Input_Parameters>
+                  <Binary_Exp op='-' typref='2701647786'>
+                    <Id value='M21_Speed' typref='2701647786'/>
+                    <Id value='M24_Speed' typref='2701647786'/>
+                  </Binary_Exp>
+                </Input_Parameters>
+                <Output_Parameters>
+                  <Id value='dd' typref='2701647786'/>
+                </Output_Parameters>
+              </Operation_Call>
+              <If_Sub elseif='no'>
+                <Condition>
+                  <Exp_Comparison op='&lt;'>
+                    <Id value='dd' typref='2701647786'/>
+                    <Id value='SPEED_DELTA' typref='2701647786'/>
+                  </Exp_Comparison>
+                </Condition>
+                <Then>
+                  <If_Sub elseif='no'>
+                    <Condition>
+                      <Nary_Pred op='&amp;'>
+                        <Exp_Comparison op='&lt;'>
+                          <Id value='M21_Speed' typref='2701647786'/>
+                          <Id value='SPEED_DELTA' typref='2701647786'/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op='&lt;'>
+                          <Id value='M24_Speed' typref='2701647786'/>
+                          <Id value='SPEED_DELTA' typref='2701647786'/>
+                        </Exp_Comparison>
+                      </Nary_Pred>
+                    </Condition>
+                    <Then>
+                      <Assignement_Sub>
+                        <Variables>
+                          <Id value='stopped' typref='1134906831'/>
+                        </Variables>
+                        <Values>
+                          <Id value='STOPPED' typref='1134906831'/>
+                        </Values>
+                      </Assignement_Sub>
+                    </Then>
+                    <Else>
+                      <Assignement_Sub>
+                        <Variables>
+                          <Id value='stopped' typref='1134906831'/>
+                        </Variables>
+                        <Values>
+                          <Id value='MOVING' typref='1134906831'/>
+                        </Values>
+                      </Assignement_Sub>
+                    </Else>
+                  </If_Sub>
+                </Then>
+                <Else>
+                  <Assignement_Sub>
+                    <Variables>
+                      <Id value='stopped' typref='1134906831'/>
+                    </Variables>
+                    <Values>
+                      <Id value='INCONS_SPEED' typref='1134906831'/>
+                    </Values>
+                  </Assignement_Sub>
+                </Else>
+              </If_Sub>
+            </Nary_Sub>
+          </Body>
+        </VAR_IN>
+      </Body>
+    </Operation>
+  </Operations>
+  <TypeInfos>
+  <Type id='2701647786'>
+    <Id value='INTEGER'/>
+    </Type>
+  <Type id='3603043417'>
+    <Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+    </Type>
+  <Type id='4119209065'>
+    <Id value='PAR_RESULT'/>
+    </Type>
+  <Type id='1134906831'>
+    <Id value='SPEED_RESULT'/>
+    </Type>
+</TypeInfos>
+
+</Machine>

@@ -1,0 +1,180 @@
+<!--
+  Copyright (C) 2018 Clearsy
+
+  This file is part of MockPilot.
+
+  MockPilot is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  MockPilot is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+  License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Machine name='Utils' type='abstraction'>
+  <Concrete_Constants>
+    <Id value='UINT16_MAX' typref='2701647786'/>
+    <Id value='uint16_t' typref='3603043417'/>
+  </Concrete_Constants>
+  <Concrete_Variables>
+    <Id value='current_date' typref='2701647786'/>
+    <Id value='current_time' typref='2701647786'/>
+    <Id value='toprint' typref='2043437594'/>
+  </Concrete_Variables>
+  <Properties>
+    <Nary_Pred op='&amp;'>
+      <Exp_Comparison op=':'>
+        <Id value='UINT16_MAX' typref='2701647786'/>
+        <Id value='NAT1' typref='3603043417'/>
+      </Exp_Comparison>
+      <Exp_Comparison op='='>
+        <Id value='uint16_t' typref='3603043417'/>
+        <Binary_Exp op='..' typref='3603043417'>
+          <Integer_Literal value='0' typref='2701647786'/>
+          <Id value='UINT16_MAX' typref='2701647786'/>
+        </Binary_Exp>
+      </Exp_Comparison>
+    </Nary_Pred>
+  </Properties>
+  <Invariant>
+    <Nary_Pred op='&amp;'>
+      <Exp_Comparison op=':'>
+        <Id value='current_date' typref='2701647786'/>
+        <Id value='INT' typref='3603043417'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='current_time' typref='2701647786'/>
+        <Id value='INT' typref='3603043417'/>
+      </Exp_Comparison>
+      <Exp_Comparison op=':'>
+        <Id value='toprint' typref='2043437594'/>
+        <Id value='BOOL' typref='4282494527'/>
+      </Exp_Comparison>
+    </Nary_Pred>
+  </Invariant>
+  <Initialisation>
+    <Nary_Sub op='||'>
+      <Becomes_In>
+        <Variables>
+          <Id value='current_date' typref='2701647786'/>
+        </Variables>
+        <Value>
+          <Id value='INT' typref='3603043417'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='current_time' typref='2701647786'/>
+        </Variables>
+        <Value>
+          <Id value='INT' typref='3603043417'/>
+        </Value>
+      </Becomes_In>
+      <Becomes_In>
+        <Variables>
+          <Id value='toprint' typref='2043437594'/>
+        </Variables>
+        <Value>
+          <Id value='BOOL' typref='4282494527'/>
+        </Value>
+      </Becomes_In>
+    </Nary_Sub>
+  </Initialisation>
+  <Assertions>
+    <Exp_Comparison op='&lt;:'>
+      <Id value='uint16_t' typref='3603043417'/>
+      <Id value='INT' typref='3603043417'/>
+    </Exp_Comparison>
+  </Assertions>
+  <Operations>
+    <Operation name='print'>
+      <Input_Parameters>
+        <Id value='sensor' typref='3239339507'/>
+        <Id value='variable' typref='3239339507'/>
+        <Id value='value' typref='3239339507'/>
+      </Input_Parameters>
+      <Precondition>
+        <Nary_Pred op='&amp;'>
+          <Exp_Comparison op=':'>
+            <Id value='sensor' typref='3239339507'/>
+            <Id value='STRING' typref='4112111142'/>
+          </Exp_Comparison>
+          <Exp_Comparison op=':'>
+            <Id value='variable' typref='3239339507'/>
+            <Id value='STRING' typref='4112111142'/>
+          </Exp_Comparison>
+          <Exp_Comparison op=':'>
+            <Id value='value' typref='3239339507'/>
+            <Id value='STRING' typref='4112111142'/>
+          </Exp_Comparison>
+        </Nary_Pred>
+      </Precondition>
+      <Body>
+        <Skip/>
+      </Body>
+    </Operation>
+    <Operation name='urgent_print'>
+      <Input_Parameters>
+        <Id value='sensor' typref='3239339507'/>
+        <Id value='variable' typref='3239339507'/>
+        <Id value='value' typref='3239339507'/>
+      </Input_Parameters>
+      <Precondition>
+        <Nary_Pred op='&amp;'>
+          <Exp_Comparison op=':'>
+            <Id value='sensor' typref='3239339507'/>
+            <Id value='STRING' typref='4112111142'/>
+          </Exp_Comparison>
+          <Exp_Comparison op=':'>
+            <Id value='variable' typref='3239339507'/>
+            <Id value='STRING' typref='4112111142'/>
+          </Exp_Comparison>
+          <Exp_Comparison op=':'>
+            <Id value='value' typref='3239339507'/>
+            <Id value='STRING' typref='4112111142'/>
+          </Exp_Comparison>
+        </Nary_Pred>
+      </Precondition>
+      <Body>
+        <Skip/>
+      </Body>
+    </Operation>
+    <Operation name='flush'>
+      <Body>
+        <Skip/>
+      </Body>
+    </Operation>
+  </Operations>
+  <TypeInfos>
+  <Type id='2701647786'>
+    <Id value='INTEGER'/>
+    </Type>
+  <Type id='3603043417'>
+    <Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+    </Type>
+  <Type id='2043437594'>
+    <Id value='BOOL'/>
+    </Type>
+  <Type id='4282494527'>
+    <Unary_Exp op='POW'>
+<Id value='BOOL'/>
+</Unary_Exp>
+    </Type>
+  <Type id='3239339507'>
+    <Id value='STRING'/>
+    </Type>
+  <Type id='4112111142'>
+    <Unary_Exp op='POW'>
+<Id value='STRING'/>
+</Unary_Exp>
+    </Type>
+</TypeInfos>
+
+</Machine>
