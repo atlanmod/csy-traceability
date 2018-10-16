@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <!--
+    Copyright (C) 2018 Clearsy
+
+    This file is part of MockPilot.
+
+    MockPilot is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    MockPilot is distributed in the hope that it will be useful, but WITHOUT
+    ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+    or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+    License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+  <!--
+    A RELAX NG compact syntax pattern
+    for an identifer.
+  -->
+  <xs:complexType name="Identifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="Attr"/>
+    </xs:sequence>
+    <xs:attribute name="value" use="required"/>
+    <xs:attribute name="suffix"/>
+    <xs:attribute name="typref" type="xs:integer"/>
+    <xs:attribute name="instance"/>
+    <xs:attribute name="component"/>
+  </xs:complexType>
+</xs:schema>
