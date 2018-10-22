@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Log:Log xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:Log="Log"
+    xsi:schemaLocation="Log ../Metamodels/Log.ecore"
+    name="traces">
+  <events name="20161012_235047121"
+      timestamp="20161012_235047121">
+    <traces
+        automata="M11"
+        component="LogiqueSecu.Algo_DonneesUtiles"
+        variable="FermeturePorte"
+        sensor="M23"
+        value="1"
+        name="M11.LogiqueSecu.Algo_DonneesUtiles__FermeturePorte_M23"/>
+    <traces
+        automata="M11"
+        component="LogiqueSecu.Algo_DonneesUtiles"
+        variable="OuverturePorte"
+        sensor="M22"
+        value="1"
+        name="M11.LogiqueSecu.Algo_DonneesUtiles__OuverturePorte_M22"/>
+  </events>
+  <events name="20161012_235047122"
+      timestamp="20161012_235047122">
+    <traces
+        automata="M11"
+        component="LogiqueSecu.Algo_DonneesUtiles"
+        variable="Vitesse"
+        sensor="M24"
+        value="7"
+        name="M11.LogiqueSecu.Algo_DonneesUtiles__Vitesse_M24"/>
+    <traces
+        automata="M11"
+        component="LogiqueSecu.Algo_DonneesUtiles"
+        variable="aopp"
+        value="1"
+        name="M11.LogiqueSecu.Algo_DonneesUtiles__aopp"
+        type="OUT"/>
+  </events>
+</Log:Log>
