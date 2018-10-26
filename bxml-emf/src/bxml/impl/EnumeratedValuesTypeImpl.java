@@ -4,7 +4,7 @@ package bxml.impl;
 
 import bxml.BxmlPackage;
 import bxml.EnumeratedValuesType;
-import bxml.IdentifierType;
+import bxml.Identifier;
 
 import java.util.Collection;
 
@@ -42,7 +42,7 @@ public class EnumeratedValuesTypeImpl extends MinimalEObjectImpl.Container imple
    * @generated
    * @ordered
    */
-  protected EList<IdentifierType> id;
+  protected EList<Identifier> id;
 
   /**
    * <!-- begin-user-doc -->
@@ -68,9 +68,9 @@ public class EnumeratedValuesTypeImpl extends MinimalEObjectImpl.Container imple
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<IdentifierType> getId() {
+  public EList<Identifier> getId() {
     if (id == null) {
-      id = new EObjectContainmentEList<IdentifierType>(IdentifierType.class, this, BxmlPackage.ENUMERATED_VALUES_TYPE__ID);
+      id = new EObjectContainmentEList<Identifier>(Identifier.class, this, BxmlPackage.ENUMERATED_VALUES_TYPE__ID);
     }
     return id;
   }
@@ -114,7 +114,7 @@ public class EnumeratedValuesTypeImpl extends MinimalEObjectImpl.Container imple
     switch (featureID) {
       case BxmlPackage.ENUMERATED_VALUES_TYPE__ID:
         getId().clear();
-        getId().addAll((Collection<? extends IdentifierType>)newValue);
+        getId().addAll((Collection<? extends Identifier>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

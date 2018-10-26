@@ -41,7 +41,7 @@ public interface BxmlPackage extends EPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  String eNS_URI = "platform:/resource/bxml-emf/xml/bxml.xsd";
+  String eNS_URI = "platform:/resource/csy-traceability/bxsd/bxml.xsd";
 
   /**
    * The package namespace name.
@@ -116,22 +116,22 @@ public interface BxmlPackage extends EPackage {
   int ABSTRACTION_TYPE = 1;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The feature id for the '<em><b>Mixed</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ABSTRACTION_TYPE__VALUE = 0;
+  int ABSTRACTION_TYPE__MIXED = 0;
 
   /**
-   * The feature id for the '<em><b>Path</b></em>' attribute.
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ABSTRACTION_TYPE__PATH = 1;
+  int ABSTRACTION_TYPE__ATTR = 1;
 
   /**
    * The number of structural features of the '<em>Abstraction Type</em>' class.
@@ -272,13 +272,22 @@ public interface BxmlPackage extends EPackage {
   int ASSERTIONS_TYPE = 4;
 
   /**
-   * The feature id for the '<em><b>Pred</b></em>' attribute list.
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASSERTIONS_TYPE__PRED = 0;
+  int ASSERTIONS_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Predicate</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSERTIONS_TYPE__PREDICATE = 1;
 
   /**
    * The feature id for the '<em><b>Binary Pred</b></em>' containment reference list.
@@ -287,25 +296,16 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ASSERTIONS_TYPE__BINARY_PRED = 1;
+  int ASSERTIONS_TYPE__BINARY_PRED = 2;
 
   /**
-   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference list.
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASSERTIONS_TYPE__EXP_COMPARISON = 2;
-
-  /**
-   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ASSERTIONS_TYPE__QUANTIFIED_PRED = 3;
+  int ASSERTIONS_TYPE__NARY_PRED = 3;
 
   /**
    * The feature id for the '<em><b>Unary Pred</b></em>' containment reference list.
@@ -317,13 +317,22 @@ public interface BxmlPackage extends EPackage {
   int ASSERTIONS_TYPE__UNARY_PRED = 4;
 
   /**
-   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference list.
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASSERTIONS_TYPE__NARY_PRED = 5;
+  int ASSERTIONS_TYPE__QUANTIFIED_PRED = 5;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSERTIONS_TYPE__EXP_COMPARISON = 6;
 
   /**
    * The feature id for the '<em><b>Set</b></em>' containment reference list.
@@ -332,7 +341,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ASSERTIONS_TYPE__SET = 6;
+  int ASSERTIONS_TYPE__SET = 7;
 
   /**
    * The number of structural features of the '<em>Assertions Type</em>' class.
@@ -341,7 +350,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ASSERTIONS_TYPE_FEATURE_COUNT = 7;
+  int ASSERTIONS_TYPE_FEATURE_COUNT = 8;
 
   /**
    * The number of operations of the '<em>Assertions Type</em>' class.
@@ -408,14 +417,14 @@ public interface BxmlPackage extends EPackage {
   int ASSERT_SUB_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.AssignementSubstitutionTypeImpl <em>Assignement Substitution Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.AssignementSubTypeImpl <em>Assignement Sub Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.AssignementSubstitutionTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getAssignementSubstitutionType()
+   * @see bxml.impl.AssignementSubTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getAssignementSubType()
    * @generated
    */
-  int ASSIGNEMENT_SUBSTITUTION_TYPE = 6;
+  int ASSIGNEMENT_SUB_TYPE = 6;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -424,7 +433,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ASSIGNEMENT_SUBSTITUTION_TYPE__ATTR = 0;
+  int ASSIGNEMENT_SUB_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Variables</b></em>' containment reference.
@@ -433,7 +442,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ASSIGNEMENT_SUBSTITUTION_TYPE__VARIABLES = 1;
+  int ASSIGNEMENT_SUB_TYPE__VARIABLES = 1;
 
   /**
    * The feature id for the '<em><b>Values</b></em>' containment reference.
@@ -442,35 +451,44 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ASSIGNEMENT_SUBSTITUTION_TYPE__VALUES = 2;
+  int ASSIGNEMENT_SUB_TYPE__VALUES = 2;
 
   /**
-   * The number of structural features of the '<em>Assignement Substitution Type</em>' class.
+   * The number of structural features of the '<em>Assignement Sub Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASSIGNEMENT_SUBSTITUTION_TYPE_FEATURE_COUNT = 3;
+  int ASSIGNEMENT_SUB_TYPE_FEATURE_COUNT = 3;
 
   /**
-   * The number of operations of the '<em>Assignement Substitution Type</em>' class.
+   * The number of operations of the '<em>Assignement Sub Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASSIGNEMENT_SUBSTITUTION_TYPE_OPERATION_COUNT = 0;
+  int ASSIGNEMENT_SUB_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.AttributesTypeImpl <em>Attributes Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.AttrTypeImpl <em>Attr Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.AttributesTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getAttributesType()
+   * @see bxml.impl.AttrTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getAttrType()
    * @generated
    */
-  int ATTRIBUTES_TYPE = 7;
+  int ATTR_TYPE = 7;
+
+  /**
+   * The feature id for the '<em><b>Any Element</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTR_TYPE__ANY_ELEMENT = 0;
 
   /**
    * The feature id for the '<em><b>Any</b></em>' attribute list.
@@ -479,25 +497,25 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ATTRIBUTES_TYPE__ANY = 0;
+  int ATTR_TYPE__ANY = 1;
 
   /**
-   * The number of structural features of the '<em>Attributes Type</em>' class.
+   * The number of structural features of the '<em>Attr Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTES_TYPE_FEATURE_COUNT = 1;
+  int ATTR_TYPE_FEATURE_COUNT = 2;
 
   /**
-   * The number of operations of the '<em>Attributes Type</em>' class.
+   * The number of operations of the '<em>Attr Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTES_TYPE_OPERATION_COUNT = 0;
+  int ATTR_TYPE_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link bxml.impl.BecomesInTypeImpl <em>Becomes In Type</em>}' class.
@@ -610,77 +628,14 @@ public interface BxmlPackage extends EPackage {
   int BECOMES_SUCH_THAT_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.BinaryExpressionTypeImpl <em>Binary Expression Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.BinaryExpType2Impl <em>Binary Exp Type2</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.BinaryExpressionTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getBinaryExpressionType()
+   * @see bxml.impl.BinaryExpType2Impl
+   * @see bxml.impl.BxmlPackageImpl#getBinaryExpType2()
    * @generated
    */
-  int BINARY_EXPRESSION_TYPE = 10;
-
-  /**
-   * The feature id for the '<em><b>Attr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__ATTR = 0;
-
-  /**
-   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__BINARY_EXP = 1;
-
-  /**
-   * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__NARY_EXP = 2;
-
-  /**
-   * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__BOOLEAN_LITERAL = 3;
-
-  /**
-   * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__BOOLEAN_EXP = 4;
-
-  /**
-   * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__EMPTY_SET = 5;
-
-  /**
-   * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__EMPTY_SEQ = 6;
+  int BINARY_EXP_TYPE2 = 10;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference.
@@ -689,43 +644,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE__ID = 7;
-
-  /**
-   * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__INTEGER_LITERAL = 8;
-
-  /**
-   * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__QUANTIFIED_EXP = 9;
-
-  /**
-   * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__QUANTIFIED_SET = 10;
-
-  /**
-   * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__STRING_LITERAL = 11;
+  int BINARY_EXP_TYPE2__ID = 0;
 
   /**
    * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
@@ -734,7 +653,16 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE__UNARY_EXP = 12;
+  int BINARY_EXP_TYPE2__UNARY_EXP = 1;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_EXP_TYPE2__BINARY_EXP = 2;
 
   /**
    * The feature id for the '<em><b>Struct</b></em>' containment reference.
@@ -743,70 +671,16 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE__STRUCT = 13;
+  int BINARY_EXP_TYPE2__STRUCT = 3;
 
   /**
-   * The feature id for the '<em><b>Record</b></em>' containment reference.
+   * The feature id for the '<em><b>Generic Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE__RECORD = 14;
-
-  /**
-   * The feature id for the '<em><b>Binary Exp1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__BINARY_EXP1 = 15;
-
-  /**
-   * The feature id for the '<em><b>Nary Exp1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__NARY_EXP1 = 16;
-
-  /**
-   * The feature id for the '<em><b>Boolean Literal1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__BOOLEAN_LITERAL1 = 17;
-
-  /**
-   * The feature id for the '<em><b>Boolean Exp1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__BOOLEAN_EXP1 = 18;
-
-  /**
-   * The feature id for the '<em><b>Empty Set1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__EMPTY_SET1 = 19;
-
-  /**
-   * The feature id for the '<em><b>Empty Seq1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__EMPTY_SEQ1 = 20;
+  int BINARY_EXP_TYPE2__GENERIC_TYPE = 4;
 
   /**
    * The feature id for the '<em><b>Id1</b></em>' containment reference.
@@ -815,43 +689,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE__ID1 = 21;
-
-  /**
-   * The feature id for the '<em><b>Integer Literal1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__INTEGER_LITERAL1 = 22;
-
-  /**
-   * The feature id for the '<em><b>Quantified Exp1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__QUANTIFIED_EXP1 = 23;
-
-  /**
-   * The feature id for the '<em><b>Quantified Set1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__QUANTIFIED_SET1 = 24;
-
-  /**
-   * The feature id for the '<em><b>STRING Literal1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_EXPRESSION_TYPE__STRING_LITERAL1 = 25;
+  int BINARY_EXP_TYPE2__ID1 = 5;
 
   /**
    * The feature id for the '<em><b>Unary Exp1</b></em>' containment reference.
@@ -860,7 +698,16 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE__UNARY_EXP1 = 26;
+  int BINARY_EXP_TYPE2__UNARY_EXP1 = 6;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_EXP_TYPE2__BINARY_EXP1 = 7;
 
   /**
    * The feature id for the '<em><b>Struct1</b></em>' containment reference.
@@ -869,7 +716,1810 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE__STRUCT1 = 27;
+  int BINARY_EXP_TYPE2__STRUCT1 = 8;
+
+  /**
+   * The feature id for the '<em><b>Generic Type1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_EXP_TYPE2__GENERIC_TYPE1 = 9;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_EXP_TYPE2__OP = 10;
+
+  /**
+   * The number of structural features of the '<em>Binary Exp Type2</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_EXP_TYPE2_FEATURE_COUNT = 11;
+
+  /**
+   * The number of operations of the '<em>Binary Exp Type2</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_EXP_TYPE2_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BinaryPredTypeImpl <em>Binary Pred Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BinaryPredTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getBinaryPredType()
+   * @generated
+   */
+  int BINARY_PRED_TYPE = 11;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__BINARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__EXP_COMPARISON = 5;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__SET = 6;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__BINARY_PRED1 = 7;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__NARY_PRED1 = 8;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__UNARY_PRED1 = 9;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__QUANTIFIED_PRED1 = 10;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__EXP_COMPARISON1 = 11;
+
+  /**
+   * The feature id for the '<em><b>Set1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__SET1 = 12;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE__OP = 13;
+
+  /**
+   * The number of structural features of the '<em>Binary Pred Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE_FEATURE_COUNT = 14;
+
+  /**
+   * The number of operations of the '<em>Binary Pred Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_PRED_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BlocSubTypeImpl <em>Bloc Sub Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BlocSubTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getBlocSubType()
+   * @generated
+   */
+  int BLOC_SUB_TYPE = 12;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__BLOC_SUB = 1;
+
+  /**
+   * The feature id for the '<em><b>Skip</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__SKIP = 2;
+
+  /**
+   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__ASSERT_SUB = 3;
+
+  /**
+   * The feature id for the '<em><b>If Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__IF_SUB = 4;
+
+  /**
+   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__BECOMES_SUCH_THAT = 5;
+
+  /**
+   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__ASSIGNEMENT_SUB = 6;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__SELECT = 7;
+
+  /**
+   * The feature id for the '<em><b>Case Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__CASE_SUB = 8;
+
+  /**
+   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__ANY_SUB = 9;
+
+  /**
+   * The feature id for the '<em><b>LET Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__LET_SUB = 10;
+
+  /**
+   * The feature id for the '<em><b>Becomes In</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__BECOMES_IN = 11;
+
+  /**
+   * The feature id for the '<em><b>VARIN</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__VARIN = 12;
+
+  /**
+   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__NARY_SUB = 13;
+
+  /**
+   * The feature id for the '<em><b>Operation Call</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__OPERATION_CALL = 14;
+
+  /**
+   * The feature id for the '<em><b>While</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE__WHILE = 15;
+
+  /**
+   * The number of structural features of the '<em>Bloc Sub Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE_FEATURE_COUNT = 16;
+
+  /**
+   * The number of operations of the '<em>Bloc Sub Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOC_SUB_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BodyTypeImpl <em>Body Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BodyTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getBodyType()
+   * @generated
+   */
+  int BODY_TYPE = 13;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE__BINARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE__EXP_COMPARISON = 5;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE__SET = 6;
+
+  /**
+   * The number of structural features of the '<em>Body Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE_FEATURE_COUNT = 7;
+
+  /**
+   * The number of operations of the '<em>Body Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BodyType1Impl <em>Body Type1</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BodyType1Impl
+   * @see bxml.impl.BxmlPackageImpl#getBodyType1()
+   * @generated
+   */
+  int BODY_TYPE1 = 14;
+
+  /**
+   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__BLOC_SUB = 0;
+
+  /**
+   * The feature id for the '<em><b>Skip</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__SKIP = 1;
+
+  /**
+   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__ASSERT_SUB = 2;
+
+  /**
+   * The feature id for the '<em><b>If Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__IF_SUB = 3;
+
+  /**
+   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__BECOMES_SUCH_THAT = 4;
+
+  /**
+   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__ASSIGNEMENT_SUB = 5;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__SELECT = 6;
+
+  /**
+   * The feature id for the '<em><b>Case Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__CASE_SUB = 7;
+
+  /**
+   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__ANY_SUB = 8;
+
+  /**
+   * The feature id for the '<em><b>LET Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__LET_SUB = 9;
+
+  /**
+   * The feature id for the '<em><b>Becomes In</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__BECOMES_IN = 10;
+
+  /**
+   * The feature id for the '<em><b>VARIN</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__VARIN = 11;
+
+  /**
+   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__NARY_SUB = 12;
+
+  /**
+   * The feature id for the '<em><b>Operation Call</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__OPERATION_CALL = 13;
+
+  /**
+   * The feature id for the '<em><b>While</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1__WHILE = 14;
+
+  /**
+   * The number of structural features of the '<em>Body Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1_FEATURE_COUNT = 15;
+
+  /**
+   * The number of operations of the '<em>Body Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE1_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BodyType2Impl <em>Body Type2</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BodyType2Impl
+   * @see bxml.impl.BxmlPackageImpl#getBodyType2()
+   * @generated
+   */
+  int BODY_TYPE2 = 15;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__BLOC_SUB = 1;
+
+  /**
+   * The feature id for the '<em><b>Skip</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__SKIP = 2;
+
+  /**
+   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__ASSERT_SUB = 3;
+
+  /**
+   * The feature id for the '<em><b>If Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__IF_SUB = 4;
+
+  /**
+   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__BECOMES_SUCH_THAT = 5;
+
+  /**
+   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__ASSIGNEMENT_SUB = 6;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__SELECT = 7;
+
+  /**
+   * The feature id for the '<em><b>Case Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__CASE_SUB = 8;
+
+  /**
+   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__ANY_SUB = 9;
+
+  /**
+   * The feature id for the '<em><b>LET Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__LET_SUB = 10;
+
+  /**
+   * The feature id for the '<em><b>Becomes In</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__BECOMES_IN = 11;
+
+  /**
+   * The feature id for the '<em><b>VARIN</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__VARIN = 12;
+
+  /**
+   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__NARY_SUB = 13;
+
+  /**
+   * The feature id for the '<em><b>Operation Call</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__OPERATION_CALL = 14;
+
+  /**
+   * The feature id for the '<em><b>While</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2__WHILE = 15;
+
+  /**
+   * The number of structural features of the '<em>Body Type2</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2_FEATURE_COUNT = 16;
+
+  /**
+   * The number of operations of the '<em>Body Type2</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE2_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BodyType3Impl <em>Body Type3</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BodyType3Impl
+   * @see bxml.impl.BxmlPackageImpl#getBodyType3()
+   * @generated
+   */
+  int BODY_TYPE3 = 16;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__BINARY_EXP = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__NARY_EXP = 2;
+
+  /**
+   * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__BOOLEAN_LITERAL = 3;
+
+  /**
+   * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__BOOLEAN_EXP = 4;
+
+  /**
+   * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__EMPTY_SET = 5;
+
+  /**
+   * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__EMPTY_SEQ = 6;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__ID = 7;
+
+  /**
+   * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__INTEGER_LITERAL = 8;
+
+  /**
+   * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__QUANTIFIED_EXP = 9;
+
+  /**
+   * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__QUANTIFIED_SET = 10;
+
+  /**
+   * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__STRING_LITERAL = 11;
+
+  /**
+   * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__UNARY_EXP = 12;
+
+  /**
+   * The feature id for the '<em><b>Struct</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__STRUCT = 13;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3__RECORD = 14;
+
+  /**
+   * The number of structural features of the '<em>Body Type3</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3_FEATURE_COUNT = 15;
+
+  /**
+   * The number of operations of the '<em>Body Type3</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE3_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BodyType4Impl <em>Body Type4</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BodyType4Impl
+   * @see bxml.impl.BxmlPackageImpl#getBodyType4()
+   * @generated
+   */
+  int BODY_TYPE4 = 17;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__BLOC_SUB = 1;
+
+  /**
+   * The feature id for the '<em><b>Skip</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__SKIP = 2;
+
+  /**
+   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__ASSERT_SUB = 3;
+
+  /**
+   * The feature id for the '<em><b>If Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__IF_SUB = 4;
+
+  /**
+   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__BECOMES_SUCH_THAT = 5;
+
+  /**
+   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__ASSIGNEMENT_SUB = 6;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__SELECT = 7;
+
+  /**
+   * The feature id for the '<em><b>Case Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__CASE_SUB = 8;
+
+  /**
+   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__ANY_SUB = 9;
+
+  /**
+   * The feature id for the '<em><b>LET Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__LET_SUB = 10;
+
+  /**
+   * The feature id for the '<em><b>Becomes In</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__BECOMES_IN = 11;
+
+  /**
+   * The feature id for the '<em><b>VARIN</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__VARIN = 12;
+
+  /**
+   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__NARY_SUB = 13;
+
+  /**
+   * The feature id for the '<em><b>Operation Call</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__OPERATION_CALL = 14;
+
+  /**
+   * The feature id for the '<em><b>While</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4__WHILE = 15;
+
+  /**
+   * The number of structural features of the '<em>Body Type4</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4_FEATURE_COUNT = 16;
+
+  /**
+   * The number of operations of the '<em>Body Type4</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE4_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BodyType5Impl <em>Body Type5</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BodyType5Impl
+   * @see bxml.impl.BxmlPackageImpl#getBodyType5()
+   * @generated
+   */
+  int BODY_TYPE5 = 18;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__BLOC_SUB = 1;
+
+  /**
+   * The feature id for the '<em><b>Skip</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__SKIP = 2;
+
+  /**
+   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__ASSERT_SUB = 3;
+
+  /**
+   * The feature id for the '<em><b>If Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__IF_SUB = 4;
+
+  /**
+   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__BECOMES_SUCH_THAT = 5;
+
+  /**
+   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__ASSIGNEMENT_SUB = 6;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__SELECT = 7;
+
+  /**
+   * The feature id for the '<em><b>Case Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__CASE_SUB = 8;
+
+  /**
+   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__ANY_SUB = 9;
+
+  /**
+   * The feature id for the '<em><b>LET Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__LET_SUB = 10;
+
+  /**
+   * The feature id for the '<em><b>Becomes In</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__BECOMES_IN = 11;
+
+  /**
+   * The feature id for the '<em><b>VARIN</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__VARIN = 12;
+
+  /**
+   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__NARY_SUB = 13;
+
+  /**
+   * The feature id for the '<em><b>Operation Call</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__OPERATION_CALL = 14;
+
+  /**
+   * The feature id for the '<em><b>While</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5__WHILE = 15;
+
+  /**
+   * The number of structural features of the '<em>Body Type5</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5_FEATURE_COUNT = 16;
+
+  /**
+   * The number of operations of the '<em>Body Type5</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE5_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BodyType6Impl <em>Body Type6</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BodyType6Impl
+   * @see bxml.impl.BxmlPackageImpl#getBodyType6()
+   * @generated
+   */
+  int BODY_TYPE6 = 19;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE6__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE6__BINARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE6__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE6__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE6__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE6__EXP_COMPARISON = 5;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE6__SET = 6;
+
+  /**
+   * The number of structural features of the '<em>Body Type6</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE6_FEATURE_COUNT = 7;
+
+  /**
+   * The number of operations of the '<em>Body Type6</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_TYPE6_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BooleanExpTypeImpl <em>Boolean Exp Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BooleanExpTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getBooleanExpType()
+   * @generated
+   */
+  int BOOLEAN_EXP_TYPE = 20;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_EXP_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_EXP_TYPE__BINARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_EXP_TYPE__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_EXP_TYPE__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_EXP_TYPE__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_EXP_TYPE__EXP_COMPARISON = 5;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_EXP_TYPE__SET = 6;
+
+  /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_EXP_TYPE__TYPREF = 7;
+
+  /**
+   * The number of structural features of the '<em>Boolean Exp Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_EXP_TYPE_FEATURE_COUNT = 8;
+
+  /**
+   * The number of operations of the '<em>Boolean Exp Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_EXP_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BooleanLiteralTypeImpl <em>Boolean Literal Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BooleanLiteralTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getBooleanLiteralType()
+   * @generated
+   */
+  int BOOLEAN_LITERAL_TYPE = 21;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL_TYPE__TYPREF = 1;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL_TYPE__VALUE = 2;
+
+  /**
+   * The number of structural features of the '<em>Boolean Literal Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL_TYPE_FEATURE_COUNT = 3;
+
+  /**
+   * The number of operations of the '<em>Boolean Literal Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.BynaryExpTypeImpl <em>Bynary Exp Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.BynaryExpTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getBynaryExpType()
+   * @generated
+   */
+  int BYNARY_EXP_TYPE = 22;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__BINARY_EXP = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__NARY_EXP = 2;
+
+  /**
+   * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__BOOLEAN_LITERAL = 3;
+
+  /**
+   * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__BOOLEAN_EXP = 4;
+
+  /**
+   * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__EMPTY_SET = 5;
+
+  /**
+   * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__EMPTY_SEQ = 6;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__ID = 7;
+
+  /**
+   * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__INTEGER_LITERAL = 8;
+
+  /**
+   * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__QUANTIFIED_EXP = 9;
+
+  /**
+   * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__QUANTIFIED_SET = 10;
+
+  /**
+   * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__STRING_LITERAL = 11;
+
+  /**
+   * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__UNARY_EXP = 12;
+
+  /**
+   * The feature id for the '<em><b>Struct</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__STRUCT = 13;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__RECORD = 14;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__BINARY_EXP1 = 15;
+
+  /**
+   * The feature id for the '<em><b>Nary Exp1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__NARY_EXP1 = 16;
+
+  /**
+   * The feature id for the '<em><b>Boolean Literal1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__BOOLEAN_LITERAL1 = 17;
+
+  /**
+   * The feature id for the '<em><b>Boolean Exp1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__BOOLEAN_EXP1 = 18;
+
+  /**
+   * The feature id for the '<em><b>Empty Set1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__EMPTY_SET1 = 19;
+
+  /**
+   * The feature id for the '<em><b>Empty Seq1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__EMPTY_SEQ1 = 20;
+
+  /**
+   * The feature id for the '<em><b>Id1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__ID1 = 21;
+
+  /**
+   * The feature id for the '<em><b>Integer Literal1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__INTEGER_LITERAL1 = 22;
+
+  /**
+   * The feature id for the '<em><b>Quantified Exp1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__QUANTIFIED_EXP1 = 23;
+
+  /**
+   * The feature id for the '<em><b>Quantified Set1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__QUANTIFIED_SET1 = 24;
+
+  /**
+   * The feature id for the '<em><b>STRING Literal1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__STRING_LITERAL1 = 25;
+
+  /**
+   * The feature id for the '<em><b>Unary Exp1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__UNARY_EXP1 = 26;
+
+  /**
+   * The feature id for the '<em><b>Struct1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BYNARY_EXP_TYPE__STRUCT1 = 27;
 
   /**
    * The feature id for the '<em><b>Record1</b></em>' containment reference.
@@ -878,7 +2528,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE__RECORD1 = 28;
+  int BYNARY_EXP_TYPE__RECORD1 = 28;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -887,496 +2537,34 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE__OP = 29;
+  int BYNARY_EXP_TYPE__OP = 29;
 
   /**
-   * The number of structural features of the '<em>Binary Expression Type</em>' class.
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE_FEATURE_COUNT = 30;
+  int BYNARY_EXP_TYPE__TYPREF = 30;
 
   /**
-   * The number of operations of the '<em>Binary Expression Type</em>' class.
+   * The number of structural features of the '<em>Bynary Exp Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BINARY_EXPRESSION_TYPE_OPERATION_COUNT = 0;
+  int BYNARY_EXP_TYPE_FEATURE_COUNT = 31;
 
   /**
-   * The meta object id for the '{@link bxml.impl.BinaryPredicateTypeImpl <em>Binary Predicate Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see bxml.impl.BinaryPredicateTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getBinaryPredicateType()
-   * @generated
-   */
-  int BINARY_PREDICATE_TYPE = 11;
-
-  /**
-   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * The number of operations of the '<em>Bynary Exp Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BINARY_PREDICATE_TYPE__ATTR = 0;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_PREDICATE_TYPE__PRED = 1;
-
-  /**
-   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_PREDICATE_TYPE__BINARY_PRED = 2;
-
-  /**
-   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_PREDICATE_TYPE__EXP_COMPARISON = 3;
-
-  /**
-   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_PREDICATE_TYPE__QUANTIFIED_PRED = 4;
-
-  /**
-   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_PREDICATE_TYPE__UNARY_PRED = 5;
-
-  /**
-   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_PREDICATE_TYPE__NARY_PRED = 6;
-
-  /**
-   * The feature id for the '<em><b>Set</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_PREDICATE_TYPE__SET = 7;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_PREDICATE_TYPE__OP = 8;
-
-  /**
-   * The number of structural features of the '<em>Binary Predicate Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_PREDICATE_TYPE_FEATURE_COUNT = 9;
-
-  /**
-   * The number of operations of the '<em>Binary Predicate Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_PREDICATE_TYPE_OPERATION_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link bxml.impl.BinarySubTypeImpl <em>Binary Sub Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see bxml.impl.BinarySubTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getBinarySubType()
-   * @generated
-   */
-  int BINARY_SUB_TYPE = 12;
-
-  /**
-   * The feature id for the '<em><b>Attr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__ATTR = 0;
-
-  /**
-   * The feature id for the '<em><b>Sub</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__SUB = 1;
-
-  /**
-   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__BLOC_SUB = 2;
-
-  /**
-   * The feature id for the '<em><b>Skip</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__SKIP = 3;
-
-  /**
-   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__ASSERT_SUB = 4;
-
-  /**
-   * The feature id for the '<em><b>If Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__IF_SUB = 5;
-
-  /**
-   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__BECOMES_SUCH_THAT = 6;
-
-  /**
-   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__ASSIGNEMENT_SUB = 7;
-
-  /**
-   * The feature id for the '<em><b>Select</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__SELECT = 8;
-
-  /**
-   * The feature id for the '<em><b>Case Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__CASE_SUB = 9;
-
-  /**
-   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__ANY_SUB = 10;
-
-  /**
-   * The feature id for the '<em><b>LET Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__LET_SUB = 11;
-
-  /**
-   * The feature id for the '<em><b>Becomes In</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__BECOMES_IN = 12;
-
-  /**
-   * The feature id for the '<em><b>VARIN</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__VARIN = 13;
-
-  /**
-   * The feature id for the '<em><b>Binary Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__BINARY_SUB = 14;
-
-  /**
-   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__NARY_SUB = 15;
-
-  /**
-   * The feature id for the '<em><b>Operation Call</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__OPERATION_CALL = 16;
-
-  /**
-   * The feature id for the '<em><b>While</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__WHILE = 17;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE__OP = 18;
-
-  /**
-   * The number of structural features of the '<em>Binary Sub Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE_FEATURE_COUNT = 19;
-
-  /**
-   * The number of operations of the '<em>Binary Sub Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_SUB_TYPE_OPERATION_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link bxml.impl.CallParamatersTypeImpl <em>Call Paramaters Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see bxml.impl.CallParamatersTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getCallParamatersType()
-   * @generated
-   */
-  int CALL_PARAMATERS_TYPE = 13;
-
-  /**
-   * The feature id for the '<em><b>Exp</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__EXP = 0;
-
-  /**
-   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__BINARY_EXP = 1;
-
-  /**
-   * The feature id for the '<em><b>Nary Exp</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__NARY_EXP = 2;
-
-  /**
-   * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__BOOLEAN_LITERAL = 3;
-
-  /**
-   * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__BOOLEAN_EXP = 4;
-
-  /**
-   * The feature id for the '<em><b>Empty Set</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__EMPTY_SET = 5;
-
-  /**
-   * The feature id for the '<em><b>Empty Seq</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__EMPTY_SEQ = 6;
-
-  /**
-   * The feature id for the '<em><b>Id</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__ID = 7;
-
-  /**
-   * The feature id for the '<em><b>Integer Literal</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__INTEGER_LITERAL = 8;
-
-  /**
-   * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__QUANTIFIED_EXP = 9;
-
-  /**
-   * The feature id for the '<em><b>Quantified Set</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__QUANTIFIED_SET = 10;
-
-  /**
-   * The feature id for the '<em><b>STRING Literal</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__STRING_LITERAL = 11;
-
-  /**
-   * The feature id for the '<em><b>Unary Exp</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__UNARY_EXP = 12;
-
-  /**
-   * The feature id for the '<em><b>Struct</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__STRUCT = 13;
-
-  /**
-   * The feature id for the '<em><b>Record</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE__RECORD = 14;
-
-  /**
-   * The number of structural features of the '<em>Call Paramaters Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE_FEATURE_COUNT = 15;
-
-  /**
-   * The number of operations of the '<em>Call Paramaters Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_PARAMATERS_TYPE_OPERATION_COUNT = 0;
+  int BYNARY_EXP_TYPE_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link bxml.impl.CaseSubTypeImpl <em>Case Sub Type</em>}' class.
@@ -1386,7 +2574,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getCaseSubType()
    * @generated
    */
-  int CASE_SUB_TYPE = 14;
+  int CASE_SUB_TYPE = 23;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -1450,7 +2638,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getChoicesType()
    * @generated
    */
-  int CHOICES_TYPE = 15;
+  int CHOICES_TYPE = 24;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHOICES_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Choice</b></em>' containment reference list.
@@ -1459,7 +2656,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CHOICES_TYPE__CHOICE = 0;
+  int CHOICES_TYPE__CHOICE = 1;
 
   /**
    * The number of structural features of the '<em>Choices Type</em>' class.
@@ -1468,7 +2665,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CHOICES_TYPE_FEATURE_COUNT = 1;
+  int CHOICES_TYPE_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>Choices Type</em>' class.
@@ -1487,16 +2684,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getChoiceType()
    * @generated
    */
-  int CHOICE_TYPE = 16;
+  int CHOICE_TYPE = 25;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' containment reference list.
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHOICE_TYPE__VALUE = 0;
+  int CHOICE_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Then</b></em>' containment reference.
@@ -1526,6 +2723,61 @@ public interface BxmlPackage extends EPackage {
   int CHOICE_TYPE_OPERATION_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link bxml.impl.ChoiceType1Impl <em>Choice Type1</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.ChoiceType1Impl
+   * @see bxml.impl.BxmlPackageImpl#getChoiceType1()
+   * @generated
+   */
+  int CHOICE_TYPE1 = 26;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHOICE_TYPE1__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHOICE_TYPE1__VALUE = 1;
+
+  /**
+   * The feature id for the '<em><b>Then</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHOICE_TYPE1__THEN = 2;
+
+  /**
+   * The number of structural features of the '<em>Choice Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHOICE_TYPE1_FEATURE_COUNT = 3;
+
+  /**
+   * The number of operations of the '<em>Choice Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHOICE_TYPE1_OPERATION_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link bxml.impl.ConcreteConstantsTypeImpl <em>Concrete Constants Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1533,7 +2785,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getConcreteConstantsType()
    * @generated
    */
-  int CONCRETE_CONSTANTS_TYPE = 17;
+  int CONCRETE_CONSTANTS_TYPE = 27;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -1579,7 +2831,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getConcreteVariablesType()
    * @generated
    */
-  int CONCRETE_VARIABLES_TYPE = 18;
+  int CONCRETE_VARIABLES_TYPE = 28;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -1618,6 +2870,188 @@ public interface BxmlPackage extends EPackage {
   int CONCRETE_VARIABLES_TYPE_OPERATION_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link bxml.impl.ConditionTypeImpl <em>Condition Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.ConditionTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getConditionType()
+   * @generated
+   */
+  int CONDITION_TYPE = 29;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_TYPE__BINARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_TYPE__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_TYPE__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_TYPE__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_TYPE__EXP_COMPARISON = 5;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_TYPE__SET = 6;
+
+  /**
+   * The number of structural features of the '<em>Condition Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_TYPE_FEATURE_COUNT = 7;
+
+  /**
+   * The number of operations of the '<em>Condition Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.ConstraintsTypeImpl <em>Constraints Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.ConstraintsTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getConstraintsType()
+   * @generated
+   */
+  int CONSTRAINTS_TYPE = 30;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINTS_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINTS_TYPE__BINARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINTS_TYPE__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINTS_TYPE__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINTS_TYPE__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINTS_TYPE__EXP_COMPARISON = 5;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINTS_TYPE__SET = 6;
+
+  /**
+   * The number of structural features of the '<em>Constraints Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINTS_TYPE_FEATURE_COUNT = 7;
+
+  /**
+   * The number of operations of the '<em>Constraints Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONSTRAINTS_TYPE_OPERATION_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link bxml.impl.DocumentRootImpl <em>Document Root</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1625,7 +3059,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getDocumentRoot()
    * @generated
    */
-  int DOCUMENT_ROOT = 19;
+  int DOCUMENT_ROOT = 31;
 
   /**
    * The feature id for the '<em><b>Mixed</b></em>' attribute list.
@@ -1655,13 +3089,76 @@ public interface BxmlPackage extends EPackage {
   int DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = 2;
 
   /**
+   * The feature id for the '<em><b>Abstract Constants</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__ABSTRACT_CONSTANTS = 3;
+
+  /**
+   * The feature id for the '<em><b>Abstract Variables</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__ABSTRACT_VARIABLES = 4;
+
+  /**
+   * The feature id for the '<em><b>Abstraction</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__ABSTRACTION = 5;
+
+  /**
    * The feature id for the '<em><b>ANY Sub</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__ANY_SUB = 3;
+  int DOCUMENT_ROOT__ANY_SUB = 6;
+
+  /**
+   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__ASSERT_SUB = 7;
+
+  /**
+   * The feature id for the '<em><b>Assertions</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__ASSERTIONS = 8;
+
+  /**
+   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__ASSIGNEMENT_SUB = 9;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__ATTR = 10;
 
   /**
    * The feature id for the '<em><b>Becomes In</b></em>' containment reference.
@@ -1670,16 +3167,61 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__BECOMES_IN = 4;
+  int DOCUMENT_ROOT__BECOMES_IN = 11;
 
   /**
-   * The feature id for the '<em><b>Binary Sub</b></em>' containment reference.
+   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__BINARY_SUB = 5;
+  int DOCUMENT_ROOT__BECOMES_SUCH_THAT = 12;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__BINARY_PRED = 13;
+
+  /**
+   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__BLOC_SUB = 14;
+
+  /**
+   * The feature id for the '<em><b>Body</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__BODY = 15;
+
+  /**
+   * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__BOOLEAN_EXP = 16;
+
+  /**
+   * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__BOOLEAN_LITERAL = 17;
 
   /**
    * The feature id for the '<em><b>Case Sub</b></em>' containment reference.
@@ -1688,7 +3230,178 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__CASE_SUB = 6;
+  int DOCUMENT_ROOT__CASE_SUB = 18;
+
+  /**
+   * The feature id for the '<em><b>Choices</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__CHOICES = 19;
+
+  /**
+   * The feature id for the '<em><b>Concrete Constants</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__CONCRETE_CONSTANTS = 20;
+
+  /**
+   * The feature id for the '<em><b>Concrete Variables</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__CONCRETE_VARIABLES = 21;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__CONDITION = 22;
+
+  /**
+   * The feature id for the '<em><b>Constraints</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__CONSTRAINTS = 23;
+
+  /**
+   * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__EMPTY_SEQ = 24;
+
+  /**
+   * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__EMPTY_SET = 25;
+
+  /**
+   * The feature id for the '<em><b>Enumerated Values</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__ENUMERATED_VALUES = 26;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__EXP_COMPARISON = 27;
+
+  /**
+   * The feature id for the '<em><b>Extends</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__EXTENDS = 28;
+
+  /**
+   * The feature id for the '<em><b>Generic Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__GENERIC_TYPE = 29;
+
+  /**
+   * The feature id for the '<em><b>Guard</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__GUARD = 30;
+
+  /**
+   * The feature id for the '<em><b>If Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__IF_SUB = 31;
+
+  /**
+   * The feature id for the '<em><b>Imports</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__IMPORTS = 32;
+
+  /**
+   * The feature id for the '<em><b>Includes</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__INCLUDES = 33;
+
+  /**
+   * The feature id for the '<em><b>Initialisation</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__INITIALISATION = 34;
+
+  /**
+   * The feature id for the '<em><b>Instance</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__INSTANCE = 35;
+
+  /**
+   * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__INTEGER_LITERAL = 36;
+
+  /**
+   * The feature id for the '<em><b>Invariant</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__INVARIANT = 37;
 
   /**
    * The feature id for the '<em><b>LET Sub</b></em>' containment reference.
@@ -1697,7 +3410,16 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__LET_SUB = 7;
+  int DOCUMENT_ROOT__LET_SUB = 38;
+
+  /**
+   * The feature id for the '<em><b>Local Operations</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__LOCAL_OPERATIONS = 39;
 
   /**
    * The feature id for the '<em><b>Machine</b></em>' containment reference.
@@ -1706,7 +3428,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__MACHINE = 8;
+  int DOCUMENT_ROOT__MACHINE = 40;
 
   /**
    * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
@@ -1715,7 +3437,25 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__NARY_EXP = 9;
+  int DOCUMENT_ROOT__NARY_EXP = 41;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__NARY_PRED = 42;
+
+  /**
+   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__NARY_SUB = 43;
 
   /**
    * The feature id for the '<em><b>Operation</b></em>' containment reference.
@@ -1724,7 +3464,70 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__OPERATION = 10;
+  int DOCUMENT_ROOT__OPERATION = 44;
+
+  /**
+   * The feature id for the '<em><b>Operation Call</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__OPERATION_CALL = 45;
+
+  /**
+   * The feature id for the '<em><b>Operations</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__OPERATIONS = 46;
+
+  /**
+   * The feature id for the '<em><b>Precondition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__PRECONDITION = 47;
+
+  /**
+   * The feature id for the '<em><b>Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__PRED = 48;
+
+  /**
+   * The feature id for the '<em><b>Promoted Operation</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__PROMOTED_OPERATION = 49;
+
+  /**
+   * The feature id for the '<em><b>Promotes</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__PROMOTES = 50;
+
+  /**
+   * The feature id for the '<em><b>Properties</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__PROPERTIES = 51;
 
   /**
    * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
@@ -1733,7 +3536,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__QUANTIFIED_EXP = 11;
+  int DOCUMENT_ROOT__QUANTIFIED_EXP = 52;
 
   /**
    * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
@@ -1742,7 +3545,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__QUANTIFIED_PRED = 12;
+  int DOCUMENT_ROOT__QUANTIFIED_PRED = 53;
 
   /**
    * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
@@ -1751,7 +3554,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__QUANTIFIED_SET = 13;
+  int DOCUMENT_ROOT__QUANTIFIED_SET = 54;
 
   /**
    * The feature id for the '<em><b>Record</b></em>' containment reference.
@@ -1760,7 +3563,43 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__RECORD = 14;
+  int DOCUMENT_ROOT__RECORD = 55;
+
+  /**
+   * The feature id for the '<em><b>Record Item</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__RECORD_ITEM = 56;
+
+  /**
+   * The feature id for the '<em><b>Referenced Machine</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__REFERENCED_MACHINE = 57;
+
+  /**
+   * The feature id for the '<em><b>Refines</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__REFINES = 58;
+
+  /**
+   * The feature id for the '<em><b>Sees</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__SEES = 59;
 
   /**
    * The feature id for the '<em><b>Select</b></em>' containment reference.
@@ -1769,7 +3608,43 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__SELECT = 15;
+  int DOCUMENT_ROOT__SELECT = 60;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__SET = 61;
+
+  /**
+   * The feature id for the '<em><b>Sets</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__SETS = 62;
+
+  /**
+   * The feature id for the '<em><b>Skip</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__SKIP = 63;
+
+  /**
+   * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__STRING_LITERAL = 64;
 
   /**
    * The feature id for the '<em><b>Struct</b></em>' containment reference.
@@ -1778,7 +3653,61 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__STRUCT = 16;
+  int DOCUMENT_ROOT__STRUCT = 65;
+
+  /**
+   * The feature id for the '<em><b>Then</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__THEN = 66;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__TYPE = 67;
+
+  /**
+   * The feature id for the '<em><b>Type Infos</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__TYPE_INFOS = 68;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__UNARY_PRED = 69;
+
+  /**
+   * The feature id for the '<em><b>Uses</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__USES = 70;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__VALUE = 71;
 
   /**
    * The feature id for the '<em><b>VARIN</b></em>' containment reference.
@@ -1787,7 +3716,43 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__VARIN = 17;
+  int DOCUMENT_ROOT__VARIN = 72;
+
+  /**
+   * The feature id for the '<em><b>Variables</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__VARIABLES = 73;
+
+  /**
+   * The feature id for the '<em><b>Variant</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__VARIANT = 74;
+
+  /**
+   * The feature id for the '<em><b>When</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__WHEN = 75;
+
+  /**
+   * The feature id for the '<em><b>When Clauses</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCUMENT_ROOT__WHEN_CLAUSES = 76;
 
   /**
    * The feature id for the '<em><b>While</b></em>' containment reference.
@@ -1796,7 +3761,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT__WHILE = 18;
+  int DOCUMENT_ROOT__WHILE = 77;
 
   /**
    * The number of structural features of the '<em>Document Root</em>' class.
@@ -1805,7 +3770,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int DOCUMENT_ROOT_FEATURE_COUNT = 19;
+  int DOCUMENT_ROOT_FEATURE_COUNT = 78;
 
   /**
    * The number of operations of the '<em>Document Root</em>' class.
@@ -1817,6 +3782,488 @@ public interface BxmlPackage extends EPackage {
   int DOCUMENT_ROOT_OPERATION_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link bxml.impl.ElseTypeImpl <em>Else Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.ElseTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getElseType()
+   * @generated
+   */
+  int ELSE_TYPE = 32;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__BLOC_SUB = 1;
+
+  /**
+   * The feature id for the '<em><b>Skip</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__SKIP = 2;
+
+  /**
+   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__ASSERT_SUB = 3;
+
+  /**
+   * The feature id for the '<em><b>If Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__IF_SUB = 4;
+
+  /**
+   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__BECOMES_SUCH_THAT = 5;
+
+  /**
+   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__ASSIGNEMENT_SUB = 6;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__SELECT = 7;
+
+  /**
+   * The feature id for the '<em><b>Case Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__CASE_SUB = 8;
+
+  /**
+   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__ANY_SUB = 9;
+
+  /**
+   * The feature id for the '<em><b>LET Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__LET_SUB = 10;
+
+  /**
+   * The feature id for the '<em><b>Becomes In</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__BECOMES_IN = 11;
+
+  /**
+   * The feature id for the '<em><b>VARIN</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__VARIN = 12;
+
+  /**
+   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__NARY_SUB = 13;
+
+  /**
+   * The feature id for the '<em><b>Operation Call</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__OPERATION_CALL = 14;
+
+  /**
+   * The feature id for the '<em><b>While</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE__WHILE = 15;
+
+  /**
+   * The number of structural features of the '<em>Else Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE_FEATURE_COUNT = 16;
+
+  /**
+   * The number of operations of the '<em>Else Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.ElseType1Impl <em>Else Type1</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.ElseType1Impl
+   * @see bxml.impl.BxmlPackageImpl#getElseType1()
+   * @generated
+   */
+  int ELSE_TYPE1 = 33;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE1__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Choice</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE1__CHOICE = 1;
+
+  /**
+   * The number of structural features of the '<em>Else Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE1_FEATURE_COUNT = 2;
+
+  /**
+   * The number of operations of the '<em>Else Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE1_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.ElseType2Impl <em>Else Type2</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.ElseType2Impl
+   * @see bxml.impl.BxmlPackageImpl#getElseType2()
+   * @generated
+   */
+  int ELSE_TYPE2 = 34;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__BLOC_SUB = 1;
+
+  /**
+   * The feature id for the '<em><b>Skip</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__SKIP = 2;
+
+  /**
+   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__ASSERT_SUB = 3;
+
+  /**
+   * The feature id for the '<em><b>If Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__IF_SUB = 4;
+
+  /**
+   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__BECOMES_SUCH_THAT = 5;
+
+  /**
+   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__ASSIGNEMENT_SUB = 6;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__SELECT = 7;
+
+  /**
+   * The feature id for the '<em><b>Case Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__CASE_SUB = 8;
+
+  /**
+   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__ANY_SUB = 9;
+
+  /**
+   * The feature id for the '<em><b>LET Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__LET_SUB = 10;
+
+  /**
+   * The feature id for the '<em><b>Becomes In</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__BECOMES_IN = 11;
+
+  /**
+   * The feature id for the '<em><b>VARIN</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__VARIN = 12;
+
+  /**
+   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__NARY_SUB = 13;
+
+  /**
+   * The feature id for the '<em><b>Operation Call</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__OPERATION_CALL = 14;
+
+  /**
+   * The feature id for the '<em><b>While</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2__WHILE = 15;
+
+  /**
+   * The number of structural features of the '<em>Else Type2</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2_FEATURE_COUNT = 16;
+
+  /**
+   * The number of operations of the '<em>Else Type2</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_TYPE2_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.EmptySeqTypeImpl <em>Empty Seq Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.EmptySeqTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getEmptySeqType()
+   * @generated
+   */
+  int EMPTY_SEQ_TYPE = 35;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EMPTY_SEQ_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EMPTY_SEQ_TYPE__TYPREF = 1;
+
+  /**
+   * The number of structural features of the '<em>Empty Seq Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EMPTY_SEQ_TYPE_FEATURE_COUNT = 2;
+
+  /**
+   * The number of operations of the '<em>Empty Seq Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EMPTY_SEQ_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.EmptySetTypeImpl <em>Empty Set Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.EmptySetTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getEmptySetType()
+   * @generated
+   */
+  int EMPTY_SET_TYPE = 36;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EMPTY_SET_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EMPTY_SET_TYPE__TYPREF = 1;
+
+  /**
+   * The number of structural features of the '<em>Empty Set Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EMPTY_SET_TYPE_FEATURE_COUNT = 2;
+
+  /**
+   * The number of operations of the '<em>Empty Set Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EMPTY_SET_TYPE_OPERATION_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link bxml.impl.EnumeratedValuesTypeImpl <em>Enumerated Values Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1824,7 +4271,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getEnumeratedValuesType()
    * @generated
    */
-  int ENUMERATED_VALUES_TYPE = 20;
+  int ENUMERATED_VALUES_TYPE = 37;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference list.
@@ -1861,7 +4308,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getExpComparisonType()
    * @generated
    */
-  int EXP_COMPARISON_TYPE = 21;
+  int EXP_COMPARISON_TYPE = 38;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -2152,14 +4599,14 @@ public interface BxmlPackage extends EPackage {
   int EXP_COMPARISON_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.ExpTypeImpl <em>Exp Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.ExtendsTypeImpl <em>Extends Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.ExpTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getExpType()
+   * @see bxml.impl.ExtendsTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getExtendsType()
    * @generated
    */
-  int EXP_TYPE = 22;
+  int EXTENDS_TYPE = 39;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -2168,161 +4615,44 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int EXP_TYPE__ATTR = 0;
+  int EXTENDS_TYPE__ATTR = 0;
 
   /**
-   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
+   * The feature id for the '<em><b>Referenced Machine</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP_TYPE__BINARY_EXP = 1;
+  int EXTENDS_TYPE__REFERENCED_MACHINE = 1;
 
   /**
-   * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
+   * The number of structural features of the '<em>Extends Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP_TYPE__NARY_EXP = 2;
+  int EXTENDS_TYPE_FEATURE_COUNT = 2;
 
   /**
-   * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
+   * The number of operations of the '<em>Extends Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP_TYPE__BOOLEAN_LITERAL = 3;
+  int EXTENDS_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
+   * The meta object id for the '{@link bxml.impl.GuardTypeImpl <em>Guard Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__BOOLEAN_EXP = 4;
-
-  /**
-   * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__EMPTY_SET = 5;
-
-  /**
-   * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__EMPTY_SEQ = 6;
-
-  /**
-   * The feature id for the '<em><b>Id</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__ID = 7;
-
-  /**
-   * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__INTEGER_LITERAL = 8;
-
-  /**
-   * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__QUANTIFIED_EXP = 9;
-
-  /**
-   * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__QUANTIFIED_SET = 10;
-
-  /**
-   * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__STRING_LITERAL = 11;
-
-  /**
-   * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__UNARY_EXP = 12;
-
-  /**
-   * The feature id for the '<em><b>Struct</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__STRUCT = 13;
-
-  /**
-   * The feature id for the '<em><b>Record</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE__RECORD = 14;
-
-  /**
-   * The number of structural features of the '<em>Exp Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE_FEATURE_COUNT = 15;
-
-  /**
-   * The number of operations of the '<em>Exp Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP_TYPE_OPERATION_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link bxml.impl.IdentifierTypeImpl <em>Identifier Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see bxml.impl.IdentifierTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getIdentifierType()
+   * @see bxml.impl.GuardTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getGuardType()
    * @generated
    */
-  int IDENTIFIER_TYPE = 23;
+  int GUARD_TYPE = 40;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -2331,7 +4661,116 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int IDENTIFIER_TYPE__ATTR = 0;
+  int GUARD_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUARD_TYPE__BINARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUARD_TYPE__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUARD_TYPE__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUARD_TYPE__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUARD_TYPE__EXP_COMPARISON = 5;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUARD_TYPE__SET = 6;
+
+  /**
+   * The number of structural features of the '<em>Guard Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUARD_TYPE_FEATURE_COUNT = 7;
+
+  /**
+   * The number of operations of the '<em>Guard Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUARD_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.IdentifierImpl <em>Identifier</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.IdentifierImpl
+   * @see bxml.impl.BxmlPackageImpl#getIdentifier()
+   * @generated
+   */
+  int IDENTIFIER = 41;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENTIFIER__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Component</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENTIFIER__COMPONENT = 1;
+
+  /**
+   * The feature id for the '<em><b>Instance</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENTIFIER__INSTANCE = 2;
 
   /**
    * The feature id for the '<em><b>Suffix</b></em>' attribute.
@@ -2340,7 +4779,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int IDENTIFIER_TYPE__SUFFIX = 1;
+  int IDENTIFIER__SUFFIX = 3;
 
   /**
    * The feature id for the '<em><b>Typref</b></em>' attribute.
@@ -2349,7 +4788,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int IDENTIFIER_TYPE__TYPREF = 2;
+  int IDENTIFIER__TYPREF = 4;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2358,25 +4797,62 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int IDENTIFIER_TYPE__VALUE = 3;
+  int IDENTIFIER__VALUE = 5;
 
   /**
-   * The number of structural features of the '<em>Identifier Type</em>' class.
+   * The number of structural features of the '<em>Identifier</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IDENTIFIER_TYPE_FEATURE_COUNT = 4;
+  int IDENTIFIER_FEATURE_COUNT = 6;
 
   /**
-   * The number of operations of the '<em>Identifier Type</em>' class.
+   * The number of operations of the '<em>Identifier</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IDENTIFIER_TYPE_OPERATION_COUNT = 0;
+  int IDENTIFIER_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.IdTypeImpl <em>Id Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.IdTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getIdType()
+   * @generated
+   */
+  int ID_TYPE = 42;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ID_TYPE__VALUE = 0;
+
+  /**
+   * The number of structural features of the '<em>Id Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ID_TYPE_FEATURE_COUNT = 1;
+
+  /**
+   * The number of operations of the '<em>Id Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ID_TYPE_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link bxml.impl.IfSubTypeImpl <em>If Sub Type</em>}' class.
@@ -2386,7 +4862,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getIfSubType()
    * @generated
    */
-  int IF_SUB_TYPE = 24;
+  int IF_SUB_TYPE = 43;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -2452,50 +4928,268 @@ public interface BxmlPackage extends EPackage {
   int IF_SUB_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.InfoTypeTypeImpl <em>Info Type Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.ImportsTypeImpl <em>Imports Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.InfoTypeTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getInfoTypeType()
+   * @see bxml.impl.ImportsTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getImportsType()
    * @generated
    */
-  int INFO_TYPE_TYPE = 25;
+  int IMPORTS_TYPE = 44;
 
   /**
-   * The feature id for the '<em><b>Any</b></em>' attribute list.
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INFO_TYPE_TYPE__ANY = 0;
+  int IMPORTS_TYPE__ATTR = 0;
 
   /**
-   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * The feature id for the '<em><b>Referenced Machine</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INFO_TYPE_TYPE__ID = 1;
+  int IMPORTS_TYPE__REFERENCED_MACHINE = 1;
 
   /**
-   * The number of structural features of the '<em>Info Type Type</em>' class.
+   * The number of structural features of the '<em>Imports Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INFO_TYPE_TYPE_FEATURE_COUNT = 2;
+  int IMPORTS_TYPE_FEATURE_COUNT = 2;
 
   /**
-   * The number of operations of the '<em>Info Type Type</em>' class.
+   * The number of operations of the '<em>Imports Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INFO_TYPE_TYPE_OPERATION_COUNT = 0;
+  int IMPORTS_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.IncludesTypeImpl <em>Includes Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.IncludesTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getIncludesType()
+   * @generated
+   */
+  int INCLUDES_TYPE = 45;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDES_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Referenced Machine</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDES_TYPE__REFERENCED_MACHINE = 1;
+
+  /**
+   * The number of structural features of the '<em>Includes Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDES_TYPE_FEATURE_COUNT = 2;
+
+  /**
+   * The number of operations of the '<em>Includes Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDES_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.InitialisationTypeImpl <em>Initialisation Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.InitialisationTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getInitialisationType()
+   * @generated
+   */
+  int INITIALISATION_TYPE = 46;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__BLOC_SUB = 1;
+
+  /**
+   * The feature id for the '<em><b>Skip</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__SKIP = 2;
+
+  /**
+   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__ASSERT_SUB = 3;
+
+  /**
+   * The feature id for the '<em><b>If Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__IF_SUB = 4;
+
+  /**
+   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__BECOMES_SUCH_THAT = 5;
+
+  /**
+   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__ASSIGNEMENT_SUB = 6;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__SELECT = 7;
+
+  /**
+   * The feature id for the '<em><b>Case Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__CASE_SUB = 8;
+
+  /**
+   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__ANY_SUB = 9;
+
+  /**
+   * The feature id for the '<em><b>LET Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__LET_SUB = 10;
+
+  /**
+   * The feature id for the '<em><b>Becomes In</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__BECOMES_IN = 11;
+
+  /**
+   * The feature id for the '<em><b>VARIN</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__VARIN = 12;
+
+  /**
+   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__NARY_SUB = 13;
+
+  /**
+   * The feature id for the '<em><b>Operation Call</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__OPERATION_CALL = 14;
+
+  /**
+   * The feature id for the '<em><b>While</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE__WHILE = 15;
+
+  /**
+   * The number of structural features of the '<em>Initialisation Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE_FEATURE_COUNT = 16;
+
+  /**
+   * The number of operations of the '<em>Initialisation Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIALISATION_TYPE_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link bxml.impl.InputParametersTypeImpl <em>Input Parameters Type</em>}' class.
@@ -2505,7 +5199,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getInputParametersType()
    * @generated
    */
-  int INPUT_PARAMETERS_TYPE = 26;
+  int INPUT_PARAMETERS_TYPE = 47;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference list.
@@ -2535,6 +5229,324 @@ public interface BxmlPackage extends EPackage {
   int INPUT_PARAMETERS_TYPE_OPERATION_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link bxml.impl.InputParametersType1Impl <em>Input Parameters Type1</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.InputParametersType1Impl
+   * @see bxml.impl.BxmlPackageImpl#getInputParametersType1()
+   * @generated
+   */
+  int INPUT_PARAMETERS_TYPE1 = 48;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__EXPRESSION = 1;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__BINARY_EXP = 2;
+
+  /**
+   * The feature id for the '<em><b>Nary Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__NARY_EXP = 3;
+
+  /**
+   * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__BOOLEAN_LITERAL = 4;
+
+  /**
+   * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__BOOLEAN_EXP = 5;
+
+  /**
+   * The feature id for the '<em><b>Empty Set</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__EMPTY_SET = 6;
+
+  /**
+   * The feature id for the '<em><b>Empty Seq</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__EMPTY_SEQ = 7;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__ID = 8;
+
+  /**
+   * The feature id for the '<em><b>Integer Literal</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__INTEGER_LITERAL = 9;
+
+  /**
+   * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__QUANTIFIED_EXP = 10;
+
+  /**
+   * The feature id for the '<em><b>Quantified Set</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__QUANTIFIED_SET = 11;
+
+  /**
+   * The feature id for the '<em><b>STRING Literal</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__STRING_LITERAL = 12;
+
+  /**
+   * The feature id for the '<em><b>Unary Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__UNARY_EXP = 13;
+
+  /**
+   * The feature id for the '<em><b>Struct</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__STRUCT = 14;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1__RECORD = 15;
+
+  /**
+   * The number of structural features of the '<em>Input Parameters Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1_FEATURE_COUNT = 16;
+
+  /**
+   * The number of operations of the '<em>Input Parameters Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_PARAMETERS_TYPE1_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.IntegerLiteralTypeImpl <em>Integer Literal Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.IntegerLiteralTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getIntegerLiteralType()
+   * @generated
+   */
+  int INTEGER_LITERAL_TYPE = 49;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER_LITERAL_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER_LITERAL_TYPE__TYPREF = 1;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER_LITERAL_TYPE__VALUE = 2;
+
+  /**
+   * The number of structural features of the '<em>Integer Literal Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER_LITERAL_TYPE_FEATURE_COUNT = 3;
+
+  /**
+   * The number of operations of the '<em>Integer Literal Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER_LITERAL_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.InvariantTypeImpl <em>Invariant Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.InvariantTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getInvariantType()
+   * @generated
+   */
+  int INVARIANT_TYPE = 50;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INVARIANT_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INVARIANT_TYPE__BINARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INVARIANT_TYPE__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INVARIANT_TYPE__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INVARIANT_TYPE__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INVARIANT_TYPE__EXP_COMPARISON = 5;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INVARIANT_TYPE__SET = 6;
+
+  /**
+   * The number of structural features of the '<em>Invariant Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INVARIANT_TYPE_FEATURE_COUNT = 7;
+
+  /**
+   * The number of operations of the '<em>Invariant Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INVARIANT_TYPE_OPERATION_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link bxml.impl.LETSubTypeImpl <em>LET Sub Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2542,7 +5554,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getLETSubType()
    * @generated
    */
-  int LET_SUB_TYPE = 27;
+  int LET_SUB_TYPE = 51;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -2599,14 +5611,14 @@ public interface BxmlPackage extends EPackage {
   int LET_SUB_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.LiteralTypeImpl <em>Literal Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.LocalOperationsTypeImpl <em>Local Operations Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.LiteralTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getLiteralType()
+   * @see bxml.impl.LocalOperationsTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getLocalOperationsType()
    * @generated
    */
-  int LITERAL_TYPE = 28;
+  int LOCAL_OPERATIONS_TYPE = 52;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -2615,53 +5627,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int LITERAL_TYPE__ATTR = 0;
-
-  /**
-   * The feature id for the '<em><b>Typref</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_TYPE__TYPREF = 1;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_TYPE__VALUE = 2;
-
-  /**
-   * The number of structural features of the '<em>Literal Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_TYPE_FEATURE_COUNT = 3;
-
-  /**
-   * The number of operations of the '<em>Literal Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_TYPE_OPERATION_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link bxml.impl.LocalOperationsTypeImpl <em>Local Operations Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see bxml.impl.LocalOperationsTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getLocalOperationsType()
-   * @generated
-   */
-  int LOCAL_OPERATIONS_TYPE = 29;
+  int LOCAL_OPERATIONS_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Operation</b></em>' containment reference list.
@@ -2670,7 +5636,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int LOCAL_OPERATIONS_TYPE__OPERATION = 0;
+  int LOCAL_OPERATIONS_TYPE__OPERATION = 1;
 
   /**
    * The number of structural features of the '<em>Local Operations Type</em>' class.
@@ -2679,7 +5645,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int LOCAL_OPERATIONS_TYPE_FEATURE_COUNT = 1;
+  int LOCAL_OPERATIONS_TYPE_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>Local Operations Type</em>' class.
@@ -2691,14 +5657,23 @@ public interface BxmlPackage extends EPackage {
   int LOCAL_OPERATIONS_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.MachineType1Impl <em>Machine Type1</em>}' class.
+   * The meta object id for the '{@link bxml.impl.MachineTypeImpl <em>Machine Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.MachineType1Impl
-   * @see bxml.impl.BxmlPackageImpl#getMachineType1()
+   * @see bxml.impl.MachineTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getMachineType()
    * @generated
    */
-  int MACHINE_TYPE1 = 30;
+  int MACHINE_TYPE = 53;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MACHINE_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Abstraction</b></em>' containment reference.
@@ -2707,7 +5682,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__ABSTRACTION = 0;
+  int MACHINE_TYPE__ABSTRACTION = 1;
 
   /**
    * The feature id for the '<em><b>Parameters</b></em>' containment reference.
@@ -2716,7 +5691,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__PARAMETERS = 1;
+  int MACHINE_TYPE__PARAMETERS = 2;
 
   /**
    * The feature id for the '<em><b>Constraints</b></em>' containment reference.
@@ -2725,7 +5700,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__CONSTRAINTS = 2;
+  int MACHINE_TYPE__CONSTRAINTS = 3;
 
   /**
    * The feature id for the '<em><b>Includes</b></em>' containment reference.
@@ -2734,7 +5709,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__INCLUDES = 3;
+  int MACHINE_TYPE__INCLUDES = 4;
 
   /**
    * The feature id for the '<em><b>Imports</b></em>' containment reference.
@@ -2743,25 +5718,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__IMPORTS = 4;
-
-  /**
-   * The feature id for the '<em><b>Extends</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MACHINE_TYPE1__EXTENDS = 5;
-
-  /**
-   * The feature id for the '<em><b>Uses</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MACHINE_TYPE1__USES = 6;
+  int MACHINE_TYPE__IMPORTS = 5;
 
   /**
    * The feature id for the '<em><b>Sees</b></em>' containment reference.
@@ -2770,7 +5727,25 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__SEES = 7;
+  int MACHINE_TYPE__SEES = 6;
+
+  /**
+   * The feature id for the '<em><b>Extends</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MACHINE_TYPE__EXTENDS = 7;
+
+  /**
+   * The feature id for the '<em><b>Uses</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MACHINE_TYPE__USES = 8;
 
   /**
    * The feature id for the '<em><b>Promotes</b></em>' containment reference.
@@ -2779,7 +5754,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__PROMOTES = 8;
+  int MACHINE_TYPE__PROMOTES = 9;
 
   /**
    * The feature id for the '<em><b>Values</b></em>' containment reference.
@@ -2788,7 +5763,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__VALUES = 9;
+  int MACHINE_TYPE__VALUES = 10;
 
   /**
    * The feature id for the '<em><b>Sets</b></em>' containment reference.
@@ -2797,7 +5772,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__SETS = 10;
+  int MACHINE_TYPE__SETS = 11;
 
   /**
    * The feature id for the '<em><b>Abstract Constants</b></em>' containment reference.
@@ -2806,7 +5781,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__ABSTRACT_CONSTANTS = 11;
+  int MACHINE_TYPE__ABSTRACT_CONSTANTS = 12;
 
   /**
    * The feature id for the '<em><b>Concrete Constants</b></em>' containment reference.
@@ -2815,7 +5790,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__CONCRETE_CONSTANTS = 12;
+  int MACHINE_TYPE__CONCRETE_CONSTANTS = 13;
 
   /**
    * The feature id for the '<em><b>Abstract Variables</b></em>' containment reference.
@@ -2824,7 +5799,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__ABSTRACT_VARIABLES = 13;
+  int MACHINE_TYPE__ABSTRACT_VARIABLES = 14;
 
   /**
    * The feature id for the '<em><b>Concrete Variables</b></em>' containment reference.
@@ -2833,7 +5808,16 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__CONCRETE_VARIABLES = 14;
+  int MACHINE_TYPE__CONCRETE_VARIABLES = 15;
+
+  /**
+   * The feature id for the '<em><b>Variant</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MACHINE_TYPE__VARIANT = 16;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference.
@@ -2842,7 +5826,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__PROPERTIES = 15;
+  int MACHINE_TYPE__PROPERTIES = 17;
 
   /**
    * The feature id for the '<em><b>Invariant</b></em>' containment reference.
@@ -2851,7 +5835,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__INVARIANT = 16;
+  int MACHINE_TYPE__INVARIANT = 18;
 
   /**
    * The feature id for the '<em><b>Initialisation</b></em>' containment reference.
@@ -2860,7 +5844,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__INITIALISATION = 17;
+  int MACHINE_TYPE__INITIALISATION = 19;
 
   /**
    * The feature id for the '<em><b>Assertions</b></em>' containment reference.
@@ -2869,7 +5853,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__ASSERTIONS = 18;
+  int MACHINE_TYPE__ASSERTIONS = 20;
 
   /**
    * The feature id for the '<em><b>Local Operations</b></em>' containment reference.
@@ -2878,7 +5862,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__LOCAL_OPERATIONS = 19;
+  int MACHINE_TYPE__LOCAL_OPERATIONS = 21;
 
   /**
    * The feature id for the '<em><b>Operations</b></em>' containment reference.
@@ -2887,7 +5871,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__OPERATIONS = 20;
+  int MACHINE_TYPE__OPERATIONS = 22;
 
   /**
    * The feature id for the '<em><b>Type Infos</b></em>' containment reference.
@@ -2896,7 +5880,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__TYPE_INFOS = 21;
+  int MACHINE_TYPE__TYPE_INFOS = 23;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2905,7 +5889,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__NAME = 22;
+  int MACHINE_TYPE__NAME = 24;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2914,25 +5898,25 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1__TYPE = 23;
+  int MACHINE_TYPE__TYPE = 25;
 
   /**
-   * The number of structural features of the '<em>Machine Type1</em>' class.
+   * The number of structural features of the '<em>Machine Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1_FEATURE_COUNT = 24;
+  int MACHINE_TYPE_FEATURE_COUNT = 26;
 
   /**
-   * The number of operations of the '<em>Machine Type1</em>' class.
+   * The number of operations of the '<em>Machine Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MACHINE_TYPE1_OPERATION_COUNT = 0;
+  int MACHINE_TYPE_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link bxml.impl.NameTypeImpl <em>Name Type</em>}' class.
@@ -2942,16 +5926,25 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getNameType()
    * @generated
    */
-  int NAME_TYPE = 31;
+  int NAME_TYPE = 54;
 
   /**
-   * The feature id for the '<em><b>Id</b></em>' containment reference list.
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NAME_TYPE__ID = 0;
+  int NAME_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAME_TYPE__ID = 1;
 
   /**
    * The number of structural features of the '<em>Name Type</em>' class.
@@ -2960,7 +5953,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NAME_TYPE_FEATURE_COUNT = 1;
+  int NAME_TYPE_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>Name Type</em>' class.
@@ -2979,16 +5972,25 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getNaryExpType()
    * @generated
    */
-  int NARY_EXP_TYPE = 32;
+  int NARY_EXP_TYPE = 55;
 
   /**
-   * The feature id for the '<em><b>Exp</b></em>' attribute list.
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__EXP = 0;
+  int NARY_EXP_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_EXP_TYPE__EXPRESSION = 1;
 
   /**
    * The feature id for the '<em><b>Binary Exp</b></em>' containment reference list.
@@ -2997,7 +5999,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__BINARY_EXP = 1;
+  int NARY_EXP_TYPE__BINARY_EXP = 2;
 
   /**
    * The feature id for the '<em><b>Nary Exp</b></em>' containment reference list.
@@ -3006,7 +6008,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__NARY_EXP = 2;
+  int NARY_EXP_TYPE__NARY_EXP = 3;
 
   /**
    * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference list.
@@ -3015,7 +6017,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__BOOLEAN_LITERAL = 3;
+  int NARY_EXP_TYPE__BOOLEAN_LITERAL = 4;
 
   /**
    * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference list.
@@ -3024,7 +6026,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__BOOLEAN_EXP = 4;
+  int NARY_EXP_TYPE__BOOLEAN_EXP = 5;
 
   /**
    * The feature id for the '<em><b>Empty Set</b></em>' containment reference list.
@@ -3033,7 +6035,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__EMPTY_SET = 5;
+  int NARY_EXP_TYPE__EMPTY_SET = 6;
 
   /**
    * The feature id for the '<em><b>Empty Seq</b></em>' containment reference list.
@@ -3042,7 +6044,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__EMPTY_SEQ = 6;
+  int NARY_EXP_TYPE__EMPTY_SEQ = 7;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference list.
@@ -3051,7 +6053,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__ID = 7;
+  int NARY_EXP_TYPE__ID = 8;
 
   /**
    * The feature id for the '<em><b>Integer Literal</b></em>' containment reference list.
@@ -3060,7 +6062,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__INTEGER_LITERAL = 8;
+  int NARY_EXP_TYPE__INTEGER_LITERAL = 9;
 
   /**
    * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference list.
@@ -3069,7 +6071,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__QUANTIFIED_EXP = 9;
+  int NARY_EXP_TYPE__QUANTIFIED_EXP = 10;
 
   /**
    * The feature id for the '<em><b>Quantified Set</b></em>' containment reference list.
@@ -3078,7 +6080,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__QUANTIFIED_SET = 10;
+  int NARY_EXP_TYPE__QUANTIFIED_SET = 11;
 
   /**
    * The feature id for the '<em><b>STRING Literal</b></em>' containment reference list.
@@ -3087,7 +6089,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__STRING_LITERAL = 11;
+  int NARY_EXP_TYPE__STRING_LITERAL = 12;
 
   /**
    * The feature id for the '<em><b>Unary Exp</b></em>' containment reference list.
@@ -3096,7 +6098,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__UNARY_EXP = 12;
+  int NARY_EXP_TYPE__UNARY_EXP = 13;
 
   /**
    * The feature id for the '<em><b>Struct</b></em>' containment reference list.
@@ -3105,7 +6107,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__STRUCT = 13;
+  int NARY_EXP_TYPE__STRUCT = 14;
 
   /**
    * The feature id for the '<em><b>Record</b></em>' containment reference list.
@@ -3114,7 +6116,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__RECORD = 14;
+  int NARY_EXP_TYPE__RECORD = 15;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -3123,7 +6125,16 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE__OP = 15;
+  int NARY_EXP_TYPE__OP = 16;
+
+  /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_EXP_TYPE__TYPREF = 17;
 
   /**
    * The number of structural features of the '<em>Nary Exp Type</em>' class.
@@ -3132,7 +6143,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_EXP_TYPE_FEATURE_COUNT = 16;
+  int NARY_EXP_TYPE_FEATURE_COUNT = 18;
 
   /**
    * The number of operations of the '<em>Nary Exp Type</em>' class.
@@ -3144,114 +6155,14 @@ public interface BxmlPackage extends EPackage {
   int NARY_EXP_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.NaryPredicateTypeImpl <em>Nary Predicate Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.NaryPredTypeImpl <em>Nary Pred Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.NaryPredicateTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getNaryPredicateType()
+   * @see bxml.impl.NaryPredTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getNaryPredType()
    * @generated
    */
-  int NARY_PREDICATE_TYPE = 33;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_PREDICATE_TYPE__PRED = 0;
-
-  /**
-   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_PREDICATE_TYPE__BINARY_PRED = 1;
-
-  /**
-   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_PREDICATE_TYPE__EXP_COMPARISON = 2;
-
-  /**
-   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_PREDICATE_TYPE__QUANTIFIED_PRED = 3;
-
-  /**
-   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_PREDICATE_TYPE__UNARY_PRED = 4;
-
-  /**
-   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_PREDICATE_TYPE__NARY_PRED = 5;
-
-  /**
-   * The feature id for the '<em><b>Set</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_PREDICATE_TYPE__SET = 6;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_PREDICATE_TYPE__OP = 7;
-
-  /**
-   * The number of structural features of the '<em>Nary Predicate Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_PREDICATE_TYPE_FEATURE_COUNT = 8;
-
-  /**
-   * The number of operations of the '<em>Nary Predicate Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_PREDICATE_TYPE_OPERATION_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link bxml.impl.NarySubstitutionTypeImpl <em>Nary Substitution Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see bxml.impl.NarySubstitutionTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getNarySubstitutionType()
-   * @generated
-   */
-  int NARY_SUBSTITUTION_TYPE = 34;
+  int NARY_PRED_TYPE = 56;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -3260,160 +6171,70 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE__ATTR = 0;
+  int NARY_PRED_TYPE__ATTR = 0;
 
   /**
-   * The feature id for the '<em><b>Sub</b></em>' attribute list.
+   * The feature id for the '<em><b>Predicate</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE__SUB = 1;
+  int NARY_PRED_TYPE__PREDICATE = 1;
 
   /**
-   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference list.
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE__BLOC_SUB = 2;
+  int NARY_PRED_TYPE__BINARY_PRED = 2;
 
   /**
-   * The feature id for the '<em><b>Skip</b></em>' containment reference list.
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE__SKIP = 3;
+  int NARY_PRED_TYPE__NARY_PRED = 3;
 
   /**
-   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference list.
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE__ASSERT_SUB = 4;
+  int NARY_PRED_TYPE__UNARY_PRED = 4;
 
   /**
-   * The feature id for the '<em><b>If Sub</b></em>' containment reference list.
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE__IF_SUB = 5;
+  int NARY_PRED_TYPE__QUANTIFIED_PRED = 5;
 
   /**
-   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference list.
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE__BECOMES_SUCH_THAT = 6;
+  int NARY_PRED_TYPE__EXP_COMPARISON = 6;
 
   /**
-   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference list.
+   * The feature id for the '<em><b>Set</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE__ASSIGNEMENT_SUB = 7;
-
-  /**
-   * The feature id for the '<em><b>Select</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_SUBSTITUTION_TYPE__SELECT = 8;
-
-  /**
-   * The feature id for the '<em><b>Case Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_SUBSTITUTION_TYPE__CASE_SUB = 9;
-
-  /**
-   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_SUBSTITUTION_TYPE__ANY_SUB = 10;
-
-  /**
-   * The feature id for the '<em><b>LET Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_SUBSTITUTION_TYPE__LET_SUB = 11;
-
-  /**
-   * The feature id for the '<em><b>Becomes In</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_SUBSTITUTION_TYPE__BECOMES_IN = 12;
-
-  /**
-   * The feature id for the '<em><b>VARIN</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_SUBSTITUTION_TYPE__VARIN = 13;
-
-  /**
-   * The feature id for the '<em><b>Binary Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_SUBSTITUTION_TYPE__BINARY_SUB = 14;
-
-  /**
-   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_SUBSTITUTION_TYPE__NARY_SUB = 15;
-
-  /**
-   * The feature id for the '<em><b>Operation Call</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_SUBSTITUTION_TYPE__OPERATION_CALL = 16;
-
-  /**
-   * The feature id for the '<em><b>While</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NARY_SUBSTITUTION_TYPE__WHILE = 17;
+  int NARY_PRED_TYPE__SET = 7;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -3422,25 +6243,215 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE__OP = 18;
+  int NARY_PRED_TYPE__OP = 8;
 
   /**
-   * The number of structural features of the '<em>Nary Substitution Type</em>' class.
+   * The number of structural features of the '<em>Nary Pred Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE_FEATURE_COUNT = 19;
+  int NARY_PRED_TYPE_FEATURE_COUNT = 9;
 
   /**
-   * The number of operations of the '<em>Nary Substitution Type</em>' class.
+   * The number of operations of the '<em>Nary Pred Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NARY_SUBSTITUTION_TYPE_OPERATION_COUNT = 0;
+  int NARY_PRED_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.NarySubTypeImpl <em>Nary Sub Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.NarySubTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getNarySubType()
+   * @generated
+   */
+  int NARY_SUB_TYPE = 57;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Substitution</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__SUBSTITUTION = 1;
+
+  /**
+   * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__BLOC_SUB = 2;
+
+  /**
+   * The feature id for the '<em><b>Skip</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__SKIP = 3;
+
+  /**
+   * The feature id for the '<em><b>Assert Sub</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__ASSERT_SUB = 4;
+
+  /**
+   * The feature id for the '<em><b>If Sub</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__IF_SUB = 5;
+
+  /**
+   * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__BECOMES_SUCH_THAT = 6;
+
+  /**
+   * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__ASSIGNEMENT_SUB = 7;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__SELECT = 8;
+
+  /**
+   * The feature id for the '<em><b>Case Sub</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__CASE_SUB = 9;
+
+  /**
+   * The feature id for the '<em><b>ANY Sub</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__ANY_SUB = 10;
+
+  /**
+   * The feature id for the '<em><b>LET Sub</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__LET_SUB = 11;
+
+  /**
+   * The feature id for the '<em><b>Becomes In</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__BECOMES_IN = 12;
+
+  /**
+   * The feature id for the '<em><b>VARIN</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__VARIN = 13;
+
+  /**
+   * The feature id for the '<em><b>Nary Sub</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__NARY_SUB = 14;
+
+  /**
+   * The feature id for the '<em><b>Operation Call</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__OPERATION_CALL = 15;
+
+  /**
+   * The feature id for the '<em><b>While</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__WHILE = 16;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE__OP = 17;
+
+  /**
+   * The number of structural features of the '<em>Nary Sub Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE_FEATURE_COUNT = 18;
+
+  /**
+   * The number of operations of the '<em>Nary Sub Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NARY_SUB_TYPE_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link bxml.impl.OperationCallTypeImpl <em>Operation Call Type</em>}' class.
@@ -3450,7 +6461,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getOperationCallType()
    * @generated
    */
-  int OPERATION_CALL_TYPE = 35;
+  int OPERATION_CALL_TYPE = 58;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -3489,22 +6500,13 @@ public interface BxmlPackage extends EPackage {
   int OPERATION_CALL_TYPE__OUTPUT_PARAMETERS = 3;
 
   /**
-   * The feature id for the '<em><b>Operation</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATION_CALL_TYPE__OPERATION = 4;
-
-  /**
    * The number of structural features of the '<em>Operation Call Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATION_CALL_TYPE_FEATURE_COUNT = 5;
+  int OPERATION_CALL_TYPE_FEATURE_COUNT = 4;
 
   /**
    * The number of operations of the '<em>Operation Call Type</em>' class.
@@ -3523,7 +6525,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getOperationsType()
    * @generated
    */
-  int OPERATIONS_TYPE = 36;
+  int OPERATIONS_TYPE = 59;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATIONS_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Operation</b></em>' containment reference list.
@@ -3532,7 +6543,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int OPERATIONS_TYPE__OPERATION = 0;
+  int OPERATIONS_TYPE__OPERATION = 1;
 
   /**
    * The number of structural features of the '<em>Operations Type</em>' class.
@@ -3541,7 +6552,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int OPERATIONS_TYPE_FEATURE_COUNT = 1;
+  int OPERATIONS_TYPE_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>Operations Type</em>' class.
@@ -3560,7 +6571,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getOperationType()
    * @generated
    */
-  int OPERATION_TYPE = 37;
+  int OPERATION_TYPE = 60;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -3651,7 +6662,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getOutputParametersType()
    * @generated
    */
-  int OUTPUT_PARAMETERS_TYPE = 38;
+  int OUTPUT_PARAMETERS_TYPE = 61;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference list.
@@ -3681,23 +6692,32 @@ public interface BxmlPackage extends EPackage {
   int OUTPUT_PARAMETERS_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.ParametersTypeImpl <em>Parameters Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.OutputParametersType1Impl <em>Output Parameters Type1</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.ParametersTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getParametersType()
+   * @see bxml.impl.OutputParametersType1Impl
+   * @see bxml.impl.BxmlPackageImpl#getOutputParametersType1()
    * @generated
    */
-  int PARAMETERS_TYPE = 39;
+  int OUTPUT_PARAMETERS_TYPE1 = 62;
 
   /**
-   * The feature id for the '<em><b>Exp</b></em>' attribute list.
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__EXP = 0;
+  int OUTPUT_PARAMETERS_TYPE1__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_PARAMETERS_TYPE1__EXPRESSION = 1;
 
   /**
    * The feature id for the '<em><b>Binary Exp</b></em>' containment reference list.
@@ -3706,7 +6726,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__BINARY_EXP = 1;
+  int OUTPUT_PARAMETERS_TYPE1__BINARY_EXP = 2;
 
   /**
    * The feature id for the '<em><b>Nary Exp</b></em>' containment reference list.
@@ -3715,7 +6735,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__NARY_EXP = 2;
+  int OUTPUT_PARAMETERS_TYPE1__NARY_EXP = 3;
 
   /**
    * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference list.
@@ -3724,7 +6744,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__BOOLEAN_LITERAL = 3;
+  int OUTPUT_PARAMETERS_TYPE1__BOOLEAN_LITERAL = 4;
 
   /**
    * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference list.
@@ -3733,7 +6753,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__BOOLEAN_EXP = 4;
+  int OUTPUT_PARAMETERS_TYPE1__BOOLEAN_EXP = 5;
 
   /**
    * The feature id for the '<em><b>Empty Set</b></em>' containment reference list.
@@ -3742,7 +6762,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__EMPTY_SET = 5;
+  int OUTPUT_PARAMETERS_TYPE1__EMPTY_SET = 6;
 
   /**
    * The feature id for the '<em><b>Empty Seq</b></em>' containment reference list.
@@ -3751,7 +6771,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__EMPTY_SEQ = 6;
+  int OUTPUT_PARAMETERS_TYPE1__EMPTY_SEQ = 7;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference list.
@@ -3760,7 +6780,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__ID = 7;
+  int OUTPUT_PARAMETERS_TYPE1__ID = 8;
 
   /**
    * The feature id for the '<em><b>Integer Literal</b></em>' containment reference list.
@@ -3769,7 +6789,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__INTEGER_LITERAL = 8;
+  int OUTPUT_PARAMETERS_TYPE1__INTEGER_LITERAL = 9;
 
   /**
    * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference list.
@@ -3778,7 +6798,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__QUANTIFIED_EXP = 9;
+  int OUTPUT_PARAMETERS_TYPE1__QUANTIFIED_EXP = 10;
 
   /**
    * The feature id for the '<em><b>Quantified Set</b></em>' containment reference list.
@@ -3787,7 +6807,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__QUANTIFIED_SET = 10;
+  int OUTPUT_PARAMETERS_TYPE1__QUANTIFIED_SET = 11;
 
   /**
    * The feature id for the '<em><b>STRING Literal</b></em>' containment reference list.
@@ -3796,7 +6816,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__STRING_LITERAL = 11;
+  int OUTPUT_PARAMETERS_TYPE1__STRING_LITERAL = 12;
 
   /**
    * The feature id for the '<em><b>Unary Exp</b></em>' containment reference list.
@@ -3805,7 +6825,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__UNARY_EXP = 12;
+  int OUTPUT_PARAMETERS_TYPE1__UNARY_EXP = 13;
 
   /**
    * The feature id for the '<em><b>Struct</b></em>' containment reference list.
@@ -3814,7 +6834,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__STRUCT = 13;
+  int OUTPUT_PARAMETERS_TYPE1__STRUCT = 14;
 
   /**
    * The feature id for the '<em><b>Record</b></em>' containment reference list.
@@ -3823,7 +6843,53 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE__RECORD = 14;
+  int OUTPUT_PARAMETERS_TYPE1__RECORD = 15;
+
+  /**
+   * The number of structural features of the '<em>Output Parameters Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_PARAMETERS_TYPE1_FEATURE_COUNT = 16;
+
+  /**
+   * The number of operations of the '<em>Output Parameters Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_PARAMETERS_TYPE1_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.ParametersTypeImpl <em>Parameters Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.ParametersTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getParametersType()
+   * @generated
+   */
+  int PARAMETERS_TYPE = 63;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE__ID = 1;
 
   /**
    * The number of structural features of the '<em>Parameters Type</em>' class.
@@ -3832,7 +6898,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE_FEATURE_COUNT = 15;
+  int PARAMETERS_TYPE_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>Parameters Type</em>' class.
@@ -3851,16 +6917,70 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getParametersType1()
    * @generated
    */
-  int PARAMETERS_TYPE1 = 40;
+  int PARAMETERS_TYPE1 = 64;
 
   /**
-   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * The feature id for the '<em><b>Expression</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE1__ATTR = 0;
+  int PARAMETERS_TYPE1__EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__BINARY_EXP = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__NARY_EXP = 2;
+
+  /**
+   * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__BOOLEAN_LITERAL = 3;
+
+  /**
+   * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__BOOLEAN_EXP = 4;
+
+  /**
+   * The feature id for the '<em><b>Empty Set</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__EMPTY_SET = 5;
+
+  /**
+   * The feature id for the '<em><b>Empty Seq</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__EMPTY_SEQ = 6;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference list.
@@ -3869,7 +6989,70 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE1__ID = 1;
+  int PARAMETERS_TYPE1__ID = 7;
+
+  /**
+   * The feature id for the '<em><b>Integer Literal</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__INTEGER_LITERAL = 8;
+
+  /**
+   * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__QUANTIFIED_EXP = 9;
+
+  /**
+   * The feature id for the '<em><b>Quantified Set</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__QUANTIFIED_SET = 10;
+
+  /**
+   * The feature id for the '<em><b>STRING Literal</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__STRING_LITERAL = 11;
+
+  /**
+   * The feature id for the '<em><b>Unary Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__UNARY_EXP = 12;
+
+  /**
+   * The feature id for the '<em><b>Struct</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__STRUCT = 13;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMETERS_TYPE1__RECORD = 14;
 
   /**
    * The number of structural features of the '<em>Parameters Type1</em>' class.
@@ -3878,7 +7061,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PARAMETERS_TYPE1_FEATURE_COUNT = 2;
+  int PARAMETERS_TYPE1_FEATURE_COUNT = 15;
 
   /**
    * The number of operations of the '<em>Parameters Type1</em>' class.
@@ -3890,23 +7073,14 @@ public interface BxmlPackage extends EPackage {
   int PARAMETERS_TYPE1_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.PredicateTypeImpl <em>Predicate Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.PreconditionTypeImpl <em>Precondition Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.PredicateTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getPredicateType()
+   * @see bxml.impl.PreconditionTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getPreconditionType()
    * @generated
    */
-  int PREDICATE_TYPE = 41;
-
-  /**
-   * The feature id for the '<em><b>Attr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PREDICATE_TYPE__ATTR = 0;
+  int PRECONDITION_TYPE = 65;
 
   /**
    * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
@@ -3915,34 +7089,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PREDICATE_TYPE__BINARY_PRED = 1;
-
-  /**
-   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PREDICATE_TYPE__EXP_COMPARISON = 2;
-
-  /**
-   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PREDICATE_TYPE__QUANTIFIED_PRED = 3;
-
-  /**
-   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PREDICATE_TYPE__UNARY_PRED = 4;
+  int PRECONDITION_TYPE__BINARY_PRED = 0;
 
   /**
    * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
@@ -3951,7 +7098,34 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PREDICATE_TYPE__NARY_PRED = 5;
+  int PRECONDITION_TYPE__NARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECONDITION_TYPE__UNARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECONDITION_TYPE__QUANTIFIED_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRECONDITION_TYPE__EXP_COMPARISON = 4;
 
   /**
    * The feature id for the '<em><b>Set</b></em>' containment reference.
@@ -3960,25 +7134,162 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PREDICATE_TYPE__SET = 6;
+  int PRECONDITION_TYPE__SET = 5;
 
   /**
-   * The number of structural features of the '<em>Predicate Type</em>' class.
+   * The number of structural features of the '<em>Precondition Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PREDICATE_TYPE_FEATURE_COUNT = 7;
+  int PRECONDITION_TYPE_FEATURE_COUNT = 6;
 
   /**
-   * The number of operations of the '<em>Predicate Type</em>' class.
+   * The number of operations of the '<em>Precondition Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PREDICATE_TYPE_OPERATION_COUNT = 0;
+  int PRECONDITION_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.PredTypeImpl <em>Pred Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.PredTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getPredType()
+   * @generated
+   */
+  int PRED_TYPE = 66;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRED_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRED_TYPE__BINARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRED_TYPE__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRED_TYPE__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRED_TYPE__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRED_TYPE__EXP_COMPARISON = 5;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRED_TYPE__SET = 6;
+
+  /**
+   * The number of structural features of the '<em>Pred Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRED_TYPE_FEATURE_COUNT = 7;
+
+  /**
+   * The number of operations of the '<em>Pred Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRED_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.PromotedOperationTypeImpl <em>Promoted Operation Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.PromotedOperationTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getPromotedOperationType()
+   * @generated
+   */
+  int PROMOTED_OPERATION_TYPE = 67;
+
+  /**
+   * The feature id for the '<em><b>Mixed</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROMOTED_OPERATION_TYPE__MIXED = 0;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROMOTED_OPERATION_TYPE__ATTR = 1;
+
+  /**
+   * The number of structural features of the '<em>Promoted Operation Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROMOTED_OPERATION_TYPE_FEATURE_COUNT = 2;
+
+  /**
+   * The number of operations of the '<em>Promoted Operation Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROMOTED_OPERATION_TYPE_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link bxml.impl.PromotesTypeImpl <em>Promotes Type</em>}' class.
@@ -3988,16 +7299,25 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getPromotesType()
    * @generated
    */
-  int PROMOTES_TYPE = 42;
+  int PROMOTES_TYPE = 68;
 
   /**
-   * The feature id for the '<em><b>Promoted Operation</b></em>' attribute list.
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROMOTES_TYPE__PROMOTED_OPERATION = 0;
+  int PROMOTES_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Promoted Operation</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROMOTES_TYPE__PROMOTED_OPERATION = 1;
 
   /**
    * The number of structural features of the '<em>Promotes Type</em>' class.
@@ -4006,7 +7326,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PROMOTES_TYPE_FEATURE_COUNT = 1;
+  int PROMOTES_TYPE_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>Promotes Type</em>' class.
@@ -4018,6 +7338,97 @@ public interface BxmlPackage extends EPackage {
   int PROMOTES_TYPE_OPERATION_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link bxml.impl.PropertiesTypeImpl <em>Properties Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.PropertiesTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getPropertiesType()
+   * @generated
+   */
+  int PROPERTIES_TYPE = 69;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_TYPE__BINARY_PRED = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_TYPE__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_TYPE__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_TYPE__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_TYPE__EXP_COMPARISON = 5;
+
+  /**
+   * The feature id for the '<em><b>Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_TYPE__SET = 6;
+
+  /**
+   * The number of structural features of the '<em>Properties Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_TYPE_FEATURE_COUNT = 7;
+
+  /**
+   * The number of operations of the '<em>Properties Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_TYPE_OPERATION_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link bxml.impl.QuantifiedExpTypeImpl <em>Quantified Exp Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4025,7 +7436,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getQuantifiedExpType()
    * @generated
    */
-  int QUANTIFIED_EXP_TYPE = 43;
+  int QUANTIFIED_EXP_TYPE = 70;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4073,13 +7484,22 @@ public interface BxmlPackage extends EPackage {
   int QUANTIFIED_EXP_TYPE__TYPE = 4;
 
   /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUANTIFIED_EXP_TYPE__TYPREF = 5;
+
+  /**
    * The number of structural features of the '<em>Quantified Exp Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUANTIFIED_EXP_TYPE_FEATURE_COUNT = 5;
+  int QUANTIFIED_EXP_TYPE_FEATURE_COUNT = 6;
 
   /**
    * The number of operations of the '<em>Quantified Exp Type</em>' class.
@@ -4098,7 +7518,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getQuantifiedPredType()
    * @generated
    */
-  int QUANTIFIED_PRED_TYPE = 44;
+  int QUANTIFIED_PRED_TYPE = 71;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4162,7 +7582,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getQuantifiedSetType()
    * @generated
    */
-  int QUANTIFIED_SET_TYPE = 45;
+  int QUANTIFIED_SET_TYPE = 72;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4192,13 +7612,22 @@ public interface BxmlPackage extends EPackage {
   int QUANTIFIED_SET_TYPE__BODY = 2;
 
   /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUANTIFIED_SET_TYPE__TYPREF = 3;
+
+  /**
    * The number of structural features of the '<em>Quantified Set Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUANTIFIED_SET_TYPE_FEATURE_COUNT = 3;
+  int QUANTIFIED_SET_TYPE_FEATURE_COUNT = 4;
 
   /**
    * The number of operations of the '<em>Quantified Set Type</em>' class.
@@ -4217,7 +7646,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getRecordItemType()
    * @generated
    */
-  int RECORD_ITEM_TYPE = 46;
+  int RECORD_ITEM_TYPE = 73;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RECORD_ITEM_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
@@ -4226,7 +7664,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__BINARY_EXP = 0;
+  int RECORD_ITEM_TYPE__BINARY_EXP = 1;
 
   /**
    * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
@@ -4235,7 +7673,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__NARY_EXP = 1;
+  int RECORD_ITEM_TYPE__NARY_EXP = 2;
 
   /**
    * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
@@ -4244,7 +7682,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__BOOLEAN_LITERAL = 2;
+  int RECORD_ITEM_TYPE__BOOLEAN_LITERAL = 3;
 
   /**
    * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
@@ -4253,7 +7691,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__BOOLEAN_EXP = 3;
+  int RECORD_ITEM_TYPE__BOOLEAN_EXP = 4;
 
   /**
    * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
@@ -4262,7 +7700,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__EMPTY_SET = 4;
+  int RECORD_ITEM_TYPE__EMPTY_SET = 5;
 
   /**
    * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
@@ -4271,7 +7709,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__EMPTY_SEQ = 5;
+  int RECORD_ITEM_TYPE__EMPTY_SEQ = 6;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference.
@@ -4280,7 +7718,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__ID = 6;
+  int RECORD_ITEM_TYPE__ID = 7;
 
   /**
    * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
@@ -4289,7 +7727,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__INTEGER_LITERAL = 7;
+  int RECORD_ITEM_TYPE__INTEGER_LITERAL = 8;
 
   /**
    * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
@@ -4298,7 +7736,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__QUANTIFIED_EXP = 8;
+  int RECORD_ITEM_TYPE__QUANTIFIED_EXP = 9;
 
   /**
    * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
@@ -4307,7 +7745,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__QUANTIFIED_SET = 9;
+  int RECORD_ITEM_TYPE__QUANTIFIED_SET = 10;
 
   /**
    * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
@@ -4316,7 +7754,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__STRING_LITERAL = 10;
+  int RECORD_ITEM_TYPE__STRING_LITERAL = 11;
 
   /**
    * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
@@ -4325,7 +7763,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__UNARY_EXP = 11;
+  int RECORD_ITEM_TYPE__UNARY_EXP = 12;
 
   /**
    * The feature id for the '<em><b>Struct</b></em>' containment reference.
@@ -4334,7 +7772,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__STRUCT = 12;
+  int RECORD_ITEM_TYPE__STRUCT = 13;
 
   /**
    * The feature id for the '<em><b>Record</b></em>' containment reference.
@@ -4343,7 +7781,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__RECORD = 13;
+  int RECORD_ITEM_TYPE__RECORD = 14;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -4352,7 +7790,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE__LABEL = 14;
+  int RECORD_ITEM_TYPE__LABEL = 15;
 
   /**
    * The number of structural features of the '<em>Record Item Type</em>' class.
@@ -4361,7 +7799,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int RECORD_ITEM_TYPE_FEATURE_COUNT = 15;
+  int RECORD_ITEM_TYPE_FEATURE_COUNT = 16;
 
   /**
    * The number of operations of the '<em>Record Item Type</em>' class.
@@ -4380,7 +7818,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getRecordType()
    * @generated
    */
-  int RECORD_TYPE = 47;
+  int RECORD_TYPE = 74;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4401,13 +7839,22 @@ public interface BxmlPackage extends EPackage {
   int RECORD_TYPE__RECORD_ITEM = 1;
 
   /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RECORD_TYPE__TYPREF = 2;
+
+  /**
    * The number of structural features of the '<em>Record Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RECORD_TYPE_FEATURE_COUNT = 2;
+  int RECORD_TYPE_FEATURE_COUNT = 3;
 
   /**
    * The number of operations of the '<em>Record Type</em>' class.
@@ -4426,7 +7873,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getReferencedMachineType()
    * @generated
    */
-  int REFERENCED_MACHINE_TYPE = 48;
+  int REFERENCED_MACHINE_TYPE = 75;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REFERENCED_MACHINE_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4435,7 +7891,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REFERENCED_MACHINE_TYPE__NAME = 0;
+  int REFERENCED_MACHINE_TYPE__NAME = 1;
 
   /**
    * The feature id for the '<em><b>Instance</b></em>' attribute.
@@ -4444,7 +7900,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REFERENCED_MACHINE_TYPE__INSTANCE = 1;
+  int REFERENCED_MACHINE_TYPE__INSTANCE = 2;
 
   /**
    * The feature id for the '<em><b>Parameters</b></em>' containment reference.
@@ -4453,16 +7909,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REFERENCED_MACHINE_TYPE__PARAMETERS = 2;
-
-  /**
-   * The feature id for the '<em><b>Path</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCED_MACHINE_TYPE__PATH = 3;
+  int REFERENCED_MACHINE_TYPE__PARAMETERS = 3;
 
   /**
    * The number of structural features of the '<em>Referenced Machine Type</em>' class.
@@ -4483,107 +7930,6 @@ public interface BxmlPackage extends EPackage {
   int REFERENCED_MACHINE_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.ReferencedMachineType1Impl <em>Referenced Machine Type1</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see bxml.impl.ReferencedMachineType1Impl
-   * @see bxml.impl.BxmlPackageImpl#getReferencedMachineType1()
-   * @generated
-   */
-  int REFERENCED_MACHINE_TYPE1 = 49;
-
-  /**
-   * The feature id for the '<em><b>Attr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCED_MACHINE_TYPE1__ATTR = 0;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCED_MACHINE_TYPE1__NAME = 1;
-
-  /**
-   * The feature id for the '<em><b>Rename</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCED_MACHINE_TYPE1__RENAME = 2;
-
-  /**
-   * The feature id for the '<em><b>Path</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCED_MACHINE_TYPE1__PATH = 3;
-
-  /**
-   * The number of structural features of the '<em>Referenced Machine Type1</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCED_MACHINE_TYPE1_FEATURE_COUNT = 4;
-
-  /**
-   * The number of operations of the '<em>Referenced Machine Type1</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCED_MACHINE_TYPE1_OPERATION_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link bxml.impl.ReferencedMachineType2Impl <em>Referenced Machine Type2</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see bxml.impl.ReferencedMachineType2Impl
-   * @see bxml.impl.BxmlPackageImpl#getReferencedMachineType2()
-   * @generated
-   */
-  int REFERENCED_MACHINE_TYPE2 = 50;
-
-  /**
-   * The feature id for the '<em><b>Referenced Machine</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCED_MACHINE_TYPE2__REFERENCED_MACHINE = 0;
-
-  /**
-   * The number of structural features of the '<em>Referenced Machine Type2</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCED_MACHINE_TYPE2_FEATURE_COUNT = 1;
-
-  /**
-   * The number of operations of the '<em>Referenced Machine Type2</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REFERENCED_MACHINE_TYPE2_OPERATION_COUNT = 0;
-
-  /**
    * The meta object id for the '{@link bxml.impl.RefinesTypeImpl <em>Refines Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4591,7 +7937,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getRefinesType()
    * @generated
    */
-  int REFINES_TYPE = 51;
+  int REFINES_TYPE = 76;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4637,7 +7983,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getSeesType()
    * @generated
    */
-  int SEES_TYPE = 52;
+  int SEES_TYPE = 77;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4683,7 +8029,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getSelectType()
    * @generated
    */
-  int SELECT_TYPE = 53;
+  int SELECT_TYPE = 78;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4738,7 +8084,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getSetsType()
    * @generated
    */
-  int SETS_TYPE = 54;
+  int SETS_TYPE = 79;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4784,7 +8130,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getSetType()
    * @generated
    */
-  int SET_TYPE = 55;
+  int SET_TYPE = 80;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4832,14 +8178,88 @@ public interface BxmlPackage extends EPackage {
   int SET_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.StringLiteralTypeImpl <em>String Literal Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.SetType1Impl <em>Set Type1</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.StringLiteralTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getStringLiteralType()
+   * @see bxml.impl.SetType1Impl
+   * @see bxml.impl.BxmlPackageImpl#getSetType1()
    * @generated
    */
-  int STRING_LITERAL_TYPE = 56;
+  int SET_TYPE1 = 81;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_TYPE1__ID = 0;
+
+  /**
+   * The number of structural features of the '<em>Set Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_TYPE1_FEATURE_COUNT = 1;
+
+  /**
+   * The number of operations of the '<em>Set Type1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_TYPE1_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.SkipTypeImpl <em>Skip Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.SkipTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getSkipType()
+   * @generated
+   */
+  int SKIP_TYPE = 82;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SKIP_TYPE__ATTR = 0;
+
+  /**
+   * The number of structural features of the '<em>Skip Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SKIP_TYPE_FEATURE_COUNT = 1;
+
+  /**
+   * The number of operations of the '<em>Skip Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SKIP_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.STRINGLiteralTypeImpl <em>STRING Literal Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.STRINGLiteralTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getSTRINGLiteralType()
+   * @generated
+   */
+  int STRING_LITERAL_TYPE = 83;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4869,7 +8289,7 @@ public interface BxmlPackage extends EPackage {
   int STRING_LITERAL_TYPE__VALUE = 2;
 
   /**
-   * The number of structural features of the '<em>String Literal Type</em>' class.
+   * The number of structural features of the '<em>STRING Literal Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -4878,7 +8298,7 @@ public interface BxmlPackage extends EPackage {
   int STRING_LITERAL_TYPE_FEATURE_COUNT = 3;
 
   /**
-   * The number of operations of the '<em>String Literal Type</em>' class.
+   * The number of operations of the '<em>STRING Literal Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -4894,7 +8314,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getStructType()
    * @generated
    */
-  int STRUCT_TYPE = 57;
+  int STRUCT_TYPE = 84;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4915,13 +8335,22 @@ public interface BxmlPackage extends EPackage {
   int STRUCT_TYPE__RECORD_ITEM = 1;
 
   /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRUCT_TYPE__TYPREF = 2;
+
+  /**
    * The number of structural features of the '<em>Struct Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STRUCT_TYPE_FEATURE_COUNT = 2;
+  int STRUCT_TYPE_FEATURE_COUNT = 3;
 
   /**
    * The number of operations of the '<em>Struct Type</em>' class.
@@ -4933,14 +8362,14 @@ public interface BxmlPackage extends EPackage {
   int STRUCT_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.SubstitutionTypeImpl <em>Substitution Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.ThenTypeImpl <em>Then Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.SubstitutionTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getSubstitutionType()
+   * @see bxml.impl.ThenTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getThenType()
    * @generated
    */
-  int SUBSTITUTION_TYPE = 58;
+  int THEN_TYPE = 85;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -4949,7 +8378,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__ATTR = 0;
+  int THEN_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Bloc Sub</b></em>' containment reference.
@@ -4958,7 +8387,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__BLOC_SUB = 1;
+  int THEN_TYPE__BLOC_SUB = 1;
 
   /**
    * The feature id for the '<em><b>Skip</b></em>' containment reference.
@@ -4967,7 +8396,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__SKIP = 2;
+  int THEN_TYPE__SKIP = 2;
 
   /**
    * The feature id for the '<em><b>Assert Sub</b></em>' containment reference.
@@ -4976,7 +8405,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__ASSERT_SUB = 3;
+  int THEN_TYPE__ASSERT_SUB = 3;
 
   /**
    * The feature id for the '<em><b>If Sub</b></em>' containment reference.
@@ -4985,7 +8414,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__IF_SUB = 4;
+  int THEN_TYPE__IF_SUB = 4;
 
   /**
    * The feature id for the '<em><b>Becomes Such That</b></em>' containment reference.
@@ -4994,7 +8423,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__BECOMES_SUCH_THAT = 5;
+  int THEN_TYPE__BECOMES_SUCH_THAT = 5;
 
   /**
    * The feature id for the '<em><b>Assignement Sub</b></em>' containment reference.
@@ -5003,7 +8432,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__ASSIGNEMENT_SUB = 6;
+  int THEN_TYPE__ASSIGNEMENT_SUB = 6;
 
   /**
    * The feature id for the '<em><b>Select</b></em>' containment reference.
@@ -5012,7 +8441,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__SELECT = 7;
+  int THEN_TYPE__SELECT = 7;
 
   /**
    * The feature id for the '<em><b>Case Sub</b></em>' containment reference.
@@ -5021,7 +8450,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__CASE_SUB = 8;
+  int THEN_TYPE__CASE_SUB = 8;
 
   /**
    * The feature id for the '<em><b>ANY Sub</b></em>' containment reference.
@@ -5030,7 +8459,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__ANY_SUB = 9;
+  int THEN_TYPE__ANY_SUB = 9;
 
   /**
    * The feature id for the '<em><b>LET Sub</b></em>' containment reference.
@@ -5039,7 +8468,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__LET_SUB = 10;
+  int THEN_TYPE__LET_SUB = 10;
 
   /**
    * The feature id for the '<em><b>Becomes In</b></em>' containment reference.
@@ -5048,7 +8477,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__BECOMES_IN = 11;
+  int THEN_TYPE__BECOMES_IN = 11;
 
   /**
    * The feature id for the '<em><b>VARIN</b></em>' containment reference.
@@ -5057,16 +8486,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__VARIN = 12;
-
-  /**
-   * The feature id for the '<em><b>Binary Sub</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SUBSTITUTION_TYPE__BINARY_SUB = 13;
+  int THEN_TYPE__VARIN = 12;
 
   /**
    * The feature id for the '<em><b>Nary Sub</b></em>' containment reference.
@@ -5075,7 +8495,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__NARY_SUB = 14;
+  int THEN_TYPE__NARY_SUB = 13;
 
   /**
    * The feature id for the '<em><b>Operation Call</b></em>' containment reference.
@@ -5084,7 +8504,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__OPERATION_CALL = 15;
+  int THEN_TYPE__OPERATION_CALL = 14;
 
   /**
    * The feature id for the '<em><b>While</b></em>' containment reference.
@@ -5093,62 +8513,107 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE__WHILE = 16;
+  int THEN_TYPE__WHILE = 15;
 
   /**
-   * The number of structural features of the '<em>Substitution Type</em>' class.
+   * The number of structural features of the '<em>Then Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE_FEATURE_COUNT = 17;
+  int THEN_TYPE_FEATURE_COUNT = 16;
 
   /**
-   * The number of operations of the '<em>Substitution Type</em>' class.
+   * The number of operations of the '<em>Then Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SUBSTITUTION_TYPE_OPERATION_COUNT = 0;
+  int THEN_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.TerminalTypeImpl <em>Terminal Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.TypeInfoImpl <em>Type Info</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.TerminalTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getTerminalType()
+   * @see bxml.impl.TypeInfoImpl
+   * @see bxml.impl.BxmlPackageImpl#getTypeInfo()
    * @generated
    */
-  int TERMINAL_TYPE = 59;
+  int TYPE_INFO = 86;
 
   /**
-   * The feature id for the '<em><b>Attr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TERMINAL_TYPE__ATTR = 0;
-
-  /**
-   * The number of structural features of the '<em>Terminal Type</em>' class.
+   * The feature id for the '<em><b>Id</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TERMINAL_TYPE_FEATURE_COUNT = 1;
+  int TYPE_INFO__ID = 0;
 
   /**
-   * The number of operations of the '<em>Terminal Type</em>' class.
+   * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TERMINAL_TYPE_OPERATION_COUNT = 0;
+  int TYPE_INFO__UNARY_EXP = 1;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_INFO__BINARY_EXP = 2;
+
+  /**
+   * The feature id for the '<em><b>Struct</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_INFO__STRUCT = 3;
+
+  /**
+   * The feature id for the '<em><b>Generic Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_INFO__GENERIC_TYPE = 4;
+
+  /**
+   * The feature id for the '<em><b>Id1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_INFO__ID1 = 5;
+
+  /**
+   * The number of structural features of the '<em>Type Info</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_INFO_FEATURE_COUNT = 6;
+
+  /**
+   * The number of operations of the '<em>Type Info</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_INFO_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link bxml.impl.TypeInfosTypeImpl <em>Type Infos Type</em>}' class.
@@ -5158,7 +8623,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getTypeInfosType()
    * @generated
    */
-  int TYPE_INFOS_TYPE = 60;
+  int TYPE_INFOS_TYPE = 87;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -5188,14 +8653,14 @@ public interface BxmlPackage extends EPackage {
   int TYPE_INFOS_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.impl.UnaryExpressionTypeImpl <em>Unary Expression Type</em>}' class.
+   * The meta object id for the '{@link bxml.impl.UnaryExpTypeImpl <em>Unary Exp Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.UnaryExpressionTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getUnaryExpressionType()
+   * @see bxml.impl.UnaryExpTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getUnaryExpType()
    * @generated
    */
-  int UNARY_EXPRESSION_TYPE = 61;
+  int UNARY_EXP_TYPE = 88;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -5204,7 +8669,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__ATTR = 0;
+  int UNARY_EXP_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
@@ -5213,7 +8678,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__BINARY_EXP = 1;
+  int UNARY_EXP_TYPE__BINARY_EXP = 1;
 
   /**
    * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
@@ -5222,7 +8687,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__NARY_EXP = 2;
+  int UNARY_EXP_TYPE__NARY_EXP = 2;
 
   /**
    * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
@@ -5231,7 +8696,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__BOOLEAN_LITERAL = 3;
+  int UNARY_EXP_TYPE__BOOLEAN_LITERAL = 3;
 
   /**
    * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
@@ -5240,7 +8705,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__BOOLEAN_EXP = 4;
+  int UNARY_EXP_TYPE__BOOLEAN_EXP = 4;
 
   /**
    * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
@@ -5249,7 +8714,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__EMPTY_SET = 5;
+  int UNARY_EXP_TYPE__EMPTY_SET = 5;
 
   /**
    * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
@@ -5258,7 +8723,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__EMPTY_SEQ = 6;
+  int UNARY_EXP_TYPE__EMPTY_SEQ = 6;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference.
@@ -5267,7 +8732,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__ID = 7;
+  int UNARY_EXP_TYPE__ID = 7;
 
   /**
    * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
@@ -5276,7 +8741,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__INTEGER_LITERAL = 8;
+  int UNARY_EXP_TYPE__INTEGER_LITERAL = 8;
 
   /**
    * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
@@ -5285,7 +8750,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__QUANTIFIED_EXP = 9;
+  int UNARY_EXP_TYPE__QUANTIFIED_EXP = 9;
 
   /**
    * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
@@ -5294,7 +8759,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__QUANTIFIED_SET = 10;
+  int UNARY_EXP_TYPE__QUANTIFIED_SET = 10;
 
   /**
    * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
@@ -5303,7 +8768,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__STRING_LITERAL = 11;
+  int UNARY_EXP_TYPE__STRING_LITERAL = 11;
 
   /**
    * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
@@ -5312,7 +8777,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__UNARY_EXP = 12;
+  int UNARY_EXP_TYPE__UNARY_EXP = 12;
 
   /**
    * The feature id for the '<em><b>Struct</b></em>' containment reference.
@@ -5321,7 +8786,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__STRUCT = 13;
+  int UNARY_EXP_TYPE__STRUCT = 13;
 
   /**
    * The feature id for the '<em><b>Record</b></em>' containment reference.
@@ -5330,7 +8795,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__RECORD = 14;
+  int UNARY_EXP_TYPE__RECORD = 14;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -5339,35 +8804,135 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE__OP = 15;
+  int UNARY_EXP_TYPE__OP = 15;
 
   /**
-   * The number of structural features of the '<em>Unary Expression Type</em>' class.
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE_FEATURE_COUNT = 16;
+  int UNARY_EXP_TYPE__TYPREF = 16;
 
   /**
-   * The number of operations of the '<em>Unary Expression Type</em>' class.
+   * The number of structural features of the '<em>Unary Exp Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION_TYPE_OPERATION_COUNT = 0;
+  int UNARY_EXP_TYPE_FEATURE_COUNT = 17;
 
   /**
-   * The meta object id for the '{@link bxml.impl.UnaryPredicateTypeImpl <em>Unary Predicate Type</em>}' class.
+   * The number of operations of the '<em>Unary Exp Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.impl.UnaryPredicateTypeImpl
-   * @see bxml.impl.BxmlPackageImpl#getUnaryPredicateType()
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXP_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.UnaryExpType2Impl <em>Unary Exp Type2</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.UnaryExpType2Impl
+   * @see bxml.impl.BxmlPackageImpl#getUnaryExpType2()
    * @generated
    */
-  int UNARY_PREDICATE_TYPE = 62;
+  int UNARY_EXP_TYPE2 = 89;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXP_TYPE2__ID = 0;
+
+  /**
+   * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXP_TYPE2__UNARY_EXP = 1;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXP_TYPE2__BINARY_EXP = 2;
+
+  /**
+   * The feature id for the '<em><b>Struct</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXP_TYPE2__STRUCT = 3;
+
+  /**
+   * The feature id for the '<em><b>Generic Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXP_TYPE2__GENERIC_TYPE = 4;
+
+  /**
+   * The feature id for the '<em><b>Op</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXP_TYPE2__OP = 5;
+
+  /**
+   * The number of structural features of the '<em>Unary Exp Type2</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXP_TYPE2_FEATURE_COUNT = 6;
+
+  /**
+   * The number of operations of the '<em>Unary Exp Type2</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_EXP_TYPE2_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.UnaryPredTypeImpl <em>Unary Pred Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.UnaryPredTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getUnaryPredType()
+   * @generated
+   */
+  int UNARY_PRED_TYPE = 90;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_PRED_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Binary Pred</b></em>' containment reference.
@@ -5376,34 +8941,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_PREDICATE_TYPE__BINARY_PRED = 0;
-
-  /**
-   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int UNARY_PREDICATE_TYPE__EXP_COMPARISON = 1;
-
-  /**
-   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int UNARY_PREDICATE_TYPE__QUANTIFIED_PRED = 2;
-
-  /**
-   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int UNARY_PREDICATE_TYPE__UNARY_PRED = 3;
+  int UNARY_PRED_TYPE__BINARY_PRED = 1;
 
   /**
    * The feature id for the '<em><b>Nary Pred</b></em>' containment reference.
@@ -5412,7 +8950,34 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_PREDICATE_TYPE__NARY_PRED = 4;
+  int UNARY_PRED_TYPE__NARY_PRED = 2;
+
+  /**
+   * The feature id for the '<em><b>Unary Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_PRED_TYPE__UNARY_PRED = 3;
+
+  /**
+   * The feature id for the '<em><b>Quantified Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_PRED_TYPE__QUANTIFIED_PRED = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp Comparison</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNARY_PRED_TYPE__EXP_COMPARISON = 5;
 
   /**
    * The feature id for the '<em><b>Set</b></em>' containment reference.
@@ -5421,7 +8986,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_PREDICATE_TYPE__SET = 5;
+  int UNARY_PRED_TYPE__SET = 6;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -5430,25 +8995,71 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int UNARY_PREDICATE_TYPE__OP = 6;
+  int UNARY_PRED_TYPE__OP = 7;
 
   /**
-   * The number of structural features of the '<em>Unary Predicate Type</em>' class.
+   * The number of structural features of the '<em>Unary Pred Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UNARY_PREDICATE_TYPE_FEATURE_COUNT = 7;
+  int UNARY_PRED_TYPE_FEATURE_COUNT = 8;
 
   /**
-   * The number of operations of the '<em>Unary Predicate Type</em>' class.
+   * The number of operations of the '<em>Unary Pred Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UNARY_PREDICATE_TYPE_OPERATION_COUNT = 0;
+  int UNARY_PRED_TYPE_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link bxml.impl.UsesTypeImpl <em>Uses Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.UsesTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getUsesType()
+   * @generated
+   */
+  int USES_TYPE = 91;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int USES_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Referenced Machine</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int USES_TYPE__REFERENCED_MACHINE = 1;
+
+  /**
+   * The number of structural features of the '<em>Uses Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int USES_TYPE_FEATURE_COUNT = 2;
+
+  /**
+   * The number of operations of the '<em>Uses Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int USES_TYPE_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link bxml.impl.ValuationTypeImpl <em>Valuation Type</em>}' class.
@@ -5458,7 +9069,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getValuationType()
    * @generated
    */
-  int VALUATION_TYPE = 63;
+  int VALUATION_TYPE = 92;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUATION_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
@@ -5467,7 +9087,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__BINARY_EXP = 0;
+  int VALUATION_TYPE__BINARY_EXP = 1;
 
   /**
    * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
@@ -5476,7 +9096,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__NARY_EXP = 1;
+  int VALUATION_TYPE__NARY_EXP = 2;
 
   /**
    * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
@@ -5485,7 +9105,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__BOOLEAN_LITERAL = 2;
+  int VALUATION_TYPE__BOOLEAN_LITERAL = 3;
 
   /**
    * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
@@ -5494,7 +9114,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__BOOLEAN_EXP = 3;
+  int VALUATION_TYPE__BOOLEAN_EXP = 4;
 
   /**
    * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
@@ -5503,7 +9123,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__EMPTY_SET = 4;
+  int VALUATION_TYPE__EMPTY_SET = 5;
 
   /**
    * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
@@ -5512,7 +9132,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__EMPTY_SEQ = 5;
+  int VALUATION_TYPE__EMPTY_SEQ = 6;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference.
@@ -5521,7 +9141,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__ID = 6;
+  int VALUATION_TYPE__ID = 7;
 
   /**
    * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
@@ -5530,7 +9150,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__INTEGER_LITERAL = 7;
+  int VALUATION_TYPE__INTEGER_LITERAL = 8;
 
   /**
    * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
@@ -5539,7 +9159,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__QUANTIFIED_EXP = 8;
+  int VALUATION_TYPE__QUANTIFIED_EXP = 9;
 
   /**
    * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
@@ -5548,7 +9168,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__QUANTIFIED_SET = 9;
+  int VALUATION_TYPE__QUANTIFIED_SET = 10;
 
   /**
    * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
@@ -5557,7 +9177,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__STRING_LITERAL = 10;
+  int VALUATION_TYPE__STRING_LITERAL = 11;
 
   /**
    * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
@@ -5566,7 +9186,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__UNARY_EXP = 11;
+  int VALUATION_TYPE__UNARY_EXP = 12;
 
   /**
    * The feature id for the '<em><b>Struct</b></em>' containment reference.
@@ -5575,7 +9195,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__STRUCT = 12;
+  int VALUATION_TYPE__STRUCT = 13;
 
   /**
    * The feature id for the '<em><b>Record</b></em>' containment reference.
@@ -5584,7 +9204,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__RECORD = 13;
+  int VALUATION_TYPE__RECORD = 14;
 
   /**
    * The feature id for the '<em><b>Ident</b></em>' attribute.
@@ -5593,7 +9213,16 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE__IDENT = 14;
+  int VALUATION_TYPE__IDENT = 15;
+
+  /**
+   * The feature id for the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUATION_TYPE__TYPREF = 16;
 
   /**
    * The number of structural features of the '<em>Valuation Type</em>' class.
@@ -5602,7 +9231,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE_FEATURE_COUNT = 15;
+  int VALUATION_TYPE_FEATURE_COUNT = 17;
 
   /**
    * The number of operations of the '<em>Valuation Type</em>' class.
@@ -5621,7 +9250,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getValuationType1()
    * @generated
    */
-  int VALUATION_TYPE1 = 64;
+  int VALUATION_TYPE1 = 93;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUATION_TYPE1__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
@@ -5630,7 +9268,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__BINARY_EXP = 0;
+  int VALUATION_TYPE1__BINARY_EXP = 1;
 
   /**
    * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
@@ -5639,7 +9277,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__NARY_EXP = 1;
+  int VALUATION_TYPE1__NARY_EXP = 2;
 
   /**
    * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
@@ -5648,7 +9286,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__BOOLEAN_LITERAL = 2;
+  int VALUATION_TYPE1__BOOLEAN_LITERAL = 3;
 
   /**
    * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
@@ -5657,7 +9295,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__BOOLEAN_EXP = 3;
+  int VALUATION_TYPE1__BOOLEAN_EXP = 4;
 
   /**
    * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
@@ -5666,7 +9304,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__EMPTY_SET = 4;
+  int VALUATION_TYPE1__EMPTY_SET = 5;
 
   /**
    * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
@@ -5675,7 +9313,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__EMPTY_SEQ = 5;
+  int VALUATION_TYPE1__EMPTY_SEQ = 6;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference.
@@ -5684,7 +9322,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__ID = 6;
+  int VALUATION_TYPE1__ID = 7;
 
   /**
    * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
@@ -5693,7 +9331,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__INTEGER_LITERAL = 7;
+  int VALUATION_TYPE1__INTEGER_LITERAL = 8;
 
   /**
    * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
@@ -5702,7 +9340,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__QUANTIFIED_EXP = 8;
+  int VALUATION_TYPE1__QUANTIFIED_EXP = 9;
 
   /**
    * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
@@ -5711,7 +9349,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__QUANTIFIED_SET = 9;
+  int VALUATION_TYPE1__QUANTIFIED_SET = 10;
 
   /**
    * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
@@ -5720,7 +9358,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__STRING_LITERAL = 10;
+  int VALUATION_TYPE1__STRING_LITERAL = 11;
 
   /**
    * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
@@ -5729,7 +9367,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__UNARY_EXP = 11;
+  int VALUATION_TYPE1__UNARY_EXP = 12;
 
   /**
    * The feature id for the '<em><b>Struct</b></em>' containment reference.
@@ -5738,7 +9376,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__STRUCT = 12;
+  int VALUATION_TYPE1__STRUCT = 13;
 
   /**
    * The feature id for the '<em><b>Record</b></em>' containment reference.
@@ -5747,7 +9385,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__RECORD = 13;
+  int VALUATION_TYPE1__RECORD = 14;
 
   /**
    * The feature id for the '<em><b>Ident</b></em>' attribute.
@@ -5756,7 +9394,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1__IDENT = 14;
+  int VALUATION_TYPE1__IDENT = 15;
 
   /**
    * The number of structural features of the '<em>Valuation Type1</em>' class.
@@ -5765,7 +9403,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUATION_TYPE1_FEATURE_COUNT = 15;
+  int VALUATION_TYPE1_FEATURE_COUNT = 16;
 
   /**
    * The number of operations of the '<em>Valuation Type1</em>' class.
@@ -5784,7 +9422,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getValuesType()
    * @generated
    */
-  int VALUES_TYPE = 65;
+  int VALUES_TYPE = 94;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUES_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Valuation</b></em>' containment reference list.
@@ -5793,7 +9440,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE__VALUATION = 0;
+  int VALUES_TYPE__VALUATION = 1;
 
   /**
    * The number of structural features of the '<em>Values Type</em>' class.
@@ -5802,7 +9449,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE_FEATURE_COUNT = 1;
+  int VALUES_TYPE_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>Values Type</em>' class.
@@ -5821,7 +9468,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getValuesType1()
    * @generated
    */
-  int VALUES_TYPE1 = 66;
+  int VALUES_TYPE1 = 95;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUES_TYPE1__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Valuation</b></em>' containment reference list.
@@ -5830,7 +9486,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE1__VALUATION = 0;
+  int VALUES_TYPE1__VALUATION = 1;
 
   /**
    * The number of structural features of the '<em>Values Type1</em>' class.
@@ -5839,7 +9495,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE1_FEATURE_COUNT = 1;
+  int VALUES_TYPE1_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>Values Type1</em>' class.
@@ -5858,16 +9514,25 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getValuesType2()
    * @generated
    */
-  int VALUES_TYPE2 = 67;
+  int VALUES_TYPE2 = 96;
 
   /**
-   * The feature id for the '<em><b>Exp</b></em>' attribute list.
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__EXP = 0;
+  int VALUES_TYPE2__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUES_TYPE2__EXPRESSION = 1;
 
   /**
    * The feature id for the '<em><b>Binary Exp</b></em>' containment reference list.
@@ -5876,7 +9541,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__BINARY_EXP = 1;
+  int VALUES_TYPE2__BINARY_EXP = 2;
 
   /**
    * The feature id for the '<em><b>Nary Exp</b></em>' containment reference list.
@@ -5885,7 +9550,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__NARY_EXP = 2;
+  int VALUES_TYPE2__NARY_EXP = 3;
 
   /**
    * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference list.
@@ -5894,7 +9559,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__BOOLEAN_LITERAL = 3;
+  int VALUES_TYPE2__BOOLEAN_LITERAL = 4;
 
   /**
    * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference list.
@@ -5903,7 +9568,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__BOOLEAN_EXP = 4;
+  int VALUES_TYPE2__BOOLEAN_EXP = 5;
 
   /**
    * The feature id for the '<em><b>Empty Set</b></em>' containment reference list.
@@ -5912,7 +9577,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__EMPTY_SET = 5;
+  int VALUES_TYPE2__EMPTY_SET = 6;
 
   /**
    * The feature id for the '<em><b>Empty Seq</b></em>' containment reference list.
@@ -5921,7 +9586,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__EMPTY_SEQ = 6;
+  int VALUES_TYPE2__EMPTY_SEQ = 7;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference list.
@@ -5930,7 +9595,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__ID = 7;
+  int VALUES_TYPE2__ID = 8;
 
   /**
    * The feature id for the '<em><b>Integer Literal</b></em>' containment reference list.
@@ -5939,7 +9604,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__INTEGER_LITERAL = 8;
+  int VALUES_TYPE2__INTEGER_LITERAL = 9;
 
   /**
    * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference list.
@@ -5948,7 +9613,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__QUANTIFIED_EXP = 9;
+  int VALUES_TYPE2__QUANTIFIED_EXP = 10;
 
   /**
    * The feature id for the '<em><b>Quantified Set</b></em>' containment reference list.
@@ -5957,7 +9622,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__QUANTIFIED_SET = 10;
+  int VALUES_TYPE2__QUANTIFIED_SET = 11;
 
   /**
    * The feature id for the '<em><b>STRING Literal</b></em>' containment reference list.
@@ -5966,7 +9631,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__STRING_LITERAL = 11;
+  int VALUES_TYPE2__STRING_LITERAL = 12;
 
   /**
    * The feature id for the '<em><b>Unary Exp</b></em>' containment reference list.
@@ -5975,7 +9640,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__UNARY_EXP = 12;
+  int VALUES_TYPE2__UNARY_EXP = 13;
 
   /**
    * The feature id for the '<em><b>Struct</b></em>' containment reference list.
@@ -5984,7 +9649,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__STRUCT = 13;
+  int VALUES_TYPE2__STRUCT = 14;
 
   /**
    * The feature id for the '<em><b>Record</b></em>' containment reference list.
@@ -5993,7 +9658,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2__RECORD = 14;
+  int VALUES_TYPE2__RECORD = 15;
 
   /**
    * The number of structural features of the '<em>Values Type2</em>' class.
@@ -6002,7 +9667,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VALUES_TYPE2_FEATURE_COUNT = 15;
+  int VALUES_TYPE2_FEATURE_COUNT = 16;
 
   /**
    * The number of operations of the '<em>Values Type2</em>' class.
@@ -6014,6 +9679,169 @@ public interface BxmlPackage extends EPackage {
   int VALUES_TYPE2_OPERATION_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link bxml.impl.ValueTypeImpl <em>Value Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.ValueTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getValueType()
+   * @generated
+   */
+  int VALUE_TYPE = 97;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__BINARY_EXP = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__NARY_EXP = 2;
+
+  /**
+   * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__BOOLEAN_LITERAL = 3;
+
+  /**
+   * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__BOOLEAN_EXP = 4;
+
+  /**
+   * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__EMPTY_SET = 5;
+
+  /**
+   * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__EMPTY_SEQ = 6;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__ID = 7;
+
+  /**
+   * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__INTEGER_LITERAL = 8;
+
+  /**
+   * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__QUANTIFIED_EXP = 9;
+
+  /**
+   * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__QUANTIFIED_SET = 10;
+
+  /**
+   * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__STRING_LITERAL = 11;
+
+  /**
+   * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__UNARY_EXP = 12;
+
+  /**
+   * The feature id for the '<em><b>Struct</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__STRUCT = 13;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE__RECORD = 14;
+
+  /**
+   * The number of structural features of the '<em>Value Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE_FEATURE_COUNT = 15;
+
+  /**
+   * The number of operations of the '<em>Value Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_TYPE_OPERATION_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link bxml.impl.VariablesTypeImpl <em>Variables Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6021,16 +9849,25 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getVariablesType()
    * @generated
    */
-  int VARIABLES_TYPE = 68;
+  int VARIABLES_TYPE = 98;
 
   /**
-   * The feature id for the '<em><b>Exp</b></em>' attribute list.
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__EXP = 0;
+  int VARIABLES_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLES_TYPE__EXPRESSION = 1;
 
   /**
    * The feature id for the '<em><b>Binary Exp</b></em>' containment reference list.
@@ -6039,7 +9876,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__BINARY_EXP = 1;
+  int VARIABLES_TYPE__BINARY_EXP = 2;
 
   /**
    * The feature id for the '<em><b>Nary Exp</b></em>' containment reference list.
@@ -6048,7 +9885,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__NARY_EXP = 2;
+  int VARIABLES_TYPE__NARY_EXP = 3;
 
   /**
    * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference list.
@@ -6057,7 +9894,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__BOOLEAN_LITERAL = 3;
+  int VARIABLES_TYPE__BOOLEAN_LITERAL = 4;
 
   /**
    * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference list.
@@ -6066,7 +9903,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__BOOLEAN_EXP = 4;
+  int VARIABLES_TYPE__BOOLEAN_EXP = 5;
 
   /**
    * The feature id for the '<em><b>Empty Set</b></em>' containment reference list.
@@ -6075,7 +9912,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__EMPTY_SET = 5;
+  int VARIABLES_TYPE__EMPTY_SET = 6;
 
   /**
    * The feature id for the '<em><b>Empty Seq</b></em>' containment reference list.
@@ -6084,7 +9921,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__EMPTY_SEQ = 6;
+  int VARIABLES_TYPE__EMPTY_SEQ = 7;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference list.
@@ -6093,7 +9930,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__ID = 7;
+  int VARIABLES_TYPE__ID = 8;
 
   /**
    * The feature id for the '<em><b>Integer Literal</b></em>' containment reference list.
@@ -6102,7 +9939,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__INTEGER_LITERAL = 8;
+  int VARIABLES_TYPE__INTEGER_LITERAL = 9;
 
   /**
    * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference list.
@@ -6111,7 +9948,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__QUANTIFIED_EXP = 9;
+  int VARIABLES_TYPE__QUANTIFIED_EXP = 10;
 
   /**
    * The feature id for the '<em><b>Quantified Set</b></em>' containment reference list.
@@ -6120,7 +9957,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__QUANTIFIED_SET = 10;
+  int VARIABLES_TYPE__QUANTIFIED_SET = 11;
 
   /**
    * The feature id for the '<em><b>STRING Literal</b></em>' containment reference list.
@@ -6129,7 +9966,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__STRING_LITERAL = 11;
+  int VARIABLES_TYPE__STRING_LITERAL = 12;
 
   /**
    * The feature id for the '<em><b>Unary Exp</b></em>' containment reference list.
@@ -6138,7 +9975,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__UNARY_EXP = 12;
+  int VARIABLES_TYPE__UNARY_EXP = 13;
 
   /**
    * The feature id for the '<em><b>Struct</b></em>' containment reference list.
@@ -6147,7 +9984,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__STRUCT = 13;
+  int VARIABLES_TYPE__STRUCT = 14;
 
   /**
    * The feature id for the '<em><b>Record</b></em>' containment reference list.
@@ -6156,7 +9993,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE__RECORD = 14;
+  int VARIABLES_TYPE__RECORD = 15;
 
   /**
    * The number of structural features of the '<em>Variables Type</em>' class.
@@ -6165,7 +10002,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VARIABLES_TYPE_FEATURE_COUNT = 15;
+  int VARIABLES_TYPE_FEATURE_COUNT = 16;
 
   /**
    * The number of operations of the '<em>Variables Type</em>' class.
@@ -6184,7 +10021,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getVariablesType1()
    * @generated
    */
-  int VARIABLES_TYPE1 = 69;
+  int VARIABLES_TYPE1 = 99;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -6223,6 +10060,169 @@ public interface BxmlPackage extends EPackage {
   int VARIABLES_TYPE1_OPERATION_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link bxml.impl.VariantTypeImpl <em>Variant Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.impl.VariantTypeImpl
+   * @see bxml.impl.BxmlPackageImpl#getVariantType()
+   * @generated
+   */
+  int VARIANT_TYPE = 100;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__ATTR = 0;
+
+  /**
+   * The feature id for the '<em><b>Binary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__BINARY_EXP = 1;
+
+  /**
+   * The feature id for the '<em><b>Nary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__NARY_EXP = 2;
+
+  /**
+   * The feature id for the '<em><b>Boolean Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__BOOLEAN_LITERAL = 3;
+
+  /**
+   * The feature id for the '<em><b>Boolean Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__BOOLEAN_EXP = 4;
+
+  /**
+   * The feature id for the '<em><b>Empty Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__EMPTY_SET = 5;
+
+  /**
+   * The feature id for the '<em><b>Empty Seq</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__EMPTY_SEQ = 6;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__ID = 7;
+
+  /**
+   * The feature id for the '<em><b>Integer Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__INTEGER_LITERAL = 8;
+
+  /**
+   * The feature id for the '<em><b>Quantified Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__QUANTIFIED_EXP = 9;
+
+  /**
+   * The feature id for the '<em><b>Quantified Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__QUANTIFIED_SET = 10;
+
+  /**
+   * The feature id for the '<em><b>STRING Literal</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__STRING_LITERAL = 11;
+
+  /**
+   * The feature id for the '<em><b>Unary Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__UNARY_EXP = 12;
+
+  /**
+   * The feature id for the '<em><b>Struct</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__STRUCT = 13;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE__RECORD = 14;
+
+  /**
+   * The number of structural features of the '<em>Variant Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE_FEATURE_COUNT = 15;
+
+  /**
+   * The number of operations of the '<em>Variant Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANT_TYPE_OPERATION_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link bxml.impl.VARINTypeImpl <em>VARIN Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6230,7 +10230,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getVARINType()
    * @generated
    */
-  int VARIN_TYPE = 70;
+  int VARIN_TYPE = 101;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -6260,22 +10260,13 @@ public interface BxmlPackage extends EPackage {
   int VARIN_TYPE__BODY = 2;
 
   /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIN_TYPE__OP = 3;
-
-  /**
    * The number of structural features of the '<em>VARIN Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIN_TYPE_FEATURE_COUNT = 4;
+  int VARIN_TYPE_FEATURE_COUNT = 3;
 
   /**
    * The number of operations of the '<em>VARIN Type</em>' class.
@@ -6294,7 +10285,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getWhenClausesType()
    * @generated
    */
-  int WHEN_CLAUSES_TYPE = 71;
+  int WHEN_CLAUSES_TYPE = 102;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHEN_CLAUSES_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>When</b></em>' containment reference list.
@@ -6303,7 +10303,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int WHEN_CLAUSES_TYPE__WHEN = 0;
+  int WHEN_CLAUSES_TYPE__WHEN = 1;
 
   /**
    * The number of structural features of the '<em>When Clauses Type</em>' class.
@@ -6312,7 +10312,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int WHEN_CLAUSES_TYPE_FEATURE_COUNT = 1;
+  int WHEN_CLAUSES_TYPE_FEATURE_COUNT = 2;
 
   /**
    * The number of operations of the '<em>When Clauses Type</em>' class.
@@ -6331,7 +10331,16 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getWhenType()
    * @generated
    */
-  int WHEN_TYPE = 72;
+  int WHEN_TYPE = 103;
+
+  /**
+   * The feature id for the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHEN_TYPE__ATTR = 0;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -6340,7 +10349,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int WHEN_TYPE__CONDITION = 0;
+  int WHEN_TYPE__CONDITION = 1;
 
   /**
    * The feature id for the '<em><b>Then</b></em>' containment reference.
@@ -6349,7 +10358,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int WHEN_TYPE__THEN = 1;
+  int WHEN_TYPE__THEN = 2;
 
   /**
    * The number of structural features of the '<em>When Type</em>' class.
@@ -6358,7 +10367,7 @@ public interface BxmlPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int WHEN_TYPE_FEATURE_COUNT = 2;
+  int WHEN_TYPE_FEATURE_COUNT = 3;
 
   /**
    * The number of operations of the '<em>When Type</em>' class.
@@ -6377,7 +10386,7 @@ public interface BxmlPackage extends EPackage {
    * @see bxml.impl.BxmlPackageImpl#getWhileType()
    * @generated
    */
-  int WHILE_TYPE = 73;
+  int WHILE_TYPE = 104;
 
   /**
    * The feature id for the '<em><b>Attr</b></em>' containment reference.
@@ -6443,244 +10452,304 @@ public interface BxmlPackage extends EPackage {
   int WHILE_TYPE_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link bxml.BinaryExpOp <em>Binary Exp Op</em>}' enum.
+   * The meta object id for the '{@link bxml.ElseifType <em>Elseif Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.BinaryExpOp
-   * @see bxml.impl.BxmlPackageImpl#getBinaryExpOp()
+   * @see bxml.ElseifType
+   * @see bxml.impl.BxmlPackageImpl#getElseifType()
    * @generated
    */
-  int BINARY_EXP_OP = 74;
+  int ELSEIF_TYPE = 105;
 
   /**
-   * The meta object id for the '{@link bxml.BinaryPredOp <em>Binary Pred Op</em>}' enum.
+   * The meta object id for the '{@link bxml.OpType <em>Op Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.BinaryPredOp
-   * @see bxml.impl.BxmlPackageImpl#getBinaryPredOp()
+   * @see bxml.OpType
+   * @see bxml.impl.BxmlPackageImpl#getOpType()
    * @generated
    */
-  int BINARY_PRED_OP = 75;
+  int OP_TYPE = 106;
 
   /**
-   * The meta object id for the '{@link bxml.BinarySubOp <em>Binary Sub Op</em>}' enum.
+   * The meta object id for the '{@link bxml.OpType1 <em>Op Type1</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.BinarySubOp
-   * @see bxml.impl.BxmlPackageImpl#getBinarySubOp()
+   * @see bxml.OpType1
+   * @see bxml.impl.BxmlPackageImpl#getOpType1()
    * @generated
    */
-  int BINARY_SUB_OP = 76;
+  int OP_TYPE1 = 107;
 
   /**
-   * The meta object id for the '{@link bxml.ComparisonOp <em>Comparison Op</em>}' enum.
+   * The meta object id for the '{@link bxml.OpType2 <em>Op Type2</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.ComparisonOp
-   * @see bxml.impl.BxmlPackageImpl#getComparisonOp()
+   * @see bxml.OpType2
+   * @see bxml.impl.BxmlPackageImpl#getOpType2()
    * @generated
    */
-  int COMPARISON_OP = 77;
+  int OP_TYPE2 = 108;
 
   /**
-   * The meta object id for the '{@link bxml.MachineType <em>Machine Type</em>}' enum.
+   * The meta object id for the '{@link bxml.OpType3 <em>Op Type3</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.MachineType
-   * @see bxml.impl.BxmlPackageImpl#getMachineType()
+   * @see bxml.OpType3
+   * @see bxml.impl.BxmlPackageImpl#getOpType3()
    * @generated
    */
-  int MACHINE_TYPE = 78;
+  int OP_TYPE3 = 109;
 
   /**
-   * The meta object id for the '{@link bxml.NaryExpOp <em>Nary Exp Op</em>}' enum.
+   * The meta object id for the '{@link bxml.OpType4 <em>Op Type4</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.NaryExpOp
-   * @see bxml.impl.BxmlPackageImpl#getNaryExpOp()
+   * @see bxml.OpType4
+   * @see bxml.impl.BxmlPackageImpl#getOpType4()
    * @generated
    */
-  int NARY_EXP_OP = 79;
+  int OP_TYPE4 = 110;
 
   /**
-   * The meta object id for the '{@link bxml.NaryOp <em>Nary Op</em>}' enum.
+   * The meta object id for the '{@link bxml.OpType5 <em>Op Type5</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.NaryOp
-   * @see bxml.impl.BxmlPackageImpl#getNaryOp()
+   * @see bxml.OpType5
+   * @see bxml.impl.BxmlPackageImpl#getOpType5()
    * @generated
    */
-  int NARY_OP = 80;
+  int OP_TYPE5 = 111;
 
   /**
-   * The meta object id for the '{@link bxml.OpVarSub <em>Op Var Sub</em>}' enum.
+   * The meta object id for the '{@link bxml.OpType6 <em>Op Type6</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.OpVarSub
-   * @see bxml.impl.BxmlPackageImpl#getOpVarSub()
+   * @see bxml.OpType6
+   * @see bxml.impl.BxmlPackageImpl#getOpType6()
    * @generated
    */
-  int OP_VAR_SUB = 81;
+  int OP_TYPE6 = 112;
 
   /**
-   * The meta object id for the '{@link bxml.QuantifiedExpOp <em>Quantified Exp Op</em>}' enum.
+   * The meta object id for the '{@link bxml.OpType7 <em>Op Type7</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.QuantifiedExpOp
-   * @see bxml.impl.BxmlPackageImpl#getQuantifiedExpOp()
+   * @see bxml.OpType7
+   * @see bxml.impl.BxmlPackageImpl#getOpType7()
    * @generated
    */
-  int QUANTIFIED_EXP_OP = 82;
+  int OP_TYPE7 = 113;
 
   /**
-   * The meta object id for the '{@link bxml.QuantifiedPredOp <em>Quantified Pred Op</em>}' enum.
+   * The meta object id for the '{@link bxml.OpType8 <em>Op Type8</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.QuantifiedPredOp
-   * @see bxml.impl.BxmlPackageImpl#getQuantifiedPredOp()
+   * @see bxml.OpType8
+   * @see bxml.impl.BxmlPackageImpl#getOpType8()
    * @generated
    */
-  int QUANTIFIED_PRED_OP = 83;
+  int OP_TYPE8 = 114;
 
   /**
-   * The meta object id for the '{@link bxml.UnaryExpOp <em>Unary Exp Op</em>}' enum.
+   * The meta object id for the '{@link bxml.OpType9 <em>Op Type9</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.UnaryExpOp
-   * @see bxml.impl.BxmlPackageImpl#getUnaryExpOp()
+   * @see bxml.OpType9
+   * @see bxml.impl.BxmlPackageImpl#getOpType9()
    * @generated
    */
-  int UNARY_EXP_OP = 84;
+  int OP_TYPE9 = 115;
 
   /**
-   * The meta object id for the '{@link bxml.UnaryPredOp <em>Unary Pred Op</em>}' enum.
+   * The meta object id for the '{@link bxml.TypeType <em>Type Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.UnaryPredOp
-   * @see bxml.impl.BxmlPackageImpl#getUnaryPredOp()
+   * @see bxml.TypeType
+   * @see bxml.impl.BxmlPackageImpl#getTypeType()
    * @generated
    */
-  int UNARY_PRED_OP = 85;
+  int TYPE_TYPE = 116;
 
   /**
-   * The meta object id for the '<em>Binary Exp Op Object</em>' data type.
+   * The meta object id for the '{@link bxml.TypeType1 <em>Type Type1</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.BinaryExpOp
-   * @see bxml.impl.BxmlPackageImpl#getBinaryExpOpObject()
+   * @see bxml.TypeType1
+   * @see bxml.impl.BxmlPackageImpl#getTypeType1()
    * @generated
    */
-  int BINARY_EXP_OP_OBJECT = 86;
+  int TYPE_TYPE1 = 117;
 
   /**
-   * The meta object id for the '<em>Binary Pred Op Object</em>' data type.
+   * The meta object id for the '{@link bxml.TypeType2 <em>Type Type2</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.BinaryPredOp
-   * @see bxml.impl.BxmlPackageImpl#getBinaryPredOpObject()
+   * @see bxml.TypeType2
+   * @see bxml.impl.BxmlPackageImpl#getTypeType2()
    * @generated
    */
-  int BINARY_PRED_OP_OBJECT = 87;
+  int TYPE_TYPE2 = 118;
 
   /**
-   * The meta object id for the '<em>Binary Sub Op Object</em>' data type.
+   * The meta object id for the '{@link bxml.ValueType1 <em>Value Type1</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.BinarySubOp
-   * @see bxml.impl.BxmlPackageImpl#getBinarySubOpObject()
+   * @see bxml.ValueType1
+   * @see bxml.impl.BxmlPackageImpl#getValueType1()
    * @generated
    */
-  int BINARY_SUB_OP_OBJECT = 88;
+  int VALUE_TYPE1 = 119;
 
   /**
-   * The meta object id for the '<em>Comparison Op Object</em>' data type.
+   * The meta object id for the '<em>Elseif Type Object</em>' data type.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.ComparisonOp
-   * @see bxml.impl.BxmlPackageImpl#getComparisonOpObject()
+   * @see bxml.ElseifType
+   * @see bxml.impl.BxmlPackageImpl#getElseifTypeObject()
    * @generated
    */
-  int COMPARISON_OP_OBJECT = 89;
+  int ELSEIF_TYPE_OBJECT = 120;
 
   /**
-   * The meta object id for the '<em>Machine Type Object</em>' data type.
+   * The meta object id for the '<em>Op Type Object</em>' data type.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.MachineType
-   * @see bxml.impl.BxmlPackageImpl#getMachineTypeObject()
+   * @see bxml.OpType1
+   * @see bxml.impl.BxmlPackageImpl#getOpTypeObject()
    * @generated
    */
-  int MACHINE_TYPE_OBJECT = 90;
+  int OP_TYPE_OBJECT = 121;
 
   /**
-   * The meta object id for the '<em>Nary Exp Op Object</em>' data type.
+   * The meta object id for the '<em>Op Type Object1</em>' data type.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.NaryExpOp
-   * @see bxml.impl.BxmlPackageImpl#getNaryExpOpObject()
+   * @see bxml.OpType8
+   * @see bxml.impl.BxmlPackageImpl#getOpTypeObject1()
    * @generated
    */
-  int NARY_EXP_OP_OBJECT = 91;
+  int OP_TYPE_OBJECT1 = 122;
 
   /**
-   * The meta object id for the '<em>Nary Op Object</em>' data type.
+   * The meta object id for the '<em>Op Type Object2</em>' data type.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.NaryOp
-   * @see bxml.impl.BxmlPackageImpl#getNaryOpObject()
+   * @see bxml.OpType5
+   * @see bxml.impl.BxmlPackageImpl#getOpTypeObject2()
    * @generated
    */
-  int NARY_OP_OBJECT = 92;
+  int OP_TYPE_OBJECT2 = 123;
 
   /**
-   * The meta object id for the '<em>Op Var Sub Object</em>' data type.
+   * The meta object id for the '<em>Op Type Object3</em>' data type.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.OpVarSub
-   * @see bxml.impl.BxmlPackageImpl#getOpVarSubObject()
+   * @see bxml.OpType4
+   * @see bxml.impl.BxmlPackageImpl#getOpTypeObject3()
    * @generated
    */
-  int OP_VAR_SUB_OBJECT = 93;
+  int OP_TYPE_OBJECT3 = 124;
 
   /**
-   * The meta object id for the '<em>Quantified Exp Op Object</em>' data type.
+   * The meta object id for the '<em>Op Type Object4</em>' data type.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.QuantifiedExpOp
-   * @see bxml.impl.BxmlPackageImpl#getQuantifiedExpOpObject()
+   * @see bxml.OpType3
+   * @see bxml.impl.BxmlPackageImpl#getOpTypeObject4()
    * @generated
    */
-  int QUANTIFIED_EXP_OP_OBJECT = 94;
+  int OP_TYPE_OBJECT4 = 125;
 
   /**
-   * The meta object id for the '<em>Quantified Pred Op Object</em>' data type.
+   * The meta object id for the '<em>Op Type Object5</em>' data type.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.QuantifiedPredOp
-   * @see bxml.impl.BxmlPackageImpl#getQuantifiedPredOpObject()
+   * @see bxml.OpType
+   * @see bxml.impl.BxmlPackageImpl#getOpTypeObject5()
    * @generated
    */
-  int QUANTIFIED_PRED_OP_OBJECT = 95;
+  int OP_TYPE_OBJECT5 = 126;
 
   /**
-   * The meta object id for the '<em>Unary Exp Op Object</em>' data type.
+   * The meta object id for the '<em>Op Type Object6</em>' data type.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.UnaryExpOp
-   * @see bxml.impl.BxmlPackageImpl#getUnaryExpOpObject()
+   * @see bxml.OpType7
+   * @see bxml.impl.BxmlPackageImpl#getOpTypeObject6()
    * @generated
    */
-  int UNARY_EXP_OP_OBJECT = 96;
+  int OP_TYPE_OBJECT6 = 127;
 
   /**
-   * The meta object id for the '<em>Unary Pred Op Object</em>' data type.
+   * The meta object id for the '<em>Op Type Object7</em>' data type.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see bxml.UnaryPredOp
-   * @see bxml.impl.BxmlPackageImpl#getUnaryPredOpObject()
+   * @see bxml.OpType6
+   * @see bxml.impl.BxmlPackageImpl#getOpTypeObject7()
    * @generated
    */
-  int UNARY_PRED_OP_OBJECT = 97;
+  int OP_TYPE_OBJECT7 = 128;
+
+  /**
+   * The meta object id for the '<em>Op Type Object8</em>' data type.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.OpType2
+   * @see bxml.impl.BxmlPackageImpl#getOpTypeObject8()
+   * @generated
+   */
+  int OP_TYPE_OBJECT8 = 129;
+
+  /**
+   * The meta object id for the '<em>Op Type Object9</em>' data type.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.OpType9
+   * @see bxml.impl.BxmlPackageImpl#getOpTypeObject9()
+   * @generated
+   */
+  int OP_TYPE_OBJECT9 = 130;
+
+  /**
+   * The meta object id for the '<em>Type Type Object</em>' data type.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.TypeType
+   * @see bxml.impl.BxmlPackageImpl#getTypeTypeObject()
+   * @generated
+   */
+  int TYPE_TYPE_OBJECT = 131;
+
+  /**
+   * The meta object id for the '<em>Type Type Object1</em>' data type.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.TypeType1
+   * @see bxml.impl.BxmlPackageImpl#getTypeTypeObject1()
+   * @generated
+   */
+  int TYPE_TYPE_OBJECT1 = 132;
+
+  /**
+   * The meta object id for the '<em>Type Type Object2</em>' data type.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.TypeType2
+   * @see bxml.impl.BxmlPackageImpl#getTypeTypeObject2()
+   * @generated
+   */
+  int TYPE_TYPE_OBJECT2 = 133;
+
+  /**
+   * The meta object id for the '<em>Value Type Object</em>' data type.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see bxml.ValueType1
+   * @see bxml.impl.BxmlPackageImpl#getValueTypeObject()
+   * @generated
+   */
+  int VALUE_TYPE_OBJECT = 134;
 
 
   /**
@@ -6726,26 +10795,26 @@ public interface BxmlPackage extends EPackage {
   EClass getAbstractionType();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.AbstractionType#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute list '{@link bxml.AbstractionType#getMixed <em>Mixed</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see bxml.AbstractionType#getValue()
+   * @return the meta object for the attribute list '<em>Mixed</em>'.
+   * @see bxml.AbstractionType#getMixed()
    * @see #getAbstractionType()
    * @generated
    */
-  EAttribute getAbstractionType_Value();
+  EAttribute getAbstractionType_Mixed();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.AbstractionType#getPath <em>Path</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.AbstractionType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Path</em>'.
-   * @see bxml.AbstractionType#getPath()
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.AbstractionType#getAttr()
    * @see #getAbstractionType()
    * @generated
    */
-  EAttribute getAbstractionType_Path();
+  EReference getAbstractionType_Attr();
 
   /**
    * Returns the meta object for class '{@link bxml.AbstractVariablesType <em>Abstract Variables Type</em>}'.
@@ -6844,15 +10913,26 @@ public interface BxmlPackage extends EPackage {
   EClass getAssertionsType();
 
   /**
-   * Returns the meta object for the attribute list '{@link bxml.AssertionsType#getPred <em>Pred</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.AssertionsType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Pred</em>'.
-   * @see bxml.AssertionsType#getPred()
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.AssertionsType#getAttr()
    * @see #getAssertionsType()
    * @generated
    */
-  EAttribute getAssertionsType_Pred();
+  EReference getAssertionsType_Attr();
+
+  /**
+   * Returns the meta object for the attribute list '{@link bxml.AssertionsType#getPredicate <em>Predicate</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Predicate</em>'.
+   * @see bxml.AssertionsType#getPredicate()
+   * @see #getAssertionsType()
+   * @generated
+   */
+  EAttribute getAssertionsType_Predicate();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.AssertionsType#getBinaryPred <em>Binary Pred</em>}'.
@@ -6866,26 +10946,15 @@ public interface BxmlPackage extends EPackage {
   EReference getAssertionsType_BinaryPred();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.AssertionsType#getExpComparison <em>Exp Comparison</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.AssertionsType#getNaryPred <em>Nary Pred</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Exp Comparison</em>'.
-   * @see bxml.AssertionsType#getExpComparison()
+   * @return the meta object for the containment reference list '<em>Nary Pred</em>'.
+   * @see bxml.AssertionsType#getNaryPred()
    * @see #getAssertionsType()
    * @generated
    */
-  EReference getAssertionsType_ExpComparison();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.AssertionsType#getQuantifiedPred <em>Quantified Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Quantified Pred</em>'.
-   * @see bxml.AssertionsType#getQuantifiedPred()
-   * @see #getAssertionsType()
-   * @generated
-   */
-  EReference getAssertionsType_QuantifiedPred();
+  EReference getAssertionsType_NaryPred();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.AssertionsType#getUnaryPred <em>Unary Pred</em>}'.
@@ -6899,15 +10968,26 @@ public interface BxmlPackage extends EPackage {
   EReference getAssertionsType_UnaryPred();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.AssertionsType#getNaryPred <em>Nary Pred</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.AssertionsType#getQuantifiedPred <em>Quantified Pred</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Nary Pred</em>'.
-   * @see bxml.AssertionsType#getNaryPred()
+   * @return the meta object for the containment reference list '<em>Quantified Pred</em>'.
+   * @see bxml.AssertionsType#getQuantifiedPred()
    * @see #getAssertionsType()
    * @generated
    */
-  EReference getAssertionsType_NaryPred();
+  EReference getAssertionsType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.AssertionsType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Exp Comparison</em>'.
+   * @see bxml.AssertionsType#getExpComparison()
+   * @see #getAssertionsType()
+   * @generated
+   */
+  EReference getAssertionsType_ExpComparison();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.AssertionsType#getSet <em>Set</em>}'.
@@ -6964,68 +11044,79 @@ public interface BxmlPackage extends EPackage {
   EReference getAssertSubType_Body();
 
   /**
-   * Returns the meta object for class '{@link bxml.AssignementSubstitutionType <em>Assignement Substitution Type</em>}'.
+   * Returns the meta object for class '{@link bxml.AssignementSubType <em>Assignement Sub Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Assignement Substitution Type</em>'.
-   * @see bxml.AssignementSubstitutionType
+   * @return the meta object for class '<em>Assignement Sub Type</em>'.
+   * @see bxml.AssignementSubType
    * @generated
    */
-  EClass getAssignementSubstitutionType();
+  EClass getAssignementSubType();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.AssignementSubstitutionType#getAttr <em>Attr</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.AssignementSubType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.AssignementSubstitutionType#getAttr()
-   * @see #getAssignementSubstitutionType()
+   * @see bxml.AssignementSubType#getAttr()
+   * @see #getAssignementSubType()
    * @generated
    */
-  EReference getAssignementSubstitutionType_Attr();
+  EReference getAssignementSubType_Attr();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.AssignementSubstitutionType#getVariables <em>Variables</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.AssignementSubType#getVariables <em>Variables</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Variables</em>'.
-   * @see bxml.AssignementSubstitutionType#getVariables()
-   * @see #getAssignementSubstitutionType()
+   * @see bxml.AssignementSubType#getVariables()
+   * @see #getAssignementSubType()
    * @generated
    */
-  EReference getAssignementSubstitutionType_Variables();
+  EReference getAssignementSubType_Variables();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.AssignementSubstitutionType#getValues <em>Values</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.AssignementSubType#getValues <em>Values</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Values</em>'.
-   * @see bxml.AssignementSubstitutionType#getValues()
-   * @see #getAssignementSubstitutionType()
+   * @see bxml.AssignementSubType#getValues()
+   * @see #getAssignementSubType()
    * @generated
    */
-  EReference getAssignementSubstitutionType_Values();
+  EReference getAssignementSubType_Values();
 
   /**
-   * Returns the meta object for class '{@link bxml.AttributesType <em>Attributes Type</em>}'.
+   * Returns the meta object for class '{@link bxml.AttrType <em>Attr Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Attributes Type</em>'.
-   * @see bxml.AttributesType
+   * @return the meta object for class '<em>Attr Type</em>'.
+   * @see bxml.AttrType
    * @generated
    */
-  EClass getAttributesType();
+  EClass getAttrType();
 
   /**
-   * Returns the meta object for the attribute list '{@link bxml.AttributesType#getAny <em>Any</em>}'.
+   * Returns the meta object for the attribute list '{@link bxml.AttrType#getAnyElement <em>Any Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Any Element</em>'.
+   * @see bxml.AttrType#getAnyElement()
+   * @see #getAttrType()
+   * @generated
+   */
+  EAttribute getAttrType_AnyElement();
+
+  /**
+   * Returns the meta object for the attribute list '{@link bxml.AttrType#getAny <em>Any</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute list '<em>Any</em>'.
-   * @see bxml.AttributesType#getAny()
-   * @see #getAttributesType()
+   * @see bxml.AttrType#getAny()
+   * @see #getAttrType()
    * @generated
    */
-  EAttribute getAttributesType_Any();
+  EAttribute getAttrType_Any();
 
   /**
    * Returns the meta object for class '{@link bxml.BecomesInType <em>Becomes In Type</em>}'.
@@ -7114,847 +11205,2059 @@ public interface BxmlPackage extends EPackage {
   EReference getBecomesSuchThatType_Pred();
 
   /**
-   * Returns the meta object for class '{@link bxml.BinaryExpressionType <em>Binary Expression Type</em>}'.
+   * Returns the meta object for class '{@link bxml.BinaryExpType2 <em>Binary Exp Type2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Binary Expression Type</em>'.
-   * @see bxml.BinaryExpressionType
+   * @return the meta object for class '<em>Binary Exp Type2</em>'.
+   * @see bxml.BinaryExpType2
    * @generated
    */
-  EClass getBinaryExpressionType();
+  EClass getBinaryExpType2();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getAttr <em>Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.BinaryExpressionType#getAttr()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_Attr();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getBinaryExp <em>Binary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Binary Exp</em>'.
-   * @see bxml.BinaryExpressionType#getBinaryExp()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_BinaryExp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getNaryExp <em>Nary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Nary Exp</em>'.
-   * @see bxml.BinaryExpressionType#getNaryExp()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_NaryExp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getBooleanLiteral <em>Boolean Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Boolean Literal</em>'.
-   * @see bxml.BinaryExpressionType#getBooleanLiteral()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_BooleanLiteral();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getBooleanExp <em>Boolean Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Boolean Exp</em>'.
-   * @see bxml.BinaryExpressionType#getBooleanExp()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_BooleanExp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getEmptySet <em>Empty Set</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Empty Set</em>'.
-   * @see bxml.BinaryExpressionType#getEmptySet()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_EmptySet();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getEmptySeq <em>Empty Seq</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Empty Seq</em>'.
-   * @see bxml.BinaryExpressionType#getEmptySeq()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_EmptySeq();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getId <em>Id</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.BinaryExpType2#getId <em>Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Id</em>'.
-   * @see bxml.BinaryExpressionType#getId()
-   * @see #getBinaryExpressionType()
+   * @see bxml.BinaryExpType2#getId()
+   * @see #getBinaryExpType2()
    * @generated
    */
-  EReference getBinaryExpressionType_Id();
+  EReference getBinaryExpType2_Id();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getIntegerLiteral <em>Integer Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Integer Literal</em>'.
-   * @see bxml.BinaryExpressionType#getIntegerLiteral()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_IntegerLiteral();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getQuantifiedExp <em>Quantified Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantified Exp</em>'.
-   * @see bxml.BinaryExpressionType#getQuantifiedExp()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_QuantifiedExp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getQuantifiedSet <em>Quantified Set</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantified Set</em>'.
-   * @see bxml.BinaryExpressionType#getQuantifiedSet()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_QuantifiedSet();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getSTRINGLiteral <em>STRING Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>STRING Literal</em>'.
-   * @see bxml.BinaryExpressionType#getSTRINGLiteral()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_STRINGLiteral();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getUnaryExp <em>Unary Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.BinaryExpType2#getUnaryExp <em>Unary Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Unary Exp</em>'.
-   * @see bxml.BinaryExpressionType#getUnaryExp()
-   * @see #getBinaryExpressionType()
+   * @see bxml.BinaryExpType2#getUnaryExp()
+   * @see #getBinaryExpType2()
    * @generated
    */
-  EReference getBinaryExpressionType_UnaryExp();
+  EReference getBinaryExpType2_UnaryExp();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getStruct <em>Struct</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.BinaryExpType2#getBinaryExp <em>Binary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Exp</em>'.
+   * @see bxml.BinaryExpType2#getBinaryExp()
+   * @see #getBinaryExpType2()
+   * @generated
+   */
+  EReference getBinaryExpType2_BinaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryExpType2#getStruct <em>Struct</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Struct</em>'.
-   * @see bxml.BinaryExpressionType#getStruct()
-   * @see #getBinaryExpressionType()
+   * @see bxml.BinaryExpType2#getStruct()
+   * @see #getBinaryExpType2()
    * @generated
    */
-  EReference getBinaryExpressionType_Struct();
+  EReference getBinaryExpType2_Struct();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getRecord <em>Record</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.BinaryExpType2#getGenericType <em>Generic Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Record</em>'.
-   * @see bxml.BinaryExpressionType#getRecord()
-   * @see #getBinaryExpressionType()
+   * @return the meta object for the attribute '<em>Generic Type</em>'.
+   * @see bxml.BinaryExpType2#getGenericType()
+   * @see #getBinaryExpType2()
    * @generated
    */
-  EReference getBinaryExpressionType_Record();
+  EAttribute getBinaryExpType2_GenericType();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getBinaryExp1 <em>Binary Exp1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Binary Exp1</em>'.
-   * @see bxml.BinaryExpressionType#getBinaryExp1()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_BinaryExp1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getNaryExp1 <em>Nary Exp1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Nary Exp1</em>'.
-   * @see bxml.BinaryExpressionType#getNaryExp1()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_NaryExp1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getBooleanLiteral1 <em>Boolean Literal1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Boolean Literal1</em>'.
-   * @see bxml.BinaryExpressionType#getBooleanLiteral1()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_BooleanLiteral1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getBooleanExp1 <em>Boolean Exp1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Boolean Exp1</em>'.
-   * @see bxml.BinaryExpressionType#getBooleanExp1()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_BooleanExp1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getEmptySet1 <em>Empty Set1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Empty Set1</em>'.
-   * @see bxml.BinaryExpressionType#getEmptySet1()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_EmptySet1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getEmptySeq1 <em>Empty Seq1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Empty Seq1</em>'.
-   * @see bxml.BinaryExpressionType#getEmptySeq1()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_EmptySeq1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getId1 <em>Id1</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.BinaryExpType2#getId1 <em>Id1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Id1</em>'.
-   * @see bxml.BinaryExpressionType#getId1()
-   * @see #getBinaryExpressionType()
+   * @see bxml.BinaryExpType2#getId1()
+   * @see #getBinaryExpType2()
    * @generated
    */
-  EReference getBinaryExpressionType_Id1();
+  EReference getBinaryExpType2_Id1();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getIntegerLiteral1 <em>Integer Literal1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Integer Literal1</em>'.
-   * @see bxml.BinaryExpressionType#getIntegerLiteral1()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_IntegerLiteral1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getQuantifiedExp1 <em>Quantified Exp1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantified Exp1</em>'.
-   * @see bxml.BinaryExpressionType#getQuantifiedExp1()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_QuantifiedExp1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getQuantifiedSet1 <em>Quantified Set1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantified Set1</em>'.
-   * @see bxml.BinaryExpressionType#getQuantifiedSet1()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_QuantifiedSet1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getSTRINGLiteral1 <em>STRING Literal1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>STRING Literal1</em>'.
-   * @see bxml.BinaryExpressionType#getSTRINGLiteral1()
-   * @see #getBinaryExpressionType()
-   * @generated
-   */
-  EReference getBinaryExpressionType_STRINGLiteral1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getUnaryExp1 <em>Unary Exp1</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.BinaryExpType2#getUnaryExp1 <em>Unary Exp1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Unary Exp1</em>'.
-   * @see bxml.BinaryExpressionType#getUnaryExp1()
-   * @see #getBinaryExpressionType()
+   * @see bxml.BinaryExpType2#getUnaryExp1()
+   * @see #getBinaryExpType2()
    * @generated
    */
-  EReference getBinaryExpressionType_UnaryExp1();
+  EReference getBinaryExpType2_UnaryExp1();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getStruct1 <em>Struct1</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.BinaryExpType2#getBinaryExp1 <em>Binary Exp1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Exp1</em>'.
+   * @see bxml.BinaryExpType2#getBinaryExp1()
+   * @see #getBinaryExpType2()
+   * @generated
+   */
+  EReference getBinaryExpType2_BinaryExp1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryExpType2#getStruct1 <em>Struct1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Struct1</em>'.
-   * @see bxml.BinaryExpressionType#getStruct1()
-   * @see #getBinaryExpressionType()
+   * @see bxml.BinaryExpType2#getStruct1()
+   * @see #getBinaryExpType2()
    * @generated
    */
-  EReference getBinaryExpressionType_Struct1();
+  EReference getBinaryExpType2_Struct1();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryExpressionType#getRecord1 <em>Record1</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.BinaryExpType2#getGenericType1 <em>Generic Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Generic Type1</em>'.
+   * @see bxml.BinaryExpType2#getGenericType1()
+   * @see #getBinaryExpType2()
+   * @generated
+   */
+  EAttribute getBinaryExpType2_GenericType1();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.BinaryExpType2#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see bxml.BinaryExpType2#getOp()
+   * @see #getBinaryExpType2()
+   * @generated
+   */
+  EAttribute getBinaryExpType2_Op();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BinaryPredType <em>Binary Pred Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Binary Pred Type</em>'.
+   * @see bxml.BinaryPredType
+   * @generated
+   */
+  EClass getBinaryPredType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BinaryPredType#getAttr()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.BinaryPredType#getBinaryPred()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.BinaryPredType#getNaryPred()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.BinaryPredType#getUnaryPred()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.BinaryPredType#getQuantifiedPred()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.BinaryPredType#getExpComparison()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.BinaryPredType#getSet()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_Set();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getBinaryPred1 <em>Binary Pred1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred1</em>'.
+   * @see bxml.BinaryPredType#getBinaryPred1()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_BinaryPred1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getNaryPred1 <em>Nary Pred1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred1</em>'.
+   * @see bxml.BinaryPredType#getNaryPred1()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_NaryPred1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getUnaryPred1 <em>Unary Pred1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred1</em>'.
+   * @see bxml.BinaryPredType#getUnaryPred1()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_UnaryPred1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getQuantifiedPred1 <em>Quantified Pred1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred1</em>'.
+   * @see bxml.BinaryPredType#getQuantifiedPred1()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_QuantifiedPred1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getExpComparison1 <em>Exp Comparison1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison1</em>'.
+   * @see bxml.BinaryPredType#getExpComparison1()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_ExpComparison1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BinaryPredType#getSet1 <em>Set1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set1</em>'.
+   * @see bxml.BinaryPredType#getSet1()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EReference getBinaryPredType_Set1();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.BinaryPredType#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see bxml.BinaryPredType#getOp()
+   * @see #getBinaryPredType()
+   * @generated
+   */
+  EAttribute getBinaryPredType_Op();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BlocSubType <em>Bloc Sub Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bloc Sub Type</em>'.
+   * @see bxml.BlocSubType
+   * @generated
+   */
+  EClass getBlocSubType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BlocSubType#getAttr()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getBlocSub <em>Bloc Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bloc Sub</em>'.
+   * @see bxml.BlocSubType#getBlocSub()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_BlocSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getSkip <em>Skip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Skip</em>'.
+   * @see bxml.BlocSubType#getSkip()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_Skip();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getAssertSub <em>Assert Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assert Sub</em>'.
+   * @see bxml.BlocSubType#getAssertSub()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_AssertSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getIfSub <em>If Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sub</em>'.
+   * @see bxml.BlocSubType#getIfSub()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_IfSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes Such That</em>'.
+   * @see bxml.BlocSubType#getBecomesSuchThat()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_BecomesSuchThat();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getAssignementSub <em>Assignement Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignement Sub</em>'.
+   * @see bxml.BlocSubType#getAssignementSub()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_AssignementSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getSelect <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Select</em>'.
+   * @see bxml.BlocSubType#getSelect()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_Select();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getCaseSub <em>Case Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Case Sub</em>'.
+   * @see bxml.BlocSubType#getCaseSub()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_CaseSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getANYSub <em>ANY Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>ANY Sub</em>'.
+   * @see bxml.BlocSubType#getANYSub()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_ANYSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getLETSub <em>LET Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>LET Sub</em>'.
+   * @see bxml.BlocSubType#getLETSub()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_LETSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getBecomesIn <em>Becomes In</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes In</em>'.
+   * @see bxml.BlocSubType#getBecomesIn()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_BecomesIn();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getVARIN <em>VARIN</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>VARIN</em>'.
+   * @see bxml.BlocSubType#getVARIN()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_VARIN();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getNarySub <em>Nary Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Sub</em>'.
+   * @see bxml.BlocSubType#getNarySub()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_NarySub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getOperationCall <em>Operation Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Call</em>'.
+   * @see bxml.BlocSubType#getOperationCall()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_OperationCall();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BlocSubType#getWhile <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>While</em>'.
+   * @see bxml.BlocSubType#getWhile()
+   * @see #getBlocSubType()
+   * @generated
+   */
+  EReference getBlocSubType_While();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BodyType <em>Body Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Body Type</em>'.
+   * @see bxml.BodyType
+   * @generated
+   */
+  EClass getBodyType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BodyType#getAttr()
+   * @see #getBodyType()
+   * @generated
+   */
+  EReference getBodyType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.BodyType#getBinaryPred()
+   * @see #getBodyType()
+   * @generated
+   */
+  EReference getBodyType_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.BodyType#getNaryPred()
+   * @see #getBodyType()
+   * @generated
+   */
+  EReference getBodyType_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.BodyType#getUnaryPred()
+   * @see #getBodyType()
+   * @generated
+   */
+  EReference getBodyType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.BodyType#getQuantifiedPred()
+   * @see #getBodyType()
+   * @generated
+   */
+  EReference getBodyType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.BodyType#getExpComparison()
+   * @see #getBodyType()
+   * @generated
+   */
+  EReference getBodyType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.BodyType#getSet()
+   * @see #getBodyType()
+   * @generated
+   */
+  EReference getBodyType_Set();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BodyType1 <em>Body Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Body Type1</em>'.
+   * @see bxml.BodyType1
+   * @generated
+   */
+  EClass getBodyType1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getBlocSub <em>Bloc Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bloc Sub</em>'.
+   * @see bxml.BodyType1#getBlocSub()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_BlocSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getSkip <em>Skip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Skip</em>'.
+   * @see bxml.BodyType1#getSkip()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_Skip();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getAssertSub <em>Assert Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assert Sub</em>'.
+   * @see bxml.BodyType1#getAssertSub()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_AssertSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getIfSub <em>If Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sub</em>'.
+   * @see bxml.BodyType1#getIfSub()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_IfSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes Such That</em>'.
+   * @see bxml.BodyType1#getBecomesSuchThat()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_BecomesSuchThat();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getAssignementSub <em>Assignement Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignement Sub</em>'.
+   * @see bxml.BodyType1#getAssignementSub()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_AssignementSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getSelect <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Select</em>'.
+   * @see bxml.BodyType1#getSelect()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_Select();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getCaseSub <em>Case Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Case Sub</em>'.
+   * @see bxml.BodyType1#getCaseSub()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_CaseSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getANYSub <em>ANY Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>ANY Sub</em>'.
+   * @see bxml.BodyType1#getANYSub()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_ANYSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getLETSub <em>LET Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>LET Sub</em>'.
+   * @see bxml.BodyType1#getLETSub()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_LETSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getBecomesIn <em>Becomes In</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes In</em>'.
+   * @see bxml.BodyType1#getBecomesIn()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_BecomesIn();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getVARIN <em>VARIN</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>VARIN</em>'.
+   * @see bxml.BodyType1#getVARIN()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_VARIN();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getNarySub <em>Nary Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Sub</em>'.
+   * @see bxml.BodyType1#getNarySub()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_NarySub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getOperationCall <em>Operation Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Call</em>'.
+   * @see bxml.BodyType1#getOperationCall()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_OperationCall();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType1#getWhile <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>While</em>'.
+   * @see bxml.BodyType1#getWhile()
+   * @see #getBodyType1()
+   * @generated
+   */
+  EReference getBodyType1_While();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BodyType2 <em>Body Type2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Body Type2</em>'.
+   * @see bxml.BodyType2
+   * @generated
+   */
+  EClass getBodyType2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BodyType2#getAttr()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getBlocSub <em>Bloc Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bloc Sub</em>'.
+   * @see bxml.BodyType2#getBlocSub()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_BlocSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getSkip <em>Skip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Skip</em>'.
+   * @see bxml.BodyType2#getSkip()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_Skip();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getAssertSub <em>Assert Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assert Sub</em>'.
+   * @see bxml.BodyType2#getAssertSub()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_AssertSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getIfSub <em>If Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sub</em>'.
+   * @see bxml.BodyType2#getIfSub()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_IfSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes Such That</em>'.
+   * @see bxml.BodyType2#getBecomesSuchThat()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_BecomesSuchThat();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getAssignementSub <em>Assignement Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignement Sub</em>'.
+   * @see bxml.BodyType2#getAssignementSub()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_AssignementSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getSelect <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Select</em>'.
+   * @see bxml.BodyType2#getSelect()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_Select();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getCaseSub <em>Case Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Case Sub</em>'.
+   * @see bxml.BodyType2#getCaseSub()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_CaseSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getANYSub <em>ANY Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>ANY Sub</em>'.
+   * @see bxml.BodyType2#getANYSub()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_ANYSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getLETSub <em>LET Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>LET Sub</em>'.
+   * @see bxml.BodyType2#getLETSub()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_LETSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getBecomesIn <em>Becomes In</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes In</em>'.
+   * @see bxml.BodyType2#getBecomesIn()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_BecomesIn();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getVARIN <em>VARIN</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>VARIN</em>'.
+   * @see bxml.BodyType2#getVARIN()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_VARIN();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getNarySub <em>Nary Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Sub</em>'.
+   * @see bxml.BodyType2#getNarySub()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_NarySub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getOperationCall <em>Operation Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Call</em>'.
+   * @see bxml.BodyType2#getOperationCall()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_OperationCall();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType2#getWhile <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>While</em>'.
+   * @see bxml.BodyType2#getWhile()
+   * @see #getBodyType2()
+   * @generated
+   */
+  EReference getBodyType2_While();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BodyType3 <em>Body Type3</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Body Type3</em>'.
+   * @see bxml.BodyType3
+   * @generated
+   */
+  EClass getBodyType3();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BodyType3#getAttr()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getBinaryExp <em>Binary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Exp</em>'.
+   * @see bxml.BodyType3#getBinaryExp()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_BinaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getNaryExp <em>Nary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Exp</em>'.
+   * @see bxml.BodyType3#getNaryExp()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_NaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getBooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Literal</em>'.
+   * @see bxml.BodyType3#getBooleanLiteral()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_BooleanLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getBooleanExp <em>Boolean Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Exp</em>'.
+   * @see bxml.BodyType3#getBooleanExp()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_BooleanExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getEmptySet <em>Empty Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Set</em>'.
+   * @see bxml.BodyType3#getEmptySet()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_EmptySet();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getEmptySeq <em>Empty Seq</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Seq</em>'.
+   * @see bxml.BodyType3#getEmptySeq()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_EmptySeq();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Id</em>'.
+   * @see bxml.BodyType3#getId()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_Id();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getIntegerLiteral <em>Integer Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Integer Literal</em>'.
+   * @see bxml.BodyType3#getIntegerLiteral()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_IntegerLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getQuantifiedExp <em>Quantified Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Exp</em>'.
+   * @see bxml.BodyType3#getQuantifiedExp()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_QuantifiedExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getQuantifiedSet <em>Quantified Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Set</em>'.
+   * @see bxml.BodyType3#getQuantifiedSet()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_QuantifiedSet();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getSTRINGLiteral <em>STRING Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>STRING Literal</em>'.
+   * @see bxml.BodyType3#getSTRINGLiteral()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_STRINGLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getUnaryExp <em>Unary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Exp</em>'.
+   * @see bxml.BodyType3#getUnaryExp()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_UnaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getStruct <em>Struct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct</em>'.
+   * @see bxml.BodyType3#getStruct()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_Struct();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType3#getRecord <em>Record</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Record</em>'.
+   * @see bxml.BodyType3#getRecord()
+   * @see #getBodyType3()
+   * @generated
+   */
+  EReference getBodyType3_Record();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BodyType4 <em>Body Type4</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Body Type4</em>'.
+   * @see bxml.BodyType4
+   * @generated
+   */
+  EClass getBodyType4();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BodyType4#getAttr()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getBlocSub <em>Bloc Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bloc Sub</em>'.
+   * @see bxml.BodyType4#getBlocSub()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_BlocSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getSkip <em>Skip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Skip</em>'.
+   * @see bxml.BodyType4#getSkip()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_Skip();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getAssertSub <em>Assert Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assert Sub</em>'.
+   * @see bxml.BodyType4#getAssertSub()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_AssertSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getIfSub <em>If Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sub</em>'.
+   * @see bxml.BodyType4#getIfSub()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_IfSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes Such That</em>'.
+   * @see bxml.BodyType4#getBecomesSuchThat()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_BecomesSuchThat();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getAssignementSub <em>Assignement Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignement Sub</em>'.
+   * @see bxml.BodyType4#getAssignementSub()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_AssignementSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getSelect <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Select</em>'.
+   * @see bxml.BodyType4#getSelect()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_Select();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getCaseSub <em>Case Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Case Sub</em>'.
+   * @see bxml.BodyType4#getCaseSub()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_CaseSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getANYSub <em>ANY Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>ANY Sub</em>'.
+   * @see bxml.BodyType4#getANYSub()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_ANYSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getLETSub <em>LET Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>LET Sub</em>'.
+   * @see bxml.BodyType4#getLETSub()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_LETSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getBecomesIn <em>Becomes In</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes In</em>'.
+   * @see bxml.BodyType4#getBecomesIn()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_BecomesIn();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getVARIN <em>VARIN</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>VARIN</em>'.
+   * @see bxml.BodyType4#getVARIN()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_VARIN();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getNarySub <em>Nary Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Sub</em>'.
+   * @see bxml.BodyType4#getNarySub()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_NarySub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getOperationCall <em>Operation Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Call</em>'.
+   * @see bxml.BodyType4#getOperationCall()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_OperationCall();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType4#getWhile <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>While</em>'.
+   * @see bxml.BodyType4#getWhile()
+   * @see #getBodyType4()
+   * @generated
+   */
+  EReference getBodyType4_While();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BodyType5 <em>Body Type5</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Body Type5</em>'.
+   * @see bxml.BodyType5
+   * @generated
+   */
+  EClass getBodyType5();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BodyType5#getAttr()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getBlocSub <em>Bloc Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bloc Sub</em>'.
+   * @see bxml.BodyType5#getBlocSub()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_BlocSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getSkip <em>Skip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Skip</em>'.
+   * @see bxml.BodyType5#getSkip()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_Skip();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getAssertSub <em>Assert Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assert Sub</em>'.
+   * @see bxml.BodyType5#getAssertSub()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_AssertSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getIfSub <em>If Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sub</em>'.
+   * @see bxml.BodyType5#getIfSub()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_IfSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes Such That</em>'.
+   * @see bxml.BodyType5#getBecomesSuchThat()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_BecomesSuchThat();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getAssignementSub <em>Assignement Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignement Sub</em>'.
+   * @see bxml.BodyType5#getAssignementSub()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_AssignementSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getSelect <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Select</em>'.
+   * @see bxml.BodyType5#getSelect()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_Select();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getCaseSub <em>Case Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Case Sub</em>'.
+   * @see bxml.BodyType5#getCaseSub()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_CaseSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getANYSub <em>ANY Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>ANY Sub</em>'.
+   * @see bxml.BodyType5#getANYSub()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_ANYSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getLETSub <em>LET Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>LET Sub</em>'.
+   * @see bxml.BodyType5#getLETSub()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_LETSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getBecomesIn <em>Becomes In</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes In</em>'.
+   * @see bxml.BodyType5#getBecomesIn()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_BecomesIn();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getVARIN <em>VARIN</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>VARIN</em>'.
+   * @see bxml.BodyType5#getVARIN()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_VARIN();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getNarySub <em>Nary Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Sub</em>'.
+   * @see bxml.BodyType5#getNarySub()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_NarySub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getOperationCall <em>Operation Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Call</em>'.
+   * @see bxml.BodyType5#getOperationCall()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_OperationCall();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType5#getWhile <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>While</em>'.
+   * @see bxml.BodyType5#getWhile()
+   * @see #getBodyType5()
+   * @generated
+   */
+  EReference getBodyType5_While();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BodyType6 <em>Body Type6</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Body Type6</em>'.
+   * @see bxml.BodyType6
+   * @generated
+   */
+  EClass getBodyType6();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType6#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BodyType6#getAttr()
+   * @see #getBodyType6()
+   * @generated
+   */
+  EReference getBodyType6_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType6#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.BodyType6#getBinaryPred()
+   * @see #getBodyType6()
+   * @generated
+   */
+  EReference getBodyType6_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType6#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.BodyType6#getNaryPred()
+   * @see #getBodyType6()
+   * @generated
+   */
+  EReference getBodyType6_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType6#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.BodyType6#getUnaryPred()
+   * @see #getBodyType6()
+   * @generated
+   */
+  EReference getBodyType6_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType6#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.BodyType6#getQuantifiedPred()
+   * @see #getBodyType6()
+   * @generated
+   */
+  EReference getBodyType6_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType6#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.BodyType6#getExpComparison()
+   * @see #getBodyType6()
+   * @generated
+   */
+  EReference getBodyType6_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BodyType6#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.BodyType6#getSet()
+   * @see #getBodyType6()
+   * @generated
+   */
+  EReference getBodyType6_Set();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BooleanExpType <em>Boolean Exp Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Boolean Exp Type</em>'.
+   * @see bxml.BooleanExpType
+   * @generated
+   */
+  EClass getBooleanExpType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BooleanExpType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BooleanExpType#getAttr()
+   * @see #getBooleanExpType()
+   * @generated
+   */
+  EReference getBooleanExpType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BooleanExpType#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.BooleanExpType#getBinaryPred()
+   * @see #getBooleanExpType()
+   * @generated
+   */
+  EReference getBooleanExpType_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BooleanExpType#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.BooleanExpType#getNaryPred()
+   * @see #getBooleanExpType()
+   * @generated
+   */
+  EReference getBooleanExpType_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BooleanExpType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.BooleanExpType#getUnaryPred()
+   * @see #getBooleanExpType()
+   * @generated
+   */
+  EReference getBooleanExpType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BooleanExpType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.BooleanExpType#getQuantifiedPred()
+   * @see #getBooleanExpType()
+   * @generated
+   */
+  EReference getBooleanExpType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BooleanExpType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.BooleanExpType#getExpComparison()
+   * @see #getBooleanExpType()
+   * @generated
+   */
+  EReference getBooleanExpType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BooleanExpType#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.BooleanExpType#getSet()
+   * @see #getBooleanExpType()
+   * @generated
+   */
+  EReference getBooleanExpType_Set();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.BooleanExpType#getTypref <em>Typref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.BooleanExpType#getTypref()
+   * @see #getBooleanExpType()
+   * @generated
+   */
+  EAttribute getBooleanExpType_Typref();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BooleanLiteralType <em>Boolean Literal Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Boolean Literal Type</em>'.
+   * @see bxml.BooleanLiteralType
+   * @generated
+   */
+  EClass getBooleanLiteralType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BooleanLiteralType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BooleanLiteralType#getAttr()
+   * @see #getBooleanLiteralType()
+   * @generated
+   */
+  EReference getBooleanLiteralType_Attr();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.BooleanLiteralType#getTypref <em>Typref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.BooleanLiteralType#getTypref()
+   * @see #getBooleanLiteralType()
+   * @generated
+   */
+  EAttribute getBooleanLiteralType_Typref();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.BooleanLiteralType#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see bxml.BooleanLiteralType#getValue()
+   * @see #getBooleanLiteralType()
+   * @generated
+   */
+  EAttribute getBooleanLiteralType_Value();
+
+  /**
+   * Returns the meta object for class '{@link bxml.BynaryExpType <em>Bynary Exp Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bynary Exp Type</em>'.
+   * @see bxml.BynaryExpType
+   * @generated
+   */
+  EClass getBynaryExpType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.BynaryExpType#getAttr()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getBinaryExp <em>Binary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Exp</em>'.
+   * @see bxml.BynaryExpType#getBinaryExp()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_BinaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getNaryExp <em>Nary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Exp</em>'.
+   * @see bxml.BynaryExpType#getNaryExp()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_NaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getBooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Literal</em>'.
+   * @see bxml.BynaryExpType#getBooleanLiteral()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_BooleanLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getBooleanExp <em>Boolean Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Exp</em>'.
+   * @see bxml.BynaryExpType#getBooleanExp()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_BooleanExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getEmptySet <em>Empty Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Set</em>'.
+   * @see bxml.BynaryExpType#getEmptySet()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_EmptySet();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getEmptySeq <em>Empty Seq</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Seq</em>'.
+   * @see bxml.BynaryExpType#getEmptySeq()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_EmptySeq();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Id</em>'.
+   * @see bxml.BynaryExpType#getId()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_Id();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getIntegerLiteral <em>Integer Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Integer Literal</em>'.
+   * @see bxml.BynaryExpType#getIntegerLiteral()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_IntegerLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getQuantifiedExp <em>Quantified Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Exp</em>'.
+   * @see bxml.BynaryExpType#getQuantifiedExp()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_QuantifiedExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getQuantifiedSet <em>Quantified Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Set</em>'.
+   * @see bxml.BynaryExpType#getQuantifiedSet()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_QuantifiedSet();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getSTRINGLiteral <em>STRING Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>STRING Literal</em>'.
+   * @see bxml.BynaryExpType#getSTRINGLiteral()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_STRINGLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getUnaryExp <em>Unary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Exp</em>'.
+   * @see bxml.BynaryExpType#getUnaryExp()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_UnaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getStruct <em>Struct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct</em>'.
+   * @see bxml.BynaryExpType#getStruct()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_Struct();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getRecord <em>Record</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Record</em>'.
+   * @see bxml.BynaryExpType#getRecord()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_Record();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getBinaryExp1 <em>Binary Exp1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Exp1</em>'.
+   * @see bxml.BynaryExpType#getBinaryExp1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_BinaryExp1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getNaryExp1 <em>Nary Exp1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Exp1</em>'.
+   * @see bxml.BynaryExpType#getNaryExp1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_NaryExp1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getBooleanLiteral1 <em>Boolean Literal1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Literal1</em>'.
+   * @see bxml.BynaryExpType#getBooleanLiteral1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_BooleanLiteral1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getBooleanExp1 <em>Boolean Exp1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Exp1</em>'.
+   * @see bxml.BynaryExpType#getBooleanExp1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_BooleanExp1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getEmptySet1 <em>Empty Set1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Set1</em>'.
+   * @see bxml.BynaryExpType#getEmptySet1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_EmptySet1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getEmptySeq1 <em>Empty Seq1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Seq1</em>'.
+   * @see bxml.BynaryExpType#getEmptySeq1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_EmptySeq1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getId1 <em>Id1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Id1</em>'.
+   * @see bxml.BynaryExpType#getId1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_Id1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getIntegerLiteral1 <em>Integer Literal1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Integer Literal1</em>'.
+   * @see bxml.BynaryExpType#getIntegerLiteral1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_IntegerLiteral1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getQuantifiedExp1 <em>Quantified Exp1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Exp1</em>'.
+   * @see bxml.BynaryExpType#getQuantifiedExp1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_QuantifiedExp1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getQuantifiedSet1 <em>Quantified Set1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Set1</em>'.
+   * @see bxml.BynaryExpType#getQuantifiedSet1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_QuantifiedSet1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getSTRINGLiteral1 <em>STRING Literal1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>STRING Literal1</em>'.
+   * @see bxml.BynaryExpType#getSTRINGLiteral1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_STRINGLiteral1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getUnaryExp1 <em>Unary Exp1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Exp1</em>'.
+   * @see bxml.BynaryExpType#getUnaryExp1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_UnaryExp1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getStruct1 <em>Struct1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct1</em>'.
+   * @see bxml.BynaryExpType#getStruct1()
+   * @see #getBynaryExpType()
+   * @generated
+   */
+  EReference getBynaryExpType_Struct1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.BynaryExpType#getRecord1 <em>Record1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Record1</em>'.
-   * @see bxml.BinaryExpressionType#getRecord1()
-   * @see #getBinaryExpressionType()
+   * @see bxml.BynaryExpType#getRecord1()
+   * @see #getBynaryExpType()
    * @generated
    */
-  EReference getBinaryExpressionType_Record1();
+  EReference getBynaryExpType_Record1();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.BinaryExpressionType#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.BynaryExpType#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see bxml.BinaryExpressionType#getOp()
-   * @see #getBinaryExpressionType()
+   * @see bxml.BynaryExpType#getOp()
+   * @see #getBynaryExpType()
    * @generated
    */
-  EAttribute getBinaryExpressionType_Op();
+  EAttribute getBynaryExpType_Op();
 
   /**
-   * Returns the meta object for class '{@link bxml.BinaryPredicateType <em>Binary Predicate Type</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.BynaryExpType#getTypref <em>Typref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Binary Predicate Type</em>'.
-   * @see bxml.BinaryPredicateType
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.BynaryExpType#getTypref()
+   * @see #getBynaryExpType()
    * @generated
    */
-  EClass getBinaryPredicateType();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinaryPredicateType#getAttr <em>Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.BinaryPredicateType#getAttr()
-   * @see #getBinaryPredicateType()
-   * @generated
-   */
-  EReference getBinaryPredicateType_Attr();
-
-  /**
-   * Returns the meta object for the attribute list '{@link bxml.BinaryPredicateType#getPred <em>Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Pred</em>'.
-   * @see bxml.BinaryPredicateType#getPred()
-   * @see #getBinaryPredicateType()
-   * @generated
-   */
-  EAttribute getBinaryPredicateType_Pred();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinaryPredicateType#getBinaryPred <em>Binary Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Binary Pred</em>'.
-   * @see bxml.BinaryPredicateType#getBinaryPred()
-   * @see #getBinaryPredicateType()
-   * @generated
-   */
-  EReference getBinaryPredicateType_BinaryPred();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinaryPredicateType#getExpComparison <em>Exp Comparison</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Exp Comparison</em>'.
-   * @see bxml.BinaryPredicateType#getExpComparison()
-   * @see #getBinaryPredicateType()
-   * @generated
-   */
-  EReference getBinaryPredicateType_ExpComparison();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinaryPredicateType#getQuantifiedPred <em>Quantified Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Quantified Pred</em>'.
-   * @see bxml.BinaryPredicateType#getQuantifiedPred()
-   * @see #getBinaryPredicateType()
-   * @generated
-   */
-  EReference getBinaryPredicateType_QuantifiedPred();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinaryPredicateType#getUnaryPred <em>Unary Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Unary Pred</em>'.
-   * @see bxml.BinaryPredicateType#getUnaryPred()
-   * @see #getBinaryPredicateType()
-   * @generated
-   */
-  EReference getBinaryPredicateType_UnaryPred();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinaryPredicateType#getNaryPred <em>Nary Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Nary Pred</em>'.
-   * @see bxml.BinaryPredicateType#getNaryPred()
-   * @see #getBinaryPredicateType()
-   * @generated
-   */
-  EReference getBinaryPredicateType_NaryPred();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinaryPredicateType#getSet <em>Set</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Set</em>'.
-   * @see bxml.BinaryPredicateType#getSet()
-   * @see #getBinaryPredicateType()
-   * @generated
-   */
-  EReference getBinaryPredicateType_Set();
-
-  /**
-   * Returns the meta object for the attribute '{@link bxml.BinaryPredicateType#getOp <em>Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see bxml.BinaryPredicateType#getOp()
-   * @see #getBinaryPredicateType()
-   * @generated
-   */
-  EAttribute getBinaryPredicateType_Op();
-
-  /**
-   * Returns the meta object for class '{@link bxml.BinarySubType <em>Binary Sub Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Binary Sub Type</em>'.
-   * @see bxml.BinarySubType
-   * @generated
-   */
-  EClass getBinarySubType();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.BinarySubType#getAttr <em>Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.BinarySubType#getAttr()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_Attr();
-
-  /**
-   * Returns the meta object for the attribute list '{@link bxml.BinarySubType#getSub <em>Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Sub</em>'.
-   * @see bxml.BinarySubType#getSub()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EAttribute getBinarySubType_Sub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getBlocSub <em>Bloc Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Bloc Sub</em>'.
-   * @see bxml.BinarySubType#getBlocSub()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_BlocSub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getSkip <em>Skip</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Skip</em>'.
-   * @see bxml.BinarySubType#getSkip()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_Skip();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getAssertSub <em>Assert Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Assert Sub</em>'.
-   * @see bxml.BinarySubType#getAssertSub()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_AssertSub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getIfSub <em>If Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>If Sub</em>'.
-   * @see bxml.BinarySubType#getIfSub()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_IfSub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getBecomesSuchThat <em>Becomes Such That</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Becomes Such That</em>'.
-   * @see bxml.BinarySubType#getBecomesSuchThat()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_BecomesSuchThat();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getAssignementSub <em>Assignement Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Assignement Sub</em>'.
-   * @see bxml.BinarySubType#getAssignementSub()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_AssignementSub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getSelect <em>Select</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Select</em>'.
-   * @see bxml.BinarySubType#getSelect()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_Select();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getCaseSub <em>Case Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Case Sub</em>'.
-   * @see bxml.BinarySubType#getCaseSub()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_CaseSub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getANYSub <em>ANY Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>ANY Sub</em>'.
-   * @see bxml.BinarySubType#getANYSub()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_ANYSub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getLETSub <em>LET Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>LET Sub</em>'.
-   * @see bxml.BinarySubType#getLETSub()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_LETSub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getBecomesIn <em>Becomes In</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Becomes In</em>'.
-   * @see bxml.BinarySubType#getBecomesIn()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_BecomesIn();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getVARIN <em>VARIN</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>VARIN</em>'.
-   * @see bxml.BinarySubType#getVARIN()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_VARIN();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getBinarySub <em>Binary Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Binary Sub</em>'.
-   * @see bxml.BinarySubType#getBinarySub()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_BinarySub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getNarySub <em>Nary Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Nary Sub</em>'.
-   * @see bxml.BinarySubType#getNarySub()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_NarySub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getOperationCall <em>Operation Call</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Operation Call</em>'.
-   * @see bxml.BinarySubType#getOperationCall()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_OperationCall();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.BinarySubType#getWhile <em>While</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>While</em>'.
-   * @see bxml.BinarySubType#getWhile()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EReference getBinarySubType_While();
-
-  /**
-   * Returns the meta object for the attribute '{@link bxml.BinarySubType#getOp <em>Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see bxml.BinarySubType#getOp()
-   * @see #getBinarySubType()
-   * @generated
-   */
-  EAttribute getBinarySubType_Op();
-
-  /**
-   * Returns the meta object for class '{@link bxml.CallParamatersType <em>Call Paramaters Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Call Paramaters Type</em>'.
-   * @see bxml.CallParamatersType
-   * @generated
-   */
-  EClass getCallParamatersType();
-
-  /**
-   * Returns the meta object for the attribute list '{@link bxml.CallParamatersType#getExp <em>Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Exp</em>'.
-   * @see bxml.CallParamatersType#getExp()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EAttribute getCallParamatersType_Exp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getBinaryExp <em>Binary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Binary Exp</em>'.
-   * @see bxml.CallParamatersType#getBinaryExp()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_BinaryExp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getNaryExp <em>Nary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Nary Exp</em>'.
-   * @see bxml.CallParamatersType#getNaryExp()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_NaryExp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getBooleanLiteral <em>Boolean Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Boolean Literal</em>'.
-   * @see bxml.CallParamatersType#getBooleanLiteral()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_BooleanLiteral();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getBooleanExp <em>Boolean Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Boolean Exp</em>'.
-   * @see bxml.CallParamatersType#getBooleanExp()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_BooleanExp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getEmptySet <em>Empty Set</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Empty Set</em>'.
-   * @see bxml.CallParamatersType#getEmptySet()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_EmptySet();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getEmptySeq <em>Empty Seq</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Empty Seq</em>'.
-   * @see bxml.CallParamatersType#getEmptySeq()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_EmptySeq();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getId <em>Id</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Id</em>'.
-   * @see bxml.CallParamatersType#getId()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_Id();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getIntegerLiteral <em>Integer Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Integer Literal</em>'.
-   * @see bxml.CallParamatersType#getIntegerLiteral()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_IntegerLiteral();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getQuantifiedExp <em>Quantified Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Quantified Exp</em>'.
-   * @see bxml.CallParamatersType#getQuantifiedExp()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_QuantifiedExp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getQuantifiedSet <em>Quantified Set</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Quantified Set</em>'.
-   * @see bxml.CallParamatersType#getQuantifiedSet()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_QuantifiedSet();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getSTRINGLiteral <em>STRING Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>STRING Literal</em>'.
-   * @see bxml.CallParamatersType#getSTRINGLiteral()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_STRINGLiteral();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getUnaryExp <em>Unary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Unary Exp</em>'.
-   * @see bxml.CallParamatersType#getUnaryExp()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_UnaryExp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getStruct <em>Struct</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Struct</em>'.
-   * @see bxml.CallParamatersType#getStruct()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_Struct();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.CallParamatersType#getRecord <em>Record</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Record</em>'.
-   * @see bxml.CallParamatersType#getRecord()
-   * @see #getCallParamatersType()
-   * @generated
-   */
-  EReference getCallParamatersType_Record();
+  EAttribute getBynaryExpType_Typref();
 
   /**
    * Returns the meta object for class '{@link bxml.CaseSubType <em>Case Sub Type</em>}'.
@@ -8021,6 +13324,17 @@ public interface BxmlPackage extends EPackage {
   EClass getChoicesType();
 
   /**
+   * Returns the meta object for the containment reference '{@link bxml.ChoicesType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ChoicesType#getAttr()
+   * @see #getChoicesType()
+   * @generated
+   */
+  EReference getChoicesType_Attr();
+
+  /**
    * Returns the meta object for the containment reference list '{@link bxml.ChoicesType#getChoice <em>Choice</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8042,15 +13356,15 @@ public interface BxmlPackage extends EPackage {
   EClass getChoiceType();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.ChoiceType#getValue <em>Value</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ChoiceType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Value</em>'.
-   * @see bxml.ChoiceType#getValue()
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ChoiceType#getAttr()
    * @see #getChoiceType()
    * @generated
    */
-  EReference getChoiceType_Value();
+  EReference getChoiceType_Attr();
 
   /**
    * Returns the meta object for the containment reference '{@link bxml.ChoiceType#getThen <em>Then</em>}'.
@@ -8062,6 +13376,49 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EReference getChoiceType_Then();
+
+  /**
+   * Returns the meta object for class '{@link bxml.ChoiceType1 <em>Choice Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Choice Type1</em>'.
+   * @see bxml.ChoiceType1
+   * @generated
+   */
+  EClass getChoiceType1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ChoiceType1#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ChoiceType1#getAttr()
+   * @see #getChoiceType1()
+   * @generated
+   */
+  EReference getChoiceType1_Attr();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ChoiceType1#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Value</em>'.
+   * @see bxml.ChoiceType1#getValue()
+   * @see #getChoiceType1()
+   * @generated
+   */
+  EReference getChoiceType1_Value();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ChoiceType1#getThen <em>Then</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Then</em>'.
+   * @see bxml.ChoiceType1#getThen()
+   * @see #getChoiceType1()
+   * @generated
+   */
+  EReference getChoiceType1_Then();
 
   /**
    * Returns the meta object for class '{@link bxml.ConcreteConstantsType <em>Concrete Constants Type</em>}'.
@@ -8128,6 +13485,180 @@ public interface BxmlPackage extends EPackage {
   EReference getConcreteVariablesType_Id();
 
   /**
+   * Returns the meta object for class '{@link bxml.ConditionType <em>Condition Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Condition Type</em>'.
+   * @see bxml.ConditionType
+   * @generated
+   */
+  EClass getConditionType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConditionType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ConditionType#getAttr()
+   * @see #getConditionType()
+   * @generated
+   */
+  EReference getConditionType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConditionType#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.ConditionType#getBinaryPred()
+   * @see #getConditionType()
+   * @generated
+   */
+  EReference getConditionType_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConditionType#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.ConditionType#getNaryPred()
+   * @see #getConditionType()
+   * @generated
+   */
+  EReference getConditionType_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConditionType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.ConditionType#getUnaryPred()
+   * @see #getConditionType()
+   * @generated
+   */
+  EReference getConditionType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConditionType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.ConditionType#getQuantifiedPred()
+   * @see #getConditionType()
+   * @generated
+   */
+  EReference getConditionType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConditionType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.ConditionType#getExpComparison()
+   * @see #getConditionType()
+   * @generated
+   */
+  EReference getConditionType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConditionType#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.ConditionType#getSet()
+   * @see #getConditionType()
+   * @generated
+   */
+  EReference getConditionType_Set();
+
+  /**
+   * Returns the meta object for class '{@link bxml.ConstraintsType <em>Constraints Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Constraints Type</em>'.
+   * @see bxml.ConstraintsType
+   * @generated
+   */
+  EClass getConstraintsType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConstraintsType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ConstraintsType#getAttr()
+   * @see #getConstraintsType()
+   * @generated
+   */
+  EReference getConstraintsType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConstraintsType#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.ConstraintsType#getBinaryPred()
+   * @see #getConstraintsType()
+   * @generated
+   */
+  EReference getConstraintsType_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConstraintsType#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.ConstraintsType#getNaryPred()
+   * @see #getConstraintsType()
+   * @generated
+   */
+  EReference getConstraintsType_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConstraintsType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.ConstraintsType#getUnaryPred()
+   * @see #getConstraintsType()
+   * @generated
+   */
+  EReference getConstraintsType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConstraintsType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.ConstraintsType#getQuantifiedPred()
+   * @see #getConstraintsType()
+   * @generated
+   */
+  EReference getConstraintsType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConstraintsType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.ConstraintsType#getExpComparison()
+   * @see #getConstraintsType()
+   * @generated
+   */
+  EReference getConstraintsType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ConstraintsType#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.ConstraintsType#getSet()
+   * @see #getConstraintsType()
+   * @generated
+   */
+  EReference getConstraintsType_Set();
+
+  /**
    * Returns the meta object for class '{@link bxml.DocumentRoot <em>Document Root</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8171,6 +13702,39 @@ public interface BxmlPackage extends EPackage {
   EReference getDocumentRoot_XSISchemaLocation();
 
   /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getAbstractConstants <em>Abstract Constants</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Abstract Constants</em>'.
+   * @see bxml.DocumentRoot#getAbstractConstants()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_AbstractConstants();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getAbstractVariables <em>Abstract Variables</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Abstract Variables</em>'.
+   * @see bxml.DocumentRoot#getAbstractVariables()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_AbstractVariables();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getAbstraction <em>Abstraction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Abstraction</em>'.
+   * @see bxml.DocumentRoot#getAbstraction()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Abstraction();
+
+  /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getANYSub <em>ANY Sub</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8180,6 +13744,50 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EReference getDocumentRoot_ANYSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getAssertSub <em>Assert Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assert Sub</em>'.
+   * @see bxml.DocumentRoot#getAssertSub()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_AssertSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getAssertions <em>Assertions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assertions</em>'.
+   * @see bxml.DocumentRoot#getAssertions()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Assertions();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getAssignementSub <em>Assignement Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignement Sub</em>'.
+   * @see bxml.DocumentRoot#getAssignementSub()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_AssignementSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.DocumentRoot#getAttr()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Attr();
 
   /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getBecomesIn <em>Becomes In</em>}'.
@@ -8193,15 +13801,70 @@ public interface BxmlPackage extends EPackage {
   EReference getDocumentRoot_BecomesIn();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getBinarySub <em>Binary Sub</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getBecomesSuchThat <em>Becomes Such That</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Binary Sub</em>'.
-   * @see bxml.DocumentRoot#getBinarySub()
+   * @return the meta object for the containment reference '<em>Becomes Such That</em>'.
+   * @see bxml.DocumentRoot#getBecomesSuchThat()
    * @see #getDocumentRoot()
    * @generated
    */
-  EReference getDocumentRoot_BinarySub();
+  EReference getDocumentRoot_BecomesSuchThat();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.DocumentRoot#getBinaryPred()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getBlocSub <em>Bloc Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bloc Sub</em>'.
+   * @see bxml.DocumentRoot#getBlocSub()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_BlocSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getBody <em>Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Body</em>'.
+   * @see bxml.DocumentRoot#getBody()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Body();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getBooleanExp <em>Boolean Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Exp</em>'.
+   * @see bxml.DocumentRoot#getBooleanExp()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_BooleanExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getBooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Literal</em>'.
+   * @see bxml.DocumentRoot#getBooleanLiteral()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_BooleanLiteral();
 
   /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getCaseSub <em>Case Sub</em>}'.
@@ -8215,6 +13878,215 @@ public interface BxmlPackage extends EPackage {
   EReference getDocumentRoot_CaseSub();
 
   /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getChoices <em>Choices</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Choices</em>'.
+   * @see bxml.DocumentRoot#getChoices()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Choices();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getConcreteConstants <em>Concrete Constants</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Concrete Constants</em>'.
+   * @see bxml.DocumentRoot#getConcreteConstants()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_ConcreteConstants();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getConcreteVariables <em>Concrete Variables</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Concrete Variables</em>'.
+   * @see bxml.DocumentRoot#getConcreteVariables()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_ConcreteVariables();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getCondition <em>Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Condition</em>'.
+   * @see bxml.DocumentRoot#getCondition()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Condition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getConstraints <em>Constraints</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Constraints</em>'.
+   * @see bxml.DocumentRoot#getConstraints()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Constraints();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getEmptySeq <em>Empty Seq</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Seq</em>'.
+   * @see bxml.DocumentRoot#getEmptySeq()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_EmptySeq();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getEmptySet <em>Empty Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Set</em>'.
+   * @see bxml.DocumentRoot#getEmptySet()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_EmptySet();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getEnumeratedValues <em>Enumerated Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Enumerated Values</em>'.
+   * @see bxml.DocumentRoot#getEnumeratedValues()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_EnumeratedValues();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.DocumentRoot#getExpComparison()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getExtends <em>Extends</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Extends</em>'.
+   * @see bxml.DocumentRoot#getExtends()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Extends();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.DocumentRoot#getGenericType <em>Generic Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Generic Type</em>'.
+   * @see bxml.DocumentRoot#getGenericType()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EAttribute getDocumentRoot_GenericType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getGuard <em>Guard</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Guard</em>'.
+   * @see bxml.DocumentRoot#getGuard()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Guard();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getIfSub <em>If Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sub</em>'.
+   * @see bxml.DocumentRoot#getIfSub()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_IfSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getImports <em>Imports</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Imports</em>'.
+   * @see bxml.DocumentRoot#getImports()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Imports();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getIncludes <em>Includes</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Includes</em>'.
+   * @see bxml.DocumentRoot#getIncludes()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Includes();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getInitialisation <em>Initialisation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Initialisation</em>'.
+   * @see bxml.DocumentRoot#getInitialisation()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Initialisation();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.DocumentRoot#getInstance <em>Instance</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Instance</em>'.
+   * @see bxml.DocumentRoot#getInstance()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EAttribute getDocumentRoot_Instance();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getIntegerLiteral <em>Integer Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Integer Literal</em>'.
+   * @see bxml.DocumentRoot#getIntegerLiteral()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_IntegerLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getInvariant <em>Invariant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Invariant</em>'.
+   * @see bxml.DocumentRoot#getInvariant()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Invariant();
+
+  /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getLETSub <em>LET Sub</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8224,6 +14096,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EReference getDocumentRoot_LETSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getLocalOperations <em>Local Operations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Local Operations</em>'.
+   * @see bxml.DocumentRoot#getLocalOperations()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_LocalOperations();
 
   /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getMachine <em>Machine</em>}'.
@@ -8248,6 +14131,28 @@ public interface BxmlPackage extends EPackage {
   EReference getDocumentRoot_NaryExp();
 
   /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.DocumentRoot#getNaryPred()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getNarySub <em>Nary Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Sub</em>'.
+   * @see bxml.DocumentRoot#getNarySub()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_NarySub();
+
+  /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getOperation <em>Operation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8257,6 +14162,83 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EReference getDocumentRoot_Operation();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getOperationCall <em>Operation Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Call</em>'.
+   * @see bxml.DocumentRoot#getOperationCall()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_OperationCall();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getOperations <em>Operations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operations</em>'.
+   * @see bxml.DocumentRoot#getOperations()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Operations();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getPrecondition <em>Precondition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Precondition</em>'.
+   * @see bxml.DocumentRoot#getPrecondition()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Precondition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getPred <em>Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Pred</em>'.
+   * @see bxml.DocumentRoot#getPred()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Pred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getPromotedOperation <em>Promoted Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Promoted Operation</em>'.
+   * @see bxml.DocumentRoot#getPromotedOperation()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_PromotedOperation();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getPromotes <em>Promotes</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Promotes</em>'.
+   * @see bxml.DocumentRoot#getPromotes()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Promotes();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getProperties <em>Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Properties</em>'.
+   * @see bxml.DocumentRoot#getProperties()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Properties();
 
   /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getQuantifiedExp <em>Quantified Exp</em>}'.
@@ -8303,6 +14285,50 @@ public interface BxmlPackage extends EPackage {
   EReference getDocumentRoot_Record();
 
   /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getRecordItem <em>Record Item</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Record Item</em>'.
+   * @see bxml.DocumentRoot#getRecordItem()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_RecordItem();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getReferencedMachine <em>Referenced Machine</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Referenced Machine</em>'.
+   * @see bxml.DocumentRoot#getReferencedMachine()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_ReferencedMachine();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getRefines <em>Refines</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Refines</em>'.
+   * @see bxml.DocumentRoot#getRefines()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Refines();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getSees <em>Sees</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Sees</em>'.
+   * @see bxml.DocumentRoot#getSees()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Sees();
+
+  /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getSelect <em>Select</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8312,6 +14338,50 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EReference getDocumentRoot_Select();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.DocumentRoot#getSet()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Set();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getSets <em>Sets</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Sets</em>'.
+   * @see bxml.DocumentRoot#getSets()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Sets();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getSkip <em>Skip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Skip</em>'.
+   * @see bxml.DocumentRoot#getSkip()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Skip();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getSTRINGLiteral <em>STRING Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>STRING Literal</em>'.
+   * @see bxml.DocumentRoot#getSTRINGLiteral()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_STRINGLiteral();
 
   /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getStruct <em>Struct</em>}'.
@@ -8325,6 +14395,72 @@ public interface BxmlPackage extends EPackage {
   EReference getDocumentRoot_Struct();
 
   /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getThen <em>Then</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Then</em>'.
+   * @see bxml.DocumentRoot#getThen()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Then();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see bxml.DocumentRoot#getType()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Type();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getTypeInfos <em>Type Infos</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type Infos</em>'.
+   * @see bxml.DocumentRoot#getTypeInfos()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_TypeInfos();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.DocumentRoot#getUnaryPred()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getUses <em>Uses</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Uses</em>'.
+   * @see bxml.DocumentRoot#getUses()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Uses();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Value</em>'.
+   * @see bxml.DocumentRoot#getValue()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Value();
+
+  /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getVARIN <em>VARIN</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8336,6 +14472,50 @@ public interface BxmlPackage extends EPackage {
   EReference getDocumentRoot_VARIN();
 
   /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getVariables <em>Variables</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Variables</em>'.
+   * @see bxml.DocumentRoot#getVariables()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Variables();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getVariant <em>Variant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Variant</em>'.
+   * @see bxml.DocumentRoot#getVariant()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_Variant();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getWhen <em>When</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>When</em>'.
+   * @see bxml.DocumentRoot#getWhen()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_When();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getWhenClauses <em>When Clauses</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>When Clauses</em>'.
+   * @see bxml.DocumentRoot#getWhenClauses()
+   * @see #getDocumentRoot()
+   * @generated
+   */
+  EReference getDocumentRoot_WhenClauses();
+
+  /**
    * Returns the meta object for the containment reference '{@link bxml.DocumentRoot#getWhile <em>While</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8345,6 +14525,474 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EReference getDocumentRoot_While();
+
+  /**
+   * Returns the meta object for class '{@link bxml.ElseType <em>Else Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Else Type</em>'.
+   * @see bxml.ElseType
+   * @generated
+   */
+  EClass getElseType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ElseType#getAttr()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getBlocSub <em>Bloc Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bloc Sub</em>'.
+   * @see bxml.ElseType#getBlocSub()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_BlocSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getSkip <em>Skip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Skip</em>'.
+   * @see bxml.ElseType#getSkip()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_Skip();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getAssertSub <em>Assert Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assert Sub</em>'.
+   * @see bxml.ElseType#getAssertSub()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_AssertSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getIfSub <em>If Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sub</em>'.
+   * @see bxml.ElseType#getIfSub()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_IfSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes Such That</em>'.
+   * @see bxml.ElseType#getBecomesSuchThat()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_BecomesSuchThat();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getAssignementSub <em>Assignement Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignement Sub</em>'.
+   * @see bxml.ElseType#getAssignementSub()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_AssignementSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getSelect <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Select</em>'.
+   * @see bxml.ElseType#getSelect()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_Select();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getCaseSub <em>Case Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Case Sub</em>'.
+   * @see bxml.ElseType#getCaseSub()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_CaseSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getANYSub <em>ANY Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>ANY Sub</em>'.
+   * @see bxml.ElseType#getANYSub()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_ANYSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getLETSub <em>LET Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>LET Sub</em>'.
+   * @see bxml.ElseType#getLETSub()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_LETSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getBecomesIn <em>Becomes In</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes In</em>'.
+   * @see bxml.ElseType#getBecomesIn()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_BecomesIn();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getVARIN <em>VARIN</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>VARIN</em>'.
+   * @see bxml.ElseType#getVARIN()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_VARIN();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getNarySub <em>Nary Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Sub</em>'.
+   * @see bxml.ElseType#getNarySub()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_NarySub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getOperationCall <em>Operation Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Call</em>'.
+   * @see bxml.ElseType#getOperationCall()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_OperationCall();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType#getWhile <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>While</em>'.
+   * @see bxml.ElseType#getWhile()
+   * @see #getElseType()
+   * @generated
+   */
+  EReference getElseType_While();
+
+  /**
+   * Returns the meta object for class '{@link bxml.ElseType1 <em>Else Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Else Type1</em>'.
+   * @see bxml.ElseType1
+   * @generated
+   */
+  EClass getElseType1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType1#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ElseType1#getAttr()
+   * @see #getElseType1()
+   * @generated
+   */
+  EReference getElseType1_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType1#getChoice <em>Choice</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Choice</em>'.
+   * @see bxml.ElseType1#getChoice()
+   * @see #getElseType1()
+   * @generated
+   */
+  EReference getElseType1_Choice();
+
+  /**
+   * Returns the meta object for class '{@link bxml.ElseType2 <em>Else Type2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Else Type2</em>'.
+   * @see bxml.ElseType2
+   * @generated
+   */
+  EClass getElseType2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ElseType2#getAttr()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getBlocSub <em>Bloc Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bloc Sub</em>'.
+   * @see bxml.ElseType2#getBlocSub()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_BlocSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getSkip <em>Skip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Skip</em>'.
+   * @see bxml.ElseType2#getSkip()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_Skip();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getAssertSub <em>Assert Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assert Sub</em>'.
+   * @see bxml.ElseType2#getAssertSub()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_AssertSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getIfSub <em>If Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sub</em>'.
+   * @see bxml.ElseType2#getIfSub()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_IfSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes Such That</em>'.
+   * @see bxml.ElseType2#getBecomesSuchThat()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_BecomesSuchThat();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getAssignementSub <em>Assignement Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignement Sub</em>'.
+   * @see bxml.ElseType2#getAssignementSub()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_AssignementSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getSelect <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Select</em>'.
+   * @see bxml.ElseType2#getSelect()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_Select();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getCaseSub <em>Case Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Case Sub</em>'.
+   * @see bxml.ElseType2#getCaseSub()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_CaseSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getANYSub <em>ANY Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>ANY Sub</em>'.
+   * @see bxml.ElseType2#getANYSub()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_ANYSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getLETSub <em>LET Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>LET Sub</em>'.
+   * @see bxml.ElseType2#getLETSub()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_LETSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getBecomesIn <em>Becomes In</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes In</em>'.
+   * @see bxml.ElseType2#getBecomesIn()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_BecomesIn();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getVARIN <em>VARIN</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>VARIN</em>'.
+   * @see bxml.ElseType2#getVARIN()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_VARIN();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getNarySub <em>Nary Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Sub</em>'.
+   * @see bxml.ElseType2#getNarySub()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_NarySub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getOperationCall <em>Operation Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Call</em>'.
+   * @see bxml.ElseType2#getOperationCall()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_OperationCall();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ElseType2#getWhile <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>While</em>'.
+   * @see bxml.ElseType2#getWhile()
+   * @see #getElseType2()
+   * @generated
+   */
+  EReference getElseType2_While();
+
+  /**
+   * Returns the meta object for class '{@link bxml.EmptySeqType <em>Empty Seq Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Empty Seq Type</em>'.
+   * @see bxml.EmptySeqType
+   * @generated
+   */
+  EClass getEmptySeqType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.EmptySeqType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.EmptySeqType#getAttr()
+   * @see #getEmptySeqType()
+   * @generated
+   */
+  EReference getEmptySeqType_Attr();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.EmptySeqType#getTypref <em>Typref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.EmptySeqType#getTypref()
+   * @see #getEmptySeqType()
+   * @generated
+   */
+  EAttribute getEmptySeqType_Typref();
+
+  /**
+   * Returns the meta object for class '{@link bxml.EmptySetType <em>Empty Set Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Empty Set Type</em>'.
+   * @see bxml.EmptySetType
+   * @generated
+   */
+  EClass getEmptySetType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.EmptySetType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.EmptySetType#getAttr()
+   * @see #getEmptySetType()
+   * @generated
+   */
+  EReference getEmptySetType_Attr();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.EmptySetType#getTypref <em>Typref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.EmptySetType#getTypref()
+   * @see #getEmptySetType()
+   * @generated
+   */
+  EAttribute getEmptySetType_Typref();
 
   /**
    * Returns the meta object for class '{@link bxml.EnumeratedValuesType <em>Enumerated Values Type</em>}'.
@@ -8708,233 +15356,220 @@ public interface BxmlPackage extends EPackage {
   EAttribute getExpComparisonType_Op();
 
   /**
-   * Returns the meta object for class '{@link bxml.ExpType <em>Exp Type</em>}'.
+   * Returns the meta object for class '{@link bxml.ExtendsType <em>Extends Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Exp Type</em>'.
-   * @see bxml.ExpType
+   * @return the meta object for class '<em>Extends Type</em>'.
+   * @see bxml.ExtendsType
    * @generated
    */
-  EClass getExpType();
+  EClass getExtendsType();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getAttr <em>Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.ExpType#getAttr()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_Attr();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getBinaryExp <em>Binary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Binary Exp</em>'.
-   * @see bxml.ExpType#getBinaryExp()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_BinaryExp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getNaryExp <em>Nary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Nary Exp</em>'.
-   * @see bxml.ExpType#getNaryExp()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_NaryExp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getBooleanLiteral <em>Boolean Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Boolean Literal</em>'.
-   * @see bxml.ExpType#getBooleanLiteral()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_BooleanLiteral();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getBooleanExp <em>Boolean Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Boolean Exp</em>'.
-   * @see bxml.ExpType#getBooleanExp()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_BooleanExp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getEmptySet <em>Empty Set</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Empty Set</em>'.
-   * @see bxml.ExpType#getEmptySet()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_EmptySet();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getEmptySeq <em>Empty Seq</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Empty Seq</em>'.
-   * @see bxml.ExpType#getEmptySeq()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_EmptySeq();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getId <em>Id</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Id</em>'.
-   * @see bxml.ExpType#getId()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_Id();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getIntegerLiteral <em>Integer Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Integer Literal</em>'.
-   * @see bxml.ExpType#getIntegerLiteral()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_IntegerLiteral();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getQuantifiedExp <em>Quantified Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantified Exp</em>'.
-   * @see bxml.ExpType#getQuantifiedExp()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_QuantifiedExp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getQuantifiedSet <em>Quantified Set</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantified Set</em>'.
-   * @see bxml.ExpType#getQuantifiedSet()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_QuantifiedSet();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getSTRINGLiteral <em>STRING Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>STRING Literal</em>'.
-   * @see bxml.ExpType#getSTRINGLiteral()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_STRINGLiteral();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getUnaryExp <em>Unary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Unary Exp</em>'.
-   * @see bxml.ExpType#getUnaryExp()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_UnaryExp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getStruct <em>Struct</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Struct</em>'.
-   * @see bxml.ExpType#getStruct()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_Struct();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ExpType#getRecord <em>Record</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Record</em>'.
-   * @see bxml.ExpType#getRecord()
-   * @see #getExpType()
-   * @generated
-   */
-  EReference getExpType_Record();
-
-  /**
-   * Returns the meta object for class '{@link bxml.IdentifierType <em>Identifier Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Identifier Type</em>'.
-   * @see bxml.IdentifierType
-   * @generated
-   */
-  EClass getIdentifierType();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.IdentifierType#getAttr <em>Attr</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ExtendsType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.IdentifierType#getAttr()
-   * @see #getIdentifierType()
+   * @see bxml.ExtendsType#getAttr()
+   * @see #getExtendsType()
    * @generated
    */
-  EReference getIdentifierType_Attr();
+  EReference getExtendsType_Attr();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.IdentifierType#getSuffix <em>Suffix</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.ExtendsType#getReferencedMachine <em>Referenced Machine</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Referenced Machine</em>'.
+   * @see bxml.ExtendsType#getReferencedMachine()
+   * @see #getExtendsType()
+   * @generated
+   */
+  EReference getExtendsType_ReferencedMachine();
+
+  /**
+   * Returns the meta object for class '{@link bxml.GuardType <em>Guard Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Guard Type</em>'.
+   * @see bxml.GuardType
+   * @generated
+   */
+  EClass getGuardType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.GuardType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.GuardType#getAttr()
+   * @see #getGuardType()
+   * @generated
+   */
+  EReference getGuardType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.GuardType#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.GuardType#getBinaryPred()
+   * @see #getGuardType()
+   * @generated
+   */
+  EReference getGuardType_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.GuardType#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.GuardType#getNaryPred()
+   * @see #getGuardType()
+   * @generated
+   */
+  EReference getGuardType_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.GuardType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.GuardType#getUnaryPred()
+   * @see #getGuardType()
+   * @generated
+   */
+  EReference getGuardType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.GuardType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.GuardType#getQuantifiedPred()
+   * @see #getGuardType()
+   * @generated
+   */
+  EReference getGuardType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.GuardType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.GuardType#getExpComparison()
+   * @see #getGuardType()
+   * @generated
+   */
+  EReference getGuardType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.GuardType#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.GuardType#getSet()
+   * @see #getGuardType()
+   * @generated
+   */
+  EReference getGuardType_Set();
+
+  /**
+   * Returns the meta object for class '{@link bxml.Identifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Identifier</em>'.
+   * @see bxml.Identifier
+   * @generated
+   */
+  EClass getIdentifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.Identifier#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.Identifier#getAttr()
+   * @see #getIdentifier()
+   * @generated
+   */
+  EReference getIdentifier_Attr();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.Identifier#getComponent <em>Component</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Component</em>'.
+   * @see bxml.Identifier#getComponent()
+   * @see #getIdentifier()
+   * @generated
+   */
+  EAttribute getIdentifier_Component();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.Identifier#getInstance <em>Instance</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Instance</em>'.
+   * @see bxml.Identifier#getInstance()
+   * @see #getIdentifier()
+   * @generated
+   */
+  EAttribute getIdentifier_Instance();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.Identifier#getSuffix <em>Suffix</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Suffix</em>'.
-   * @see bxml.IdentifierType#getSuffix()
-   * @see #getIdentifierType()
+   * @see bxml.Identifier#getSuffix()
+   * @see #getIdentifier()
    * @generated
    */
-  EAttribute getIdentifierType_Suffix();
+  EAttribute getIdentifier_Suffix();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.IdentifierType#getTypref <em>Typref</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.Identifier#getTypref <em>Typref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Typref</em>'.
-   * @see bxml.IdentifierType#getTypref()
-   * @see #getIdentifierType()
+   * @see bxml.Identifier#getTypref()
+   * @see #getIdentifier()
    * @generated
    */
-  EAttribute getIdentifierType_Typref();
+  EAttribute getIdentifier_Typref();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.IdentifierType#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.Identifier#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Value</em>'.
-   * @see bxml.IdentifierType#getValue()
-   * @see #getIdentifierType()
+   * @see bxml.Identifier#getValue()
+   * @see #getIdentifier()
    * @generated
    */
-  EAttribute getIdentifierType_Value();
+  EAttribute getIdentifier_Value();
+
+  /**
+   * Returns the meta object for class '{@link bxml.IdType <em>Id Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Id Type</em>'.
+   * @see bxml.IdType
+   * @generated
+   */
+  EClass getIdType();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.IdType#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see bxml.IdType#getValue()
+   * @see #getIdType()
+   * @generated
+   */
+  EAttribute getIdType_Value();
 
   /**
    * Returns the meta object for class '{@link bxml.IfSubType <em>If Sub Type</em>}'.
@@ -9002,36 +15637,254 @@ public interface BxmlPackage extends EPackage {
   EAttribute getIfSubType_Elseif();
 
   /**
-   * Returns the meta object for class '{@link bxml.InfoTypeType <em>Info Type Type</em>}'.
+   * Returns the meta object for class '{@link bxml.ImportsType <em>Imports Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Info Type Type</em>'.
-   * @see bxml.InfoTypeType
+   * @return the meta object for class '<em>Imports Type</em>'.
+   * @see bxml.ImportsType
    * @generated
    */
-  EClass getInfoTypeType();
+  EClass getImportsType();
 
   /**
-   * Returns the meta object for the attribute list '{@link bxml.InfoTypeType#getAny <em>Any</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ImportsType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Any</em>'.
-   * @see bxml.InfoTypeType#getAny()
-   * @see #getInfoTypeType()
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ImportsType#getAttr()
+   * @see #getImportsType()
    * @generated
    */
-  EAttribute getInfoTypeType_Any();
+  EReference getImportsType_Attr();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.InfoTypeType#getId <em>Id</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.ImportsType#getReferencedMachine <em>Referenced Machine</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Id</em>'.
-   * @see bxml.InfoTypeType#getId()
-   * @see #getInfoTypeType()
+   * @return the meta object for the containment reference list '<em>Referenced Machine</em>'.
+   * @see bxml.ImportsType#getReferencedMachine()
+   * @see #getImportsType()
    * @generated
    */
-  EAttribute getInfoTypeType_Id();
+  EReference getImportsType_ReferencedMachine();
+
+  /**
+   * Returns the meta object for class '{@link bxml.IncludesType <em>Includes Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Includes Type</em>'.
+   * @see bxml.IncludesType
+   * @generated
+   */
+  EClass getIncludesType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.IncludesType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.IncludesType#getAttr()
+   * @see #getIncludesType()
+   * @generated
+   */
+  EReference getIncludesType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.IncludesType#getReferencedMachine <em>Referenced Machine</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Referenced Machine</em>'.
+   * @see bxml.IncludesType#getReferencedMachine()
+   * @see #getIncludesType()
+   * @generated
+   */
+  EReference getIncludesType_ReferencedMachine();
+
+  /**
+   * Returns the meta object for class '{@link bxml.InitialisationType <em>Initialisation Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Initialisation Type</em>'.
+   * @see bxml.InitialisationType
+   * @generated
+   */
+  EClass getInitialisationType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.InitialisationType#getAttr()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getBlocSub <em>Bloc Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Bloc Sub</em>'.
+   * @see bxml.InitialisationType#getBlocSub()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_BlocSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getSkip <em>Skip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Skip</em>'.
+   * @see bxml.InitialisationType#getSkip()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_Skip();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getAssertSub <em>Assert Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assert Sub</em>'.
+   * @see bxml.InitialisationType#getAssertSub()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_AssertSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getIfSub <em>If Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sub</em>'.
+   * @see bxml.InitialisationType#getIfSub()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_IfSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes Such That</em>'.
+   * @see bxml.InitialisationType#getBecomesSuchThat()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_BecomesSuchThat();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getAssignementSub <em>Assignement Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Assignement Sub</em>'.
+   * @see bxml.InitialisationType#getAssignementSub()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_AssignementSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getSelect <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Select</em>'.
+   * @see bxml.InitialisationType#getSelect()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_Select();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getCaseSub <em>Case Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Case Sub</em>'.
+   * @see bxml.InitialisationType#getCaseSub()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_CaseSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getANYSub <em>ANY Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>ANY Sub</em>'.
+   * @see bxml.InitialisationType#getANYSub()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_ANYSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getLETSub <em>LET Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>LET Sub</em>'.
+   * @see bxml.InitialisationType#getLETSub()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_LETSub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getBecomesIn <em>Becomes In</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Becomes In</em>'.
+   * @see bxml.InitialisationType#getBecomesIn()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_BecomesIn();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getVARIN <em>VARIN</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>VARIN</em>'.
+   * @see bxml.InitialisationType#getVARIN()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_VARIN();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getNarySub <em>Nary Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Sub</em>'.
+   * @see bxml.InitialisationType#getNarySub()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_NarySub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getOperationCall <em>Operation Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Call</em>'.
+   * @see bxml.InitialisationType#getOperationCall()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_OperationCall();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InitialisationType#getWhile <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>While</em>'.
+   * @see bxml.InitialisationType#getWhile()
+   * @see #getInitialisationType()
+   * @generated
+   */
+  EReference getInitialisationType_While();
 
   /**
    * Returns the meta object for class '{@link bxml.InputParametersType <em>Input Parameters Type</em>}'.
@@ -9053,6 +15906,322 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EReference getInputParametersType_Id();
+
+  /**
+   * Returns the meta object for class '{@link bxml.InputParametersType1 <em>Input Parameters Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Input Parameters Type1</em>'.
+   * @see bxml.InputParametersType1
+   * @generated
+   */
+  EClass getInputParametersType1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InputParametersType1#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.InputParametersType1#getAttr()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_Attr();
+
+  /**
+   * Returns the meta object for the attribute list '{@link bxml.InputParametersType1#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Expression</em>'.
+   * @see bxml.InputParametersType1#getExpression()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EAttribute getInputParametersType1_Expression();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getBinaryExp <em>Binary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Binary Exp</em>'.
+   * @see bxml.InputParametersType1#getBinaryExp()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_BinaryExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getNaryExp <em>Nary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Nary Exp</em>'.
+   * @see bxml.InputParametersType1#getNaryExp()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_NaryExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getBooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Boolean Literal</em>'.
+   * @see bxml.InputParametersType1#getBooleanLiteral()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_BooleanLiteral();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getBooleanExp <em>Boolean Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Boolean Exp</em>'.
+   * @see bxml.InputParametersType1#getBooleanExp()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_BooleanExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getEmptySet <em>Empty Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Empty Set</em>'.
+   * @see bxml.InputParametersType1#getEmptySet()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_EmptySet();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getEmptySeq <em>Empty Seq</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Empty Seq</em>'.
+   * @see bxml.InputParametersType1#getEmptySeq()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_EmptySeq();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Id</em>'.
+   * @see bxml.InputParametersType1#getId()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_Id();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getIntegerLiteral <em>Integer Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Integer Literal</em>'.
+   * @see bxml.InputParametersType1#getIntegerLiteral()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_IntegerLiteral();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getQuantifiedExp <em>Quantified Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Quantified Exp</em>'.
+   * @see bxml.InputParametersType1#getQuantifiedExp()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_QuantifiedExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getQuantifiedSet <em>Quantified Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Quantified Set</em>'.
+   * @see bxml.InputParametersType1#getQuantifiedSet()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_QuantifiedSet();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getSTRINGLiteral <em>STRING Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>STRING Literal</em>'.
+   * @see bxml.InputParametersType1#getSTRINGLiteral()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_STRINGLiteral();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getUnaryExp <em>Unary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Unary Exp</em>'.
+   * @see bxml.InputParametersType1#getUnaryExp()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_UnaryExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getStruct <em>Struct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Struct</em>'.
+   * @see bxml.InputParametersType1#getStruct()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_Struct();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.InputParametersType1#getRecord <em>Record</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Record</em>'.
+   * @see bxml.InputParametersType1#getRecord()
+   * @see #getInputParametersType1()
+   * @generated
+   */
+  EReference getInputParametersType1_Record();
+
+  /**
+   * Returns the meta object for class '{@link bxml.IntegerLiteralType <em>Integer Literal Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Integer Literal Type</em>'.
+   * @see bxml.IntegerLiteralType
+   * @generated
+   */
+  EClass getIntegerLiteralType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.IntegerLiteralType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.IntegerLiteralType#getAttr()
+   * @see #getIntegerLiteralType()
+   * @generated
+   */
+  EReference getIntegerLiteralType_Attr();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.IntegerLiteralType#getTypref <em>Typref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.IntegerLiteralType#getTypref()
+   * @see #getIntegerLiteralType()
+   * @generated
+   */
+  EAttribute getIntegerLiteralType_Typref();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.IntegerLiteralType#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see bxml.IntegerLiteralType#getValue()
+   * @see #getIntegerLiteralType()
+   * @generated
+   */
+  EAttribute getIntegerLiteralType_Value();
+
+  /**
+   * Returns the meta object for class '{@link bxml.InvariantType <em>Invariant Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Invariant Type</em>'.
+   * @see bxml.InvariantType
+   * @generated
+   */
+  EClass getInvariantType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InvariantType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.InvariantType#getAttr()
+   * @see #getInvariantType()
+   * @generated
+   */
+  EReference getInvariantType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InvariantType#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.InvariantType#getBinaryPred()
+   * @see #getInvariantType()
+   * @generated
+   */
+  EReference getInvariantType_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InvariantType#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.InvariantType#getNaryPred()
+   * @see #getInvariantType()
+   * @generated
+   */
+  EReference getInvariantType_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InvariantType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.InvariantType#getUnaryPred()
+   * @see #getInvariantType()
+   * @generated
+   */
+  EReference getInvariantType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InvariantType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.InvariantType#getQuantifiedPred()
+   * @see #getInvariantType()
+   * @generated
+   */
+  EReference getInvariantType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InvariantType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.InvariantType#getExpComparison()
+   * @see #getInvariantType()
+   * @generated
+   */
+  EReference getInvariantType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.InvariantType#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.InvariantType#getSet()
+   * @see #getInvariantType()
+   * @generated
+   */
+  EReference getInvariantType_Set();
 
   /**
    * Returns the meta object for class '{@link bxml.LETSubType <em>LET Sub Type</em>}'.
@@ -9109,49 +16278,6 @@ public interface BxmlPackage extends EPackage {
   EReference getLETSubType_Then();
 
   /**
-   * Returns the meta object for class '{@link bxml.LiteralType <em>Literal Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Literal Type</em>'.
-   * @see bxml.LiteralType
-   * @generated
-   */
-  EClass getLiteralType();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.LiteralType#getAttr <em>Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.LiteralType#getAttr()
-   * @see #getLiteralType()
-   * @generated
-   */
-  EReference getLiteralType_Attr();
-
-  /**
-   * Returns the meta object for the attribute '{@link bxml.LiteralType#getTypref <em>Typref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Typref</em>'.
-   * @see bxml.LiteralType#getTypref()
-   * @see #getLiteralType()
-   * @generated
-   */
-  EAttribute getLiteralType_Typref();
-
-  /**
-   * Returns the meta object for the attribute '{@link bxml.LiteralType#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see bxml.LiteralType#getValue()
-   * @see #getLiteralType()
-   * @generated
-   */
-  EAttribute getLiteralType_Value();
-
-  /**
    * Returns the meta object for class '{@link bxml.LocalOperationsType <em>Local Operations Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -9160,6 +16286,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EClass getLocalOperationsType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.LocalOperationsType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.LocalOperationsType#getAttr()
+   * @see #getLocalOperationsType()
+   * @generated
+   */
+  EReference getLocalOperationsType_Attr();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.LocalOperationsType#getOperation <em>Operation</em>}'.
@@ -9173,278 +16310,300 @@ public interface BxmlPackage extends EPackage {
   EReference getLocalOperationsType_Operation();
 
   /**
-   * Returns the meta object for class '{@link bxml.MachineType1 <em>Machine Type1</em>}'.
+   * Returns the meta object for class '{@link bxml.MachineType <em>Machine Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Machine Type1</em>'.
-   * @see bxml.MachineType1
+   * @return the meta object for class '<em>Machine Type</em>'.
+   * @see bxml.MachineType
    * @generated
    */
-  EClass getMachineType1();
+  EClass getMachineType();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getAbstraction <em>Abstraction</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.MachineType#getAttr()
+   * @see #getMachineType()
+   * @generated
+   */
+  EReference getMachineType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getAbstraction <em>Abstraction</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Abstraction</em>'.
-   * @see bxml.MachineType1#getAbstraction()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getAbstraction()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Abstraction();
+  EReference getMachineType_Abstraction();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getParameters <em>Parameters</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getParameters <em>Parameters</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Parameters</em>'.
-   * @see bxml.MachineType1#getParameters()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getParameters()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Parameters();
+  EReference getMachineType_Parameters();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getConstraints <em>Constraints</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getConstraints <em>Constraints</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Constraints</em>'.
-   * @see bxml.MachineType1#getConstraints()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getConstraints()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Constraints();
+  EReference getMachineType_Constraints();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getIncludes <em>Includes</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getIncludes <em>Includes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Includes</em>'.
-   * @see bxml.MachineType1#getIncludes()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getIncludes()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Includes();
+  EReference getMachineType_Includes();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getImports <em>Imports</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getImports <em>Imports</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Imports</em>'.
-   * @see bxml.MachineType1#getImports()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getImports()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Imports();
+  EReference getMachineType_Imports();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getExtends <em>Extends</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Extends</em>'.
-   * @see bxml.MachineType1#getExtends()
-   * @see #getMachineType1()
-   * @generated
-   */
-  EReference getMachineType1_Extends();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getUses <em>Uses</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Uses</em>'.
-   * @see bxml.MachineType1#getUses()
-   * @see #getMachineType1()
-   * @generated
-   */
-  EReference getMachineType1_Uses();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getSees <em>Sees</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getSees <em>Sees</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Sees</em>'.
-   * @see bxml.MachineType1#getSees()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getSees()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Sees();
+  EReference getMachineType_Sees();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getPromotes <em>Promotes</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getExtends <em>Extends</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Extends</em>'.
+   * @see bxml.MachineType#getExtends()
+   * @see #getMachineType()
+   * @generated
+   */
+  EReference getMachineType_Extends();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getUses <em>Uses</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Uses</em>'.
+   * @see bxml.MachineType#getUses()
+   * @see #getMachineType()
+   * @generated
+   */
+  EReference getMachineType_Uses();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getPromotes <em>Promotes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Promotes</em>'.
-   * @see bxml.MachineType1#getPromotes()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getPromotes()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Promotes();
+  EReference getMachineType_Promotes();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getValues <em>Values</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getValues <em>Values</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Values</em>'.
-   * @see bxml.MachineType1#getValues()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getValues()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Values();
+  EReference getMachineType_Values();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getSets <em>Sets</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getSets <em>Sets</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Sets</em>'.
-   * @see bxml.MachineType1#getSets()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getSets()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Sets();
+  EReference getMachineType_Sets();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getAbstractConstants <em>Abstract Constants</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getAbstractConstants <em>Abstract Constants</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Abstract Constants</em>'.
-   * @see bxml.MachineType1#getAbstractConstants()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getAbstractConstants()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_AbstractConstants();
+  EReference getMachineType_AbstractConstants();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getConcreteConstants <em>Concrete Constants</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getConcreteConstants <em>Concrete Constants</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Concrete Constants</em>'.
-   * @see bxml.MachineType1#getConcreteConstants()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getConcreteConstants()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_ConcreteConstants();
+  EReference getMachineType_ConcreteConstants();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getAbstractVariables <em>Abstract Variables</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getAbstractVariables <em>Abstract Variables</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Abstract Variables</em>'.
-   * @see bxml.MachineType1#getAbstractVariables()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getAbstractVariables()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_AbstractVariables();
+  EReference getMachineType_AbstractVariables();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getConcreteVariables <em>Concrete Variables</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getConcreteVariables <em>Concrete Variables</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Concrete Variables</em>'.
-   * @see bxml.MachineType1#getConcreteVariables()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getConcreteVariables()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_ConcreteVariables();
+  EReference getMachineType_ConcreteVariables();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getProperties <em>Properties</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getVariant <em>Variant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Variant</em>'.
+   * @see bxml.MachineType#getVariant()
+   * @see #getMachineType()
+   * @generated
+   */
+  EReference getMachineType_Variant();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getProperties <em>Properties</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Properties</em>'.
-   * @see bxml.MachineType1#getProperties()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getProperties()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Properties();
+  EReference getMachineType_Properties();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getInvariant <em>Invariant</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getInvariant <em>Invariant</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Invariant</em>'.
-   * @see bxml.MachineType1#getInvariant()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getInvariant()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Invariant();
+  EReference getMachineType_Invariant();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getInitialisation <em>Initialisation</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getInitialisation <em>Initialisation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Initialisation</em>'.
-   * @see bxml.MachineType1#getInitialisation()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getInitialisation()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Initialisation();
+  EReference getMachineType_Initialisation();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getAssertions <em>Assertions</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getAssertions <em>Assertions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Assertions</em>'.
-   * @see bxml.MachineType1#getAssertions()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getAssertions()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Assertions();
+  EReference getMachineType_Assertions();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getLocalOperations <em>Local Operations</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getLocalOperations <em>Local Operations</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Local Operations</em>'.
-   * @see bxml.MachineType1#getLocalOperations()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getLocalOperations()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_LocalOperations();
+  EReference getMachineType_LocalOperations();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getOperations <em>Operations</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getOperations <em>Operations</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Operations</em>'.
-   * @see bxml.MachineType1#getOperations()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getOperations()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_Operations();
+  EReference getMachineType_Operations();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.MachineType1#getTypeInfos <em>Type Infos</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.MachineType#getTypeInfos <em>Type Infos</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Type Infos</em>'.
-   * @see bxml.MachineType1#getTypeInfos()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getTypeInfos()
+   * @see #getMachineType()
    * @generated
    */
-  EReference getMachineType1_TypeInfos();
+  EReference getMachineType_TypeInfos();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.MachineType1#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.MachineType#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see bxml.MachineType1#getName()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getName()
+   * @see #getMachineType()
    * @generated
    */
-  EAttribute getMachineType1_Name();
+  EAttribute getMachineType_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.MachineType1#getType <em>Type</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.MachineType#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Type</em>'.
-   * @see bxml.MachineType1#getType()
-   * @see #getMachineType1()
+   * @see bxml.MachineType#getType()
+   * @see #getMachineType()
    * @generated
    */
-  EAttribute getMachineType1_Type();
+  EAttribute getMachineType_Type();
 
   /**
    * Returns the meta object for class '{@link bxml.NameType <em>Name Type</em>}'.
@@ -9457,10 +16616,21 @@ public interface BxmlPackage extends EPackage {
   EClass getNameType();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.NameType#getId <em>Id</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.NameType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Id</em>'.
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.NameType#getAttr()
+   * @see #getNameType()
+   * @generated
+   */
+  EReference getNameType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.NameType#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Id</em>'.
    * @see bxml.NameType#getId()
    * @see #getNameType()
    * @generated
@@ -9478,15 +16648,26 @@ public interface BxmlPackage extends EPackage {
   EClass getNaryExpType();
 
   /**
-   * Returns the meta object for the attribute list '{@link bxml.NaryExpType#getExp <em>Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.NaryExpType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Exp</em>'.
-   * @see bxml.NaryExpType#getExp()
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.NaryExpType#getAttr()
    * @see #getNaryExpType()
    * @generated
    */
-  EAttribute getNaryExpType_Exp();
+  EReference getNaryExpType_Attr();
+
+  /**
+   * Returns the meta object for the attribute list '{@link bxml.NaryExpType#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Expression</em>'.
+   * @see bxml.NaryExpType#getExpression()
+   * @see #getNaryExpType()
+   * @generated
+   */
+  EAttribute getNaryExpType_Expression();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.NaryExpType#getBinaryExp <em>Binary Exp</em>}'.
@@ -9654,321 +16835,332 @@ public interface BxmlPackage extends EPackage {
   EAttribute getNaryExpType_Op();
 
   /**
-   * Returns the meta object for class '{@link bxml.NaryPredicateType <em>Nary Predicate Type</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.NaryExpType#getTypref <em>Typref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Nary Predicate Type</em>'.
-   * @see bxml.NaryPredicateType
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.NaryExpType#getTypref()
+   * @see #getNaryExpType()
    * @generated
    */
-  EClass getNaryPredicateType();
+  EAttribute getNaryExpType_Typref();
 
   /**
-   * Returns the meta object for the attribute list '{@link bxml.NaryPredicateType#getPred <em>Pred</em>}'.
+   * Returns the meta object for class '{@link bxml.NaryPredType <em>Nary Pred Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Pred</em>'.
-   * @see bxml.NaryPredicateType#getPred()
-   * @see #getNaryPredicateType()
+   * @return the meta object for class '<em>Nary Pred Type</em>'.
+   * @see bxml.NaryPredType
    * @generated
    */
-  EAttribute getNaryPredicateType_Pred();
+  EClass getNaryPredType();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.NaryPredicateType#getBinaryPred <em>Binary Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Binary Pred</em>'.
-   * @see bxml.NaryPredicateType#getBinaryPred()
-   * @see #getNaryPredicateType()
-   * @generated
-   */
-  EReference getNaryPredicateType_BinaryPred();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NaryPredicateType#getExpComparison <em>Exp Comparison</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Exp Comparison</em>'.
-   * @see bxml.NaryPredicateType#getExpComparison()
-   * @see #getNaryPredicateType()
-   * @generated
-   */
-  EReference getNaryPredicateType_ExpComparison();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NaryPredicateType#getQuantifiedPred <em>Quantified Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Quantified Pred</em>'.
-   * @see bxml.NaryPredicateType#getQuantifiedPred()
-   * @see #getNaryPredicateType()
-   * @generated
-   */
-  EReference getNaryPredicateType_QuantifiedPred();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NaryPredicateType#getUnaryPred <em>Unary Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Unary Pred</em>'.
-   * @see bxml.NaryPredicateType#getUnaryPred()
-   * @see #getNaryPredicateType()
-   * @generated
-   */
-  EReference getNaryPredicateType_UnaryPred();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NaryPredicateType#getNaryPred <em>Nary Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Nary Pred</em>'.
-   * @see bxml.NaryPredicateType#getNaryPred()
-   * @see #getNaryPredicateType()
-   * @generated
-   */
-  EReference getNaryPredicateType_NaryPred();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NaryPredicateType#getSet <em>Set</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Set</em>'.
-   * @see bxml.NaryPredicateType#getSet()
-   * @see #getNaryPredicateType()
-   * @generated
-   */
-  EReference getNaryPredicateType_Set();
-
-  /**
-   * Returns the meta object for the attribute '{@link bxml.NaryPredicateType#getOp <em>Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see bxml.NaryPredicateType#getOp()
-   * @see #getNaryPredicateType()
-   * @generated
-   */
-  EAttribute getNaryPredicateType_Op();
-
-  /**
-   * Returns the meta object for class '{@link bxml.NarySubstitutionType <em>Nary Substitution Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Nary Substitution Type</em>'.
-   * @see bxml.NarySubstitutionType
-   * @generated
-   */
-  EClass getNarySubstitutionType();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.NarySubstitutionType#getAttr <em>Attr</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.NaryPredType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.NarySubstitutionType#getAttr()
-   * @see #getNarySubstitutionType()
+   * @see bxml.NaryPredType#getAttr()
+   * @see #getNaryPredType()
    * @generated
    */
-  EReference getNarySubstitutionType_Attr();
+  EReference getNaryPredType_Attr();
 
   /**
-   * Returns the meta object for the attribute list '{@link bxml.NarySubstitutionType#getSub <em>Sub</em>}'.
+   * Returns the meta object for the attribute list '{@link bxml.NaryPredType#getPredicate <em>Predicate</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Sub</em>'.
-   * @see bxml.NarySubstitutionType#getSub()
-   * @see #getNarySubstitutionType()
+   * @return the meta object for the attribute list '<em>Predicate</em>'.
+   * @see bxml.NaryPredType#getPredicate()
+   * @see #getNaryPredType()
    * @generated
    */
-  EAttribute getNarySubstitutionType_Sub();
+  EAttribute getNaryPredType_Predicate();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getBlocSub <em>Bloc Sub</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.NaryPredType#getBinaryPred <em>Binary Pred</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Bloc Sub</em>'.
-   * @see bxml.NarySubstitutionType#getBlocSub()
-   * @see #getNarySubstitutionType()
+   * @return the meta object for the containment reference list '<em>Binary Pred</em>'.
+   * @see bxml.NaryPredType#getBinaryPred()
+   * @see #getNaryPredType()
    * @generated
    */
-  EReference getNarySubstitutionType_BlocSub();
+  EReference getNaryPredType_BinaryPred();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getSkip <em>Skip</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.NaryPredType#getNaryPred <em>Nary Pred</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Skip</em>'.
-   * @see bxml.NarySubstitutionType#getSkip()
-   * @see #getNarySubstitutionType()
+   * @return the meta object for the containment reference list '<em>Nary Pred</em>'.
+   * @see bxml.NaryPredType#getNaryPred()
+   * @see #getNaryPredType()
    * @generated
    */
-  EReference getNarySubstitutionType_Skip();
+  EReference getNaryPredType_NaryPred();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getAssertSub <em>Assert Sub</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.NaryPredType#getUnaryPred <em>Unary Pred</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Assert Sub</em>'.
-   * @see bxml.NarySubstitutionType#getAssertSub()
-   * @see #getNarySubstitutionType()
+   * @return the meta object for the containment reference list '<em>Unary Pred</em>'.
+   * @see bxml.NaryPredType#getUnaryPred()
+   * @see #getNaryPredType()
    * @generated
    */
-  EReference getNarySubstitutionType_AssertSub();
+  EReference getNaryPredType_UnaryPred();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getIfSub <em>If Sub</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.NaryPredType#getQuantifiedPred <em>Quantified Pred</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>If Sub</em>'.
-   * @see bxml.NarySubstitutionType#getIfSub()
-   * @see #getNarySubstitutionType()
+   * @return the meta object for the containment reference list '<em>Quantified Pred</em>'.
+   * @see bxml.NaryPredType#getQuantifiedPred()
+   * @see #getNaryPredType()
    * @generated
    */
-  EReference getNarySubstitutionType_IfSub();
+  EReference getNaryPredType_QuantifiedPred();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.NaryPredType#getExpComparison <em>Exp Comparison</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Becomes Such That</em>'.
-   * @see bxml.NarySubstitutionType#getBecomesSuchThat()
-   * @see #getNarySubstitutionType()
+   * @return the meta object for the containment reference list '<em>Exp Comparison</em>'.
+   * @see bxml.NaryPredType#getExpComparison()
+   * @see #getNaryPredType()
    * @generated
    */
-  EReference getNarySubstitutionType_BecomesSuchThat();
+  EReference getNaryPredType_ExpComparison();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getAssignementSub <em>Assignement Sub</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.NaryPredType#getSet <em>Set</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Assignement Sub</em>'.
-   * @see bxml.NarySubstitutionType#getAssignementSub()
-   * @see #getNarySubstitutionType()
+   * @return the meta object for the containment reference list '<em>Set</em>'.
+   * @see bxml.NaryPredType#getSet()
+   * @see #getNaryPredType()
    * @generated
    */
-  EReference getNarySubstitutionType_AssignementSub();
+  EReference getNaryPredType_Set();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getSelect <em>Select</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Select</em>'.
-   * @see bxml.NarySubstitutionType#getSelect()
-   * @see #getNarySubstitutionType()
-   * @generated
-   */
-  EReference getNarySubstitutionType_Select();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getCaseSub <em>Case Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Case Sub</em>'.
-   * @see bxml.NarySubstitutionType#getCaseSub()
-   * @see #getNarySubstitutionType()
-   * @generated
-   */
-  EReference getNarySubstitutionType_CaseSub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getANYSub <em>ANY Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>ANY Sub</em>'.
-   * @see bxml.NarySubstitutionType#getANYSub()
-   * @see #getNarySubstitutionType()
-   * @generated
-   */
-  EReference getNarySubstitutionType_ANYSub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getLETSub <em>LET Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>LET Sub</em>'.
-   * @see bxml.NarySubstitutionType#getLETSub()
-   * @see #getNarySubstitutionType()
-   * @generated
-   */
-  EReference getNarySubstitutionType_LETSub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getBecomesIn <em>Becomes In</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Becomes In</em>'.
-   * @see bxml.NarySubstitutionType#getBecomesIn()
-   * @see #getNarySubstitutionType()
-   * @generated
-   */
-  EReference getNarySubstitutionType_BecomesIn();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getVARIN <em>VARIN</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>VARIN</em>'.
-   * @see bxml.NarySubstitutionType#getVARIN()
-   * @see #getNarySubstitutionType()
-   * @generated
-   */
-  EReference getNarySubstitutionType_VARIN();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getBinarySub <em>Binary Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Binary Sub</em>'.
-   * @see bxml.NarySubstitutionType#getBinarySub()
-   * @see #getNarySubstitutionType()
-   * @generated
-   */
-  EReference getNarySubstitutionType_BinarySub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getNarySub <em>Nary Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Nary Sub</em>'.
-   * @see bxml.NarySubstitutionType#getNarySub()
-   * @see #getNarySubstitutionType()
-   * @generated
-   */
-  EReference getNarySubstitutionType_NarySub();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getOperationCall <em>Operation Call</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Operation Call</em>'.
-   * @see bxml.NarySubstitutionType#getOperationCall()
-   * @see #getNarySubstitutionType()
-   * @generated
-   */
-  EReference getNarySubstitutionType_OperationCall();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.NarySubstitutionType#getWhile <em>While</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>While</em>'.
-   * @see bxml.NarySubstitutionType#getWhile()
-   * @see #getNarySubstitutionType()
-   * @generated
-   */
-  EReference getNarySubstitutionType_While();
-
-  /**
-   * Returns the meta object for the attribute '{@link bxml.NarySubstitutionType#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.NaryPredType#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see bxml.NarySubstitutionType#getOp()
-   * @see #getNarySubstitutionType()
+   * @see bxml.NaryPredType#getOp()
+   * @see #getNaryPredType()
    * @generated
    */
-  EAttribute getNarySubstitutionType_Op();
+  EAttribute getNaryPredType_Op();
+
+  /**
+   * Returns the meta object for class '{@link bxml.NarySubType <em>Nary Sub Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Nary Sub Type</em>'.
+   * @see bxml.NarySubType
+   * @generated
+   */
+  EClass getNarySubType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.NarySubType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.NarySubType#getAttr()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_Attr();
+
+  /**
+   * Returns the meta object for the attribute list '{@link bxml.NarySubType#getSubstitution <em>Substitution</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Substitution</em>'.
+   * @see bxml.NarySubType#getSubstitution()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EAttribute getNarySubType_Substitution();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getBlocSub <em>Bloc Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Bloc Sub</em>'.
+   * @see bxml.NarySubType#getBlocSub()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_BlocSub();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getSkip <em>Skip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Skip</em>'.
+   * @see bxml.NarySubType#getSkip()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_Skip();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getAssertSub <em>Assert Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Assert Sub</em>'.
+   * @see bxml.NarySubType#getAssertSub()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_AssertSub();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getIfSub <em>If Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>If Sub</em>'.
+   * @see bxml.NarySubType#getIfSub()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_IfSub();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Becomes Such That</em>'.
+   * @see bxml.NarySubType#getBecomesSuchThat()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_BecomesSuchThat();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getAssignementSub <em>Assignement Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Assignement Sub</em>'.
+   * @see bxml.NarySubType#getAssignementSub()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_AssignementSub();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getSelect <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Select</em>'.
+   * @see bxml.NarySubType#getSelect()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_Select();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getCaseSub <em>Case Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Case Sub</em>'.
+   * @see bxml.NarySubType#getCaseSub()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_CaseSub();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getANYSub <em>ANY Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>ANY Sub</em>'.
+   * @see bxml.NarySubType#getANYSub()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_ANYSub();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getLETSub <em>LET Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>LET Sub</em>'.
+   * @see bxml.NarySubType#getLETSub()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_LETSub();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getBecomesIn <em>Becomes In</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Becomes In</em>'.
+   * @see bxml.NarySubType#getBecomesIn()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_BecomesIn();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getVARIN <em>VARIN</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>VARIN</em>'.
+   * @see bxml.NarySubType#getVARIN()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_VARIN();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getNarySub <em>Nary Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Nary Sub</em>'.
+   * @see bxml.NarySubType#getNarySub()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_NarySub();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getOperationCall <em>Operation Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Operation Call</em>'.
+   * @see bxml.NarySubType#getOperationCall()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_OperationCall();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.NarySubType#getWhile <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>While</em>'.
+   * @see bxml.NarySubType#getWhile()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EReference getNarySubType_While();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.NarySubType#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see bxml.NarySubType#getOp()
+   * @see #getNarySubType()
+   * @generated
+   */
+  EAttribute getNarySubType_Op();
 
   /**
    * Returns the meta object for class '{@link bxml.OperationCallType <em>Operation Call Type</em>}'.
@@ -10025,17 +17217,6 @@ public interface BxmlPackage extends EPackage {
   EReference getOperationCallType_OutputParameters();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.OperationCallType#getOperation <em>Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Operation</em>'.
-   * @see bxml.OperationCallType#getOperation()
-   * @see #getOperationCallType()
-   * @generated
-   */
-  EReference getOperationCallType_Operation();
-
-  /**
    * Returns the meta object for class '{@link bxml.OperationsType <em>Operations Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -10044,6 +17225,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EClass getOperationsType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.OperationsType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.OperationsType#getAttr()
+   * @see #getOperationsType()
+   * @generated
+   */
+  EReference getOperationsType_Attr();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.OperationsType#getOperation <em>Operation</em>}'.
@@ -10165,6 +17357,192 @@ public interface BxmlPackage extends EPackage {
   EReference getOutputParametersType_Id();
 
   /**
+   * Returns the meta object for class '{@link bxml.OutputParametersType1 <em>Output Parameters Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Output Parameters Type1</em>'.
+   * @see bxml.OutputParametersType1
+   * @generated
+   */
+  EClass getOutputParametersType1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.OutputParametersType1#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.OutputParametersType1#getAttr()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_Attr();
+
+  /**
+   * Returns the meta object for the attribute list '{@link bxml.OutputParametersType1#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Expression</em>'.
+   * @see bxml.OutputParametersType1#getExpression()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EAttribute getOutputParametersType1_Expression();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getBinaryExp <em>Binary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Binary Exp</em>'.
+   * @see bxml.OutputParametersType1#getBinaryExp()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_BinaryExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getNaryExp <em>Nary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Nary Exp</em>'.
+   * @see bxml.OutputParametersType1#getNaryExp()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_NaryExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getBooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Boolean Literal</em>'.
+   * @see bxml.OutputParametersType1#getBooleanLiteral()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_BooleanLiteral();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getBooleanExp <em>Boolean Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Boolean Exp</em>'.
+   * @see bxml.OutputParametersType1#getBooleanExp()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_BooleanExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getEmptySet <em>Empty Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Empty Set</em>'.
+   * @see bxml.OutputParametersType1#getEmptySet()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_EmptySet();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getEmptySeq <em>Empty Seq</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Empty Seq</em>'.
+   * @see bxml.OutputParametersType1#getEmptySeq()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_EmptySeq();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Id</em>'.
+   * @see bxml.OutputParametersType1#getId()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_Id();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getIntegerLiteral <em>Integer Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Integer Literal</em>'.
+   * @see bxml.OutputParametersType1#getIntegerLiteral()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_IntegerLiteral();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getQuantifiedExp <em>Quantified Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Quantified Exp</em>'.
+   * @see bxml.OutputParametersType1#getQuantifiedExp()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_QuantifiedExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getQuantifiedSet <em>Quantified Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Quantified Set</em>'.
+   * @see bxml.OutputParametersType1#getQuantifiedSet()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_QuantifiedSet();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getSTRINGLiteral <em>STRING Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>STRING Literal</em>'.
+   * @see bxml.OutputParametersType1#getSTRINGLiteral()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_STRINGLiteral();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getUnaryExp <em>Unary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Unary Exp</em>'.
+   * @see bxml.OutputParametersType1#getUnaryExp()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_UnaryExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getStruct <em>Struct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Struct</em>'.
+   * @see bxml.OutputParametersType1#getStruct()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_Struct();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.OutputParametersType1#getRecord <em>Record</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Record</em>'.
+   * @see bxml.OutputParametersType1#getRecord()
+   * @see #getOutputParametersType1()
+   * @generated
+   */
+  EReference getOutputParametersType1_Record();
+
+  /**
    * Returns the meta object for class '{@link bxml.ParametersType <em>Parameters Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -10175,81 +17553,15 @@ public interface BxmlPackage extends EPackage {
   EClass getParametersType();
 
   /**
-   * Returns the meta object for the attribute list '{@link bxml.ParametersType#getExp <em>Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ParametersType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Exp</em>'.
-   * @see bxml.ParametersType#getExp()
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ParametersType#getAttr()
    * @see #getParametersType()
    * @generated
    */
-  EAttribute getParametersType_Exp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getBinaryExp <em>Binary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Binary Exp</em>'.
-   * @see bxml.ParametersType#getBinaryExp()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_BinaryExp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getNaryExp <em>Nary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Nary Exp</em>'.
-   * @see bxml.ParametersType#getNaryExp()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_NaryExp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getBooleanLiteral <em>Boolean Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Boolean Literal</em>'.
-   * @see bxml.ParametersType#getBooleanLiteral()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_BooleanLiteral();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getBooleanExp <em>Boolean Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Boolean Exp</em>'.
-   * @see bxml.ParametersType#getBooleanExp()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_BooleanExp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getEmptySet <em>Empty Set</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Empty Set</em>'.
-   * @see bxml.ParametersType#getEmptySet()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_EmptySet();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getEmptySeq <em>Empty Seq</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Empty Seq</em>'.
-   * @see bxml.ParametersType#getEmptySeq()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_EmptySeq();
+  EReference getParametersType_Attr();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getId <em>Id</em>}'.
@@ -10263,83 +17575,6 @@ public interface BxmlPackage extends EPackage {
   EReference getParametersType_Id();
 
   /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getIntegerLiteral <em>Integer Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Integer Literal</em>'.
-   * @see bxml.ParametersType#getIntegerLiteral()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_IntegerLiteral();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getQuantifiedExp <em>Quantified Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Quantified Exp</em>'.
-   * @see bxml.ParametersType#getQuantifiedExp()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_QuantifiedExp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getQuantifiedSet <em>Quantified Set</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Quantified Set</em>'.
-   * @see bxml.ParametersType#getQuantifiedSet()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_QuantifiedSet();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getSTRINGLiteral <em>STRING Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>STRING Literal</em>'.
-   * @see bxml.ParametersType#getSTRINGLiteral()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_STRINGLiteral();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getUnaryExp <em>Unary Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Unary Exp</em>'.
-   * @see bxml.ParametersType#getUnaryExp()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_UnaryExp();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getStruct <em>Struct</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Struct</em>'.
-   * @see bxml.ParametersType#getStruct()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_Struct();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ParametersType#getRecord <em>Record</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Record</em>'.
-   * @see bxml.ParametersType#getRecord()
-   * @see #getParametersType()
-   * @generated
-   */
-  EReference getParametersType_Record();
-
-  /**
    * Returns the meta object for class '{@link bxml.ParametersType1 <em>Parameters Type1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -10350,15 +17585,81 @@ public interface BxmlPackage extends EPackage {
   EClass getParametersType1();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.ParametersType1#getAttr <em>Attr</em>}'.
+   * Returns the meta object for the attribute list '{@link bxml.ParametersType1#getExpression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.ParametersType1#getAttr()
+   * @return the meta object for the attribute list '<em>Expression</em>'.
+   * @see bxml.ParametersType1#getExpression()
    * @see #getParametersType1()
    * @generated
    */
-  EReference getParametersType1_Attr();
+  EAttribute getParametersType1_Expression();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getBinaryExp <em>Binary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Binary Exp</em>'.
+   * @see bxml.ParametersType1#getBinaryExp()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_BinaryExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getNaryExp <em>Nary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Nary Exp</em>'.
+   * @see bxml.ParametersType1#getNaryExp()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_NaryExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getBooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Boolean Literal</em>'.
+   * @see bxml.ParametersType1#getBooleanLiteral()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_BooleanLiteral();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getBooleanExp <em>Boolean Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Boolean Exp</em>'.
+   * @see bxml.ParametersType1#getBooleanExp()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_BooleanExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getEmptySet <em>Empty Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Empty Set</em>'.
+   * @see bxml.ParametersType1#getEmptySet()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_EmptySet();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getEmptySeq <em>Empty Seq</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Empty Seq</em>'.
+   * @see bxml.ParametersType1#getEmptySeq()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_EmptySeq();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getId <em>Id</em>}'.
@@ -10372,91 +17673,276 @@ public interface BxmlPackage extends EPackage {
   EReference getParametersType1_Id();
 
   /**
-   * Returns the meta object for class '{@link bxml.PredicateType <em>Predicate Type</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getIntegerLiteral <em>Integer Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Predicate Type</em>'.
-   * @see bxml.PredicateType
+   * @return the meta object for the containment reference list '<em>Integer Literal</em>'.
+   * @see bxml.ParametersType1#getIntegerLiteral()
+   * @see #getParametersType1()
    * @generated
    */
-  EClass getPredicateType();
+  EReference getParametersType1_IntegerLiteral();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.PredicateType#getAttr <em>Attr</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getQuantifiedExp <em>Quantified Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.PredicateType#getAttr()
-   * @see #getPredicateType()
+   * @return the meta object for the containment reference list '<em>Quantified Exp</em>'.
+   * @see bxml.ParametersType1#getQuantifiedExp()
+   * @see #getParametersType1()
    * @generated
    */
-  EReference getPredicateType_Attr();
+  EReference getParametersType1_QuantifiedExp();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.PredicateType#getBinaryPred <em>Binary Pred</em>}'.
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getQuantifiedSet <em>Quantified Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Quantified Set</em>'.
+   * @see bxml.ParametersType1#getQuantifiedSet()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_QuantifiedSet();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getSTRINGLiteral <em>STRING Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>STRING Literal</em>'.
+   * @see bxml.ParametersType1#getSTRINGLiteral()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_STRINGLiteral();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getUnaryExp <em>Unary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Unary Exp</em>'.
+   * @see bxml.ParametersType1#getUnaryExp()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_UnaryExp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getStruct <em>Struct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Struct</em>'.
+   * @see bxml.ParametersType1#getStruct()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_Struct();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.ParametersType1#getRecord <em>Record</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Record</em>'.
+   * @see bxml.ParametersType1#getRecord()
+   * @see #getParametersType1()
+   * @generated
+   */
+  EReference getParametersType1_Record();
+
+  /**
+   * Returns the meta object for class '{@link bxml.PreconditionType <em>Precondition Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Precondition Type</em>'.
+   * @see bxml.PreconditionType
+   * @generated
+   */
+  EClass getPreconditionType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PreconditionType#getBinaryPred <em>Binary Pred</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Binary Pred</em>'.
-   * @see bxml.PredicateType#getBinaryPred()
-   * @see #getPredicateType()
+   * @see bxml.PreconditionType#getBinaryPred()
+   * @see #getPreconditionType()
    * @generated
    */
-  EReference getPredicateType_BinaryPred();
+  EReference getPreconditionType_BinaryPred();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.PredicateType#getExpComparison <em>Exp Comparison</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
-   * @see bxml.PredicateType#getExpComparison()
-   * @see #getPredicateType()
-   * @generated
-   */
-  EReference getPredicateType_ExpComparison();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.PredicateType#getQuantifiedPred <em>Quantified Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
-   * @see bxml.PredicateType#getQuantifiedPred()
-   * @see #getPredicateType()
-   * @generated
-   */
-  EReference getPredicateType_QuantifiedPred();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.PredicateType#getUnaryPred <em>Unary Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
-   * @see bxml.PredicateType#getUnaryPred()
-   * @see #getPredicateType()
-   * @generated
-   */
-  EReference getPredicateType_UnaryPred();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.PredicateType#getNaryPred <em>Nary Pred</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.PreconditionType#getNaryPred <em>Nary Pred</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Nary Pred</em>'.
-   * @see bxml.PredicateType#getNaryPred()
-   * @see #getPredicateType()
+   * @see bxml.PreconditionType#getNaryPred()
+   * @see #getPreconditionType()
    * @generated
    */
-  EReference getPredicateType_NaryPred();
+  EReference getPreconditionType_NaryPred();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.PredicateType#getSet <em>Set</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.PreconditionType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.PreconditionType#getUnaryPred()
+   * @see #getPreconditionType()
+   * @generated
+   */
+  EReference getPreconditionType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PreconditionType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.PreconditionType#getQuantifiedPred()
+   * @see #getPreconditionType()
+   * @generated
+   */
+  EReference getPreconditionType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PreconditionType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.PreconditionType#getExpComparison()
+   * @see #getPreconditionType()
+   * @generated
+   */
+  EReference getPreconditionType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PreconditionType#getSet <em>Set</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Set</em>'.
-   * @see bxml.PredicateType#getSet()
-   * @see #getPredicateType()
+   * @see bxml.PreconditionType#getSet()
+   * @see #getPreconditionType()
    * @generated
    */
-  EReference getPredicateType_Set();
+  EReference getPreconditionType_Set();
+
+  /**
+   * Returns the meta object for class '{@link bxml.PredType <em>Pred Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Pred Type</em>'.
+   * @see bxml.PredType
+   * @generated
+   */
+  EClass getPredType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PredType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.PredType#getAttr()
+   * @see #getPredType()
+   * @generated
+   */
+  EReference getPredType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PredType#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.PredType#getBinaryPred()
+   * @see #getPredType()
+   * @generated
+   */
+  EReference getPredType_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PredType#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.PredType#getNaryPred()
+   * @see #getPredType()
+   * @generated
+   */
+  EReference getPredType_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PredType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.PredType#getUnaryPred()
+   * @see #getPredType()
+   * @generated
+   */
+  EReference getPredType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PredType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.PredType#getQuantifiedPred()
+   * @see #getPredType()
+   * @generated
+   */
+  EReference getPredType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PredType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.PredType#getExpComparison()
+   * @see #getPredType()
+   * @generated
+   */
+  EReference getPredType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PredType#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.PredType#getSet()
+   * @see #getPredType()
+   * @generated
+   */
+  EReference getPredType_Set();
+
+  /**
+   * Returns the meta object for class '{@link bxml.PromotedOperationType <em>Promoted Operation Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Promoted Operation Type</em>'.
+   * @see bxml.PromotedOperationType
+   * @generated
+   */
+  EClass getPromotedOperationType();
+
+  /**
+   * Returns the meta object for the attribute list '{@link bxml.PromotedOperationType#getMixed <em>Mixed</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Mixed</em>'.
+   * @see bxml.PromotedOperationType#getMixed()
+   * @see #getPromotedOperationType()
+   * @generated
+   */
+  EAttribute getPromotedOperationType_Mixed();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PromotedOperationType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.PromotedOperationType#getAttr()
+   * @see #getPromotedOperationType()
+   * @generated
+   */
+  EReference getPromotedOperationType_Attr();
 
   /**
    * Returns the meta object for class '{@link bxml.PromotesType <em>Promotes Type</em>}'.
@@ -10469,15 +17955,113 @@ public interface BxmlPackage extends EPackage {
   EClass getPromotesType();
 
   /**
-   * Returns the meta object for the attribute list '{@link bxml.PromotesType#getPromotedOperation <em>Promoted Operation</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.PromotesType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Promoted Operation</em>'.
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.PromotesType#getAttr()
+   * @see #getPromotesType()
+   * @generated
+   */
+  EReference getPromotesType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.PromotesType#getPromotedOperation <em>Promoted Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Promoted Operation</em>'.
    * @see bxml.PromotesType#getPromotedOperation()
    * @see #getPromotesType()
    * @generated
    */
-  EAttribute getPromotesType_PromotedOperation();
+  EReference getPromotesType_PromotedOperation();
+
+  /**
+   * Returns the meta object for class '{@link bxml.PropertiesType <em>Properties Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Properties Type</em>'.
+   * @see bxml.PropertiesType
+   * @generated
+   */
+  EClass getPropertiesType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PropertiesType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.PropertiesType#getAttr()
+   * @see #getPropertiesType()
+   * @generated
+   */
+  EReference getPropertiesType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PropertiesType#getBinaryPred <em>Binary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Pred</em>'.
+   * @see bxml.PropertiesType#getBinaryPred()
+   * @see #getPropertiesType()
+   * @generated
+   */
+  EReference getPropertiesType_BinaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PropertiesType#getNaryPred <em>Nary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Pred</em>'.
+   * @see bxml.PropertiesType#getNaryPred()
+   * @see #getPropertiesType()
+   * @generated
+   */
+  EReference getPropertiesType_NaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PropertiesType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.PropertiesType#getUnaryPred()
+   * @see #getPropertiesType()
+   * @generated
+   */
+  EReference getPropertiesType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PropertiesType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.PropertiesType#getQuantifiedPred()
+   * @see #getPropertiesType()
+   * @generated
+   */
+  EReference getPropertiesType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PropertiesType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.PropertiesType#getExpComparison()
+   * @see #getPropertiesType()
+   * @generated
+   */
+  EReference getPropertiesType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.PropertiesType#getSet <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Set</em>'.
+   * @see bxml.PropertiesType#getSet()
+   * @see #getPropertiesType()
+   * @generated
+   */
+  EReference getPropertiesType_Set();
 
   /**
    * Returns the meta object for class '{@link bxml.QuantifiedExpType <em>Quantified Exp Type</em>}'.
@@ -10543,6 +18127,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EAttribute getQuantifiedExpType_Type();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.QuantifiedExpType#getTypref <em>Typref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.QuantifiedExpType#getTypref()
+   * @see #getQuantifiedExpType()
+   * @generated
+   */
+  EAttribute getQuantifiedExpType_Typref();
 
   /**
    * Returns the meta object for class '{@link bxml.QuantifiedPredType <em>Quantified Pred Type</em>}'.
@@ -10642,6 +18237,17 @@ public interface BxmlPackage extends EPackage {
   EReference getQuantifiedSetType_Body();
 
   /**
+   * Returns the meta object for the attribute '{@link bxml.QuantifiedSetType#getTypref <em>Typref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.QuantifiedSetType#getTypref()
+   * @see #getQuantifiedSetType()
+   * @generated
+   */
+  EAttribute getQuantifiedSetType_Typref();
+
+  /**
    * Returns the meta object for class '{@link bxml.RecordItemType <em>Record Item Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -10650,6 +18256,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EClass getRecordItemType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.RecordItemType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.RecordItemType#getAttr()
+   * @see #getRecordItemType()
+   * @generated
+   */
+  EReference getRecordItemType_Attr();
 
   /**
    * Returns the meta object for the containment reference '{@link bxml.RecordItemType#getBinaryExp <em>Binary Exp</em>}'.
@@ -10849,6 +18466,17 @@ public interface BxmlPackage extends EPackage {
   EReference getRecordType_RecordItem();
 
   /**
+   * Returns the meta object for the attribute '{@link bxml.RecordType#getTypref <em>Typref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.RecordType#getTypref()
+   * @see #getRecordType()
+   * @generated
+   */
+  EAttribute getRecordType_Typref();
+
+  /**
    * Returns the meta object for class '{@link bxml.ReferencedMachineType <em>Referenced Machine Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -10857,6 +18485,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EClass getReferencedMachineType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ReferencedMachineType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ReferencedMachineType#getAttr()
+   * @see #getReferencedMachineType()
+   * @generated
+   */
+  EReference getReferencedMachineType_Attr();
 
   /**
    * Returns the meta object for the attribute '{@link bxml.ReferencedMachineType#getName <em>Name</em>}'.
@@ -10890,92 +18529,6 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EReference getReferencedMachineType_Parameters();
-
-  /**
-   * Returns the meta object for the attribute '{@link bxml.ReferencedMachineType#getPath <em>Path</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Path</em>'.
-   * @see bxml.ReferencedMachineType#getPath()
-   * @see #getReferencedMachineType()
-   * @generated
-   */
-  EAttribute getReferencedMachineType_Path();
-
-  /**
-   * Returns the meta object for class '{@link bxml.ReferencedMachineType1 <em>Referenced Machine Type1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Referenced Machine Type1</em>'.
-   * @see bxml.ReferencedMachineType1
-   * @generated
-   */
-  EClass getReferencedMachineType1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.ReferencedMachineType1#getAttr <em>Attr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.ReferencedMachineType1#getAttr()
-   * @see #getReferencedMachineType1()
-   * @generated
-   */
-  EReference getReferencedMachineType1_Attr();
-
-  /**
-   * Returns the meta object for the attribute '{@link bxml.ReferencedMachineType1#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see bxml.ReferencedMachineType1#getName()
-   * @see #getReferencedMachineType1()
-   * @generated
-   */
-  EAttribute getReferencedMachineType1_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link bxml.ReferencedMachineType1#getRename <em>Rename</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Rename</em>'.
-   * @see bxml.ReferencedMachineType1#getRename()
-   * @see #getReferencedMachineType1()
-   * @generated
-   */
-  EAttribute getReferencedMachineType1_Rename();
-
-  /**
-   * Returns the meta object for the attribute '{@link bxml.ReferencedMachineType1#getPath <em>Path</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Path</em>'.
-   * @see bxml.ReferencedMachineType1#getPath()
-   * @see #getReferencedMachineType1()
-   * @generated
-   */
-  EAttribute getReferencedMachineType1_Path();
-
-  /**
-   * Returns the meta object for class '{@link bxml.ReferencedMachineType2 <em>Referenced Machine Type2</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Referenced Machine Type2</em>'.
-   * @see bxml.ReferencedMachineType2
-   * @generated
-   */
-  EClass getReferencedMachineType2();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link bxml.ReferencedMachineType2#getReferencedMachine <em>Referenced Machine</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Referenced Machine</em>'.
-   * @see bxml.ReferencedMachineType2#getReferencedMachine()
-   * @see #getReferencedMachineType2()
-   * @generated
-   */
-  EReference getReferencedMachineType2_ReferencedMachine();
 
   /**
    * Returns the meta object for class '{@link bxml.RefinesType <em>Refines Type</em>}'.
@@ -11160,47 +18713,89 @@ public interface BxmlPackage extends EPackage {
   EReference getSetType_EnumeratedValues();
 
   /**
-   * Returns the meta object for class '{@link bxml.StringLiteralType <em>String Literal Type</em>}'.
+   * Returns the meta object for class '{@link bxml.SetType1 <em>Set Type1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>String Literal Type</em>'.
-   * @see bxml.StringLiteralType
+   * @return the meta object for class '<em>Set Type1</em>'.
+   * @see bxml.SetType1
    * @generated
    */
-  EClass getStringLiteralType();
+  EClass getSetType1();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.StringLiteralType#getAttr <em>Attr</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.SetType1#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Id</em>'.
+   * @see bxml.SetType1#getId()
+   * @see #getSetType1()
+   * @generated
+   */
+  EReference getSetType1_Id();
+
+  /**
+   * Returns the meta object for class '{@link bxml.SkipType <em>Skip Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Skip Type</em>'.
+   * @see bxml.SkipType
+   * @generated
+   */
+  EClass getSkipType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.SkipType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.StringLiteralType#getAttr()
-   * @see #getStringLiteralType()
+   * @see bxml.SkipType#getAttr()
+   * @see #getSkipType()
    * @generated
    */
-  EReference getStringLiteralType_Attr();
+  EReference getSkipType_Attr();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.StringLiteralType#getTypref <em>Typref</em>}'.
+   * Returns the meta object for class '{@link bxml.STRINGLiteralType <em>STRING Literal Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>STRING Literal Type</em>'.
+   * @see bxml.STRINGLiteralType
+   * @generated
+   */
+  EClass getSTRINGLiteralType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.STRINGLiteralType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.STRINGLiteralType#getAttr()
+   * @see #getSTRINGLiteralType()
+   * @generated
+   */
+  EReference getSTRINGLiteralType_Attr();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.STRINGLiteralType#getTypref <em>Typref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Typref</em>'.
-   * @see bxml.StringLiteralType#getTypref()
-   * @see #getStringLiteralType()
+   * @see bxml.STRINGLiteralType#getTypref()
+   * @see #getSTRINGLiteralType()
    * @generated
    */
-  EAttribute getStringLiteralType_Typref();
+  EAttribute getSTRINGLiteralType_Typref();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.StringLiteralType#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.STRINGLiteralType#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Value</em>'.
-   * @see bxml.StringLiteralType#getValue()
-   * @see #getStringLiteralType()
+   * @see bxml.STRINGLiteralType#getValue()
+   * @see #getSTRINGLiteralType()
    * @generated
    */
-  EAttribute getStringLiteralType_Value();
+  EAttribute getSTRINGLiteralType_Value();
 
   /**
    * Returns the meta object for class '{@link bxml.StructType <em>Struct Type</em>}'.
@@ -11235,222 +18830,277 @@ public interface BxmlPackage extends EPackage {
   EReference getStructType_RecordItem();
 
   /**
-   * Returns the meta object for class '{@link bxml.SubstitutionType <em>Substitution Type</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.StructType#getTypref <em>Typref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Substitution Type</em>'.
-   * @see bxml.SubstitutionType
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.StructType#getTypref()
+   * @see #getStructType()
    * @generated
    */
-  EClass getSubstitutionType();
+  EAttribute getStructType_Typref();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getAttr <em>Attr</em>}'.
+   * Returns the meta object for class '{@link bxml.ThenType <em>Then Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Then Type</em>'.
+   * @see bxml.ThenType
+   * @generated
+   */
+  EClass getThenType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.SubstitutionType#getAttr()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getAttr()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_Attr();
+  EReference getThenType_Attr();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getBlocSub <em>Bloc Sub</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getBlocSub <em>Bloc Sub</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Bloc Sub</em>'.
-   * @see bxml.SubstitutionType#getBlocSub()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getBlocSub()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_BlocSub();
+  EReference getThenType_BlocSub();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getSkip <em>Skip</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getSkip <em>Skip</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Skip</em>'.
-   * @see bxml.SubstitutionType#getSkip()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getSkip()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_Skip();
+  EReference getThenType_Skip();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getAssertSub <em>Assert Sub</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getAssertSub <em>Assert Sub</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Assert Sub</em>'.
-   * @see bxml.SubstitutionType#getAssertSub()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getAssertSub()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_AssertSub();
+  EReference getThenType_AssertSub();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getIfSub <em>If Sub</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getIfSub <em>If Sub</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>If Sub</em>'.
-   * @see bxml.SubstitutionType#getIfSub()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getIfSub()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_IfSub();
+  EReference getThenType_IfSub();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getBecomesSuchThat <em>Becomes Such That</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getBecomesSuchThat <em>Becomes Such That</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Becomes Such That</em>'.
-   * @see bxml.SubstitutionType#getBecomesSuchThat()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getBecomesSuchThat()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_BecomesSuchThat();
+  EReference getThenType_BecomesSuchThat();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getAssignementSub <em>Assignement Sub</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getAssignementSub <em>Assignement Sub</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Assignement Sub</em>'.
-   * @see bxml.SubstitutionType#getAssignementSub()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getAssignementSub()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_AssignementSub();
+  EReference getThenType_AssignementSub();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getSelect <em>Select</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getSelect <em>Select</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Select</em>'.
-   * @see bxml.SubstitutionType#getSelect()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getSelect()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_Select();
+  EReference getThenType_Select();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getCaseSub <em>Case Sub</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getCaseSub <em>Case Sub</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Case Sub</em>'.
-   * @see bxml.SubstitutionType#getCaseSub()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getCaseSub()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_CaseSub();
+  EReference getThenType_CaseSub();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getANYSub <em>ANY Sub</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getANYSub <em>ANY Sub</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>ANY Sub</em>'.
-   * @see bxml.SubstitutionType#getANYSub()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getANYSub()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_ANYSub();
+  EReference getThenType_ANYSub();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getLETSub <em>LET Sub</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getLETSub <em>LET Sub</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>LET Sub</em>'.
-   * @see bxml.SubstitutionType#getLETSub()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getLETSub()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_LETSub();
+  EReference getThenType_LETSub();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getBecomesIn <em>Becomes In</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getBecomesIn <em>Becomes In</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Becomes In</em>'.
-   * @see bxml.SubstitutionType#getBecomesIn()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getBecomesIn()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_BecomesIn();
+  EReference getThenType_BecomesIn();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getVARIN <em>VARIN</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getVARIN <em>VARIN</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>VARIN</em>'.
-   * @see bxml.SubstitutionType#getVARIN()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getVARIN()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_VARIN();
+  EReference getThenType_VARIN();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getBinarySub <em>Binary Sub</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Binary Sub</em>'.
-   * @see bxml.SubstitutionType#getBinarySub()
-   * @see #getSubstitutionType()
-   * @generated
-   */
-  EReference getSubstitutionType_BinarySub();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getNarySub <em>Nary Sub</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getNarySub <em>Nary Sub</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Nary Sub</em>'.
-   * @see bxml.SubstitutionType#getNarySub()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getNarySub()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_NarySub();
+  EReference getThenType_NarySub();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getOperationCall <em>Operation Call</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getOperationCall <em>Operation Call</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Operation Call</em>'.
-   * @see bxml.SubstitutionType#getOperationCall()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getOperationCall()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_OperationCall();
+  EReference getThenType_OperationCall();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.SubstitutionType#getWhile <em>While</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ThenType#getWhile <em>While</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>While</em>'.
-   * @see bxml.SubstitutionType#getWhile()
-   * @see #getSubstitutionType()
+   * @see bxml.ThenType#getWhile()
+   * @see #getThenType()
    * @generated
    */
-  EReference getSubstitutionType_While();
+  EReference getThenType_While();
 
   /**
-   * Returns the meta object for class '{@link bxml.TerminalType <em>Terminal Type</em>}'.
+   * Returns the meta object for class '{@link bxml.TypeInfo <em>Type Info</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Terminal Type</em>'.
-   * @see bxml.TerminalType
+   * @return the meta object for class '<em>Type Info</em>'.
+   * @see bxml.TypeInfo
    * @generated
    */
-  EClass getTerminalType();
+  EClass getTypeInfo();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.TerminalType#getAttr <em>Attr</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.TypeInfo#getId <em>Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.TerminalType#getAttr()
-   * @see #getTerminalType()
+   * @return the meta object for the containment reference '<em>Id</em>'.
+   * @see bxml.TypeInfo#getId()
+   * @see #getTypeInfo()
    * @generated
    */
-  EReference getTerminalType_Attr();
+  EReference getTypeInfo_Id();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.TypeInfo#getUnaryExp <em>Unary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Exp</em>'.
+   * @see bxml.TypeInfo#getUnaryExp()
+   * @see #getTypeInfo()
+   * @generated
+   */
+  EReference getTypeInfo_UnaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.TypeInfo#getBinaryExp <em>Binary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Exp</em>'.
+   * @see bxml.TypeInfo#getBinaryExp()
+   * @see #getTypeInfo()
+   * @generated
+   */
+  EReference getTypeInfo_BinaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.TypeInfo#getStruct <em>Struct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct</em>'.
+   * @see bxml.TypeInfo#getStruct()
+   * @see #getTypeInfo()
+   * @generated
+   */
+  EReference getTypeInfo_Struct();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.TypeInfo#getGenericType <em>Generic Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Generic Type</em>'.
+   * @see bxml.TypeInfo#getGenericType()
+   * @see #getTypeInfo()
+   * @generated
+   */
+  EAttribute getTypeInfo_GenericType();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.TypeInfo#getId1 <em>Id1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id1</em>'.
+   * @see bxml.TypeInfo#getId1()
+   * @see #getTypeInfo()
+   * @generated
+   */
+  EAttribute getTypeInfo_Id1();
 
   /**
    * Returns the meta object for class '{@link bxml.TypeInfosType <em>Type Infos Type</em>}'.
@@ -11474,277 +19124,407 @@ public interface BxmlPackage extends EPackage {
   EReference getTypeInfosType_Type();
 
   /**
-   * Returns the meta object for class '{@link bxml.UnaryExpressionType <em>Unary Expression Type</em>}'.
+   * Returns the meta object for class '{@link bxml.UnaryExpType <em>Unary Exp Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Unary Expression Type</em>'.
-   * @see bxml.UnaryExpressionType
+   * @return the meta object for class '<em>Unary Exp Type</em>'.
+   * @see bxml.UnaryExpType
    * @generated
    */
-  EClass getUnaryExpressionType();
+  EClass getUnaryExpType();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getAttr <em>Attr</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Attr</em>'.
-   * @see bxml.UnaryExpressionType#getAttr()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getAttr()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_Attr();
+  EReference getUnaryExpType_Attr();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getBinaryExp <em>Binary Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getBinaryExp <em>Binary Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Binary Exp</em>'.
-   * @see bxml.UnaryExpressionType#getBinaryExp()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getBinaryExp()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_BinaryExp();
+  EReference getUnaryExpType_BinaryExp();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getNaryExp <em>Nary Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getNaryExp <em>Nary Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Nary Exp</em>'.
-   * @see bxml.UnaryExpressionType#getNaryExp()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getNaryExp()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_NaryExp();
+  EReference getUnaryExpType_NaryExp();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getBooleanLiteral <em>Boolean Literal</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getBooleanLiteral <em>Boolean Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Boolean Literal</em>'.
-   * @see bxml.UnaryExpressionType#getBooleanLiteral()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getBooleanLiteral()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_BooleanLiteral();
+  EReference getUnaryExpType_BooleanLiteral();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getBooleanExp <em>Boolean Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getBooleanExp <em>Boolean Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Boolean Exp</em>'.
-   * @see bxml.UnaryExpressionType#getBooleanExp()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getBooleanExp()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_BooleanExp();
+  EReference getUnaryExpType_BooleanExp();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getEmptySet <em>Empty Set</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getEmptySet <em>Empty Set</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Empty Set</em>'.
-   * @see bxml.UnaryExpressionType#getEmptySet()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getEmptySet()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_EmptySet();
+  EReference getUnaryExpType_EmptySet();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getEmptySeq <em>Empty Seq</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getEmptySeq <em>Empty Seq</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Empty Seq</em>'.
-   * @see bxml.UnaryExpressionType#getEmptySeq()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getEmptySeq()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_EmptySeq();
+  EReference getUnaryExpType_EmptySeq();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getId <em>Id</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getId <em>Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Id</em>'.
-   * @see bxml.UnaryExpressionType#getId()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getId()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_Id();
+  EReference getUnaryExpType_Id();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getIntegerLiteral <em>Integer Literal</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getIntegerLiteral <em>Integer Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Integer Literal</em>'.
-   * @see bxml.UnaryExpressionType#getIntegerLiteral()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getIntegerLiteral()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_IntegerLiteral();
+  EReference getUnaryExpType_IntegerLiteral();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getQuantifiedExp <em>Quantified Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getQuantifiedExp <em>Quantified Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Quantified Exp</em>'.
-   * @see bxml.UnaryExpressionType#getQuantifiedExp()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getQuantifiedExp()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_QuantifiedExp();
+  EReference getUnaryExpType_QuantifiedExp();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getQuantifiedSet <em>Quantified Set</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getQuantifiedSet <em>Quantified Set</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Quantified Set</em>'.
-   * @see bxml.UnaryExpressionType#getQuantifiedSet()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getQuantifiedSet()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_QuantifiedSet();
+  EReference getUnaryExpType_QuantifiedSet();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getSTRINGLiteral <em>STRING Literal</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getSTRINGLiteral <em>STRING Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>STRING Literal</em>'.
-   * @see bxml.UnaryExpressionType#getSTRINGLiteral()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getSTRINGLiteral()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_STRINGLiteral();
+  EReference getUnaryExpType_STRINGLiteral();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getUnaryExp <em>Unary Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getUnaryExp <em>Unary Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Unary Exp</em>'.
-   * @see bxml.UnaryExpressionType#getUnaryExp()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getUnaryExp()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_UnaryExp();
+  EReference getUnaryExpType_UnaryExp();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getStruct <em>Struct</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getStruct <em>Struct</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Struct</em>'.
-   * @see bxml.UnaryExpressionType#getStruct()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getStruct()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_Struct();
+  EReference getUnaryExpType_Struct();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryExpressionType#getRecord <em>Record</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType#getRecord <em>Record</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Record</em>'.
-   * @see bxml.UnaryExpressionType#getRecord()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getRecord()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EReference getUnaryExpressionType_Record();
+  EReference getUnaryExpType_Record();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.UnaryExpressionType#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.UnaryExpType#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see bxml.UnaryExpressionType#getOp()
-   * @see #getUnaryExpressionType()
+   * @see bxml.UnaryExpType#getOp()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EAttribute getUnaryExpressionType_Op();
+  EAttribute getUnaryExpType_Op();
 
   /**
-   * Returns the meta object for class '{@link bxml.UnaryPredicateType <em>Unary Predicate Type</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.UnaryExpType#getTypref <em>Typref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Unary Predicate Type</em>'.
-   * @see bxml.UnaryPredicateType
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.UnaryExpType#getTypref()
+   * @see #getUnaryExpType()
    * @generated
    */
-  EClass getUnaryPredicateType();
+  EAttribute getUnaryExpType_Typref();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryPredicateType#getBinaryPred <em>Binary Pred</em>}'.
+   * Returns the meta object for class '{@link bxml.UnaryExpType2 <em>Unary Exp Type2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Unary Exp Type2</em>'.
+   * @see bxml.UnaryExpType2
+   * @generated
+   */
+  EClass getUnaryExpType2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType2#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Id</em>'.
+   * @see bxml.UnaryExpType2#getId()
+   * @see #getUnaryExpType2()
+   * @generated
+   */
+  EReference getUnaryExpType2_Id();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType2#getUnaryExp <em>Unary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Exp</em>'.
+   * @see bxml.UnaryExpType2#getUnaryExp()
+   * @see #getUnaryExpType2()
+   * @generated
+   */
+  EReference getUnaryExpType2_UnaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType2#getBinaryExp <em>Binary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Exp</em>'.
+   * @see bxml.UnaryExpType2#getBinaryExp()
+   * @see #getUnaryExpType2()
+   * @generated
+   */
+  EReference getUnaryExpType2_BinaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.UnaryExpType2#getStruct <em>Struct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct</em>'.
+   * @see bxml.UnaryExpType2#getStruct()
+   * @see #getUnaryExpType2()
+   * @generated
+   */
+  EReference getUnaryExpType2_Struct();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.UnaryExpType2#getGenericType <em>Generic Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Generic Type</em>'.
+   * @see bxml.UnaryExpType2#getGenericType()
+   * @see #getUnaryExpType2()
+   * @generated
+   */
+  EAttribute getUnaryExpType2_GenericType();
+
+  /**
+   * Returns the meta object for the attribute '{@link bxml.UnaryExpType2#getOp <em>Op</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Op</em>'.
+   * @see bxml.UnaryExpType2#getOp()
+   * @see #getUnaryExpType2()
+   * @generated
+   */
+  EAttribute getUnaryExpType2_Op();
+
+  /**
+   * Returns the meta object for class '{@link bxml.UnaryPredType <em>Unary Pred Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Unary Pred Type</em>'.
+   * @see bxml.UnaryPredType
+   * @generated
+   */
+  EClass getUnaryPredType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.UnaryPredType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.UnaryPredType#getAttr()
+   * @see #getUnaryPredType()
+   * @generated
+   */
+  EReference getUnaryPredType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.UnaryPredType#getBinaryPred <em>Binary Pred</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Binary Pred</em>'.
-   * @see bxml.UnaryPredicateType#getBinaryPred()
-   * @see #getUnaryPredicateType()
+   * @see bxml.UnaryPredType#getBinaryPred()
+   * @see #getUnaryPredType()
    * @generated
    */
-  EReference getUnaryPredicateType_BinaryPred();
+  EReference getUnaryPredType_BinaryPred();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryPredicateType#getExpComparison <em>Exp Comparison</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
-   * @see bxml.UnaryPredicateType#getExpComparison()
-   * @see #getUnaryPredicateType()
-   * @generated
-   */
-  EReference getUnaryPredicateType_ExpComparison();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryPredicateType#getQuantifiedPred <em>Quantified Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
-   * @see bxml.UnaryPredicateType#getQuantifiedPred()
-   * @see #getUnaryPredicateType()
-   * @generated
-   */
-  EReference getUnaryPredicateType_QuantifiedPred();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryPredicateType#getUnaryPred <em>Unary Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
-   * @see bxml.UnaryPredicateType#getUnaryPred()
-   * @see #getUnaryPredicateType()
-   * @generated
-   */
-  EReference getUnaryPredicateType_UnaryPred();
-
-  /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryPredicateType#getNaryPred <em>Nary Pred</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryPredType#getNaryPred <em>Nary Pred</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Nary Pred</em>'.
-   * @see bxml.UnaryPredicateType#getNaryPred()
-   * @see #getUnaryPredicateType()
+   * @see bxml.UnaryPredType#getNaryPred()
+   * @see #getUnaryPredType()
    * @generated
    */
-  EReference getUnaryPredicateType_NaryPred();
+  EReference getUnaryPredType_NaryPred();
 
   /**
-   * Returns the meta object for the containment reference '{@link bxml.UnaryPredicateType#getSet <em>Set</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.UnaryPredType#getUnaryPred <em>Unary Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Pred</em>'.
+   * @see bxml.UnaryPredType#getUnaryPred()
+   * @see #getUnaryPredType()
+   * @generated
+   */
+  EReference getUnaryPredType_UnaryPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.UnaryPredType#getQuantifiedPred <em>Quantified Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Pred</em>'.
+   * @see bxml.UnaryPredType#getQuantifiedPred()
+   * @see #getUnaryPredType()
+   * @generated
+   */
+  EReference getUnaryPredType_QuantifiedPred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.UnaryPredType#getExpComparison <em>Exp Comparison</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp Comparison</em>'.
+   * @see bxml.UnaryPredType#getExpComparison()
+   * @see #getUnaryPredType()
+   * @generated
+   */
+  EReference getUnaryPredType_ExpComparison();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.UnaryPredType#getSet <em>Set</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Set</em>'.
-   * @see bxml.UnaryPredicateType#getSet()
-   * @see #getUnaryPredicateType()
+   * @see bxml.UnaryPredType#getSet()
+   * @see #getUnaryPredType()
    * @generated
    */
-  EReference getUnaryPredicateType_Set();
+  EReference getUnaryPredType_Set();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.UnaryPredicateType#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link bxml.UnaryPredType#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see bxml.UnaryPredicateType#getOp()
-   * @see #getUnaryPredicateType()
+   * @see bxml.UnaryPredType#getOp()
+   * @see #getUnaryPredType()
    * @generated
    */
-  EAttribute getUnaryPredicateType_Op();
+  EAttribute getUnaryPredType_Op();
+
+  /**
+   * Returns the meta object for class '{@link bxml.UsesType <em>Uses Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Uses Type</em>'.
+   * @see bxml.UsesType
+   * @generated
+   */
+  EClass getUsesType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.UsesType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.UsesType#getAttr()
+   * @see #getUsesType()
+   * @generated
+   */
+  EReference getUsesType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link bxml.UsesType#getReferencedMachine <em>Referenced Machine</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Referenced Machine</em>'.
+   * @see bxml.UsesType#getReferencedMachine()
+   * @see #getUsesType()
+   * @generated
+   */
+  EReference getUsesType_ReferencedMachine();
 
   /**
    * Returns the meta object for class '{@link bxml.ValuationType <em>Valuation Type</em>}'.
@@ -11755,6 +19535,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EClass getValuationType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValuationType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ValuationType#getAttr()
+   * @see #getValuationType()
+   * @generated
+   */
+  EReference getValuationType_Attr();
 
   /**
    * Returns the meta object for the containment reference '{@link bxml.ValuationType#getBinaryExp <em>Binary Exp</em>}'.
@@ -11922,6 +19713,17 @@ public interface BxmlPackage extends EPackage {
   EAttribute getValuationType_Ident();
 
   /**
+   * Returns the meta object for the attribute '{@link bxml.ValuationType#getTypref <em>Typref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Typref</em>'.
+   * @see bxml.ValuationType#getTypref()
+   * @see #getValuationType()
+   * @generated
+   */
+  EAttribute getValuationType_Typref();
+
+  /**
    * Returns the meta object for class '{@link bxml.ValuationType1 <em>Valuation Type1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -11930,6 +19732,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EClass getValuationType1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValuationType1#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ValuationType1#getAttr()
+   * @see #getValuationType1()
+   * @generated
+   */
+  EReference getValuationType1_Attr();
 
   /**
    * Returns the meta object for the containment reference '{@link bxml.ValuationType1#getBinaryExp <em>Binary Exp</em>}'.
@@ -12107,6 +19920,17 @@ public interface BxmlPackage extends EPackage {
   EClass getValuesType();
 
   /**
+   * Returns the meta object for the containment reference '{@link bxml.ValuesType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ValuesType#getAttr()
+   * @see #getValuesType()
+   * @generated
+   */
+  EReference getValuesType_Attr();
+
+  /**
    * Returns the meta object for the containment reference list '{@link bxml.ValuesType#getValuation <em>Valuation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -12126,6 +19950,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EClass getValuesType1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValuesType1#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ValuesType1#getAttr()
+   * @see #getValuesType1()
+   * @generated
+   */
+  EReference getValuesType1_Attr();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.ValuesType1#getValuation <em>Valuation</em>}'.
@@ -12149,15 +19984,26 @@ public interface BxmlPackage extends EPackage {
   EClass getValuesType2();
 
   /**
-   * Returns the meta object for the attribute list '{@link bxml.ValuesType2#getExp <em>Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.ValuesType2#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Exp</em>'.
-   * @see bxml.ValuesType2#getExp()
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ValuesType2#getAttr()
    * @see #getValuesType2()
    * @generated
    */
-  EAttribute getValuesType2_Exp();
+  EReference getValuesType2_Attr();
+
+  /**
+   * Returns the meta object for the attribute list '{@link bxml.ValuesType2#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Expression</em>'.
+   * @see bxml.ValuesType2#getExpression()
+   * @see #getValuesType2()
+   * @generated
+   */
+  EAttribute getValuesType2_Expression();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.ValuesType2#getBinaryExp <em>Binary Exp</em>}'.
@@ -12314,6 +20160,181 @@ public interface BxmlPackage extends EPackage {
   EReference getValuesType2_Record();
 
   /**
+   * Returns the meta object for class '{@link bxml.ValueType <em>Value Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Value Type</em>'.
+   * @see bxml.ValueType
+   * @generated
+   */
+  EClass getValueType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.ValueType#getAttr()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getBinaryExp <em>Binary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Exp</em>'.
+   * @see bxml.ValueType#getBinaryExp()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_BinaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getNaryExp <em>Nary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Exp</em>'.
+   * @see bxml.ValueType#getNaryExp()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_NaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getBooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Literal</em>'.
+   * @see bxml.ValueType#getBooleanLiteral()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_BooleanLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getBooleanExp <em>Boolean Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Exp</em>'.
+   * @see bxml.ValueType#getBooleanExp()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_BooleanExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getEmptySet <em>Empty Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Set</em>'.
+   * @see bxml.ValueType#getEmptySet()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_EmptySet();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getEmptySeq <em>Empty Seq</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Seq</em>'.
+   * @see bxml.ValueType#getEmptySeq()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_EmptySeq();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Id</em>'.
+   * @see bxml.ValueType#getId()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_Id();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getIntegerLiteral <em>Integer Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Integer Literal</em>'.
+   * @see bxml.ValueType#getIntegerLiteral()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_IntegerLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getQuantifiedExp <em>Quantified Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Exp</em>'.
+   * @see bxml.ValueType#getQuantifiedExp()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_QuantifiedExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getQuantifiedSet <em>Quantified Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Set</em>'.
+   * @see bxml.ValueType#getQuantifiedSet()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_QuantifiedSet();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getSTRINGLiteral <em>STRING Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>STRING Literal</em>'.
+   * @see bxml.ValueType#getSTRINGLiteral()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_STRINGLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getUnaryExp <em>Unary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Exp</em>'.
+   * @see bxml.ValueType#getUnaryExp()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_UnaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getStruct <em>Struct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct</em>'.
+   * @see bxml.ValueType#getStruct()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_Struct();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.ValueType#getRecord <em>Record</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Record</em>'.
+   * @see bxml.ValueType#getRecord()
+   * @see #getValueType()
+   * @generated
+   */
+  EReference getValueType_Record();
+
+  /**
    * Returns the meta object for class '{@link bxml.VariablesType <em>Variables Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -12324,15 +20345,26 @@ public interface BxmlPackage extends EPackage {
   EClass getVariablesType();
 
   /**
-   * Returns the meta object for the attribute list '{@link bxml.VariablesType#getExp <em>Exp</em>}'.
+   * Returns the meta object for the containment reference '{@link bxml.VariablesType#getAttr <em>Attr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Exp</em>'.
-   * @see bxml.VariablesType#getExp()
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.VariablesType#getAttr()
    * @see #getVariablesType()
    * @generated
    */
-  EAttribute getVariablesType_Exp();
+  EReference getVariablesType_Attr();
+
+  /**
+   * Returns the meta object for the attribute list '{@link bxml.VariablesType#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Expression</em>'.
+   * @see bxml.VariablesType#getExpression()
+   * @see #getVariablesType()
+   * @generated
+   */
+  EAttribute getVariablesType_Expression();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.VariablesType#getBinaryExp <em>Binary Exp</em>}'.
@@ -12521,6 +20553,181 @@ public interface BxmlPackage extends EPackage {
   EReference getVariablesType1_Id();
 
   /**
+   * Returns the meta object for class '{@link bxml.VariantType <em>Variant Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Variant Type</em>'.
+   * @see bxml.VariantType
+   * @generated
+   */
+  EClass getVariantType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.VariantType#getAttr()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_Attr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getBinaryExp <em>Binary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Binary Exp</em>'.
+   * @see bxml.VariantType#getBinaryExp()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_BinaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getNaryExp <em>Nary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Nary Exp</em>'.
+   * @see bxml.VariantType#getNaryExp()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_NaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getBooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Literal</em>'.
+   * @see bxml.VariantType#getBooleanLiteral()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_BooleanLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getBooleanExp <em>Boolean Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Boolean Exp</em>'.
+   * @see bxml.VariantType#getBooleanExp()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_BooleanExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getEmptySet <em>Empty Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Set</em>'.
+   * @see bxml.VariantType#getEmptySet()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_EmptySet();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getEmptySeq <em>Empty Seq</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Empty Seq</em>'.
+   * @see bxml.VariantType#getEmptySeq()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_EmptySeq();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Id</em>'.
+   * @see bxml.VariantType#getId()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_Id();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getIntegerLiteral <em>Integer Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Integer Literal</em>'.
+   * @see bxml.VariantType#getIntegerLiteral()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_IntegerLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getQuantifiedExp <em>Quantified Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Exp</em>'.
+   * @see bxml.VariantType#getQuantifiedExp()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_QuantifiedExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getQuantifiedSet <em>Quantified Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Quantified Set</em>'.
+   * @see bxml.VariantType#getQuantifiedSet()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_QuantifiedSet();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getSTRINGLiteral <em>STRING Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>STRING Literal</em>'.
+   * @see bxml.VariantType#getSTRINGLiteral()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_STRINGLiteral();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getUnaryExp <em>Unary Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Unary Exp</em>'.
+   * @see bxml.VariantType#getUnaryExp()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_UnaryExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getStruct <em>Struct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Struct</em>'.
+   * @see bxml.VariantType#getStruct()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_Struct();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.VariantType#getRecord <em>Record</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Record</em>'.
+   * @see bxml.VariantType#getRecord()
+   * @see #getVariantType()
+   * @generated
+   */
+  EReference getVariantType_Record();
+
+  /**
    * Returns the meta object for class '{@link bxml.VARINType <em>VARIN Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -12564,17 +20771,6 @@ public interface BxmlPackage extends EPackage {
   EReference getVARINType_Body();
 
   /**
-   * Returns the meta object for the attribute '{@link bxml.VARINType#getOp <em>Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see bxml.VARINType#getOp()
-   * @see #getVARINType()
-   * @generated
-   */
-  EAttribute getVARINType_Op();
-
-  /**
    * Returns the meta object for class '{@link bxml.WhenClausesType <em>When Clauses Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -12583,6 +20779,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EClass getWhenClausesType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.WhenClausesType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.WhenClausesType#getAttr()
+   * @see #getWhenClausesType()
+   * @generated
+   */
+  EReference getWhenClausesType_Attr();
 
   /**
    * Returns the meta object for the containment reference list '{@link bxml.WhenClausesType#getWhen <em>When</em>}'.
@@ -12604,6 +20811,17 @@ public interface BxmlPackage extends EPackage {
    * @generated
    */
   EClass getWhenType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link bxml.WhenType#getAttr <em>Attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attr</em>'.
+   * @see bxml.WhenType#getAttr()
+   * @see #getWhenType()
+   * @generated
+   */
+  EReference getWhenType_Attr();
 
   /**
    * Returns the meta object for the containment reference '{@link bxml.WhenType#getCondition <em>Condition</em>}'.
@@ -12693,268 +20911,334 @@ public interface BxmlPackage extends EPackage {
   EReference getWhileType_Variant();
 
   /**
-   * Returns the meta object for enum '{@link bxml.BinaryExpOp <em>Binary Exp Op</em>}'.
+   * Returns the meta object for enum '{@link bxml.ElseifType <em>Elseif Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Binary Exp Op</em>'.
-   * @see bxml.BinaryExpOp
+   * @return the meta object for enum '<em>Elseif Type</em>'.
+   * @see bxml.ElseifType
    * @generated
    */
-  EEnum getBinaryExpOp();
+  EEnum getElseifType();
 
   /**
-   * Returns the meta object for enum '{@link bxml.BinaryPredOp <em>Binary Pred Op</em>}'.
+   * Returns the meta object for enum '{@link bxml.OpType <em>Op Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Binary Pred Op</em>'.
-   * @see bxml.BinaryPredOp
+   * @return the meta object for enum '<em>Op Type</em>'.
+   * @see bxml.OpType
    * @generated
    */
-  EEnum getBinaryPredOp();
+  EEnum getOpType();
 
   /**
-   * Returns the meta object for enum '{@link bxml.BinarySubOp <em>Binary Sub Op</em>}'.
+   * Returns the meta object for enum '{@link bxml.OpType1 <em>Op Type1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Binary Sub Op</em>'.
-   * @see bxml.BinarySubOp
+   * @return the meta object for enum '<em>Op Type1</em>'.
+   * @see bxml.OpType1
    * @generated
    */
-  EEnum getBinarySubOp();
+  EEnum getOpType1();
 
   /**
-   * Returns the meta object for enum '{@link bxml.ComparisonOp <em>Comparison Op</em>}'.
+   * Returns the meta object for enum '{@link bxml.OpType2 <em>Op Type2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Comparison Op</em>'.
-   * @see bxml.ComparisonOp
+   * @return the meta object for enum '<em>Op Type2</em>'.
+   * @see bxml.OpType2
    * @generated
    */
-  EEnum getComparisonOp();
+  EEnum getOpType2();
 
   /**
-   * Returns the meta object for enum '{@link bxml.MachineType <em>Machine Type</em>}'.
+   * Returns the meta object for enum '{@link bxml.OpType3 <em>Op Type3</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Machine Type</em>'.
-   * @see bxml.MachineType
+   * @return the meta object for enum '<em>Op Type3</em>'.
+   * @see bxml.OpType3
    * @generated
    */
-  EEnum getMachineType();
+  EEnum getOpType3();
 
   /**
-   * Returns the meta object for enum '{@link bxml.NaryExpOp <em>Nary Exp Op</em>}'.
+   * Returns the meta object for enum '{@link bxml.OpType4 <em>Op Type4</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Nary Exp Op</em>'.
-   * @see bxml.NaryExpOp
+   * @return the meta object for enum '<em>Op Type4</em>'.
+   * @see bxml.OpType4
    * @generated
    */
-  EEnum getNaryExpOp();
+  EEnum getOpType4();
 
   /**
-   * Returns the meta object for enum '{@link bxml.NaryOp <em>Nary Op</em>}'.
+   * Returns the meta object for enum '{@link bxml.OpType5 <em>Op Type5</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Nary Op</em>'.
-   * @see bxml.NaryOp
+   * @return the meta object for enum '<em>Op Type5</em>'.
+   * @see bxml.OpType5
    * @generated
    */
-  EEnum getNaryOp();
+  EEnum getOpType5();
 
   /**
-   * Returns the meta object for enum '{@link bxml.OpVarSub <em>Op Var Sub</em>}'.
+   * Returns the meta object for enum '{@link bxml.OpType6 <em>Op Type6</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Op Var Sub</em>'.
-   * @see bxml.OpVarSub
+   * @return the meta object for enum '<em>Op Type6</em>'.
+   * @see bxml.OpType6
    * @generated
    */
-  EEnum getOpVarSub();
+  EEnum getOpType6();
 
   /**
-   * Returns the meta object for enum '{@link bxml.QuantifiedExpOp <em>Quantified Exp Op</em>}'.
+   * Returns the meta object for enum '{@link bxml.OpType7 <em>Op Type7</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Quantified Exp Op</em>'.
-   * @see bxml.QuantifiedExpOp
+   * @return the meta object for enum '<em>Op Type7</em>'.
+   * @see bxml.OpType7
    * @generated
    */
-  EEnum getQuantifiedExpOp();
+  EEnum getOpType7();
 
   /**
-   * Returns the meta object for enum '{@link bxml.QuantifiedPredOp <em>Quantified Pred Op</em>}'.
+   * Returns the meta object for enum '{@link bxml.OpType8 <em>Op Type8</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Quantified Pred Op</em>'.
-   * @see bxml.QuantifiedPredOp
+   * @return the meta object for enum '<em>Op Type8</em>'.
+   * @see bxml.OpType8
    * @generated
    */
-  EEnum getQuantifiedPredOp();
+  EEnum getOpType8();
 
   /**
-   * Returns the meta object for enum '{@link bxml.UnaryExpOp <em>Unary Exp Op</em>}'.
+   * Returns the meta object for enum '{@link bxml.OpType9 <em>Op Type9</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Unary Exp Op</em>'.
-   * @see bxml.UnaryExpOp
+   * @return the meta object for enum '<em>Op Type9</em>'.
+   * @see bxml.OpType9
    * @generated
    */
-  EEnum getUnaryExpOp();
+  EEnum getOpType9();
 
   /**
-   * Returns the meta object for enum '{@link bxml.UnaryPredOp <em>Unary Pred Op</em>}'.
+   * Returns the meta object for enum '{@link bxml.TypeType <em>Type Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Unary Pred Op</em>'.
-   * @see bxml.UnaryPredOp
+   * @return the meta object for enum '<em>Type Type</em>'.
+   * @see bxml.TypeType
    * @generated
    */
-  EEnum getUnaryPredOp();
+  EEnum getTypeType();
 
   /**
-   * Returns the meta object for data type '{@link bxml.BinaryExpOp <em>Binary Exp Op Object</em>}'.
+   * Returns the meta object for enum '{@link bxml.TypeType1 <em>Type Type1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Binary Exp Op Object</em>'.
-   * @see bxml.BinaryExpOp
-   * @model instanceClass="bxml.BinaryExpOp"
-   *        extendedMetaData="name='binary_exp_op:Object' baseType='binary_exp_op'"
+   * @return the meta object for enum '<em>Type Type1</em>'.
+   * @see bxml.TypeType1
    * @generated
    */
-  EDataType getBinaryExpOpObject();
+  EEnum getTypeType1();
 
   /**
-   * Returns the meta object for data type '{@link bxml.BinaryPredOp <em>Binary Pred Op Object</em>}'.
+   * Returns the meta object for enum '{@link bxml.TypeType2 <em>Type Type2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Binary Pred Op Object</em>'.
-   * @see bxml.BinaryPredOp
-   * @model instanceClass="bxml.BinaryPredOp"
-   *        extendedMetaData="name='binary_pred_op:Object' baseType='binary_pred_op'"
+   * @return the meta object for enum '<em>Type Type2</em>'.
+   * @see bxml.TypeType2
    * @generated
    */
-  EDataType getBinaryPredOpObject();
+  EEnum getTypeType2();
 
   /**
-   * Returns the meta object for data type '{@link bxml.BinarySubOp <em>Binary Sub Op Object</em>}'.
+   * Returns the meta object for enum '{@link bxml.ValueType1 <em>Value Type1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Binary Sub Op Object</em>'.
-   * @see bxml.BinarySubOp
-   * @model instanceClass="bxml.BinarySubOp"
-   *        extendedMetaData="name='binary_sub_op:Object' baseType='binary_sub_op'"
+   * @return the meta object for enum '<em>Value Type1</em>'.
+   * @see bxml.ValueType1
    * @generated
    */
-  EDataType getBinarySubOpObject();
+  EEnum getValueType1();
 
   /**
-   * Returns the meta object for data type '{@link bxml.ComparisonOp <em>Comparison Op Object</em>}'.
+   * Returns the meta object for data type '{@link bxml.ElseifType <em>Elseif Type Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Comparison Op Object</em>'.
-   * @see bxml.ComparisonOp
-   * @model instanceClass="bxml.ComparisonOp"
-   *        extendedMetaData="name='comparison_op:Object' baseType='comparison_op'"
+   * @return the meta object for data type '<em>Elseif Type Object</em>'.
+   * @see bxml.ElseifType
+   * @model instanceClass="bxml.ElseifType"
+   *        extendedMetaData="name='elseif_._type:Object' baseType='elseif_._type'"
    * @generated
    */
-  EDataType getComparisonOpObject();
+  EDataType getElseifTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link bxml.MachineType <em>Machine Type Object</em>}'.
+   * Returns the meta object for data type '{@link bxml.OpType1 <em>Op Type Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Machine Type Object</em>'.
-   * @see bxml.MachineType
-   * @model instanceClass="bxml.MachineType"
-   *        extendedMetaData="name='machine_type:Object' baseType='machine_type'"
+   * @return the meta object for data type '<em>Op Type Object</em>'.
+   * @see bxml.OpType1
+   * @model instanceClass="bxml.OpType1"
+   *        extendedMetaData="name='op_._1_._type:Object' baseType='op_._1_._type'"
    * @generated
    */
-  EDataType getMachineTypeObject();
+  EDataType getOpTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link bxml.NaryExpOp <em>Nary Exp Op Object</em>}'.
+   * Returns the meta object for data type '{@link bxml.OpType8 <em>Op Type Object1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Nary Exp Op Object</em>'.
-   * @see bxml.NaryExpOp
-   * @model instanceClass="bxml.NaryExpOp"
-   *        extendedMetaData="name='nary_exp_op:Object' baseType='nary_exp_op'"
+   * @return the meta object for data type '<em>Op Type Object1</em>'.
+   * @see bxml.OpType8
+   * @model instanceClass="bxml.OpType8"
+   *        extendedMetaData="name='op_._8_._type:Object' baseType='op_._8_._type'"
    * @generated
    */
-  EDataType getNaryExpOpObject();
+  EDataType getOpTypeObject1();
 
   /**
-   * Returns the meta object for data type '{@link bxml.NaryOp <em>Nary Op Object</em>}'.
+   * Returns the meta object for data type '{@link bxml.OpType5 <em>Op Type Object2</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Nary Op Object</em>'.
-   * @see bxml.NaryOp
-   * @model instanceClass="bxml.NaryOp"
-   *        extendedMetaData="name='nary_op:Object' baseType='nary_op'"
+   * @return the meta object for data type '<em>Op Type Object2</em>'.
+   * @see bxml.OpType5
+   * @model instanceClass="bxml.OpType5"
+   *        extendedMetaData="name='op_._5_._type:Object' baseType='op_._5_._type'"
    * @generated
    */
-  EDataType getNaryOpObject();
+  EDataType getOpTypeObject2();
 
   /**
-   * Returns the meta object for data type '{@link bxml.OpVarSub <em>Op Var Sub Object</em>}'.
+   * Returns the meta object for data type '{@link bxml.OpType4 <em>Op Type Object3</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Op Var Sub Object</em>'.
-   * @see bxml.OpVarSub
-   * @model instanceClass="bxml.OpVarSub"
-   *        extendedMetaData="name='op_var_sub:Object' baseType='op_var_sub'"
+   * @return the meta object for data type '<em>Op Type Object3</em>'.
+   * @see bxml.OpType4
+   * @model instanceClass="bxml.OpType4"
+   *        extendedMetaData="name='op_._4_._type:Object' baseType='op_._4_._type'"
    * @generated
    */
-  EDataType getOpVarSubObject();
+  EDataType getOpTypeObject3();
 
   /**
-   * Returns the meta object for data type '{@link bxml.QuantifiedExpOp <em>Quantified Exp Op Object</em>}'.
+   * Returns the meta object for data type '{@link bxml.OpType3 <em>Op Type Object4</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Quantified Exp Op Object</em>'.
-   * @see bxml.QuantifiedExpOp
-   * @model instanceClass="bxml.QuantifiedExpOp"
-   *        extendedMetaData="name='quantified_exp_op:Object' baseType='quantified_exp_op'"
+   * @return the meta object for data type '<em>Op Type Object4</em>'.
+   * @see bxml.OpType3
+   * @model instanceClass="bxml.OpType3"
+   *        extendedMetaData="name='op_._3_._type:Object' baseType='op_._3_._type'"
    * @generated
    */
-  EDataType getQuantifiedExpOpObject();
+  EDataType getOpTypeObject4();
 
   /**
-   * Returns the meta object for data type '{@link bxml.QuantifiedPredOp <em>Quantified Pred Op Object</em>}'.
+   * Returns the meta object for data type '{@link bxml.OpType <em>Op Type Object5</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Quantified Pred Op Object</em>'.
-   * @see bxml.QuantifiedPredOp
-   * @model instanceClass="bxml.QuantifiedPredOp"
-   *        extendedMetaData="name='quantified_pred_op:Object' baseType='quantified_pred_op'"
+   * @return the meta object for data type '<em>Op Type Object5</em>'.
+   * @see bxml.OpType
+   * @model instanceClass="bxml.OpType"
+   *        extendedMetaData="name='op_._type:Object' baseType='op_._type'"
    * @generated
    */
-  EDataType getQuantifiedPredOpObject();
+  EDataType getOpTypeObject5();
 
   /**
-   * Returns the meta object for data type '{@link bxml.UnaryExpOp <em>Unary Exp Op Object</em>}'.
+   * Returns the meta object for data type '{@link bxml.OpType7 <em>Op Type Object6</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Unary Exp Op Object</em>'.
-   * @see bxml.UnaryExpOp
-   * @model instanceClass="bxml.UnaryExpOp"
-   *        extendedMetaData="name='unary_exp_op:Object' baseType='unary_exp_op'"
+   * @return the meta object for data type '<em>Op Type Object6</em>'.
+   * @see bxml.OpType7
+   * @model instanceClass="bxml.OpType7"
+   *        extendedMetaData="name='op_._7_._type:Object' baseType='op_._7_._type'"
    * @generated
    */
-  EDataType getUnaryExpOpObject();
+  EDataType getOpTypeObject6();
 
   /**
-   * Returns the meta object for data type '{@link bxml.UnaryPredOp <em>Unary Pred Op Object</em>}'.
+   * Returns the meta object for data type '{@link bxml.OpType6 <em>Op Type Object7</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for data type '<em>Unary Pred Op Object</em>'.
-   * @see bxml.UnaryPredOp
-   * @model instanceClass="bxml.UnaryPredOp"
-   *        extendedMetaData="name='unary_pred_op:Object' baseType='unary_pred_op'"
+   * @return the meta object for data type '<em>Op Type Object7</em>'.
+   * @see bxml.OpType6
+   * @model instanceClass="bxml.OpType6"
+   *        extendedMetaData="name='op_._6_._type:Object' baseType='op_._6_._type'"
    * @generated
    */
-  EDataType getUnaryPredOpObject();
+  EDataType getOpTypeObject7();
+
+  /**
+   * Returns the meta object for data type '{@link bxml.OpType2 <em>Op Type Object8</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for data type '<em>Op Type Object8</em>'.
+   * @see bxml.OpType2
+   * @model instanceClass="bxml.OpType2"
+   *        extendedMetaData="name='op_._2_._type:Object' baseType='op_._2_._type'"
+   * @generated
+   */
+  EDataType getOpTypeObject8();
+
+  /**
+   * Returns the meta object for data type '{@link bxml.OpType9 <em>Op Type Object9</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for data type '<em>Op Type Object9</em>'.
+   * @see bxml.OpType9
+   * @model instanceClass="bxml.OpType9"
+   *        extendedMetaData="name='op_._9_._type:Object' baseType='op_._9_._type'"
+   * @generated
+   */
+  EDataType getOpTypeObject9();
+
+  /**
+   * Returns the meta object for data type '{@link bxml.TypeType <em>Type Type Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for data type '<em>Type Type Object</em>'.
+   * @see bxml.TypeType
+   * @model instanceClass="bxml.TypeType"
+   *        extendedMetaData="name='type_._type:Object' baseType='type_._type'"
+   * @generated
+   */
+  EDataType getTypeTypeObject();
+
+  /**
+   * Returns the meta object for data type '{@link bxml.TypeType1 <em>Type Type Object1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for data type '<em>Type Type Object1</em>'.
+   * @see bxml.TypeType1
+   * @model instanceClass="bxml.TypeType1"
+   *        extendedMetaData="name='type_._1_._type:Object' baseType='type_._1_._type'"
+   * @generated
+   */
+  EDataType getTypeTypeObject1();
+
+  /**
+   * Returns the meta object for data type '{@link bxml.TypeType2 <em>Type Type Object2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for data type '<em>Type Type Object2</em>'.
+   * @see bxml.TypeType2
+   * @model instanceClass="bxml.TypeType2"
+   *        extendedMetaData="name='type_._2_._type:Object' baseType='type_._2_._type'"
+   * @generated
+   */
+  EDataType getTypeTypeObject2();
+
+  /**
+   * Returns the meta object for data type '{@link bxml.ValueType1 <em>Value Type Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for data type '<em>Value Type Object</em>'.
+   * @see bxml.ValueType1
+   * @model instanceClass="bxml.ValueType1"
+   *        extendedMetaData="name='value_._type:Object' baseType='value_._type'"
+   * @generated
+   */
+  EDataType getValueTypeObject();
 
   /**
    * Returns the factory that creates the instances of the model.

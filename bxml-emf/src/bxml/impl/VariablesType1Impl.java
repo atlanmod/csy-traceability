@@ -2,9 +2,9 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BxmlPackage;
-import bxml.IdentifierType;
+import bxml.Identifier;
 import bxml.VariablesType1;
 
 import java.util.Collection;
@@ -46,7 +46,7 @@ public class VariablesType1Impl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getId() <em>Id</em>}' containment reference list.
@@ -56,7 +56,7 @@ public class VariablesType1Impl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected EList<IdentifierType> id;
+  protected EList<Identifier> id;
 
   /**
    * <!-- begin-user-doc -->
@@ -82,7 +82,7 @@ public class VariablesType1Impl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -91,8 +91,8 @@ public class VariablesType1Impl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VARIABLES_TYPE1__ATTR, oldAttr, newAttr);
@@ -106,7 +106,7 @@ public class VariablesType1Impl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -125,9 +125,9 @@ public class VariablesType1Impl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<IdentifierType> getId() {
+  public EList<Identifier> getId() {
     if (id == null) {
-      id = new EObjectContainmentEList<IdentifierType>(IdentifierType.class, this, BxmlPackage.VARIABLES_TYPE1__ID);
+      id = new EObjectContainmentEList<Identifier>(Identifier.class, this, BxmlPackage.VARIABLES_TYPE1__ID);
     }
     return id;
   }
@@ -174,11 +174,11 @@ public class VariablesType1Impl extends MinimalEObjectImpl.Container implements 
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.VARIABLES_TYPE1__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.VARIABLES_TYPE1__ID:
         getId().clear();
-        getId().addAll((Collection<? extends IdentifierType>)newValue);
+        getId().addAll((Collection<? extends Identifier>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -193,7 +193,7 @@ public class VariablesType1Impl extends MinimalEObjectImpl.Container implements 
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.VARIABLES_TYPE1__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.VARIABLES_TYPE1__ID:
         getId().clear();

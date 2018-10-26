@@ -33,13 +33,13 @@ public interface LETSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getLETSubType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.LETSubType#getAttr <em>Attr</em>}' containment reference.
@@ -49,7 +49,7 @@ public interface LETSubType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Variables</b></em>' containment reference.
@@ -114,13 +114,13 @@ public interface LETSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Then</em>' containment reference.
-   * @see #setThen(SubstitutionType)
+   * @see #setThen(ThenType)
    * @see bxml.BxmlPackage#getLETSubType_Then()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Then' namespace='##targetNamespace'"
    * @generated
    */
-  SubstitutionType getThen();
+  ThenType getThen();
 
   /**
    * Sets the value of the '{@link bxml.LETSubType#getThen <em>Then</em>}' containment reference.
@@ -130,6 +130,6 @@ public interface LETSubType extends EObject {
    * @see #getThen()
    * @generated
    */
-  void setThen(SubstitutionType value);
+  void setThen(ThenType value);
 
 } // LETSubType

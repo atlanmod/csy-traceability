@@ -2,7 +2,7 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BxmlPackage;
 import bxml.SetType;
 import bxml.SetsType;
@@ -46,7 +46,7 @@ public class SetsTypeImpl extends MinimalEObjectImpl.Container implements SetsTy
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getSet() <em>Set</em>}' containment reference list.
@@ -82,7 +82,7 @@ public class SetsTypeImpl extends MinimalEObjectImpl.Container implements SetsTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -91,8 +91,8 @@ public class SetsTypeImpl extends MinimalEObjectImpl.Container implements SetsTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.SETS_TYPE__ATTR, oldAttr, newAttr);
@@ -106,7 +106,7 @@ public class SetsTypeImpl extends MinimalEObjectImpl.Container implements SetsTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -174,7 +174,7 @@ public class SetsTypeImpl extends MinimalEObjectImpl.Container implements SetsTy
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.SETS_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.SETS_TYPE__SET:
         getSet().clear();
@@ -193,7 +193,7 @@ public class SetsTypeImpl extends MinimalEObjectImpl.Container implements SetsTy
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.SETS_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.SETS_TYPE__SET:
         getSet().clear();

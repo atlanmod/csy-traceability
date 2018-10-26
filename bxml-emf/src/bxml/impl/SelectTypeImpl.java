@@ -2,10 +2,10 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BxmlPackage;
+import bxml.ElseType;
 import bxml.SelectType;
-import bxml.SubstitutionType;
 import bxml.WhenClausesType;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -41,7 +41,7 @@ public class SelectTypeImpl extends MinimalEObjectImpl.Container implements Sele
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getWhenClauses() <em>When Clauses</em>}' containment reference.
@@ -61,7 +61,7 @@ public class SelectTypeImpl extends MinimalEObjectImpl.Container implements Sele
    * @generated
    * @ordered
    */
-  protected SubstitutionType else_;
+  protected ElseType else_;
 
   /**
    * <!-- begin-user-doc -->
@@ -87,7 +87,7 @@ public class SelectTypeImpl extends MinimalEObjectImpl.Container implements Sele
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -96,8 +96,8 @@ public class SelectTypeImpl extends MinimalEObjectImpl.Container implements Sele
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.SELECT_TYPE__ATTR, oldAttr, newAttr);
@@ -111,7 +111,7 @@ public class SelectTypeImpl extends MinimalEObjectImpl.Container implements Sele
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -173,7 +173,7 @@ public class SelectTypeImpl extends MinimalEObjectImpl.Container implements Sele
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubstitutionType getElse() {
+  public ElseType getElse() {
     return else_;
   }
 
@@ -182,8 +182,8 @@ public class SelectTypeImpl extends MinimalEObjectImpl.Container implements Sele
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetElse(SubstitutionType newElse, NotificationChain msgs) {
-    SubstitutionType oldElse = else_;
+  public NotificationChain basicSetElse(ElseType newElse, NotificationChain msgs) {
+    ElseType oldElse = else_;
     else_ = newElse;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.SELECT_TYPE__ELSE, oldElse, newElse);
@@ -197,7 +197,7 @@ public class SelectTypeImpl extends MinimalEObjectImpl.Container implements Sele
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setElse(SubstitutionType newElse) {
+  public void setElse(ElseType newElse) {
     if (newElse != else_) {
       NotificationChain msgs = null;
       if (else_ != null)
@@ -256,13 +256,13 @@ public class SelectTypeImpl extends MinimalEObjectImpl.Container implements Sele
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.SELECT_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.SELECT_TYPE__WHEN_CLAUSES:
         setWhenClauses((WhenClausesType)newValue);
         return;
       case BxmlPackage.SELECT_TYPE__ELSE:
-        setElse((SubstitutionType)newValue);
+        setElse((ElseType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -277,13 +277,13 @@ public class SelectTypeImpl extends MinimalEObjectImpl.Container implements Sele
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.SELECT_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.SELECT_TYPE__WHEN_CLAUSES:
         setWhenClauses((WhenClausesType)null);
         return;
       case BxmlPackage.SELECT_TYPE__ELSE:
-        setElse((SubstitutionType)null);
+        setElse((ElseType)null);
         return;
     }
     super.eUnset(featureID);

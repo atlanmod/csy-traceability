@@ -2,12 +2,12 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BxmlPackage;
-import bxml.CallParamatersType;
+import bxml.InputParametersType1;
 import bxml.NameType;
 import bxml.OperationCallType;
-import bxml.OperationType;
+import bxml.OutputParametersType1;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -30,7 +30,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link bxml.impl.OperationCallTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link bxml.impl.OperationCallTypeImpl#getInputParameters <em>Input Parameters</em>}</li>
  *   <li>{@link bxml.impl.OperationCallTypeImpl#getOutputParameters <em>Output Parameters</em>}</li>
- *   <li>{@link bxml.impl.OperationCallTypeImpl#getOperation <em>Operation</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,7 +43,7 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
@@ -64,7 +63,7 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected CallParamatersType inputParameters;
+  protected InputParametersType1 inputParameters;
 
   /**
    * The cached value of the '{@link #getOutputParameters() <em>Output Parameters</em>}' containment reference.
@@ -74,17 +73,7 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected CallParamatersType outputParameters;
-
-  /**
-   * The cached value of the '{@link #getOperation() <em>Operation</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOperation()
-   * @generated
-   * @ordered
-   */
-  protected OperationType operation;
+  protected OutputParametersType1 outputParameters;
 
   /**
    * <!-- begin-user-doc -->
@@ -110,7 +99,7 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -119,8 +108,8 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.OPERATION_CALL_TYPE__ATTR, oldAttr, newAttr);
@@ -134,7 +123,7 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -196,7 +185,7 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public CallParamatersType getInputParameters() {
+  public InputParametersType1 getInputParameters() {
     return inputParameters;
   }
 
@@ -205,8 +194,8 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetInputParameters(CallParamatersType newInputParameters, NotificationChain msgs) {
-    CallParamatersType oldInputParameters = inputParameters;
+  public NotificationChain basicSetInputParameters(InputParametersType1 newInputParameters, NotificationChain msgs) {
+    InputParametersType1 oldInputParameters = inputParameters;
     inputParameters = newInputParameters;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.OPERATION_CALL_TYPE__INPUT_PARAMETERS, oldInputParameters, newInputParameters);
@@ -220,7 +209,7 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setInputParameters(CallParamatersType newInputParameters) {
+  public void setInputParameters(InputParametersType1 newInputParameters) {
     if (newInputParameters != inputParameters) {
       NotificationChain msgs = null;
       if (inputParameters != null)
@@ -239,7 +228,7 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public CallParamatersType getOutputParameters() {
+  public OutputParametersType1 getOutputParameters() {
     return outputParameters;
   }
 
@@ -248,8 +237,8 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetOutputParameters(CallParamatersType newOutputParameters, NotificationChain msgs) {
-    CallParamatersType oldOutputParameters = outputParameters;
+  public NotificationChain basicSetOutputParameters(OutputParametersType1 newOutputParameters, NotificationChain msgs) {
+    OutputParametersType1 oldOutputParameters = outputParameters;
     outputParameters = newOutputParameters;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.OPERATION_CALL_TYPE__OUTPUT_PARAMETERS, oldOutputParameters, newOutputParameters);
@@ -263,7 +252,7 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOutputParameters(CallParamatersType newOutputParameters) {
+  public void setOutputParameters(OutputParametersType1 newOutputParameters) {
     if (newOutputParameters != outputParameters) {
       NotificationChain msgs = null;
       if (outputParameters != null)
@@ -282,49 +271,6 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public OperationType getOperation() {
-    return operation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetOperation(OperationType newOperation, NotificationChain msgs) {
-    OperationType oldOperation = operation;
-    operation = newOperation;
-    if (eNotificationRequired()) {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.OPERATION_CALL_TYPE__OPERATION, oldOperation, newOperation);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOperation(OperationType newOperation) {
-    if (newOperation != operation) {
-      NotificationChain msgs = null;
-      if (operation != null)
-        msgs = ((InternalEObject)operation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.OPERATION_CALL_TYPE__OPERATION, null, msgs);
-      if (newOperation != null)
-        msgs = ((InternalEObject)newOperation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.OPERATION_CALL_TYPE__OPERATION, null, msgs);
-      msgs = basicSetOperation(newOperation, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.OPERATION_CALL_TYPE__OPERATION, newOperation, newOperation));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
@@ -336,8 +282,6 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
         return basicSetInputParameters(null, msgs);
       case BxmlPackage.OPERATION_CALL_TYPE__OUTPUT_PARAMETERS:
         return basicSetOutputParameters(null, msgs);
-      case BxmlPackage.OPERATION_CALL_TYPE__OPERATION:
-        return basicSetOperation(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -358,8 +302,6 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
         return getInputParameters();
       case BxmlPackage.OPERATION_CALL_TYPE__OUTPUT_PARAMETERS:
         return getOutputParameters();
-      case BxmlPackage.OPERATION_CALL_TYPE__OPERATION:
-        return getOperation();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -373,19 +315,16 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.OPERATION_CALL_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.OPERATION_CALL_TYPE__NAME:
         setName((NameType)newValue);
         return;
       case BxmlPackage.OPERATION_CALL_TYPE__INPUT_PARAMETERS:
-        setInputParameters((CallParamatersType)newValue);
+        setInputParameters((InputParametersType1)newValue);
         return;
       case BxmlPackage.OPERATION_CALL_TYPE__OUTPUT_PARAMETERS:
-        setOutputParameters((CallParamatersType)newValue);
-        return;
-      case BxmlPackage.OPERATION_CALL_TYPE__OPERATION:
-        setOperation((OperationType)newValue);
+        setOutputParameters((OutputParametersType1)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -400,19 +339,16 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.OPERATION_CALL_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.OPERATION_CALL_TYPE__NAME:
         setName((NameType)null);
         return;
       case BxmlPackage.OPERATION_CALL_TYPE__INPUT_PARAMETERS:
-        setInputParameters((CallParamatersType)null);
+        setInputParameters((InputParametersType1)null);
         return;
       case BxmlPackage.OPERATION_CALL_TYPE__OUTPUT_PARAMETERS:
-        setOutputParameters((CallParamatersType)null);
-        return;
-      case BxmlPackage.OPERATION_CALL_TYPE__OPERATION:
-        setOperation((OperationType)null);
+        setOutputParameters((OutputParametersType1)null);
         return;
     }
     super.eUnset(featureID);
@@ -434,8 +370,6 @@ public class OperationCallTypeImpl extends MinimalEObjectImpl.Container implemen
         return inputParameters != null;
       case BxmlPackage.OPERATION_CALL_TYPE__OUTPUT_PARAMETERS:
         return outputParameters != null;
-      case BxmlPackage.OPERATION_CALL_TYPE__OPERATION:
-        return operation != null;
     }
     return super.eIsSet(featureID);
   }

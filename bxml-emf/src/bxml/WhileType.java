@@ -34,13 +34,13 @@ public interface WhileType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getWhileType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.WhileType#getAttr <em>Attr</em>}' containment reference.
@@ -50,7 +50,7 @@ public interface WhileType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Condition</b></em>' containment reference.
@@ -61,13 +61,13 @@ public interface WhileType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Condition</em>' containment reference.
-   * @see #setCondition(PredicateType)
+   * @see #setCondition(ConditionType)
    * @see bxml.BxmlPackage#getWhileType_Condition()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Condition' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getCondition();
+  ConditionType getCondition();
 
   /**
    * Sets the value of the '{@link bxml.WhileType#getCondition <em>Condition</em>}' containment reference.
@@ -77,7 +77,7 @@ public interface WhileType extends EObject {
    * @see #getCondition()
    * @generated
    */
-  void setCondition(PredicateType value);
+  void setCondition(ConditionType value);
 
   /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference.
@@ -88,13 +88,13 @@ public interface WhileType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Body</em>' containment reference.
-   * @see #setBody(SubstitutionType)
+   * @see #setBody(BodyType5)
    * @see bxml.BxmlPackage#getWhileType_Body()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Body' namespace='##targetNamespace'"
    * @generated
    */
-  SubstitutionType getBody();
+  BodyType5 getBody();
 
   /**
    * Sets the value of the '{@link bxml.WhileType#getBody <em>Body</em>}' containment reference.
@@ -104,7 +104,7 @@ public interface WhileType extends EObject {
    * @see #getBody()
    * @generated
    */
-  void setBody(SubstitutionType value);
+  void setBody(BodyType5 value);
 
   /**
    * Returns the value of the '<em><b>Invariant</b></em>' containment reference.
@@ -115,13 +115,13 @@ public interface WhileType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Invariant</em>' containment reference.
-   * @see #setInvariant(PredicateType)
+   * @see #setInvariant(InvariantType)
    * @see bxml.BxmlPackage#getWhileType_Invariant()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Invariant' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getInvariant();
+  InvariantType getInvariant();
 
   /**
    * Sets the value of the '{@link bxml.WhileType#getInvariant <em>Invariant</em>}' containment reference.
@@ -131,7 +131,7 @@ public interface WhileType extends EObject {
    * @see #getInvariant()
    * @generated
    */
-  void setInvariant(PredicateType value);
+  void setInvariant(InvariantType value);
 
   /**
    * Returns the value of the '<em><b>Variant</b></em>' containment reference.
@@ -142,13 +142,13 @@ public interface WhileType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Variant</em>' containment reference.
-   * @see #setVariant(ExpType)
+   * @see #setVariant(VariantType)
    * @see bxml.BxmlPackage#getWhileType_Variant()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Variant' namespace='##targetNamespace'"
    * @generated
    */
-  ExpType getVariant();
+  VariantType getVariant();
 
   /**
    * Sets the value of the '{@link bxml.WhileType#getVariant <em>Variant</em>}' containment reference.
@@ -158,6 +158,6 @@ public interface WhileType extends EObject {
    * @see #getVariant()
    * @generated
    */
-  void setVariant(ExpType value);
+  void setVariant(VariantType value);
 
 } // WhileType

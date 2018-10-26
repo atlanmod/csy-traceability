@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface OutputParametersType extends EObject {
   /**
    * Returns the value of the '<em><b>Id</b></em>' containment reference list.
-   * The list contents are of type {@link bxml.IdentifierType}.
+   * The list contents are of type {@link bxml.Identifier}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Id</em>' containment reference list isn't clear,
@@ -38,6 +38,6 @@ public interface OutputParametersType extends EObject {
    *        extendedMetaData="kind='element' name='Id' namespace='##targetNamespace'"
    * @generated
    */
-  EList<IdentifierType> getId();
+  EList<Identifier> getId();
 
 } // OutputParametersType

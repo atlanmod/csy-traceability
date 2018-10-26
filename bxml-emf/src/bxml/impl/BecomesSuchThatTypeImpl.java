@@ -2,10 +2,10 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BecomesSuchThatType;
 import bxml.BxmlPackage;
-import bxml.PredicateType;
+import bxml.PredType;
 import bxml.VariablesType1;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -41,7 +41,7 @@ public class BecomesSuchThatTypeImpl extends MinimalEObjectImpl.Container implem
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference.
@@ -61,7 +61,7 @@ public class BecomesSuchThatTypeImpl extends MinimalEObjectImpl.Container implem
    * @generated
    * @ordered
    */
-  protected PredicateType pred;
+  protected PredType pred;
 
   /**
    * <!-- begin-user-doc -->
@@ -87,7 +87,7 @@ public class BecomesSuchThatTypeImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -96,8 +96,8 @@ public class BecomesSuchThatTypeImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.BECOMES_SUCH_THAT_TYPE__ATTR, oldAttr, newAttr);
@@ -111,7 +111,7 @@ public class BecomesSuchThatTypeImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -173,7 +173,7 @@ public class BecomesSuchThatTypeImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getPred() {
+  public PredType getPred() {
     return pred;
   }
 
@@ -182,8 +182,8 @@ public class BecomesSuchThatTypeImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPred(PredicateType newPred, NotificationChain msgs) {
-    PredicateType oldPred = pred;
+  public NotificationChain basicSetPred(PredType newPred, NotificationChain msgs) {
+    PredType oldPred = pred;
     pred = newPred;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.BECOMES_SUCH_THAT_TYPE__PRED, oldPred, newPred);
@@ -197,7 +197,7 @@ public class BecomesSuchThatTypeImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPred(PredicateType newPred) {
+  public void setPred(PredType newPred) {
     if (newPred != pred) {
       NotificationChain msgs = null;
       if (pred != null)
@@ -256,13 +256,13 @@ public class BecomesSuchThatTypeImpl extends MinimalEObjectImpl.Container implem
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.BECOMES_SUCH_THAT_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.BECOMES_SUCH_THAT_TYPE__VARIABLES:
         setVariables((VariablesType1)newValue);
         return;
       case BxmlPackage.BECOMES_SUCH_THAT_TYPE__PRED:
-        setPred((PredicateType)newValue);
+        setPred((PredType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -277,13 +277,13 @@ public class BecomesSuchThatTypeImpl extends MinimalEObjectImpl.Container implem
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.BECOMES_SUCH_THAT_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.BECOMES_SUCH_THAT_TYPE__VARIABLES:
         setVariables((VariablesType1)null);
         return;
       case BxmlPackage.BECOMES_SUCH_THAT_TYPE__PRED:
-        setPred((PredicateType)null);
+        setPred((PredType)null);
         return;
     }
     super.eUnset(featureID);

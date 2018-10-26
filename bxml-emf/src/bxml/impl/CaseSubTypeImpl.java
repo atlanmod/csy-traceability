@@ -2,12 +2,12 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BxmlPackage;
 import bxml.CaseSubType;
 import bxml.ChoicesType;
-import bxml.ExpType;
-import bxml.SubstitutionType;
+import bxml.ElseType1;
+import bxml.ValueType;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -43,7 +43,7 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
@@ -53,7 +53,7 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * @generated
    * @ordered
    */
-  protected ExpType value;
+  protected ValueType value;
 
   /**
    * The cached value of the '{@link #getChoices() <em>Choices</em>}' containment reference.
@@ -73,7 +73,7 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * @generated
    * @ordered
    */
-  protected SubstitutionType else_;
+  protected ElseType1 else_;
 
   /**
    * <!-- begin-user-doc -->
@@ -99,7 +99,7 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -108,8 +108,8 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.CASE_SUB_TYPE__ATTR, oldAttr, newAttr);
@@ -123,7 +123,7 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -142,7 +142,7 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * <!-- end-user-doc -->
    * @generated
    */
-  public ExpType getValue() {
+  public ValueType getValue() {
     return value;
   }
 
@@ -151,8 +151,8 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValue(ExpType newValue, NotificationChain msgs) {
-    ExpType oldValue = value;
+  public NotificationChain basicSetValue(ValueType newValue, NotificationChain msgs) {
+    ValueType oldValue = value;
     value = newValue;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.CASE_SUB_TYPE__VALUE, oldValue, newValue);
@@ -166,7 +166,7 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(ExpType newValue) {
+  public void setValue(ValueType newValue) {
     if (newValue != value) {
       NotificationChain msgs = null;
       if (value != null)
@@ -228,7 +228,7 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubstitutionType getElse() {
+  public ElseType1 getElse() {
     return else_;
   }
 
@@ -237,8 +237,8 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetElse(SubstitutionType newElse, NotificationChain msgs) {
-    SubstitutionType oldElse = else_;
+  public NotificationChain basicSetElse(ElseType1 newElse, NotificationChain msgs) {
+    ElseType1 oldElse = else_;
     else_ = newElse;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.CASE_SUB_TYPE__ELSE, oldElse, newElse);
@@ -252,7 +252,7 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setElse(SubstitutionType newElse) {
+  public void setElse(ElseType1 newElse) {
     if (newElse != else_) {
       NotificationChain msgs = null;
       if (else_ != null)
@@ -315,16 +315,16 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.CASE_SUB_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.CASE_SUB_TYPE__VALUE:
-        setValue((ExpType)newValue);
+        setValue((ValueType)newValue);
         return;
       case BxmlPackage.CASE_SUB_TYPE__CHOICES:
         setChoices((ChoicesType)newValue);
         return;
       case BxmlPackage.CASE_SUB_TYPE__ELSE:
-        setElse((SubstitutionType)newValue);
+        setElse((ElseType1)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -339,16 +339,16 @@ public class CaseSubTypeImpl extends MinimalEObjectImpl.Container implements Cas
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.CASE_SUB_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.CASE_SUB_TYPE__VALUE:
-        setValue((ExpType)null);
+        setValue((ValueType)null);
         return;
       case BxmlPackage.CASE_SUB_TYPE__CHOICES:
         setChoices((ChoicesType)null);
         return;
       case BxmlPackage.CASE_SUB_TYPE__ELSE:
-        setElse((SubstitutionType)null);
+        setElse((ElseType1)null);
         return;
     }
     super.eUnset(featureID);

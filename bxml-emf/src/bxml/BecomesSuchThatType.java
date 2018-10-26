@@ -32,13 +32,13 @@ public interface BecomesSuchThatType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getBecomesSuchThatType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.BecomesSuchThatType#getAttr <em>Attr</em>}' containment reference.
@@ -48,7 +48,7 @@ public interface BecomesSuchThatType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Variables</b></em>' containment reference.
@@ -86,13 +86,13 @@ public interface BecomesSuchThatType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Pred</em>' containment reference.
-   * @see #setPred(PredicateType)
+   * @see #setPred(PredType)
    * @see bxml.BxmlPackage#getBecomesSuchThatType_Pred()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Pred' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getPred();
+  PredType getPred();
 
   /**
    * Sets the value of the '{@link bxml.BecomesSuchThatType#getPred <em>Pred</em>}' containment reference.
@@ -102,6 +102,6 @@ public interface BecomesSuchThatType extends EObject {
    * @see #getPred()
    * @generated
    */
-  void setPred(PredicateType value);
+  void setPred(PredType value);
 
 } // BecomesSuchThatType

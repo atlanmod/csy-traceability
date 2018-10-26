@@ -34,13 +34,13 @@ public interface IfSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getIfSubType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.IfSubType#getAttr <em>Attr</em>}' containment reference.
@@ -50,7 +50,7 @@ public interface IfSubType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Condition</b></em>' containment reference.
@@ -61,13 +61,13 @@ public interface IfSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Condition</em>' containment reference.
-   * @see #setCondition(PredicateType)
+   * @see #setCondition(ConditionType)
    * @see bxml.BxmlPackage#getIfSubType_Condition()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Condition' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getCondition();
+  ConditionType getCondition();
 
   /**
    * Sets the value of the '{@link bxml.IfSubType#getCondition <em>Condition</em>}' containment reference.
@@ -77,7 +77,7 @@ public interface IfSubType extends EObject {
    * @see #getCondition()
    * @generated
    */
-  void setCondition(PredicateType value);
+  void setCondition(ConditionType value);
 
   /**
    * Returns the value of the '<em><b>Then</b></em>' containment reference.
@@ -88,13 +88,13 @@ public interface IfSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Then</em>' containment reference.
-   * @see #setThen(SubstitutionType)
+   * @see #setThen(ThenType)
    * @see bxml.BxmlPackage#getIfSubType_Then()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Then' namespace='##targetNamespace'"
    * @generated
    */
-  SubstitutionType getThen();
+  ThenType getThen();
 
   /**
    * Sets the value of the '{@link bxml.IfSubType#getThen <em>Then</em>}' containment reference.
@@ -104,7 +104,7 @@ public interface IfSubType extends EObject {
    * @see #getThen()
    * @generated
    */
-  void setThen(SubstitutionType value);
+  void setThen(ThenType value);
 
   /**
    * Returns the value of the '<em><b>Else</b></em>' containment reference.
@@ -115,13 +115,13 @@ public interface IfSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Else</em>' containment reference.
-   * @see #setElse(SubstitutionType)
+   * @see #setElse(ElseType2)
    * @see bxml.BxmlPackage#getIfSubType_Else()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Else' namespace='##targetNamespace'"
    * @generated
    */
-  SubstitutionType getElse();
+  ElseType2 getElse();
 
   /**
    * Sets the value of the '{@link bxml.IfSubType#getElse <em>Else</em>}' containment reference.
@@ -131,10 +131,11 @@ public interface IfSubType extends EObject {
    * @see #getElse()
    * @generated
    */
-  void setElse(SubstitutionType value);
+  void setElse(ElseType2 value);
 
   /**
    * Returns the value of the '<em><b>Elseif</b></em>' attribute.
+   * The literals are from the enumeration {@link bxml.ElseifType}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Elseif</em>' attribute isn't clear,
@@ -142,22 +143,51 @@ public interface IfSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Elseif</em>' attribute.
-   * @see #setElseif(String)
+   * @see bxml.ElseifType
+   * @see #isSetElseif()
+   * @see #unsetElseif()
+   * @see #setElseif(ElseifType)
    * @see bxml.BxmlPackage#getIfSubType_Elseif()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+   * @model unsettable="true" required="true"
    *        extendedMetaData="kind='attribute' name='elseif' namespace='##targetNamespace'"
    * @generated
    */
-  String getElseif();
+  ElseifType getElseif();
 
   /**
    * Sets the value of the '{@link bxml.IfSubType#getElseif <em>Elseif</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Elseif</em>' attribute.
+   * @see bxml.ElseifType
+   * @see #isSetElseif()
+   * @see #unsetElseif()
    * @see #getElseif()
    * @generated
    */
-  void setElseif(String value);
+  void setElseif(ElseifType value);
+
+  /**
+   * Unsets the value of the '{@link bxml.IfSubType#getElseif <em>Elseif</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isSetElseif()
+   * @see #getElseif()
+   * @see #setElseif(ElseifType)
+   * @generated
+   */
+  void unsetElseif();
+
+  /**
+   * Returns whether the value of the '{@link bxml.IfSubType#getElseif <em>Elseif</em>}' attribute is set.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return whether the value of the '<em>Elseif</em>' attribute is set.
+   * @see #unsetElseif()
+   * @see #getElseif()
+   * @see #setElseif(ElseifType)
+   * @generated
+   */
+  boolean isSetElseif();
 
 } // IfSubType

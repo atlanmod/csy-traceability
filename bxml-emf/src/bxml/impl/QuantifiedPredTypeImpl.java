@@ -2,11 +2,11 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
+import bxml.BodyType6;
 import bxml.BxmlPackage;
-import bxml.PredicateType;
-import bxml.QuantifiedPredOp;
 import bxml.QuantifiedPredType;
+import bxml.TypeType;
 import bxml.VariablesType1;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -43,7 +43,7 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference.
@@ -63,7 +63,7 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    * @ordered
    */
-  protected PredicateType body;
+  protected BodyType6 body;
 
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -73,7 +73,7 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    * @ordered
    */
-  protected static final QuantifiedPredOp TYPE_EDEFAULT = QuantifiedPredOp.__;
+  protected static final TypeType TYPE_EDEFAULT = TypeType.__;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -83,7 +83,7 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    * @ordered
    */
-  protected QuantifiedPredOp type = TYPE_EDEFAULT;
+  protected TypeType type = TYPE_EDEFAULT;
 
   /**
    * This is true if the Type attribute has been set.
@@ -118,7 +118,7 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -127,8 +127,8 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.QUANTIFIED_PRED_TYPE__ATTR, oldAttr, newAttr);
@@ -142,7 +142,7 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -204,7 +204,7 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getBody() {
+  public BodyType6 getBody() {
     return body;
   }
 
@@ -213,8 +213,8 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBody(PredicateType newBody, NotificationChain msgs) {
-    PredicateType oldBody = body;
+  public NotificationChain basicSetBody(BodyType6 newBody, NotificationChain msgs) {
+    BodyType6 oldBody = body;
     body = newBody;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.QUANTIFIED_PRED_TYPE__BODY, oldBody, newBody);
@@ -228,7 +228,7 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBody(PredicateType newBody) {
+  public void setBody(BodyType6 newBody) {
     if (newBody != body) {
       NotificationChain msgs = null;
       if (body != null)
@@ -247,7 +247,7 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public QuantifiedPredOp getType() {
+  public TypeType getType() {
     return type;
   }
 
@@ -256,8 +256,8 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(QuantifiedPredOp newType) {
-    QuantifiedPredOp oldType = type;
+  public void setType(TypeType newType) {
+    TypeType oldType = type;
     type = newType == null ? TYPE_EDEFAULT : newType;
     boolean oldTypeESet = typeESet;
     typeESet = true;
@@ -271,7 +271,7 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    */
   public void unsetType() {
-    QuantifiedPredOp oldType = type;
+    TypeType oldType = type;
     boolean oldTypeESet = typeESet;
     type = TYPE_EDEFAULT;
     typeESet = false;
@@ -335,16 +335,16 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.QUANTIFIED_PRED_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.QUANTIFIED_PRED_TYPE__VARIABLES:
         setVariables((VariablesType1)newValue);
         return;
       case BxmlPackage.QUANTIFIED_PRED_TYPE__BODY:
-        setBody((PredicateType)newValue);
+        setBody((BodyType6)newValue);
         return;
       case BxmlPackage.QUANTIFIED_PRED_TYPE__TYPE:
-        setType((QuantifiedPredOp)newValue);
+        setType((TypeType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -359,13 +359,13 @@ public class QuantifiedPredTypeImpl extends MinimalEObjectImpl.Container impleme
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.QUANTIFIED_PRED_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.QUANTIFIED_PRED_TYPE__VARIABLES:
         setVariables((VariablesType1)null);
         return;
       case BxmlPackage.QUANTIFIED_PRED_TYPE__BODY:
-        setBody((PredicateType)null);
+        setBody((BodyType6)null);
         return;
       case BxmlPackage.QUANTIFIED_PRED_TYPE__TYPE:
         unsetType();

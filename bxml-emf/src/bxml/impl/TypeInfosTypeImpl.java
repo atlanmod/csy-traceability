@@ -3,7 +3,7 @@
 package bxml.impl;
 
 import bxml.BxmlPackage;
-import bxml.InfoTypeType;
+import bxml.TypeInfo;
 import bxml.TypeInfosType;
 
 import java.util.Collection;
@@ -42,7 +42,7 @@ public class TypeInfosTypeImpl extends MinimalEObjectImpl.Container implements T
    * @generated
    * @ordered
    */
-  protected EList<InfoTypeType> type;
+  protected EList<TypeInfo> type;
 
   /**
    * <!-- begin-user-doc -->
@@ -68,9 +68,9 @@ public class TypeInfosTypeImpl extends MinimalEObjectImpl.Container implements T
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<InfoTypeType> getType() {
+  public EList<TypeInfo> getType() {
     if (type == null) {
-      type = new EObjectContainmentEList<InfoTypeType>(InfoTypeType.class, this, BxmlPackage.TYPE_INFOS_TYPE__TYPE);
+      type = new EObjectContainmentEList<TypeInfo>(TypeInfo.class, this, BxmlPackage.TYPE_INFOS_TYPE__TYPE);
     }
     return type;
   }
@@ -114,7 +114,7 @@ public class TypeInfosTypeImpl extends MinimalEObjectImpl.Container implements T
     switch (featureID) {
       case BxmlPackage.TYPE_INFOS_TYPE__TYPE:
         getType().clear();
-        getType().addAll((Collection<? extends InfoTypeType>)newValue);
+        getType().addAll((Collection<? extends TypeInfo>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

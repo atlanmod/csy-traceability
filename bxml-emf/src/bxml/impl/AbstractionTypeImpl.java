@@ -3,14 +3,19 @@
 package bxml.impl;
 
 import bxml.AbstractionType;
+import bxml.AttrType;
 import bxml.BxmlPackage;
 
-import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.BasicFeatureMap;
+import org.eclipse.emf.ecore.util.FeatureMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,52 +25,22 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link bxml.impl.AbstractionTypeImpl#getValue <em>Value</em>}</li>
- *   <li>{@link bxml.impl.AbstractionTypeImpl#getPath <em>Path</em>}</li>
+ *   <li>{@link bxml.impl.AbstractionTypeImpl#getMixed <em>Mixed</em>}</li>
+ *   <li>{@link bxml.impl.AbstractionTypeImpl#getAttr <em>Attr</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AbstractionTypeImpl extends MinimalEObjectImpl.Container implements AbstractionType {
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getMixed() <em>Mixed</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getMixed()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected String value = VALUE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPath()
-   * @generated
-   * @ordered
-   */
-  protected static final String PATH_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getPath() <em>Path</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPath()
-   * @generated
-   * @ordered
-   */
-  protected String path = PATH_EDEFAULT;
+  protected FeatureMap mixed;
 
   /**
    * <!-- begin-user-doc -->
@@ -91,8 +66,11 @@ public class AbstractionTypeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue() {
-    return value;
+  public FeatureMap getMixed() {
+    if (mixed == null) {
+      mixed = new BasicFeatureMap(this, BxmlPackage.ABSTRACTION_TYPE__MIXED);
+    }
+    return mixed;
   }
 
   /**
@@ -100,11 +78,8 @@ public class AbstractionTypeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue) {
-    String oldValue = value;
-    value = newValue;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.ABSTRACTION_TYPE__VALUE, oldValue, value));
+  public AttrType getAttr() {
+    return (AttrType)getMixed().get(BxmlPackage.eINSTANCE.getAbstractionType_Attr(), true);
   }
 
   /**
@@ -112,8 +87,8 @@ public class AbstractionTypeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getPath() {
-    return path;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    return ((FeatureMap.Internal)getMixed()).basicAdd(BxmlPackage.eINSTANCE.getAbstractionType_Attr(), newAttr, msgs);
   }
 
   /**
@@ -121,11 +96,24 @@ public class AbstractionTypeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPath(String newPath) {
-    String oldPath = path;
-    path = newPath;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.ABSTRACTION_TYPE__PATH, oldPath, path));
+  public void setAttr(AttrType newAttr) {
+    ((FeatureMap.Internal)getMixed()).set(BxmlPackage.eINSTANCE.getAbstractionType_Attr(), newAttr);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    switch (featureID) {
+      case BxmlPackage.ABSTRACTION_TYPE__MIXED:
+        return ((InternalEList<?>)getMixed()).basicRemove(otherEnd, msgs);
+      case BxmlPackage.ABSTRACTION_TYPE__ATTR:
+        return basicSetAttr(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -136,10 +124,11 @@ public class AbstractionTypeImpl extends MinimalEObjectImpl.Container implements
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case BxmlPackage.ABSTRACTION_TYPE__VALUE:
-        return getValue();
-      case BxmlPackage.ABSTRACTION_TYPE__PATH:
-        return getPath();
+      case BxmlPackage.ABSTRACTION_TYPE__MIXED:
+        if (coreType) return getMixed();
+        return ((FeatureMap.Internal)getMixed()).getWrapper();
+      case BxmlPackage.ABSTRACTION_TYPE__ATTR:
+        return getAttr();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -152,11 +141,11 @@ public class AbstractionTypeImpl extends MinimalEObjectImpl.Container implements
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case BxmlPackage.ABSTRACTION_TYPE__VALUE:
-        setValue((String)newValue);
+      case BxmlPackage.ABSTRACTION_TYPE__MIXED:
+        ((FeatureMap.Internal)getMixed()).set(newValue);
         return;
-      case BxmlPackage.ABSTRACTION_TYPE__PATH:
-        setPath((String)newValue);
+      case BxmlPackage.ABSTRACTION_TYPE__ATTR:
+        setAttr((AttrType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -170,11 +159,11 @@ public class AbstractionTypeImpl extends MinimalEObjectImpl.Container implements
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case BxmlPackage.ABSTRACTION_TYPE__VALUE:
-        setValue(VALUE_EDEFAULT);
+      case BxmlPackage.ABSTRACTION_TYPE__MIXED:
+        getMixed().clear();
         return;
-      case BxmlPackage.ABSTRACTION_TYPE__PATH:
-        setPath(PATH_EDEFAULT);
+      case BxmlPackage.ABSTRACTION_TYPE__ATTR:
+        setAttr((AttrType)null);
         return;
     }
     super.eUnset(featureID);
@@ -188,10 +177,10 @@ public class AbstractionTypeImpl extends MinimalEObjectImpl.Container implements
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case BxmlPackage.ABSTRACTION_TYPE__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case BxmlPackage.ABSTRACTION_TYPE__PATH:
-        return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
+      case BxmlPackage.ABSTRACTION_TYPE__MIXED:
+        return mixed != null && !mixed.isEmpty();
+      case BxmlPackage.ABSTRACTION_TYPE__ATTR:
+        return getAttr() != null;
     }
     return super.eIsSet(featureID);
   }
@@ -206,10 +195,8 @@ public class AbstractionTypeImpl extends MinimalEObjectImpl.Container implements
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (value: ");
-    result.append(value);
-    result.append(", path: ");
-    result.append(path);
+    result.append(" (mixed: ");
+    result.append(mixed);
     result.append(')');
     return result.toString();
   }

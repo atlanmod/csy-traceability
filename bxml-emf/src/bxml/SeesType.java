@@ -33,13 +33,13 @@ public interface SeesType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getSeesType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.SeesType#getAttr <em>Attr</em>}' containment reference.
@@ -49,11 +49,11 @@ public interface SeesType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Referenced Machine</b></em>' containment reference list.
-   * The list contents are of type {@link bxml.ReferencedMachineType1}.
+   * The list contents are of type {@link bxml.ReferencedMachineType}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Referenced Machine</em>' containment reference list isn't clear,
@@ -66,6 +66,6 @@ public interface SeesType extends EObject {
    *        extendedMetaData="kind='element' name='Referenced_Machine' namespace='##targetNamespace'"
    * @generated
    */
-  EList<ReferencedMachineType1> getReferencedMachine();
+  EList<ReferencedMachineType> getReferencedMachine();
 
 } // SeesType

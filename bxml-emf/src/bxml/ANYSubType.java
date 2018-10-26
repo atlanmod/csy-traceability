@@ -33,13 +33,13 @@ public interface ANYSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getANYSubType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.ANYSubType#getAttr <em>Attr</em>}' containment reference.
@@ -49,7 +49,7 @@ public interface ANYSubType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Variables</b></em>' containment reference.
@@ -87,13 +87,13 @@ public interface ANYSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Pred</em>' containment reference.
-   * @see #setPred(PredicateType)
+   * @see #setPred(PredType)
    * @see bxml.BxmlPackage#getANYSubType_Pred()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Pred' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getPred();
+  PredType getPred();
 
   /**
    * Sets the value of the '{@link bxml.ANYSubType#getPred <em>Pred</em>}' containment reference.
@@ -103,7 +103,7 @@ public interface ANYSubType extends EObject {
    * @see #getPred()
    * @generated
    */
-  void setPred(PredicateType value);
+  void setPred(PredType value);
 
   /**
    * Returns the value of the '<em><b>Then</b></em>' containment reference.
@@ -114,13 +114,13 @@ public interface ANYSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Then</em>' containment reference.
-   * @see #setThen(SubstitutionType)
+   * @see #setThen(ThenType)
    * @see bxml.BxmlPackage#getANYSubType_Then()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Then' namespace='##targetNamespace'"
    * @generated
    */
-  SubstitutionType getThen();
+  ThenType getThen();
 
   /**
    * Sets the value of the '{@link bxml.ANYSubType#getThen <em>Then</em>}' containment reference.
@@ -130,6 +130,6 @@ public interface ANYSubType extends EObject {
    * @see #getThen()
    * @generated
    */
-  void setThen(SubstitutionType value);
+  void setThen(ThenType value);
 
 } // ANYSubType

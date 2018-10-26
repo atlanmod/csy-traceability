@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see bxml.BxmlPackage#getVariablesType1()
- * @model extendedMetaData="name='Variables_type' kind='elementOnly'"
+ * @model extendedMetaData="name='Variables_._1_._type' kind='elementOnly'"
  * @generated
  */
 public interface VariablesType1 extends EObject {
@@ -33,13 +33,13 @@ public interface VariablesType1 extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getVariablesType1_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.VariablesType1#getAttr <em>Attr</em>}' containment reference.
@@ -49,11 +49,11 @@ public interface VariablesType1 extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Id</b></em>' containment reference list.
-   * The list contents are of type {@link bxml.IdentifierType}.
+   * The list contents are of type {@link bxml.Identifier}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Id</em>' containment reference list isn't clear,
@@ -66,6 +66,6 @@ public interface VariablesType1 extends EObject {
    *        extendedMetaData="kind='element' name='Id' namespace='##targetNamespace'"
    * @generated
    */
-  EList<IdentifierType> getId();
+  EList<Identifier> getId();
 
 } // VariablesType1

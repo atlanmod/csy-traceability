@@ -2,10 +2,10 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BxmlPackage;
 import bxml.EnumeratedValuesType;
-import bxml.IdentifierType;
+import bxml.Identifier;
 import bxml.SetType;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -41,7 +41,7 @@ public class SetTypeImpl extends MinimalEObjectImpl.Container implements SetType
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getId() <em>Id</em>}' containment reference.
@@ -51,7 +51,7 @@ public class SetTypeImpl extends MinimalEObjectImpl.Container implements SetType
    * @generated
    * @ordered
    */
-  protected IdentifierType id;
+  protected Identifier id;
 
   /**
    * The cached value of the '{@link #getEnumeratedValues() <em>Enumerated Values</em>}' containment reference.
@@ -87,7 +87,7 @@ public class SetTypeImpl extends MinimalEObjectImpl.Container implements SetType
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -96,8 +96,8 @@ public class SetTypeImpl extends MinimalEObjectImpl.Container implements SetType
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.SET_TYPE__ATTR, oldAttr, newAttr);
@@ -111,7 +111,7 @@ public class SetTypeImpl extends MinimalEObjectImpl.Container implements SetType
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -130,7 +130,7 @@ public class SetTypeImpl extends MinimalEObjectImpl.Container implements SetType
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierType getId() {
+  public Identifier getId() {
     return id;
   }
 
@@ -139,8 +139,8 @@ public class SetTypeImpl extends MinimalEObjectImpl.Container implements SetType
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetId(IdentifierType newId, NotificationChain msgs) {
-    IdentifierType oldId = id;
+  public NotificationChain basicSetId(Identifier newId, NotificationChain msgs) {
+    Identifier oldId = id;
     id = newId;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.SET_TYPE__ID, oldId, newId);
@@ -154,7 +154,7 @@ public class SetTypeImpl extends MinimalEObjectImpl.Container implements SetType
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(IdentifierType newId) {
+  public void setId(Identifier newId) {
     if (newId != id) {
       NotificationChain msgs = null;
       if (id != null)
@@ -256,10 +256,10 @@ public class SetTypeImpl extends MinimalEObjectImpl.Container implements SetType
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.SET_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.SET_TYPE__ID:
-        setId((IdentifierType)newValue);
+        setId((Identifier)newValue);
         return;
       case BxmlPackage.SET_TYPE__ENUMERATED_VALUES:
         setEnumeratedValues((EnumeratedValuesType)newValue);
@@ -277,10 +277,10 @@ public class SetTypeImpl extends MinimalEObjectImpl.Container implements SetType
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.SET_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.SET_TYPE__ID:
-        setId((IdentifierType)null);
+        setId((Identifier)null);
         return;
       case BxmlPackage.SET_TYPE__ENUMERATED_VALUES:
         setEnumeratedValues((EnumeratedValuesType)null);

@@ -2,20 +2,25 @@
  */
 package bxml.impl;
 
-import bxml.BinaryExpressionType;
+import bxml.AttrType;
+import bxml.BooleanExpType;
+import bxml.BooleanLiteralType;
 import bxml.BxmlPackage;
-import bxml.IdentifierType;
-import bxml.LiteralType;
-import bxml.NaryExpOp;
+import bxml.BynaryExpType;
+import bxml.EmptySeqType;
+import bxml.EmptySetType;
+import bxml.Identifier;
+import bxml.IntegerLiteralType;
 import bxml.NaryExpType;
-import bxml.PredicateType;
+import bxml.OpType4;
 import bxml.QuantifiedExpType;
 import bxml.QuantifiedSetType;
 import bxml.RecordType;
-import bxml.StringLiteralType;
+import bxml.STRINGLiteralType;
 import bxml.StructType;
-import bxml.TerminalType;
-import bxml.UnaryExpressionType;
+import bxml.UnaryExpType;
+
+import java.math.BigInteger;
 
 import java.util.Collection;
 
@@ -42,7 +47,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link bxml.impl.NaryExpTypeImpl#getExp <em>Exp</em>}</li>
+ *   <li>{@link bxml.impl.NaryExpTypeImpl#getAttr <em>Attr</em>}</li>
+ *   <li>{@link bxml.impl.NaryExpTypeImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link bxml.impl.NaryExpTypeImpl#getBinaryExp <em>Binary Exp</em>}</li>
  *   <li>{@link bxml.impl.NaryExpTypeImpl#getNaryExp <em>Nary Exp</em>}</li>
  *   <li>{@link bxml.impl.NaryExpTypeImpl#getBooleanLiteral <em>Boolean Literal</em>}</li>
@@ -58,20 +64,31 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link bxml.impl.NaryExpTypeImpl#getStruct <em>Struct</em>}</li>
  *   <li>{@link bxml.impl.NaryExpTypeImpl#getRecord <em>Record</em>}</li>
  *   <li>{@link bxml.impl.NaryExpTypeImpl#getOp <em>Op</em>}</li>
+ *   <li>{@link bxml.impl.NaryExpTypeImpl#getTypref <em>Typref</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements NaryExpType {
   /**
-   * The cached value of the '{@link #getExp() <em>Exp</em>}' attribute list.
+   * The cached value of the '{@link #getAttr() <em>Attr</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExp()
+   * @see #getAttr()
    * @generated
    * @ordered
    */
-  protected FeatureMap exp;
+  protected AttrType attr;
+
+  /**
+   * The cached value of the '{@link #getExpression() <em>Expression</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExpression()
+   * @generated
+   * @ordered
+   */
+  protected FeatureMap expression;
 
   /**
    * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -81,7 +98,7 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * @generated
    * @ordered
    */
-  protected static final NaryExpOp OP_EDEFAULT = NaryExpOp.__;
+  protected static final OpType4 OP_EDEFAULT = OpType4.__;
 
   /**
    * The cached value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -91,7 +108,7 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * @generated
    * @ordered
    */
-  protected NaryExpOp op = OP_EDEFAULT;
+  protected OpType4 op = OP_EDEFAULT;
 
   /**
    * This is true if the Op attribute has been set.
@@ -101,6 +118,26 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * @ordered
    */
   protected boolean opESet;
+
+  /**
+   * The default value of the '{@link #getTypref() <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypref()
+   * @generated
+   * @ordered
+   */
+  protected static final BigInteger TYPREF_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getTypref() <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypref()
+   * @generated
+   * @ordered
+   */
+  protected BigInteger typref = TYPREF_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -126,11 +163,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public FeatureMap getExp() {
-    if (exp == null) {
-      exp = new BasicFeatureMap(this, BxmlPackage.NARY_EXP_TYPE__EXP);
-    }
-    return exp;
+  public AttrType getAttr() {
+    return attr;
   }
 
   /**
@@ -138,8 +172,54 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<BinaryExpressionType> getBinaryExp() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_BinaryExp());
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
+    attr = newAttr;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.NARY_EXP_TYPE__ATTR, oldAttr, newAttr);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAttr(AttrType newAttr) {
+    if (newAttr != attr) {
+      NotificationChain msgs = null;
+      if (attr != null)
+        msgs = ((InternalEObject)attr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.NARY_EXP_TYPE__ATTR, null, msgs);
+      if (newAttr != null)
+        msgs = ((InternalEObject)newAttr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.NARY_EXP_TYPE__ATTR, null, msgs);
+      msgs = basicSetAttr(newAttr, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.NARY_EXP_TYPE__ATTR, newAttr, newAttr));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FeatureMap getExpression() {
+    if (expression == null) {
+      expression = new BasicFeatureMap(this, BxmlPackage.NARY_EXP_TYPE__EXPRESSION);
+    }
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<BynaryExpType> getBinaryExp() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_BinaryExp());
   }
 
   /**
@@ -148,7 +228,7 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * @generated
    */
   public EList<NaryExpType> getNaryExp() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_NaryExp());
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_NaryExp());
   }
 
   /**
@@ -156,8 +236,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<IdentifierType> getBooleanLiteral() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_BooleanLiteral());
+  public EList<BooleanLiteralType> getBooleanLiteral() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_BooleanLiteral());
   }
 
   /**
@@ -165,8 +245,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<PredicateType> getBooleanExp() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_BooleanExp());
+  public EList<BooleanExpType> getBooleanExp() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_BooleanExp());
   }
 
   /**
@@ -174,8 +254,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<TerminalType> getEmptySet() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_EmptySet());
+  public EList<EmptySetType> getEmptySet() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_EmptySet());
   }
 
   /**
@@ -183,8 +263,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<TerminalType> getEmptySeq() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_EmptySeq());
+  public EList<EmptySeqType> getEmptySeq() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_EmptySeq());
   }
 
   /**
@@ -192,8 +272,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<IdentifierType> getId() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_Id());
+  public EList<Identifier> getId() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_Id());
   }
 
   /**
@@ -201,8 +281,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<LiteralType> getIntegerLiteral() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_IntegerLiteral());
+  public EList<IntegerLiteralType> getIntegerLiteral() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_IntegerLiteral());
   }
 
   /**
@@ -211,7 +291,7 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * @generated
    */
   public EList<QuantifiedExpType> getQuantifiedExp() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_QuantifiedExp());
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_QuantifiedExp());
   }
 
   /**
@@ -220,7 +300,7 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * @generated
    */
   public EList<QuantifiedSetType> getQuantifiedSet() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_QuantifiedSet());
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_QuantifiedSet());
   }
 
   /**
@@ -228,8 +308,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<StringLiteralType> getSTRINGLiteral() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_STRINGLiteral());
+  public EList<STRINGLiteralType> getSTRINGLiteral() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_STRINGLiteral());
   }
 
   /**
@@ -237,8 +317,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<UnaryExpressionType> getUnaryExp() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_UnaryExp());
+  public EList<UnaryExpType> getUnaryExp() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_UnaryExp());
   }
 
   /**
@@ -247,7 +327,7 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * @generated
    */
   public EList<StructType> getStruct() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_Struct());
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_Struct());
   }
 
   /**
@@ -256,7 +336,7 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * @generated
    */
   public EList<RecordType> getRecord() {
-    return getExp().list(BxmlPackage.eINSTANCE.getNaryExpType_Record());
+    return getExpression().list(BxmlPackage.eINSTANCE.getNaryExpType_Record());
   }
 
   /**
@@ -264,7 +344,7 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public NaryExpOp getOp() {
+  public OpType4 getOp() {
     return op;
   }
 
@@ -273,8 +353,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOp(NaryExpOp newOp) {
-    NaryExpOp oldOp = op;
+  public void setOp(OpType4 newOp) {
+    OpType4 oldOp = op;
     op = newOp == null ? OP_EDEFAULT : newOp;
     boolean oldOpESet = opESet;
     opESet = true;
@@ -288,7 +368,7 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * @generated
    */
   public void unsetOp() {
-    NaryExpOp oldOp = op;
+    OpType4 oldOp = op;
     boolean oldOpESet = opESet;
     op = OP_EDEFAULT;
     opESet = false;
@@ -310,11 +390,34 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
    * <!-- end-user-doc -->
    * @generated
    */
+  public BigInteger getTypref() {
+    return typref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTypref(BigInteger newTypref) {
+    BigInteger oldTypref = typref;
+    typref = newTypref;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.NARY_EXP_TYPE__TYPREF, oldTypref, typref));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case BxmlPackage.NARY_EXP_TYPE__EXP:
-        return ((InternalEList<?>)getExp()).basicRemove(otherEnd, msgs);
+      case BxmlPackage.NARY_EXP_TYPE__ATTR:
+        return basicSetAttr(null, msgs);
+      case BxmlPackage.NARY_EXP_TYPE__EXPRESSION:
+        return ((InternalEList<?>)getExpression()).basicRemove(otherEnd, msgs);
       case BxmlPackage.NARY_EXP_TYPE__BINARY_EXP:
         return ((InternalEList<?>)getBinaryExp()).basicRemove(otherEnd, msgs);
       case BxmlPackage.NARY_EXP_TYPE__NARY_EXP:
@@ -355,9 +458,11 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case BxmlPackage.NARY_EXP_TYPE__EXP:
-        if (coreType) return getExp();
-        return ((FeatureMap.Internal)getExp()).getWrapper();
+      case BxmlPackage.NARY_EXP_TYPE__ATTR:
+        return getAttr();
+      case BxmlPackage.NARY_EXP_TYPE__EXPRESSION:
+        if (coreType) return getExpression();
+        return ((FeatureMap.Internal)getExpression()).getWrapper();
       case BxmlPackage.NARY_EXP_TYPE__BINARY_EXP:
         return getBinaryExp();
       case BxmlPackage.NARY_EXP_TYPE__NARY_EXP:
@@ -388,6 +493,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
         return getRecord();
       case BxmlPackage.NARY_EXP_TYPE__OP:
         return getOp();
+      case BxmlPackage.NARY_EXP_TYPE__TYPREF:
+        return getTypref();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -401,12 +508,15 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case BxmlPackage.NARY_EXP_TYPE__EXP:
-        ((FeatureMap.Internal)getExp()).set(newValue);
+      case BxmlPackage.NARY_EXP_TYPE__ATTR:
+        setAttr((AttrType)newValue);
+        return;
+      case BxmlPackage.NARY_EXP_TYPE__EXPRESSION:
+        ((FeatureMap.Internal)getExpression()).set(newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__BINARY_EXP:
         getBinaryExp().clear();
-        getBinaryExp().addAll((Collection<? extends BinaryExpressionType>)newValue);
+        getBinaryExp().addAll((Collection<? extends BynaryExpType>)newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__NARY_EXP:
         getNaryExp().clear();
@@ -414,27 +524,27 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
         return;
       case BxmlPackage.NARY_EXP_TYPE__BOOLEAN_LITERAL:
         getBooleanLiteral().clear();
-        getBooleanLiteral().addAll((Collection<? extends IdentifierType>)newValue);
+        getBooleanLiteral().addAll((Collection<? extends BooleanLiteralType>)newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__BOOLEAN_EXP:
         getBooleanExp().clear();
-        getBooleanExp().addAll((Collection<? extends PredicateType>)newValue);
+        getBooleanExp().addAll((Collection<? extends BooleanExpType>)newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__EMPTY_SET:
         getEmptySet().clear();
-        getEmptySet().addAll((Collection<? extends TerminalType>)newValue);
+        getEmptySet().addAll((Collection<? extends EmptySetType>)newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__EMPTY_SEQ:
         getEmptySeq().clear();
-        getEmptySeq().addAll((Collection<? extends TerminalType>)newValue);
+        getEmptySeq().addAll((Collection<? extends EmptySeqType>)newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__ID:
         getId().clear();
-        getId().addAll((Collection<? extends IdentifierType>)newValue);
+        getId().addAll((Collection<? extends Identifier>)newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__INTEGER_LITERAL:
         getIntegerLiteral().clear();
-        getIntegerLiteral().addAll((Collection<? extends LiteralType>)newValue);
+        getIntegerLiteral().addAll((Collection<? extends IntegerLiteralType>)newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__QUANTIFIED_EXP:
         getQuantifiedExp().clear();
@@ -446,11 +556,11 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
         return;
       case BxmlPackage.NARY_EXP_TYPE__STRING_LITERAL:
         getSTRINGLiteral().clear();
-        getSTRINGLiteral().addAll((Collection<? extends StringLiteralType>)newValue);
+        getSTRINGLiteral().addAll((Collection<? extends STRINGLiteralType>)newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__UNARY_EXP:
         getUnaryExp().clear();
-        getUnaryExp().addAll((Collection<? extends UnaryExpressionType>)newValue);
+        getUnaryExp().addAll((Collection<? extends UnaryExpType>)newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__STRUCT:
         getStruct().clear();
@@ -461,7 +571,10 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
         getRecord().addAll((Collection<? extends RecordType>)newValue);
         return;
       case BxmlPackage.NARY_EXP_TYPE__OP:
-        setOp((NaryExpOp)newValue);
+        setOp((OpType4)newValue);
+        return;
+      case BxmlPackage.NARY_EXP_TYPE__TYPREF:
+        setTypref((BigInteger)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -475,8 +588,11 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case BxmlPackage.NARY_EXP_TYPE__EXP:
-        getExp().clear();
+      case BxmlPackage.NARY_EXP_TYPE__ATTR:
+        setAttr((AttrType)null);
+        return;
+      case BxmlPackage.NARY_EXP_TYPE__EXPRESSION:
+        getExpression().clear();
         return;
       case BxmlPackage.NARY_EXP_TYPE__BINARY_EXP:
         getBinaryExp().clear();
@@ -523,6 +639,9 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
       case BxmlPackage.NARY_EXP_TYPE__OP:
         unsetOp();
         return;
+      case BxmlPackage.NARY_EXP_TYPE__TYPREF:
+        setTypref(TYPREF_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -535,8 +654,10 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case BxmlPackage.NARY_EXP_TYPE__EXP:
-        return exp != null && !exp.isEmpty();
+      case BxmlPackage.NARY_EXP_TYPE__ATTR:
+        return attr != null;
+      case BxmlPackage.NARY_EXP_TYPE__EXPRESSION:
+        return expression != null && !expression.isEmpty();
       case BxmlPackage.NARY_EXP_TYPE__BINARY_EXP:
         return !getBinaryExp().isEmpty();
       case BxmlPackage.NARY_EXP_TYPE__NARY_EXP:
@@ -567,6 +688,8 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
         return !getRecord().isEmpty();
       case BxmlPackage.NARY_EXP_TYPE__OP:
         return isSetOp();
+      case BxmlPackage.NARY_EXP_TYPE__TYPREF:
+        return TYPREF_EDEFAULT == null ? typref != null : !TYPREF_EDEFAULT.equals(typref);
     }
     return super.eIsSet(featureID);
   }
@@ -581,10 +704,12 @@ public class NaryExpTypeImpl extends MinimalEObjectImpl.Container implements Nar
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (exp: ");
-    result.append(exp);
+    result.append(" (expression: ");
+    result.append(expression);
     result.append(", op: ");
     if (opESet) result.append(op); else result.append("<unset>");
+    result.append(", typref: ");
+    result.append(typref);
     result.append(')');
     return result.toString();
   }

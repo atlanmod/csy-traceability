@@ -2,6 +2,8 @@
  */
 package bxml;
 
+import java.math.BigInteger;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link bxml.ValuationType#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.ValuationType#getBinaryExp <em>Binary Exp</em>}</li>
  *   <li>{@link bxml.ValuationType#getNaryExp <em>Nary Exp</em>}</li>
  *   <li>{@link bxml.ValuationType#getBooleanLiteral <em>Boolean Literal</em>}</li>
@@ -28,6 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link bxml.ValuationType#getStruct <em>Struct</em>}</li>
  *   <li>{@link bxml.ValuationType#getRecord <em>Record</em>}</li>
  *   <li>{@link bxml.ValuationType#getIdent <em>Ident</em>}</li>
+ *   <li>{@link bxml.ValuationType#getTypref <em>Typref</em>}</li>
  * </ul>
  *
  * @see bxml.BxmlPackage#getValuationType()
@@ -35,6 +39,33 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ValuationType extends EObject {
+  /**
+   * Returns the value of the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Attr</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Attr</em>' containment reference.
+   * @see #setAttr(AttrType)
+   * @see bxml.BxmlPackage#getValuationType_Attr()
+   * @model containment="true"
+   *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
+   * @generated
+   */
+  AttrType getAttr();
+
+  /**
+   * Sets the value of the '{@link bxml.ValuationType#getAttr <em>Attr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Attr</em>' containment reference.
+   * @see #getAttr()
+   * @generated
+   */
+  void setAttr(AttrType value);
+
   /**
    * Returns the value of the '<em><b>Binary Exp</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -44,13 +75,13 @@ public interface ValuationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Binary Exp</em>' containment reference.
-   * @see #setBinaryExp(BinaryExpressionType)
+   * @see #setBinaryExp(BynaryExpType)
    * @see bxml.BxmlPackage#getValuationType_BinaryExp()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Binary_Exp' namespace='##targetNamespace'"
    * @generated
    */
-  BinaryExpressionType getBinaryExp();
+  BynaryExpType getBinaryExp();
 
   /**
    * Sets the value of the '{@link bxml.ValuationType#getBinaryExp <em>Binary Exp</em>}' containment reference.
@@ -60,7 +91,7 @@ public interface ValuationType extends EObject {
    * @see #getBinaryExp()
    * @generated
    */
-  void setBinaryExp(BinaryExpressionType value);
+  void setBinaryExp(BynaryExpType value);
 
   /**
    * Returns the value of the '<em><b>Nary Exp</b></em>' containment reference.
@@ -98,13 +129,13 @@ public interface ValuationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Boolean Literal</em>' containment reference.
-   * @see #setBooleanLiteral(IdentifierType)
+   * @see #setBooleanLiteral(BooleanLiteralType)
    * @see bxml.BxmlPackage#getValuationType_BooleanLiteral()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Boolean_Literal' namespace='##targetNamespace'"
    * @generated
    */
-  IdentifierType getBooleanLiteral();
+  BooleanLiteralType getBooleanLiteral();
 
   /**
    * Sets the value of the '{@link bxml.ValuationType#getBooleanLiteral <em>Boolean Literal</em>}' containment reference.
@@ -114,7 +145,7 @@ public interface ValuationType extends EObject {
    * @see #getBooleanLiteral()
    * @generated
    */
-  void setBooleanLiteral(IdentifierType value);
+  void setBooleanLiteral(BooleanLiteralType value);
 
   /**
    * Returns the value of the '<em><b>Boolean Exp</b></em>' containment reference.
@@ -125,13 +156,13 @@ public interface ValuationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Boolean Exp</em>' containment reference.
-   * @see #setBooleanExp(PredicateType)
+   * @see #setBooleanExp(BooleanExpType)
    * @see bxml.BxmlPackage#getValuationType_BooleanExp()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Boolean_Exp' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getBooleanExp();
+  BooleanExpType getBooleanExp();
 
   /**
    * Sets the value of the '{@link bxml.ValuationType#getBooleanExp <em>Boolean Exp</em>}' containment reference.
@@ -141,7 +172,7 @@ public interface ValuationType extends EObject {
    * @see #getBooleanExp()
    * @generated
    */
-  void setBooleanExp(PredicateType value);
+  void setBooleanExp(BooleanExpType value);
 
   /**
    * Returns the value of the '<em><b>Empty Set</b></em>' containment reference.
@@ -152,13 +183,13 @@ public interface ValuationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Empty Set</em>' containment reference.
-   * @see #setEmptySet(TerminalType)
+   * @see #setEmptySet(EmptySetType)
    * @see bxml.BxmlPackage#getValuationType_EmptySet()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='EmptySet' namespace='##targetNamespace'"
    * @generated
    */
-  TerminalType getEmptySet();
+  EmptySetType getEmptySet();
 
   /**
    * Sets the value of the '{@link bxml.ValuationType#getEmptySet <em>Empty Set</em>}' containment reference.
@@ -168,7 +199,7 @@ public interface ValuationType extends EObject {
    * @see #getEmptySet()
    * @generated
    */
-  void setEmptySet(TerminalType value);
+  void setEmptySet(EmptySetType value);
 
   /**
    * Returns the value of the '<em><b>Empty Seq</b></em>' containment reference.
@@ -179,13 +210,13 @@ public interface ValuationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Empty Seq</em>' containment reference.
-   * @see #setEmptySeq(TerminalType)
+   * @see #setEmptySeq(EmptySeqType)
    * @see bxml.BxmlPackage#getValuationType_EmptySeq()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='EmptySeq' namespace='##targetNamespace'"
    * @generated
    */
-  TerminalType getEmptySeq();
+  EmptySeqType getEmptySeq();
 
   /**
    * Sets the value of the '{@link bxml.ValuationType#getEmptySeq <em>Empty Seq</em>}' containment reference.
@@ -195,7 +226,7 @@ public interface ValuationType extends EObject {
    * @see #getEmptySeq()
    * @generated
    */
-  void setEmptySeq(TerminalType value);
+  void setEmptySeq(EmptySeqType value);
 
   /**
    * Returns the value of the '<em><b>Id</b></em>' containment reference.
@@ -206,13 +237,13 @@ public interface ValuationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Id</em>' containment reference.
-   * @see #setId(IdentifierType)
+   * @see #setId(Identifier)
    * @see bxml.BxmlPackage#getValuationType_Id()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Id' namespace='##targetNamespace'"
    * @generated
    */
-  IdentifierType getId();
+  Identifier getId();
 
   /**
    * Sets the value of the '{@link bxml.ValuationType#getId <em>Id</em>}' containment reference.
@@ -222,7 +253,7 @@ public interface ValuationType extends EObject {
    * @see #getId()
    * @generated
    */
-  void setId(IdentifierType value);
+  void setId(Identifier value);
 
   /**
    * Returns the value of the '<em><b>Integer Literal</b></em>' containment reference.
@@ -233,13 +264,13 @@ public interface ValuationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Integer Literal</em>' containment reference.
-   * @see #setIntegerLiteral(LiteralType)
+   * @see #setIntegerLiteral(IntegerLiteralType)
    * @see bxml.BxmlPackage#getValuationType_IntegerLiteral()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Integer_Literal' namespace='##targetNamespace'"
    * @generated
    */
-  LiteralType getIntegerLiteral();
+  IntegerLiteralType getIntegerLiteral();
 
   /**
    * Sets the value of the '{@link bxml.ValuationType#getIntegerLiteral <em>Integer Literal</em>}' containment reference.
@@ -249,7 +280,7 @@ public interface ValuationType extends EObject {
    * @see #getIntegerLiteral()
    * @generated
    */
-  void setIntegerLiteral(LiteralType value);
+  void setIntegerLiteral(IntegerLiteralType value);
 
   /**
    * Returns the value of the '<em><b>Quantified Exp</b></em>' containment reference.
@@ -314,13 +345,13 @@ public interface ValuationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>STRING Literal</em>' containment reference.
-   * @see #setSTRINGLiteral(StringLiteralType)
+   * @see #setSTRINGLiteral(STRINGLiteralType)
    * @see bxml.BxmlPackage#getValuationType_STRINGLiteral()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='STRING_Literal' namespace='##targetNamespace'"
    * @generated
    */
-  StringLiteralType getSTRINGLiteral();
+  STRINGLiteralType getSTRINGLiteral();
 
   /**
    * Sets the value of the '{@link bxml.ValuationType#getSTRINGLiteral <em>STRING Literal</em>}' containment reference.
@@ -330,7 +361,7 @@ public interface ValuationType extends EObject {
    * @see #getSTRINGLiteral()
    * @generated
    */
-  void setSTRINGLiteral(StringLiteralType value);
+  void setSTRINGLiteral(STRINGLiteralType value);
 
   /**
    * Returns the value of the '<em><b>Unary Exp</b></em>' containment reference.
@@ -341,13 +372,13 @@ public interface ValuationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Unary Exp</em>' containment reference.
-   * @see #setUnaryExp(UnaryExpressionType)
+   * @see #setUnaryExp(UnaryExpType)
    * @see bxml.BxmlPackage#getValuationType_UnaryExp()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Unary_Exp' namespace='##targetNamespace'"
    * @generated
    */
-  UnaryExpressionType getUnaryExp();
+  UnaryExpType getUnaryExp();
 
   /**
    * Sets the value of the '{@link bxml.ValuationType#getUnaryExp <em>Unary Exp</em>}' containment reference.
@@ -357,7 +388,7 @@ public interface ValuationType extends EObject {
    * @see #getUnaryExp()
    * @generated
    */
-  void setUnaryExp(UnaryExpressionType value);
+  void setUnaryExp(UnaryExpType value);
 
   /**
    * Returns the value of the '<em><b>Struct</b></em>' containment reference.
@@ -422,13 +453,13 @@ public interface ValuationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Ident</em>' attribute.
-   * @see #setIdent(String)
+   * @see #setIdent(Object)
    * @see bxml.BxmlPackage#getValuationType_Ident()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.AnySimpleType" required="true"
    *        extendedMetaData="kind='attribute' name='ident' namespace='##targetNamespace'"
    * @generated
    */
-  String getIdent();
+  Object getIdent();
 
   /**
    * Sets the value of the '{@link bxml.ValuationType#getIdent <em>Ident</em>}' attribute.
@@ -438,6 +469,33 @@ public interface ValuationType extends EObject {
    * @see #getIdent()
    * @generated
    */
-  void setIdent(String value);
+  void setIdent(Object value);
+
+  /**
+   * Returns the value of the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Typref</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Typref</em>' attribute.
+   * @see #setTypref(BigInteger)
+   * @see bxml.BxmlPackage#getValuationType_Typref()
+   * @model dataType="org.eclipse.emf.ecore.xml.type.Integer" required="true"
+   *        extendedMetaData="kind='attribute' name='typref' namespace='##targetNamespace'"
+   * @generated
+   */
+  BigInteger getTypref();
+
+  /**
+   * Sets the value of the '{@link bxml.ValuationType#getTypref <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Typref</em>' attribute.
+   * @see #getTypref()
+   * @generated
+   */
+  void setTypref(BigInteger value);
 
 } // ValuationType

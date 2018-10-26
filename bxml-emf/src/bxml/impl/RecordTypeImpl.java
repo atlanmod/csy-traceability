@@ -2,10 +2,12 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BxmlPackage;
 import bxml.RecordItemType;
 import bxml.RecordType;
+
+import java.math.BigInteger;
 
 import java.util.Collection;
 
@@ -33,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link bxml.impl.RecordTypeImpl#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.impl.RecordTypeImpl#getRecordItem <em>Record Item</em>}</li>
+ *   <li>{@link bxml.impl.RecordTypeImpl#getTypref <em>Typref</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,7 +49,7 @@ public class RecordTypeImpl extends MinimalEObjectImpl.Container implements Reco
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getRecordItem() <em>Record Item</em>}' containment reference list.
@@ -57,6 +60,26 @@ public class RecordTypeImpl extends MinimalEObjectImpl.Container implements Reco
    * @ordered
    */
   protected EList<RecordItemType> recordItem;
+
+  /**
+   * The default value of the '{@link #getTypref() <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypref()
+   * @generated
+   * @ordered
+   */
+  protected static final BigInteger TYPREF_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getTypref() <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypref()
+   * @generated
+   * @ordered
+   */
+  protected BigInteger typref = TYPREF_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -82,7 +105,7 @@ public class RecordTypeImpl extends MinimalEObjectImpl.Container implements Reco
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -91,8 +114,8 @@ public class RecordTypeImpl extends MinimalEObjectImpl.Container implements Reco
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_TYPE__ATTR, oldAttr, newAttr);
@@ -106,7 +129,7 @@ public class RecordTypeImpl extends MinimalEObjectImpl.Container implements Reco
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -137,6 +160,27 @@ public class RecordTypeImpl extends MinimalEObjectImpl.Container implements Reco
    * <!-- end-user-doc -->
    * @generated
    */
+  public BigInteger getTypref() {
+    return typref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTypref(BigInteger newTypref) {
+    BigInteger oldTypref = typref;
+    typref = newTypref;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_TYPE__TYPREF, oldTypref, typref));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
@@ -160,6 +204,8 @@ public class RecordTypeImpl extends MinimalEObjectImpl.Container implements Reco
         return getAttr();
       case BxmlPackage.RECORD_TYPE__RECORD_ITEM:
         return getRecordItem();
+      case BxmlPackage.RECORD_TYPE__TYPREF:
+        return getTypref();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -174,11 +220,14 @@ public class RecordTypeImpl extends MinimalEObjectImpl.Container implements Reco
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.RECORD_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.RECORD_TYPE__RECORD_ITEM:
         getRecordItem().clear();
         getRecordItem().addAll((Collection<? extends RecordItemType>)newValue);
+        return;
+      case BxmlPackage.RECORD_TYPE__TYPREF:
+        setTypref((BigInteger)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -193,10 +242,13 @@ public class RecordTypeImpl extends MinimalEObjectImpl.Container implements Reco
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.RECORD_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.RECORD_TYPE__RECORD_ITEM:
         getRecordItem().clear();
+        return;
+      case BxmlPackage.RECORD_TYPE__TYPREF:
+        setTypref(TYPREF_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -214,8 +266,26 @@ public class RecordTypeImpl extends MinimalEObjectImpl.Container implements Reco
         return attr != null;
       case BxmlPackage.RECORD_TYPE__RECORD_ITEM:
         return recordItem != null && !recordItem.isEmpty();
+      case BxmlPackage.RECORD_TYPE__TYPREF:
+        return TYPREF_EDEFAULT == null ? typref != null : !TYPREF_EDEFAULT.equals(typref);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString() {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (typref: ");
+    result.append(typref);
+    result.append(')');
+    return result.toString();
   }
 
 } //RecordTypeImpl

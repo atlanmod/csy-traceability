@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface TypeInfosType extends EObject {
   /**
    * Returns the value of the '<em><b>Type</b></em>' containment reference list.
-   * The list contents are of type {@link bxml.InfoTypeType}.
+   * The list contents are of type {@link bxml.TypeInfo}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Type</em>' containment reference list isn't clear,
@@ -38,6 +38,6 @@ public interface TypeInfosType extends EObject {
    *        extendedMetaData="kind='element' name='Type' namespace='##targetNamespace'"
    * @generated
    */
-  EList<InfoTypeType> getType();
+  EList<TypeInfo> getType();
 
 } // TypeInfosType

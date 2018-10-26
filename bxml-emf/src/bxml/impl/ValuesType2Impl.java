@@ -2,23 +2,27 @@
  */
 package bxml.impl;
 
-import bxml.BinaryExpressionType;
+import bxml.AttrType;
+import bxml.BooleanExpType;
+import bxml.BooleanLiteralType;
 import bxml.BxmlPackage;
-import bxml.IdentifierType;
-import bxml.LiteralType;
+import bxml.BynaryExpType;
+import bxml.EmptySeqType;
+import bxml.EmptySetType;
+import bxml.Identifier;
+import bxml.IntegerLiteralType;
 import bxml.NaryExpType;
-import bxml.PredicateType;
 import bxml.QuantifiedExpType;
 import bxml.QuantifiedSetType;
 import bxml.RecordType;
-import bxml.StringLiteralType;
+import bxml.STRINGLiteralType;
 import bxml.StructType;
-import bxml.TerminalType;
-import bxml.UnaryExpressionType;
+import bxml.UnaryExpType;
 import bxml.ValuesType2;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -26,6 +30,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.BasicFeatureMap;
@@ -40,7 +45,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link bxml.impl.ValuesType2Impl#getExp <em>Exp</em>}</li>
+ *   <li>{@link bxml.impl.ValuesType2Impl#getAttr <em>Attr</em>}</li>
+ *   <li>{@link bxml.impl.ValuesType2Impl#getExpression <em>Expression</em>}</li>
  *   <li>{@link bxml.impl.ValuesType2Impl#getBinaryExp <em>Binary Exp</em>}</li>
  *   <li>{@link bxml.impl.ValuesType2Impl#getNaryExp <em>Nary Exp</em>}</li>
  *   <li>{@link bxml.impl.ValuesType2Impl#getBooleanLiteral <em>Boolean Literal</em>}</li>
@@ -61,14 +67,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ValuesType2Impl extends MinimalEObjectImpl.Container implements ValuesType2 {
   /**
-   * The cached value of the '{@link #getExp() <em>Exp</em>}' attribute list.
+   * The cached value of the '{@link #getAttr() <em>Attr</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExp()
+   * @see #getAttr()
    * @generated
    * @ordered
    */
-  protected FeatureMap exp;
+  protected AttrType attr;
+
+  /**
+   * The cached value of the '{@link #getExpression() <em>Expression</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExpression()
+   * @generated
+   * @ordered
+   */
+  protected FeatureMap expression;
 
   /**
    * <!-- begin-user-doc -->
@@ -94,11 +110,8 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * <!-- end-user-doc -->
    * @generated
    */
-  public FeatureMap getExp() {
-    if (exp == null) {
-      exp = new BasicFeatureMap(this, BxmlPackage.VALUES_TYPE2__EXP);
-    }
-    return exp;
+  public AttrType getAttr() {
+    return attr;
   }
 
   /**
@@ -106,8 +119,54 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<BinaryExpressionType> getBinaryExp() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_BinaryExp());
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
+    attr = newAttr;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUES_TYPE2__ATTR, oldAttr, newAttr);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAttr(AttrType newAttr) {
+    if (newAttr != attr) {
+      NotificationChain msgs = null;
+      if (attr != null)
+        msgs = ((InternalEObject)attr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.VALUES_TYPE2__ATTR, null, msgs);
+      if (newAttr != null)
+        msgs = ((InternalEObject)newAttr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.VALUES_TYPE2__ATTR, null, msgs);
+      msgs = basicSetAttr(newAttr, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUES_TYPE2__ATTR, newAttr, newAttr));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FeatureMap getExpression() {
+    if (expression == null) {
+      expression = new BasicFeatureMap(this, BxmlPackage.VALUES_TYPE2__EXPRESSION);
+    }
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<BynaryExpType> getBinaryExp() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_BinaryExp());
   }
 
   /**
@@ -116,7 +175,7 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * @generated
    */
   public EList<NaryExpType> getNaryExp() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_NaryExp());
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_NaryExp());
   }
 
   /**
@@ -124,8 +183,8 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<IdentifierType> getBooleanLiteral() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_BooleanLiteral());
+  public EList<BooleanLiteralType> getBooleanLiteral() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_BooleanLiteral());
   }
 
   /**
@@ -133,8 +192,8 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<PredicateType> getBooleanExp() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_BooleanExp());
+  public EList<BooleanExpType> getBooleanExp() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_BooleanExp());
   }
 
   /**
@@ -142,8 +201,8 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<TerminalType> getEmptySet() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_EmptySet());
+  public EList<EmptySetType> getEmptySet() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_EmptySet());
   }
 
   /**
@@ -151,8 +210,8 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<TerminalType> getEmptySeq() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_EmptySeq());
+  public EList<EmptySeqType> getEmptySeq() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_EmptySeq());
   }
 
   /**
@@ -160,8 +219,8 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<IdentifierType> getId() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_Id());
+  public EList<Identifier> getId() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_Id());
   }
 
   /**
@@ -169,8 +228,8 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<LiteralType> getIntegerLiteral() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_IntegerLiteral());
+  public EList<IntegerLiteralType> getIntegerLiteral() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_IntegerLiteral());
   }
 
   /**
@@ -179,7 +238,7 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * @generated
    */
   public EList<QuantifiedExpType> getQuantifiedExp() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_QuantifiedExp());
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_QuantifiedExp());
   }
 
   /**
@@ -188,7 +247,7 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * @generated
    */
   public EList<QuantifiedSetType> getQuantifiedSet() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_QuantifiedSet());
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_QuantifiedSet());
   }
 
   /**
@@ -196,8 +255,8 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<StringLiteralType> getSTRINGLiteral() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_STRINGLiteral());
+  public EList<STRINGLiteralType> getSTRINGLiteral() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_STRINGLiteral());
   }
 
   /**
@@ -205,8 +264,8 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<UnaryExpressionType> getUnaryExp() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_UnaryExp());
+  public EList<UnaryExpType> getUnaryExp() {
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_UnaryExp());
   }
 
   /**
@@ -215,7 +274,7 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * @generated
    */
   public EList<StructType> getStruct() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_Struct());
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_Struct());
   }
 
   /**
@@ -224,7 +283,7 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
    * @generated
    */
   public EList<RecordType> getRecord() {
-    return getExp().list(BxmlPackage.eINSTANCE.getValuesType2_Record());
+    return getExpression().list(BxmlPackage.eINSTANCE.getValuesType2_Record());
   }
 
   /**
@@ -235,8 +294,10 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case BxmlPackage.VALUES_TYPE2__EXP:
-        return ((InternalEList<?>)getExp()).basicRemove(otherEnd, msgs);
+      case BxmlPackage.VALUES_TYPE2__ATTR:
+        return basicSetAttr(null, msgs);
+      case BxmlPackage.VALUES_TYPE2__EXPRESSION:
+        return ((InternalEList<?>)getExpression()).basicRemove(otherEnd, msgs);
       case BxmlPackage.VALUES_TYPE2__BINARY_EXP:
         return ((InternalEList<?>)getBinaryExp()).basicRemove(otherEnd, msgs);
       case BxmlPackage.VALUES_TYPE2__NARY_EXP:
@@ -277,9 +338,11 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case BxmlPackage.VALUES_TYPE2__EXP:
-        if (coreType) return getExp();
-        return ((FeatureMap.Internal)getExp()).getWrapper();
+      case BxmlPackage.VALUES_TYPE2__ATTR:
+        return getAttr();
+      case BxmlPackage.VALUES_TYPE2__EXPRESSION:
+        if (coreType) return getExpression();
+        return ((FeatureMap.Internal)getExpression()).getWrapper();
       case BxmlPackage.VALUES_TYPE2__BINARY_EXP:
         return getBinaryExp();
       case BxmlPackage.VALUES_TYPE2__NARY_EXP:
@@ -321,12 +384,15 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case BxmlPackage.VALUES_TYPE2__EXP:
-        ((FeatureMap.Internal)getExp()).set(newValue);
+      case BxmlPackage.VALUES_TYPE2__ATTR:
+        setAttr((AttrType)newValue);
+        return;
+      case BxmlPackage.VALUES_TYPE2__EXPRESSION:
+        ((FeatureMap.Internal)getExpression()).set(newValue);
         return;
       case BxmlPackage.VALUES_TYPE2__BINARY_EXP:
         getBinaryExp().clear();
-        getBinaryExp().addAll((Collection<? extends BinaryExpressionType>)newValue);
+        getBinaryExp().addAll((Collection<? extends BynaryExpType>)newValue);
         return;
       case BxmlPackage.VALUES_TYPE2__NARY_EXP:
         getNaryExp().clear();
@@ -334,27 +400,27 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
         return;
       case BxmlPackage.VALUES_TYPE2__BOOLEAN_LITERAL:
         getBooleanLiteral().clear();
-        getBooleanLiteral().addAll((Collection<? extends IdentifierType>)newValue);
+        getBooleanLiteral().addAll((Collection<? extends BooleanLiteralType>)newValue);
         return;
       case BxmlPackage.VALUES_TYPE2__BOOLEAN_EXP:
         getBooleanExp().clear();
-        getBooleanExp().addAll((Collection<? extends PredicateType>)newValue);
+        getBooleanExp().addAll((Collection<? extends BooleanExpType>)newValue);
         return;
       case BxmlPackage.VALUES_TYPE2__EMPTY_SET:
         getEmptySet().clear();
-        getEmptySet().addAll((Collection<? extends TerminalType>)newValue);
+        getEmptySet().addAll((Collection<? extends EmptySetType>)newValue);
         return;
       case BxmlPackage.VALUES_TYPE2__EMPTY_SEQ:
         getEmptySeq().clear();
-        getEmptySeq().addAll((Collection<? extends TerminalType>)newValue);
+        getEmptySeq().addAll((Collection<? extends EmptySeqType>)newValue);
         return;
       case BxmlPackage.VALUES_TYPE2__ID:
         getId().clear();
-        getId().addAll((Collection<? extends IdentifierType>)newValue);
+        getId().addAll((Collection<? extends Identifier>)newValue);
         return;
       case BxmlPackage.VALUES_TYPE2__INTEGER_LITERAL:
         getIntegerLiteral().clear();
-        getIntegerLiteral().addAll((Collection<? extends LiteralType>)newValue);
+        getIntegerLiteral().addAll((Collection<? extends IntegerLiteralType>)newValue);
         return;
       case BxmlPackage.VALUES_TYPE2__QUANTIFIED_EXP:
         getQuantifiedExp().clear();
@@ -366,11 +432,11 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
         return;
       case BxmlPackage.VALUES_TYPE2__STRING_LITERAL:
         getSTRINGLiteral().clear();
-        getSTRINGLiteral().addAll((Collection<? extends StringLiteralType>)newValue);
+        getSTRINGLiteral().addAll((Collection<? extends STRINGLiteralType>)newValue);
         return;
       case BxmlPackage.VALUES_TYPE2__UNARY_EXP:
         getUnaryExp().clear();
-        getUnaryExp().addAll((Collection<? extends UnaryExpressionType>)newValue);
+        getUnaryExp().addAll((Collection<? extends UnaryExpType>)newValue);
         return;
       case BxmlPackage.VALUES_TYPE2__STRUCT:
         getStruct().clear();
@@ -392,8 +458,11 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case BxmlPackage.VALUES_TYPE2__EXP:
-        getExp().clear();
+      case BxmlPackage.VALUES_TYPE2__ATTR:
+        setAttr((AttrType)null);
+        return;
+      case BxmlPackage.VALUES_TYPE2__EXPRESSION:
+        getExpression().clear();
         return;
       case BxmlPackage.VALUES_TYPE2__BINARY_EXP:
         getBinaryExp().clear();
@@ -449,8 +518,10 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case BxmlPackage.VALUES_TYPE2__EXP:
-        return exp != null && !exp.isEmpty();
+      case BxmlPackage.VALUES_TYPE2__ATTR:
+        return attr != null;
+      case BxmlPackage.VALUES_TYPE2__EXPRESSION:
+        return expression != null && !expression.isEmpty();
       case BxmlPackage.VALUES_TYPE2__BINARY_EXP:
         return !getBinaryExp().isEmpty();
       case BxmlPackage.VALUES_TYPE2__NARY_EXP:
@@ -493,8 +564,8 @@ public class ValuesType2Impl extends MinimalEObjectImpl.Container implements Val
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (exp: ");
-    result.append(exp);
+    result.append(" (expression: ");
+    result.append(expression);
     result.append(')');
     return result.toString();
   }

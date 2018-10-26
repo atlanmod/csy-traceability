@@ -2,10 +2,9 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
+import bxml.BodyType4;
 import bxml.BxmlPackage;
-import bxml.OpVarSub;
-import bxml.SubstitutionType;
 import bxml.VARINType;
 import bxml.VariablesType1;
 
@@ -29,7 +28,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link bxml.impl.VARINTypeImpl#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.impl.VARINTypeImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link bxml.impl.VARINTypeImpl#getBody <em>Body</em>}</li>
- *   <li>{@link bxml.impl.VARINTypeImpl#getOp <em>Op</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,7 +41,7 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference.
@@ -63,36 +61,7 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
    * @generated
    * @ordered
    */
-  protected SubstitutionType body;
-
-  /**
-   * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOp()
-   * @generated
-   * @ordered
-   */
-  protected static final OpVarSub OP_EDEFAULT = OpVarSub.ANY;
-
-  /**
-   * The cached value of the '{@link #getOp() <em>Op</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOp()
-   * @generated
-   * @ordered
-   */
-  protected OpVarSub op = OP_EDEFAULT;
-
-  /**
-   * This is true if the Op attribute has been set.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  protected boolean opESet;
+  protected BodyType4 body;
 
   /**
    * <!-- begin-user-doc -->
@@ -118,7 +87,7 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -127,8 +96,8 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VARIN_TYPE__ATTR, oldAttr, newAttr);
@@ -142,7 +111,7 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -204,7 +173,7 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubstitutionType getBody() {
+  public BodyType4 getBody() {
     return body;
   }
 
@@ -213,8 +182,8 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBody(SubstitutionType newBody, NotificationChain msgs) {
-    SubstitutionType oldBody = body;
+  public NotificationChain basicSetBody(BodyType4 newBody, NotificationChain msgs) {
+    BodyType4 oldBody = body;
     body = newBody;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VARIN_TYPE__BODY, oldBody, newBody);
@@ -228,7 +197,7 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBody(SubstitutionType newBody) {
+  public void setBody(BodyType4 newBody) {
     if (newBody != body) {
       NotificationChain msgs = null;
       if (body != null)
@@ -240,52 +209,6 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.VARIN_TYPE__BODY, newBody, newBody));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public OpVarSub getOp() {
-    return op;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOp(OpVarSub newOp) {
-    OpVarSub oldOp = op;
-    op = newOp == null ? OP_EDEFAULT : newOp;
-    boolean oldOpESet = opESet;
-    opESet = true;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.VARIN_TYPE__OP, oldOp, op, !oldOpESet));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void unsetOp() {
-    OpVarSub oldOp = op;
-    boolean oldOpESet = opESet;
-    op = OP_EDEFAULT;
-    opESet = false;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, BxmlPackage.VARIN_TYPE__OP, oldOp, OP_EDEFAULT, oldOpESet));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isSetOp() {
-    return opESet;
   }
 
   /**
@@ -320,8 +243,6 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
         return getVariables();
       case BxmlPackage.VARIN_TYPE__BODY:
         return getBody();
-      case BxmlPackage.VARIN_TYPE__OP:
-        return getOp();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -335,16 +256,13 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.VARIN_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.VARIN_TYPE__VARIABLES:
         setVariables((VariablesType1)newValue);
         return;
       case BxmlPackage.VARIN_TYPE__BODY:
-        setBody((SubstitutionType)newValue);
-        return;
-      case BxmlPackage.VARIN_TYPE__OP:
-        setOp((OpVarSub)newValue);
+        setBody((BodyType4)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -359,16 +277,13 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.VARIN_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.VARIN_TYPE__VARIABLES:
         setVariables((VariablesType1)null);
         return;
       case BxmlPackage.VARIN_TYPE__BODY:
-        setBody((SubstitutionType)null);
-        return;
-      case BxmlPackage.VARIN_TYPE__OP:
-        unsetOp();
+        setBody((BodyType4)null);
         return;
     }
     super.eUnset(featureID);
@@ -388,26 +303,8 @@ public class VARINTypeImpl extends MinimalEObjectImpl.Container implements VARIN
         return variables != null;
       case BxmlPackage.VARIN_TYPE__BODY:
         return body != null;
-      case BxmlPackage.VARIN_TYPE__OP:
-        return isSetOp();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString() {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (op: ");
-    if (opESet) result.append(op); else result.append("<unset>");
-    result.append(')');
-    return result.toString();
   }
 
 } //VARINTypeImpl

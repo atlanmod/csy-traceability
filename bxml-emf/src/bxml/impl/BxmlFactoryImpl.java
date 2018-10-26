@@ -63,70 +63,101 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
       case BxmlPackage.ANY_SUB_TYPE: return createANYSubType();
       case BxmlPackage.ASSERTIONS_TYPE: return createAssertionsType();
       case BxmlPackage.ASSERT_SUB_TYPE: return createAssertSubType();
-      case BxmlPackage.ASSIGNEMENT_SUBSTITUTION_TYPE: return createAssignementSubstitutionType();
-      case BxmlPackage.ATTRIBUTES_TYPE: return createAttributesType();
+      case BxmlPackage.ASSIGNEMENT_SUB_TYPE: return createAssignementSubType();
+      case BxmlPackage.ATTR_TYPE: return createAttrType();
       case BxmlPackage.BECOMES_IN_TYPE: return createBecomesInType();
       case BxmlPackage.BECOMES_SUCH_THAT_TYPE: return createBecomesSuchThatType();
-      case BxmlPackage.BINARY_EXPRESSION_TYPE: return createBinaryExpressionType();
-      case BxmlPackage.BINARY_PREDICATE_TYPE: return createBinaryPredicateType();
-      case BxmlPackage.BINARY_SUB_TYPE: return createBinarySubType();
-      case BxmlPackage.CALL_PARAMATERS_TYPE: return createCallParamatersType();
+      case BxmlPackage.BINARY_EXP_TYPE2: return createBinaryExpType2();
+      case BxmlPackage.BINARY_PRED_TYPE: return createBinaryPredType();
+      case BxmlPackage.BLOC_SUB_TYPE: return createBlocSubType();
+      case BxmlPackage.BODY_TYPE: return createBodyType();
+      case BxmlPackage.BODY_TYPE1: return createBodyType1();
+      case BxmlPackage.BODY_TYPE2: return createBodyType2();
+      case BxmlPackage.BODY_TYPE3: return createBodyType3();
+      case BxmlPackage.BODY_TYPE4: return createBodyType4();
+      case BxmlPackage.BODY_TYPE5: return createBodyType5();
+      case BxmlPackage.BODY_TYPE6: return createBodyType6();
+      case BxmlPackage.BOOLEAN_EXP_TYPE: return createBooleanExpType();
+      case BxmlPackage.BOOLEAN_LITERAL_TYPE: return createBooleanLiteralType();
+      case BxmlPackage.BYNARY_EXP_TYPE: return createBynaryExpType();
       case BxmlPackage.CASE_SUB_TYPE: return createCaseSubType();
       case BxmlPackage.CHOICES_TYPE: return createChoicesType();
       case BxmlPackage.CHOICE_TYPE: return createChoiceType();
+      case BxmlPackage.CHOICE_TYPE1: return createChoiceType1();
       case BxmlPackage.CONCRETE_CONSTANTS_TYPE: return createConcreteConstantsType();
       case BxmlPackage.CONCRETE_VARIABLES_TYPE: return createConcreteVariablesType();
+      case BxmlPackage.CONDITION_TYPE: return createConditionType();
+      case BxmlPackage.CONSTRAINTS_TYPE: return createConstraintsType();
       case BxmlPackage.DOCUMENT_ROOT: return createDocumentRoot();
+      case BxmlPackage.ELSE_TYPE: return createElseType();
+      case BxmlPackage.ELSE_TYPE1: return createElseType1();
+      case BxmlPackage.ELSE_TYPE2: return createElseType2();
+      case BxmlPackage.EMPTY_SEQ_TYPE: return createEmptySeqType();
+      case BxmlPackage.EMPTY_SET_TYPE: return createEmptySetType();
       case BxmlPackage.ENUMERATED_VALUES_TYPE: return createEnumeratedValuesType();
       case BxmlPackage.EXP_COMPARISON_TYPE: return createExpComparisonType();
-      case BxmlPackage.EXP_TYPE: return createExpType();
-      case BxmlPackage.IDENTIFIER_TYPE: return createIdentifierType();
+      case BxmlPackage.EXTENDS_TYPE: return createExtendsType();
+      case BxmlPackage.GUARD_TYPE: return createGuardType();
+      case BxmlPackage.IDENTIFIER: return createIdentifier();
+      case BxmlPackage.ID_TYPE: return createIdType();
       case BxmlPackage.IF_SUB_TYPE: return createIfSubType();
-      case BxmlPackage.INFO_TYPE_TYPE: return createInfoTypeType();
+      case BxmlPackage.IMPORTS_TYPE: return createImportsType();
+      case BxmlPackage.INCLUDES_TYPE: return createIncludesType();
+      case BxmlPackage.INITIALISATION_TYPE: return createInitialisationType();
       case BxmlPackage.INPUT_PARAMETERS_TYPE: return createInputParametersType();
+      case BxmlPackage.INPUT_PARAMETERS_TYPE1: return createInputParametersType1();
+      case BxmlPackage.INTEGER_LITERAL_TYPE: return createIntegerLiteralType();
+      case BxmlPackage.INVARIANT_TYPE: return createInvariantType();
       case BxmlPackage.LET_SUB_TYPE: return createLETSubType();
-      case BxmlPackage.LITERAL_TYPE: return createLiteralType();
       case BxmlPackage.LOCAL_OPERATIONS_TYPE: return createLocalOperationsType();
-      case BxmlPackage.MACHINE_TYPE1: return createMachineType1();
+      case BxmlPackage.MACHINE_TYPE: return createMachineType();
       case BxmlPackage.NAME_TYPE: return createNameType();
       case BxmlPackage.NARY_EXP_TYPE: return createNaryExpType();
-      case BxmlPackage.NARY_PREDICATE_TYPE: return createNaryPredicateType();
-      case BxmlPackage.NARY_SUBSTITUTION_TYPE: return createNarySubstitutionType();
+      case BxmlPackage.NARY_PRED_TYPE: return createNaryPredType();
+      case BxmlPackage.NARY_SUB_TYPE: return createNarySubType();
       case BxmlPackage.OPERATION_CALL_TYPE: return createOperationCallType();
       case BxmlPackage.OPERATIONS_TYPE: return createOperationsType();
       case BxmlPackage.OPERATION_TYPE: return createOperationType();
       case BxmlPackage.OUTPUT_PARAMETERS_TYPE: return createOutputParametersType();
+      case BxmlPackage.OUTPUT_PARAMETERS_TYPE1: return createOutputParametersType1();
       case BxmlPackage.PARAMETERS_TYPE: return createParametersType();
       case BxmlPackage.PARAMETERS_TYPE1: return createParametersType1();
-      case BxmlPackage.PREDICATE_TYPE: return createPredicateType();
+      case BxmlPackage.PRECONDITION_TYPE: return createPreconditionType();
+      case BxmlPackage.PRED_TYPE: return createPredType();
+      case BxmlPackage.PROMOTED_OPERATION_TYPE: return createPromotedOperationType();
       case BxmlPackage.PROMOTES_TYPE: return createPromotesType();
+      case BxmlPackage.PROPERTIES_TYPE: return createPropertiesType();
       case BxmlPackage.QUANTIFIED_EXP_TYPE: return createQuantifiedExpType();
       case BxmlPackage.QUANTIFIED_PRED_TYPE: return createQuantifiedPredType();
       case BxmlPackage.QUANTIFIED_SET_TYPE: return createQuantifiedSetType();
       case BxmlPackage.RECORD_ITEM_TYPE: return createRecordItemType();
       case BxmlPackage.RECORD_TYPE: return createRecordType();
       case BxmlPackage.REFERENCED_MACHINE_TYPE: return createReferencedMachineType();
-      case BxmlPackage.REFERENCED_MACHINE_TYPE1: return createReferencedMachineType1();
-      case BxmlPackage.REFERENCED_MACHINE_TYPE2: return createReferencedMachineType2();
       case BxmlPackage.REFINES_TYPE: return createRefinesType();
       case BxmlPackage.SEES_TYPE: return createSeesType();
       case BxmlPackage.SELECT_TYPE: return createSelectType();
       case BxmlPackage.SETS_TYPE: return createSetsType();
       case BxmlPackage.SET_TYPE: return createSetType();
-      case BxmlPackage.STRING_LITERAL_TYPE: return createStringLiteralType();
+      case BxmlPackage.SET_TYPE1: return createSetType1();
+      case BxmlPackage.SKIP_TYPE: return createSkipType();
+      case BxmlPackage.STRING_LITERAL_TYPE: return createSTRINGLiteralType();
       case BxmlPackage.STRUCT_TYPE: return createStructType();
-      case BxmlPackage.SUBSTITUTION_TYPE: return createSubstitutionType();
-      case BxmlPackage.TERMINAL_TYPE: return createTerminalType();
+      case BxmlPackage.THEN_TYPE: return createThenType();
+      case BxmlPackage.TYPE_INFO: return createTypeInfo();
       case BxmlPackage.TYPE_INFOS_TYPE: return createTypeInfosType();
-      case BxmlPackage.UNARY_EXPRESSION_TYPE: return createUnaryExpressionType();
-      case BxmlPackage.UNARY_PREDICATE_TYPE: return createUnaryPredicateType();
+      case BxmlPackage.UNARY_EXP_TYPE: return createUnaryExpType();
+      case BxmlPackage.UNARY_EXP_TYPE2: return createUnaryExpType2();
+      case BxmlPackage.UNARY_PRED_TYPE: return createUnaryPredType();
+      case BxmlPackage.USES_TYPE: return createUsesType();
       case BxmlPackage.VALUATION_TYPE: return createValuationType();
       case BxmlPackage.VALUATION_TYPE1: return createValuationType1();
       case BxmlPackage.VALUES_TYPE: return createValuesType();
       case BxmlPackage.VALUES_TYPE1: return createValuesType1();
       case BxmlPackage.VALUES_TYPE2: return createValuesType2();
+      case BxmlPackage.VALUE_TYPE: return createValueType();
       case BxmlPackage.VARIABLES_TYPE: return createVariablesType();
       case BxmlPackage.VARIABLES_TYPE1: return createVariablesType1();
+      case BxmlPackage.VARIANT_TYPE: return createVariantType();
       case BxmlPackage.VARIN_TYPE: return createVARINType();
       case BxmlPackage.WHEN_CLAUSES_TYPE: return createWhenClausesType();
       case BxmlPackage.WHEN_TYPE: return createWhenType();
@@ -144,54 +175,66 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
   @Override
   public Object createFromString(EDataType eDataType, String initialValue) {
     switch (eDataType.getClassifierID()) {
-      case BxmlPackage.BINARY_EXP_OP:
-        return createBinaryExpOpFromString(eDataType, initialValue);
-      case BxmlPackage.BINARY_PRED_OP:
-        return createBinaryPredOpFromString(eDataType, initialValue);
-      case BxmlPackage.BINARY_SUB_OP:
-        return createBinarySubOpFromString(eDataType, initialValue);
-      case BxmlPackage.COMPARISON_OP:
-        return createComparisonOpFromString(eDataType, initialValue);
-      case BxmlPackage.MACHINE_TYPE:
-        return createMachineTypeFromString(eDataType, initialValue);
-      case BxmlPackage.NARY_EXP_OP:
-        return createNaryExpOpFromString(eDataType, initialValue);
-      case BxmlPackage.NARY_OP:
-        return createNaryOpFromString(eDataType, initialValue);
-      case BxmlPackage.OP_VAR_SUB:
-        return createOpVarSubFromString(eDataType, initialValue);
-      case BxmlPackage.QUANTIFIED_EXP_OP:
-        return createQuantifiedExpOpFromString(eDataType, initialValue);
-      case BxmlPackage.QUANTIFIED_PRED_OP:
-        return createQuantifiedPredOpFromString(eDataType, initialValue);
-      case BxmlPackage.UNARY_EXP_OP:
-        return createUnaryExpOpFromString(eDataType, initialValue);
-      case BxmlPackage.UNARY_PRED_OP:
-        return createUnaryPredOpFromString(eDataType, initialValue);
-      case BxmlPackage.BINARY_EXP_OP_OBJECT:
-        return createBinaryExpOpObjectFromString(eDataType, initialValue);
-      case BxmlPackage.BINARY_PRED_OP_OBJECT:
-        return createBinaryPredOpObjectFromString(eDataType, initialValue);
-      case BxmlPackage.BINARY_SUB_OP_OBJECT:
-        return createBinarySubOpObjectFromString(eDataType, initialValue);
-      case BxmlPackage.COMPARISON_OP_OBJECT:
-        return createComparisonOpObjectFromString(eDataType, initialValue);
-      case BxmlPackage.MACHINE_TYPE_OBJECT:
-        return createMachineTypeObjectFromString(eDataType, initialValue);
-      case BxmlPackage.NARY_EXP_OP_OBJECT:
-        return createNaryExpOpObjectFromString(eDataType, initialValue);
-      case BxmlPackage.NARY_OP_OBJECT:
-        return createNaryOpObjectFromString(eDataType, initialValue);
-      case BxmlPackage.OP_VAR_SUB_OBJECT:
-        return createOpVarSubObjectFromString(eDataType, initialValue);
-      case BxmlPackage.QUANTIFIED_EXP_OP_OBJECT:
-        return createQuantifiedExpOpObjectFromString(eDataType, initialValue);
-      case BxmlPackage.QUANTIFIED_PRED_OP_OBJECT:
-        return createQuantifiedPredOpObjectFromString(eDataType, initialValue);
-      case BxmlPackage.UNARY_EXP_OP_OBJECT:
-        return createUnaryExpOpObjectFromString(eDataType, initialValue);
-      case BxmlPackage.UNARY_PRED_OP_OBJECT:
-        return createUnaryPredOpObjectFromString(eDataType, initialValue);
+      case BxmlPackage.ELSEIF_TYPE:
+        return createElseifTypeFromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE:
+        return createOpTypeFromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE1:
+        return createOpType1FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE2:
+        return createOpType2FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE3:
+        return createOpType3FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE4:
+        return createOpType4FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE5:
+        return createOpType5FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE6:
+        return createOpType6FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE7:
+        return createOpType7FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE8:
+        return createOpType8FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE9:
+        return createOpType9FromString(eDataType, initialValue);
+      case BxmlPackage.TYPE_TYPE:
+        return createTypeTypeFromString(eDataType, initialValue);
+      case BxmlPackage.TYPE_TYPE1:
+        return createTypeType1FromString(eDataType, initialValue);
+      case BxmlPackage.TYPE_TYPE2:
+        return createTypeType2FromString(eDataType, initialValue);
+      case BxmlPackage.VALUE_TYPE1:
+        return createValueType1FromString(eDataType, initialValue);
+      case BxmlPackage.ELSEIF_TYPE_OBJECT:
+        return createElseifTypeObjectFromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE_OBJECT:
+        return createOpTypeObjectFromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE_OBJECT1:
+        return createOpTypeObject1FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE_OBJECT2:
+        return createOpTypeObject2FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE_OBJECT3:
+        return createOpTypeObject3FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE_OBJECT4:
+        return createOpTypeObject4FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE_OBJECT5:
+        return createOpTypeObject5FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE_OBJECT6:
+        return createOpTypeObject6FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE_OBJECT7:
+        return createOpTypeObject7FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE_OBJECT8:
+        return createOpTypeObject8FromString(eDataType, initialValue);
+      case BxmlPackage.OP_TYPE_OBJECT9:
+        return createOpTypeObject9FromString(eDataType, initialValue);
+      case BxmlPackage.TYPE_TYPE_OBJECT:
+        return createTypeTypeObjectFromString(eDataType, initialValue);
+      case BxmlPackage.TYPE_TYPE_OBJECT1:
+        return createTypeTypeObject1FromString(eDataType, initialValue);
+      case BxmlPackage.TYPE_TYPE_OBJECT2:
+        return createTypeTypeObject2FromString(eDataType, initialValue);
+      case BxmlPackage.VALUE_TYPE_OBJECT:
+        return createValueTypeObjectFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -205,54 +248,66 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
   @Override
   public String convertToString(EDataType eDataType, Object instanceValue) {
     switch (eDataType.getClassifierID()) {
-      case BxmlPackage.BINARY_EXP_OP:
-        return convertBinaryExpOpToString(eDataType, instanceValue);
-      case BxmlPackage.BINARY_PRED_OP:
-        return convertBinaryPredOpToString(eDataType, instanceValue);
-      case BxmlPackage.BINARY_SUB_OP:
-        return convertBinarySubOpToString(eDataType, instanceValue);
-      case BxmlPackage.COMPARISON_OP:
-        return convertComparisonOpToString(eDataType, instanceValue);
-      case BxmlPackage.MACHINE_TYPE:
-        return convertMachineTypeToString(eDataType, instanceValue);
-      case BxmlPackage.NARY_EXP_OP:
-        return convertNaryExpOpToString(eDataType, instanceValue);
-      case BxmlPackage.NARY_OP:
-        return convertNaryOpToString(eDataType, instanceValue);
-      case BxmlPackage.OP_VAR_SUB:
-        return convertOpVarSubToString(eDataType, instanceValue);
-      case BxmlPackage.QUANTIFIED_EXP_OP:
-        return convertQuantifiedExpOpToString(eDataType, instanceValue);
-      case BxmlPackage.QUANTIFIED_PRED_OP:
-        return convertQuantifiedPredOpToString(eDataType, instanceValue);
-      case BxmlPackage.UNARY_EXP_OP:
-        return convertUnaryExpOpToString(eDataType, instanceValue);
-      case BxmlPackage.UNARY_PRED_OP:
-        return convertUnaryPredOpToString(eDataType, instanceValue);
-      case BxmlPackage.BINARY_EXP_OP_OBJECT:
-        return convertBinaryExpOpObjectToString(eDataType, instanceValue);
-      case BxmlPackage.BINARY_PRED_OP_OBJECT:
-        return convertBinaryPredOpObjectToString(eDataType, instanceValue);
-      case BxmlPackage.BINARY_SUB_OP_OBJECT:
-        return convertBinarySubOpObjectToString(eDataType, instanceValue);
-      case BxmlPackage.COMPARISON_OP_OBJECT:
-        return convertComparisonOpObjectToString(eDataType, instanceValue);
-      case BxmlPackage.MACHINE_TYPE_OBJECT:
-        return convertMachineTypeObjectToString(eDataType, instanceValue);
-      case BxmlPackage.NARY_EXP_OP_OBJECT:
-        return convertNaryExpOpObjectToString(eDataType, instanceValue);
-      case BxmlPackage.NARY_OP_OBJECT:
-        return convertNaryOpObjectToString(eDataType, instanceValue);
-      case BxmlPackage.OP_VAR_SUB_OBJECT:
-        return convertOpVarSubObjectToString(eDataType, instanceValue);
-      case BxmlPackage.QUANTIFIED_EXP_OP_OBJECT:
-        return convertQuantifiedExpOpObjectToString(eDataType, instanceValue);
-      case BxmlPackage.QUANTIFIED_PRED_OP_OBJECT:
-        return convertQuantifiedPredOpObjectToString(eDataType, instanceValue);
-      case BxmlPackage.UNARY_EXP_OP_OBJECT:
-        return convertUnaryExpOpObjectToString(eDataType, instanceValue);
-      case BxmlPackage.UNARY_PRED_OP_OBJECT:
-        return convertUnaryPredOpObjectToString(eDataType, instanceValue);
+      case BxmlPackage.ELSEIF_TYPE:
+        return convertElseifTypeToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE:
+        return convertOpTypeToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE1:
+        return convertOpType1ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE2:
+        return convertOpType2ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE3:
+        return convertOpType3ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE4:
+        return convertOpType4ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE5:
+        return convertOpType5ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE6:
+        return convertOpType6ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE7:
+        return convertOpType7ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE8:
+        return convertOpType8ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE9:
+        return convertOpType9ToString(eDataType, instanceValue);
+      case BxmlPackage.TYPE_TYPE:
+        return convertTypeTypeToString(eDataType, instanceValue);
+      case BxmlPackage.TYPE_TYPE1:
+        return convertTypeType1ToString(eDataType, instanceValue);
+      case BxmlPackage.TYPE_TYPE2:
+        return convertTypeType2ToString(eDataType, instanceValue);
+      case BxmlPackage.VALUE_TYPE1:
+        return convertValueType1ToString(eDataType, instanceValue);
+      case BxmlPackage.ELSEIF_TYPE_OBJECT:
+        return convertElseifTypeObjectToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE_OBJECT:
+        return convertOpTypeObjectToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE_OBJECT1:
+        return convertOpTypeObject1ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE_OBJECT2:
+        return convertOpTypeObject2ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE_OBJECT3:
+        return convertOpTypeObject3ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE_OBJECT4:
+        return convertOpTypeObject4ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE_OBJECT5:
+        return convertOpTypeObject5ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE_OBJECT6:
+        return convertOpTypeObject6ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE_OBJECT7:
+        return convertOpTypeObject7ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE_OBJECT8:
+        return convertOpTypeObject8ToString(eDataType, instanceValue);
+      case BxmlPackage.OP_TYPE_OBJECT9:
+        return convertOpTypeObject9ToString(eDataType, instanceValue);
+      case BxmlPackage.TYPE_TYPE_OBJECT:
+        return convertTypeTypeObjectToString(eDataType, instanceValue);
+      case BxmlPackage.TYPE_TYPE_OBJECT1:
+        return convertTypeTypeObject1ToString(eDataType, instanceValue);
+      case BxmlPackage.TYPE_TYPE_OBJECT2:
+        return convertTypeTypeObject2ToString(eDataType, instanceValue);
+      case BxmlPackage.VALUE_TYPE_OBJECT:
+        return convertValueTypeObjectToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -323,9 +378,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public AssignementSubstitutionType createAssignementSubstitutionType() {
-    AssignementSubstitutionTypeImpl assignementSubstitutionType = new AssignementSubstitutionTypeImpl();
-    return assignementSubstitutionType;
+  public AssignementSubType createAssignementSubType() {
+    AssignementSubTypeImpl assignementSubType = new AssignementSubTypeImpl();
+    return assignementSubType;
   }
 
   /**
@@ -333,9 +388,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType createAttributesType() {
-    AttributesTypeImpl attributesType = new AttributesTypeImpl();
-    return attributesType;
+  public AttrType createAttrType() {
+    AttrTypeImpl attrType = new AttrTypeImpl();
+    return attrType;
   }
 
   /**
@@ -363,9 +418,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryExpressionType createBinaryExpressionType() {
-    BinaryExpressionTypeImpl binaryExpressionType = new BinaryExpressionTypeImpl();
-    return binaryExpressionType;
+  public BinaryExpType2 createBinaryExpType2() {
+    BinaryExpType2Impl binaryExpType2 = new BinaryExpType2Impl();
+    return binaryExpType2;
   }
 
   /**
@@ -373,9 +428,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryPredicateType createBinaryPredicateType() {
-    BinaryPredicateTypeImpl binaryPredicateType = new BinaryPredicateTypeImpl();
-    return binaryPredicateType;
+  public BinaryPredType createBinaryPredType() {
+    BinaryPredTypeImpl binaryPredType = new BinaryPredTypeImpl();
+    return binaryPredType;
   }
 
   /**
@@ -383,9 +438,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinarySubType createBinarySubType() {
-    BinarySubTypeImpl binarySubType = new BinarySubTypeImpl();
-    return binarySubType;
+  public BlocSubType createBlocSubType() {
+    BlocSubTypeImpl blocSubType = new BlocSubTypeImpl();
+    return blocSubType;
   }
 
   /**
@@ -393,9 +448,99 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public CallParamatersType createCallParamatersType() {
-    CallParamatersTypeImpl callParamatersType = new CallParamatersTypeImpl();
-    return callParamatersType;
+  public BodyType createBodyType() {
+    BodyTypeImpl bodyType = new BodyTypeImpl();
+    return bodyType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyType1 createBodyType1() {
+    BodyType1Impl bodyType1 = new BodyType1Impl();
+    return bodyType1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyType2 createBodyType2() {
+    BodyType2Impl bodyType2 = new BodyType2Impl();
+    return bodyType2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyType3 createBodyType3() {
+    BodyType3Impl bodyType3 = new BodyType3Impl();
+    return bodyType3;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyType4 createBodyType4() {
+    BodyType4Impl bodyType4 = new BodyType4Impl();
+    return bodyType4;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyType5 createBodyType5() {
+    BodyType5Impl bodyType5 = new BodyType5Impl();
+    return bodyType5;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyType6 createBodyType6() {
+    BodyType6Impl bodyType6 = new BodyType6Impl();
+    return bodyType6;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BooleanExpType createBooleanExpType() {
+    BooleanExpTypeImpl booleanExpType = new BooleanExpTypeImpl();
+    return booleanExpType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BooleanLiteralType createBooleanLiteralType() {
+    BooleanLiteralTypeImpl booleanLiteralType = new BooleanLiteralTypeImpl();
+    return booleanLiteralType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BynaryExpType createBynaryExpType() {
+    BynaryExpTypeImpl bynaryExpType = new BynaryExpTypeImpl();
+    return bynaryExpType;
   }
 
   /**
@@ -433,6 +578,16 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
+  public ChoiceType1 createChoiceType1() {
+    ChoiceType1Impl choiceType1 = new ChoiceType1Impl();
+    return choiceType1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ConcreteConstantsType createConcreteConstantsType() {
     ConcreteConstantsTypeImpl concreteConstantsType = new ConcreteConstantsTypeImpl();
     return concreteConstantsType;
@@ -453,9 +608,79 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
+  public ConditionType createConditionType() {
+    ConditionTypeImpl conditionType = new ConditionTypeImpl();
+    return conditionType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConstraintsType createConstraintsType() {
+    ConstraintsTypeImpl constraintsType = new ConstraintsTypeImpl();
+    return constraintsType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public DocumentRoot createDocumentRoot() {
     DocumentRootImpl documentRoot = new DocumentRootImpl();
     return documentRoot;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ElseType createElseType() {
+    ElseTypeImpl elseType = new ElseTypeImpl();
+    return elseType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ElseType1 createElseType1() {
+    ElseType1Impl elseType1 = new ElseType1Impl();
+    return elseType1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ElseType2 createElseType2() {
+    ElseType2Impl elseType2 = new ElseType2Impl();
+    return elseType2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EmptySeqType createEmptySeqType() {
+    EmptySeqTypeImpl emptySeqType = new EmptySeqTypeImpl();
+    return emptySeqType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EmptySetType createEmptySetType() {
+    EmptySetTypeImpl emptySetType = new EmptySetTypeImpl();
+    return emptySetType;
   }
 
   /**
@@ -483,9 +708,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public ExpType createExpType() {
-    ExpTypeImpl expType = new ExpTypeImpl();
-    return expType;
+  public ExtendsType createExtendsType() {
+    ExtendsTypeImpl extendsType = new ExtendsTypeImpl();
+    return extendsType;
   }
 
   /**
@@ -493,9 +718,29 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierType createIdentifierType() {
-    IdentifierTypeImpl identifierType = new IdentifierTypeImpl();
-    return identifierType;
+  public GuardType createGuardType() {
+    GuardTypeImpl guardType = new GuardTypeImpl();
+    return guardType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Identifier createIdentifier() {
+    IdentifierImpl identifier = new IdentifierImpl();
+    return identifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IdType createIdType() {
+    IdTypeImpl idType = new IdTypeImpl();
+    return idType;
   }
 
   /**
@@ -513,9 +758,29 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public InfoTypeType createInfoTypeType() {
-    InfoTypeTypeImpl infoTypeType = new InfoTypeTypeImpl();
-    return infoTypeType;
+  public ImportsType createImportsType() {
+    ImportsTypeImpl importsType = new ImportsTypeImpl();
+    return importsType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IncludesType createIncludesType() {
+    IncludesTypeImpl includesType = new IncludesTypeImpl();
+    return includesType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InitialisationType createInitialisationType() {
+    InitialisationTypeImpl initialisationType = new InitialisationTypeImpl();
+    return initialisationType;
   }
 
   /**
@@ -533,9 +798,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public LETSubType createLETSubType() {
-    LETSubTypeImpl letSubType = new LETSubTypeImpl();
-    return letSubType;
+  public InputParametersType1 createInputParametersType1() {
+    InputParametersType1Impl inputParametersType1 = new InputParametersType1Impl();
+    return inputParametersType1;
   }
 
   /**
@@ -543,9 +808,29 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralType createLiteralType() {
-    LiteralTypeImpl literalType = new LiteralTypeImpl();
-    return literalType;
+  public IntegerLiteralType createIntegerLiteralType() {
+    IntegerLiteralTypeImpl integerLiteralType = new IntegerLiteralTypeImpl();
+    return integerLiteralType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InvariantType createInvariantType() {
+    InvariantTypeImpl invariantType = new InvariantTypeImpl();
+    return invariantType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LETSubType createLETSubType() {
+    LETSubTypeImpl letSubType = new LETSubTypeImpl();
+    return letSubType;
   }
 
   /**
@@ -563,9 +848,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public MachineType1 createMachineType1() {
-    MachineType1Impl machineType1 = new MachineType1Impl();
-    return machineType1;
+  public MachineType createMachineType() {
+    MachineTypeImpl machineType = new MachineTypeImpl();
+    return machineType;
   }
 
   /**
@@ -593,9 +878,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public NaryPredicateType createNaryPredicateType() {
-    NaryPredicateTypeImpl naryPredicateType = new NaryPredicateTypeImpl();
-    return naryPredicateType;
+  public NaryPredType createNaryPredType() {
+    NaryPredTypeImpl naryPredType = new NaryPredTypeImpl();
+    return naryPredType;
   }
 
   /**
@@ -603,9 +888,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public NarySubstitutionType createNarySubstitutionType() {
-    NarySubstitutionTypeImpl narySubstitutionType = new NarySubstitutionTypeImpl();
-    return narySubstitutionType;
+  public NarySubType createNarySubType() {
+    NarySubTypeImpl narySubType = new NarySubTypeImpl();
+    return narySubType;
   }
 
   /**
@@ -653,6 +938,16 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
+  public OutputParametersType1 createOutputParametersType1() {
+    OutputParametersType1Impl outputParametersType1 = new OutputParametersType1Impl();
+    return outputParametersType1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ParametersType createParametersType() {
     ParametersTypeImpl parametersType = new ParametersTypeImpl();
     return parametersType;
@@ -673,9 +968,29 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType createPredicateType() {
-    PredicateTypeImpl predicateType = new PredicateTypeImpl();
-    return predicateType;
+  public PreconditionType createPreconditionType() {
+    PreconditionTypeImpl preconditionType = new PreconditionTypeImpl();
+    return preconditionType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PredType createPredType() {
+    PredTypeImpl predType = new PredTypeImpl();
+    return predType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PromotedOperationType createPromotedOperationType() {
+    PromotedOperationTypeImpl promotedOperationType = new PromotedOperationTypeImpl();
+    return promotedOperationType;
   }
 
   /**
@@ -686,6 +1001,16 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
   public PromotesType createPromotesType() {
     PromotesTypeImpl promotesType = new PromotesTypeImpl();
     return promotesType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PropertiesType createPropertiesType() {
+    PropertiesTypeImpl propertiesType = new PropertiesTypeImpl();
+    return propertiesType;
   }
 
   /**
@@ -753,26 +1078,6 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public ReferencedMachineType1 createReferencedMachineType1() {
-    ReferencedMachineType1Impl referencedMachineType1 = new ReferencedMachineType1Impl();
-    return referencedMachineType1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ReferencedMachineType2 createReferencedMachineType2() {
-    ReferencedMachineType2Impl referencedMachineType2 = new ReferencedMachineType2Impl();
-    return referencedMachineType2;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public RefinesType createRefinesType() {
     RefinesTypeImpl refinesType = new RefinesTypeImpl();
     return refinesType;
@@ -823,8 +1128,28 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public StringLiteralType createStringLiteralType() {
-    StringLiteralTypeImpl stringLiteralType = new StringLiteralTypeImpl();
+  public SetType1 createSetType1() {
+    SetType1Impl setType1 = new SetType1Impl();
+    return setType1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SkipType createSkipType() {
+    SkipTypeImpl skipType = new SkipTypeImpl();
+    return skipType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public STRINGLiteralType createSTRINGLiteralType() {
+    STRINGLiteralTypeImpl stringLiteralType = new STRINGLiteralTypeImpl();
     return stringLiteralType;
   }
 
@@ -843,9 +1168,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubstitutionType createSubstitutionType() {
-    SubstitutionTypeImpl substitutionType = new SubstitutionTypeImpl();
-    return substitutionType;
+  public ThenType createThenType() {
+    ThenTypeImpl thenType = new ThenTypeImpl();
+    return thenType;
   }
 
   /**
@@ -853,9 +1178,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public TerminalType createTerminalType() {
-    TerminalTypeImpl terminalType = new TerminalTypeImpl();
-    return terminalType;
+  public TypeInfo createTypeInfo() {
+    TypeInfoImpl typeInfo = new TypeInfoImpl();
+    return typeInfo;
   }
 
   /**
@@ -873,9 +1198,9 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryExpressionType createUnaryExpressionType() {
-    UnaryExpressionTypeImpl unaryExpressionType = new UnaryExpressionTypeImpl();
-    return unaryExpressionType;
+  public UnaryExpType createUnaryExpType() {
+    UnaryExpTypeImpl unaryExpType = new UnaryExpTypeImpl();
+    return unaryExpType;
   }
 
   /**
@@ -883,9 +1208,29 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryPredicateType createUnaryPredicateType() {
-    UnaryPredicateTypeImpl unaryPredicateType = new UnaryPredicateTypeImpl();
-    return unaryPredicateType;
+  public UnaryExpType2 createUnaryExpType2() {
+    UnaryExpType2Impl unaryExpType2 = new UnaryExpType2Impl();
+    return unaryExpType2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UnaryPredType createUnaryPredType() {
+    UnaryPredTypeImpl unaryPredType = new UnaryPredTypeImpl();
+    return unaryPredType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UsesType createUsesType() {
+    UsesTypeImpl usesType = new UsesTypeImpl();
+    return usesType;
   }
 
   /**
@@ -943,6 +1288,16 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
+  public ValueType createValueType() {
+    ValueTypeImpl valueType = new ValueTypeImpl();
+    return valueType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public VariablesType createVariablesType() {
     VariablesTypeImpl variablesType = new VariablesTypeImpl();
     return variablesType;
@@ -956,6 +1311,16 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
   public VariablesType1 createVariablesType1() {
     VariablesType1Impl variablesType1 = new VariablesType1Impl();
     return variablesType1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VariantType createVariantType() {
+    VariantTypeImpl variantType = new VariantTypeImpl();
+    return variantType;
   }
 
   /**
@@ -1003,8 +1368,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryExpOp createBinaryExpOpFromString(EDataType eDataType, String initialValue) {
-    BinaryExpOp result = BinaryExpOp.get(initialValue);
+  public ElseifType createElseifTypeFromString(EDataType eDataType, String initialValue) {
+    ElseifType result = ElseifType.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1014,7 +1379,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertBinaryExpOpToString(EDataType eDataType, Object instanceValue) {
+  public String convertElseifTypeToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1023,8 +1388,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryPredOp createBinaryPredOpFromString(EDataType eDataType, String initialValue) {
-    BinaryPredOp result = BinaryPredOp.get(initialValue);
+  public OpType createOpTypeFromString(EDataType eDataType, String initialValue) {
+    OpType result = OpType.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1034,7 +1399,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertBinaryPredOpToString(EDataType eDataType, Object instanceValue) {
+  public String convertOpTypeToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1043,8 +1408,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinarySubOp createBinarySubOpFromString(EDataType eDataType, String initialValue) {
-    BinarySubOp result = BinarySubOp.get(initialValue);
+  public OpType1 createOpType1FromString(EDataType eDataType, String initialValue) {
+    OpType1 result = OpType1.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1054,7 +1419,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertBinarySubOpToString(EDataType eDataType, Object instanceValue) {
+  public String convertOpType1ToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1063,8 +1428,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public ComparisonOp createComparisonOpFromString(EDataType eDataType, String initialValue) {
-    ComparisonOp result = ComparisonOp.get(initialValue);
+  public OpType2 createOpType2FromString(EDataType eDataType, String initialValue) {
+    OpType2 result = OpType2.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1074,7 +1439,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertComparisonOpToString(EDataType eDataType, Object instanceValue) {
+  public String convertOpType2ToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1083,8 +1448,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public MachineType createMachineTypeFromString(EDataType eDataType, String initialValue) {
-    MachineType result = MachineType.get(initialValue);
+  public OpType3 createOpType3FromString(EDataType eDataType, String initialValue) {
+    OpType3 result = OpType3.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1094,7 +1459,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertMachineTypeToString(EDataType eDataType, Object instanceValue) {
+  public String convertOpType3ToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1103,8 +1468,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public NaryExpOp createNaryExpOpFromString(EDataType eDataType, String initialValue) {
-    NaryExpOp result = NaryExpOp.get(initialValue);
+  public OpType4 createOpType4FromString(EDataType eDataType, String initialValue) {
+    OpType4 result = OpType4.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1114,7 +1479,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertNaryExpOpToString(EDataType eDataType, Object instanceValue) {
+  public String convertOpType4ToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1123,8 +1488,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public NaryOp createNaryOpFromString(EDataType eDataType, String initialValue) {
-    NaryOp result = NaryOp.get(initialValue);
+  public OpType5 createOpType5FromString(EDataType eDataType, String initialValue) {
+    OpType5 result = OpType5.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1134,7 +1499,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertNaryOpToString(EDataType eDataType, Object instanceValue) {
+  public String convertOpType5ToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1143,8 +1508,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public OpVarSub createOpVarSubFromString(EDataType eDataType, String initialValue) {
-    OpVarSub result = OpVarSub.get(initialValue);
+  public OpType6 createOpType6FromString(EDataType eDataType, String initialValue) {
+    OpType6 result = OpType6.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1154,7 +1519,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertOpVarSubToString(EDataType eDataType, Object instanceValue) {
+  public String convertOpType6ToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1163,8 +1528,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public QuantifiedExpOp createQuantifiedExpOpFromString(EDataType eDataType, String initialValue) {
-    QuantifiedExpOp result = QuantifiedExpOp.get(initialValue);
+  public OpType7 createOpType7FromString(EDataType eDataType, String initialValue) {
+    OpType7 result = OpType7.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1174,7 +1539,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertQuantifiedExpOpToString(EDataType eDataType, Object instanceValue) {
+  public String convertOpType7ToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1183,8 +1548,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public QuantifiedPredOp createQuantifiedPredOpFromString(EDataType eDataType, String initialValue) {
-    QuantifiedPredOp result = QuantifiedPredOp.get(initialValue);
+  public OpType8 createOpType8FromString(EDataType eDataType, String initialValue) {
+    OpType8 result = OpType8.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1194,7 +1559,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertQuantifiedPredOpToString(EDataType eDataType, Object instanceValue) {
+  public String convertOpType8ToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1203,8 +1568,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryExpOp createUnaryExpOpFromString(EDataType eDataType, String initialValue) {
-    UnaryExpOp result = UnaryExpOp.get(initialValue);
+  public OpType9 createOpType9FromString(EDataType eDataType, String initialValue) {
+    OpType9 result = OpType9.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1214,7 +1579,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertUnaryExpOpToString(EDataType eDataType, Object instanceValue) {
+  public String convertOpType9ToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1223,8 +1588,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryPredOp createUnaryPredOpFromString(EDataType eDataType, String initialValue) {
-    UnaryPredOp result = UnaryPredOp.get(initialValue);
+  public TypeType createTypeTypeFromString(EDataType eDataType, String initialValue) {
+    TypeType result = TypeType.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -1234,7 +1599,7 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertUnaryPredOpToString(EDataType eDataType, Object instanceValue) {
+  public String convertTypeTypeToString(EDataType eDataType, Object instanceValue) {
     return instanceValue == null ? null : instanceValue.toString();
   }
 
@@ -1243,8 +1608,10 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryExpOp createBinaryExpOpObjectFromString(EDataType eDataType, String initialValue) {
-    return createBinaryExpOpFromString(BxmlPackage.eINSTANCE.getBinaryExpOp(), initialValue);
+  public TypeType1 createTypeType1FromString(EDataType eDataType, String initialValue) {
+    TypeType1 result = TypeType1.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
   }
 
   /**
@@ -1252,8 +1619,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertBinaryExpOpObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertBinaryExpOpToString(BxmlPackage.eINSTANCE.getBinaryExpOp(), instanceValue);
+  public String convertTypeType1ToString(EDataType eDataType, Object instanceValue) {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**
@@ -1261,8 +1628,10 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryPredOp createBinaryPredOpObjectFromString(EDataType eDataType, String initialValue) {
-    return createBinaryPredOpFromString(BxmlPackage.eINSTANCE.getBinaryPredOp(), initialValue);
+  public TypeType2 createTypeType2FromString(EDataType eDataType, String initialValue) {
+    TypeType2 result = TypeType2.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
   }
 
   /**
@@ -1270,8 +1639,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertBinaryPredOpObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertBinaryPredOpToString(BxmlPackage.eINSTANCE.getBinaryPredOp(), instanceValue);
+  public String convertTypeType2ToString(EDataType eDataType, Object instanceValue) {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**
@@ -1279,8 +1648,10 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinarySubOp createBinarySubOpObjectFromString(EDataType eDataType, String initialValue) {
-    return createBinarySubOpFromString(BxmlPackage.eINSTANCE.getBinarySubOp(), initialValue);
+  public ValueType1 createValueType1FromString(EDataType eDataType, String initialValue) {
+    ValueType1 result = ValueType1.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
   }
 
   /**
@@ -1288,8 +1659,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertBinarySubOpObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertBinarySubOpToString(BxmlPackage.eINSTANCE.getBinarySubOp(), instanceValue);
+  public String convertValueType1ToString(EDataType eDataType, Object instanceValue) {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**
@@ -1297,8 +1668,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public ComparisonOp createComparisonOpObjectFromString(EDataType eDataType, String initialValue) {
-    return createComparisonOpFromString(BxmlPackage.eINSTANCE.getComparisonOp(), initialValue);
+  public ElseifType createElseifTypeObjectFromString(EDataType eDataType, String initialValue) {
+    return createElseifTypeFromString(BxmlPackage.eINSTANCE.getElseifType(), initialValue);
   }
 
   /**
@@ -1306,8 +1677,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertComparisonOpObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertComparisonOpToString(BxmlPackage.eINSTANCE.getComparisonOp(), instanceValue);
+  public String convertElseifTypeObjectToString(EDataType eDataType, Object instanceValue) {
+    return convertElseifTypeToString(BxmlPackage.eINSTANCE.getElseifType(), instanceValue);
   }
 
   /**
@@ -1315,8 +1686,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public MachineType createMachineTypeObjectFromString(EDataType eDataType, String initialValue) {
-    return createMachineTypeFromString(BxmlPackage.eINSTANCE.getMachineType(), initialValue);
+  public OpType1 createOpTypeObjectFromString(EDataType eDataType, String initialValue) {
+    return createOpType1FromString(BxmlPackage.eINSTANCE.getOpType1(), initialValue);
   }
 
   /**
@@ -1324,8 +1695,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertMachineTypeObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertMachineTypeToString(BxmlPackage.eINSTANCE.getMachineType(), instanceValue);
+  public String convertOpTypeObjectToString(EDataType eDataType, Object instanceValue) {
+    return convertOpType1ToString(BxmlPackage.eINSTANCE.getOpType1(), instanceValue);
   }
 
   /**
@@ -1333,8 +1704,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public NaryExpOp createNaryExpOpObjectFromString(EDataType eDataType, String initialValue) {
-    return createNaryExpOpFromString(BxmlPackage.eINSTANCE.getNaryExpOp(), initialValue);
+  public OpType8 createOpTypeObject1FromString(EDataType eDataType, String initialValue) {
+    return createOpType8FromString(BxmlPackage.eINSTANCE.getOpType8(), initialValue);
   }
 
   /**
@@ -1342,8 +1713,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertNaryExpOpObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertNaryExpOpToString(BxmlPackage.eINSTANCE.getNaryExpOp(), instanceValue);
+  public String convertOpTypeObject1ToString(EDataType eDataType, Object instanceValue) {
+    return convertOpType8ToString(BxmlPackage.eINSTANCE.getOpType8(), instanceValue);
   }
 
   /**
@@ -1351,8 +1722,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public NaryOp createNaryOpObjectFromString(EDataType eDataType, String initialValue) {
-    return createNaryOpFromString(BxmlPackage.eINSTANCE.getNaryOp(), initialValue);
+  public OpType5 createOpTypeObject2FromString(EDataType eDataType, String initialValue) {
+    return createOpType5FromString(BxmlPackage.eINSTANCE.getOpType5(), initialValue);
   }
 
   /**
@@ -1360,8 +1731,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertNaryOpObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertNaryOpToString(BxmlPackage.eINSTANCE.getNaryOp(), instanceValue);
+  public String convertOpTypeObject2ToString(EDataType eDataType, Object instanceValue) {
+    return convertOpType5ToString(BxmlPackage.eINSTANCE.getOpType5(), instanceValue);
   }
 
   /**
@@ -1369,8 +1740,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public OpVarSub createOpVarSubObjectFromString(EDataType eDataType, String initialValue) {
-    return createOpVarSubFromString(BxmlPackage.eINSTANCE.getOpVarSub(), initialValue);
+  public OpType4 createOpTypeObject3FromString(EDataType eDataType, String initialValue) {
+    return createOpType4FromString(BxmlPackage.eINSTANCE.getOpType4(), initialValue);
   }
 
   /**
@@ -1378,8 +1749,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertOpVarSubObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertOpVarSubToString(BxmlPackage.eINSTANCE.getOpVarSub(), instanceValue);
+  public String convertOpTypeObject3ToString(EDataType eDataType, Object instanceValue) {
+    return convertOpType4ToString(BxmlPackage.eINSTANCE.getOpType4(), instanceValue);
   }
 
   /**
@@ -1387,8 +1758,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public QuantifiedExpOp createQuantifiedExpOpObjectFromString(EDataType eDataType, String initialValue) {
-    return createQuantifiedExpOpFromString(BxmlPackage.eINSTANCE.getQuantifiedExpOp(), initialValue);
+  public OpType3 createOpTypeObject4FromString(EDataType eDataType, String initialValue) {
+    return createOpType3FromString(BxmlPackage.eINSTANCE.getOpType3(), initialValue);
   }
 
   /**
@@ -1396,8 +1767,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertQuantifiedExpOpObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertQuantifiedExpOpToString(BxmlPackage.eINSTANCE.getQuantifiedExpOp(), instanceValue);
+  public String convertOpTypeObject4ToString(EDataType eDataType, Object instanceValue) {
+    return convertOpType3ToString(BxmlPackage.eINSTANCE.getOpType3(), instanceValue);
   }
 
   /**
@@ -1405,8 +1776,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public QuantifiedPredOp createQuantifiedPredOpObjectFromString(EDataType eDataType, String initialValue) {
-    return createQuantifiedPredOpFromString(BxmlPackage.eINSTANCE.getQuantifiedPredOp(), initialValue);
+  public OpType createOpTypeObject5FromString(EDataType eDataType, String initialValue) {
+    return createOpTypeFromString(BxmlPackage.eINSTANCE.getOpType(), initialValue);
   }
 
   /**
@@ -1414,8 +1785,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertQuantifiedPredOpObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertQuantifiedPredOpToString(BxmlPackage.eINSTANCE.getQuantifiedPredOp(), instanceValue);
+  public String convertOpTypeObject5ToString(EDataType eDataType, Object instanceValue) {
+    return convertOpTypeToString(BxmlPackage.eINSTANCE.getOpType(), instanceValue);
   }
 
   /**
@@ -1423,8 +1794,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryExpOp createUnaryExpOpObjectFromString(EDataType eDataType, String initialValue) {
-    return createUnaryExpOpFromString(BxmlPackage.eINSTANCE.getUnaryExpOp(), initialValue);
+  public OpType7 createOpTypeObject6FromString(EDataType eDataType, String initialValue) {
+    return createOpType7FromString(BxmlPackage.eINSTANCE.getOpType7(), initialValue);
   }
 
   /**
@@ -1432,8 +1803,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertUnaryExpOpObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertUnaryExpOpToString(BxmlPackage.eINSTANCE.getUnaryExpOp(), instanceValue);
+  public String convertOpTypeObject6ToString(EDataType eDataType, Object instanceValue) {
+    return convertOpType7ToString(BxmlPackage.eINSTANCE.getOpType7(), instanceValue);
   }
 
   /**
@@ -1441,8 +1812,8 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryPredOp createUnaryPredOpObjectFromString(EDataType eDataType, String initialValue) {
-    return createUnaryPredOpFromString(BxmlPackage.eINSTANCE.getUnaryPredOp(), initialValue);
+  public OpType6 createOpTypeObject7FromString(EDataType eDataType, String initialValue) {
+    return createOpType6FromString(BxmlPackage.eINSTANCE.getOpType6(), initialValue);
   }
 
   /**
@@ -1450,8 +1821,116 @@ public class BxmlFactoryImpl extends EFactoryImpl implements BxmlFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertUnaryPredOpObjectToString(EDataType eDataType, Object instanceValue) {
-    return convertUnaryPredOpToString(BxmlPackage.eINSTANCE.getUnaryPredOp(), instanceValue);
+  public String convertOpTypeObject7ToString(EDataType eDataType, Object instanceValue) {
+    return convertOpType6ToString(BxmlPackage.eINSTANCE.getOpType6(), instanceValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OpType2 createOpTypeObject8FromString(EDataType eDataType, String initialValue) {
+    return createOpType2FromString(BxmlPackage.eINSTANCE.getOpType2(), initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertOpTypeObject8ToString(EDataType eDataType, Object instanceValue) {
+    return convertOpType2ToString(BxmlPackage.eINSTANCE.getOpType2(), instanceValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OpType9 createOpTypeObject9FromString(EDataType eDataType, String initialValue) {
+    return createOpType9FromString(BxmlPackage.eINSTANCE.getOpType9(), initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertOpTypeObject9ToString(EDataType eDataType, Object instanceValue) {
+    return convertOpType9ToString(BxmlPackage.eINSTANCE.getOpType9(), instanceValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeType createTypeTypeObjectFromString(EDataType eDataType, String initialValue) {
+    return createTypeTypeFromString(BxmlPackage.eINSTANCE.getTypeType(), initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertTypeTypeObjectToString(EDataType eDataType, Object instanceValue) {
+    return convertTypeTypeToString(BxmlPackage.eINSTANCE.getTypeType(), instanceValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeType1 createTypeTypeObject1FromString(EDataType eDataType, String initialValue) {
+    return createTypeType1FromString(BxmlPackage.eINSTANCE.getTypeType1(), initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertTypeTypeObject1ToString(EDataType eDataType, Object instanceValue) {
+    return convertTypeType1ToString(BxmlPackage.eINSTANCE.getTypeType1(), instanceValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeType2 createTypeTypeObject2FromString(EDataType eDataType, String initialValue) {
+    return createTypeType2FromString(BxmlPackage.eINSTANCE.getTypeType2(), initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertTypeTypeObject2ToString(EDataType eDataType, Object instanceValue) {
+    return convertTypeType2ToString(BxmlPackage.eINSTANCE.getTypeType2(), instanceValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ValueType1 createValueTypeObjectFromString(EDataType eDataType, String initialValue) {
+    return createValueType1FromString(BxmlPackage.eINSTANCE.getValueType1(), initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertValueTypeObjectToString(EDataType eDataType, Object instanceValue) {
+    return convertValueType1ToString(BxmlPackage.eINSTANCE.getValueType1(), instanceValue);
   }
 
   /**

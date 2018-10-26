@@ -2,10 +2,10 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BecomesInType;
 import bxml.BxmlPackage;
-import bxml.ExpType;
+import bxml.ValueType;
 import bxml.VariablesType1;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -41,7 +41,7 @@ public class BecomesInTypeImpl extends MinimalEObjectImpl.Container implements B
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference.
@@ -61,7 +61,7 @@ public class BecomesInTypeImpl extends MinimalEObjectImpl.Container implements B
    * @generated
    * @ordered
    */
-  protected ExpType value;
+  protected ValueType value;
 
   /**
    * <!-- begin-user-doc -->
@@ -87,7 +87,7 @@ public class BecomesInTypeImpl extends MinimalEObjectImpl.Container implements B
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -96,8 +96,8 @@ public class BecomesInTypeImpl extends MinimalEObjectImpl.Container implements B
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.BECOMES_IN_TYPE__ATTR, oldAttr, newAttr);
@@ -111,7 +111,7 @@ public class BecomesInTypeImpl extends MinimalEObjectImpl.Container implements B
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -173,7 +173,7 @@ public class BecomesInTypeImpl extends MinimalEObjectImpl.Container implements B
    * <!-- end-user-doc -->
    * @generated
    */
-  public ExpType getValue() {
+  public ValueType getValue() {
     return value;
   }
 
@@ -182,8 +182,8 @@ public class BecomesInTypeImpl extends MinimalEObjectImpl.Container implements B
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValue(ExpType newValue, NotificationChain msgs) {
-    ExpType oldValue = value;
+  public NotificationChain basicSetValue(ValueType newValue, NotificationChain msgs) {
+    ValueType oldValue = value;
     value = newValue;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.BECOMES_IN_TYPE__VALUE, oldValue, newValue);
@@ -197,7 +197,7 @@ public class BecomesInTypeImpl extends MinimalEObjectImpl.Container implements B
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(ExpType newValue) {
+  public void setValue(ValueType newValue) {
     if (newValue != value) {
       NotificationChain msgs = null;
       if (value != null)
@@ -256,13 +256,13 @@ public class BecomesInTypeImpl extends MinimalEObjectImpl.Container implements B
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.BECOMES_IN_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.BECOMES_IN_TYPE__VARIABLES:
         setVariables((VariablesType1)newValue);
         return;
       case BxmlPackage.BECOMES_IN_TYPE__VALUE:
-        setValue((ExpType)newValue);
+        setValue((ValueType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -277,13 +277,13 @@ public class BecomesInTypeImpl extends MinimalEObjectImpl.Container implements B
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.BECOMES_IN_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.BECOMES_IN_TYPE__VARIABLES:
         setVariables((VariablesType1)null);
         return;
       case BxmlPackage.BECOMES_IN_TYPE__VALUE:
-        setValue((ExpType)null);
+        setValue((ValueType)null);
         return;
     }
     super.eUnset(featureID);

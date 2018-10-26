@@ -102,15 +102,15 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.ASSIGNEMENT_SUBSTITUTION_TYPE: {
-        AssignementSubstitutionType assignementSubstitutionType = (AssignementSubstitutionType)theEObject;
-        T result = caseAssignementSubstitutionType(assignementSubstitutionType);
+      case BxmlPackage.ASSIGNEMENT_SUB_TYPE: {
+        AssignementSubType assignementSubType = (AssignementSubType)theEObject;
+        T result = caseAssignementSubType(assignementSubType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.ATTRIBUTES_TYPE: {
-        AttributesType attributesType = (AttributesType)theEObject;
-        T result = caseAttributesType(attributesType);
+      case BxmlPackage.ATTR_TYPE: {
+        AttrType attrType = (AttrType)theEObject;
+        T result = caseAttrType(attrType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -126,27 +126,81 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.BINARY_EXPRESSION_TYPE: {
-        BinaryExpressionType binaryExpressionType = (BinaryExpressionType)theEObject;
-        T result = caseBinaryExpressionType(binaryExpressionType);
+      case BxmlPackage.BINARY_EXP_TYPE2: {
+        BinaryExpType2 binaryExpType2 = (BinaryExpType2)theEObject;
+        T result = caseBinaryExpType2(binaryExpType2);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.BINARY_PREDICATE_TYPE: {
-        BinaryPredicateType binaryPredicateType = (BinaryPredicateType)theEObject;
-        T result = caseBinaryPredicateType(binaryPredicateType);
+      case BxmlPackage.BINARY_PRED_TYPE: {
+        BinaryPredType binaryPredType = (BinaryPredType)theEObject;
+        T result = caseBinaryPredType(binaryPredType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.BINARY_SUB_TYPE: {
-        BinarySubType binarySubType = (BinarySubType)theEObject;
-        T result = caseBinarySubType(binarySubType);
+      case BxmlPackage.BLOC_SUB_TYPE: {
+        BlocSubType blocSubType = (BlocSubType)theEObject;
+        T result = caseBlocSubType(blocSubType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.CALL_PARAMATERS_TYPE: {
-        CallParamatersType callParamatersType = (CallParamatersType)theEObject;
-        T result = caseCallParamatersType(callParamatersType);
+      case BxmlPackage.BODY_TYPE: {
+        BodyType bodyType = (BodyType)theEObject;
+        T result = caseBodyType(bodyType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.BODY_TYPE1: {
+        BodyType1 bodyType1 = (BodyType1)theEObject;
+        T result = caseBodyType1(bodyType1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.BODY_TYPE2: {
+        BodyType2 bodyType2 = (BodyType2)theEObject;
+        T result = caseBodyType2(bodyType2);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.BODY_TYPE3: {
+        BodyType3 bodyType3 = (BodyType3)theEObject;
+        T result = caseBodyType3(bodyType3);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.BODY_TYPE4: {
+        BodyType4 bodyType4 = (BodyType4)theEObject;
+        T result = caseBodyType4(bodyType4);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.BODY_TYPE5: {
+        BodyType5 bodyType5 = (BodyType5)theEObject;
+        T result = caseBodyType5(bodyType5);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.BODY_TYPE6: {
+        BodyType6 bodyType6 = (BodyType6)theEObject;
+        T result = caseBodyType6(bodyType6);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.BOOLEAN_EXP_TYPE: {
+        BooleanExpType booleanExpType = (BooleanExpType)theEObject;
+        T result = caseBooleanExpType(booleanExpType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.BOOLEAN_LITERAL_TYPE: {
+        BooleanLiteralType booleanLiteralType = (BooleanLiteralType)theEObject;
+        T result = caseBooleanLiteralType(booleanLiteralType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.BYNARY_EXP_TYPE: {
+        BynaryExpType bynaryExpType = (BynaryExpType)theEObject;
+        T result = caseBynaryExpType(bynaryExpType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -168,6 +222,12 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BxmlPackage.CHOICE_TYPE1: {
+        ChoiceType1 choiceType1 = (ChoiceType1)theEObject;
+        T result = caseChoiceType1(choiceType1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BxmlPackage.CONCRETE_CONSTANTS_TYPE: {
         ConcreteConstantsType concreteConstantsType = (ConcreteConstantsType)theEObject;
         T result = caseConcreteConstantsType(concreteConstantsType);
@@ -180,9 +240,51 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BxmlPackage.CONDITION_TYPE: {
+        ConditionType conditionType = (ConditionType)theEObject;
+        T result = caseConditionType(conditionType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.CONSTRAINTS_TYPE: {
+        ConstraintsType constraintsType = (ConstraintsType)theEObject;
+        T result = caseConstraintsType(constraintsType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BxmlPackage.DOCUMENT_ROOT: {
         DocumentRoot documentRoot = (DocumentRoot)theEObject;
         T result = caseDocumentRoot(documentRoot);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.ELSE_TYPE: {
+        ElseType elseType = (ElseType)theEObject;
+        T result = caseElseType(elseType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.ELSE_TYPE1: {
+        ElseType1 elseType1 = (ElseType1)theEObject;
+        T result = caseElseType1(elseType1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.ELSE_TYPE2: {
+        ElseType2 elseType2 = (ElseType2)theEObject;
+        T result = caseElseType2(elseType2);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.EMPTY_SEQ_TYPE: {
+        EmptySeqType emptySeqType = (EmptySeqType)theEObject;
+        T result = caseEmptySeqType(emptySeqType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.EMPTY_SET_TYPE: {
+        EmptySetType emptySetType = (EmptySetType)theEObject;
+        T result = caseEmptySetType(emptySetType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -198,15 +300,27 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.EXP_TYPE: {
-        ExpType expType = (ExpType)theEObject;
-        T result = caseExpType(expType);
+      case BxmlPackage.EXTENDS_TYPE: {
+        ExtendsType extendsType = (ExtendsType)theEObject;
+        T result = caseExtendsType(extendsType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.IDENTIFIER_TYPE: {
-        IdentifierType identifierType = (IdentifierType)theEObject;
-        T result = caseIdentifierType(identifierType);
+      case BxmlPackage.GUARD_TYPE: {
+        GuardType guardType = (GuardType)theEObject;
+        T result = caseGuardType(guardType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.IDENTIFIER: {
+        Identifier identifier = (Identifier)theEObject;
+        T result = caseIdentifier(identifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.ID_TYPE: {
+        IdType idType = (IdType)theEObject;
+        T result = caseIdType(idType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -216,9 +330,21 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.INFO_TYPE_TYPE: {
-        InfoTypeType infoTypeType = (InfoTypeType)theEObject;
-        T result = caseInfoTypeType(infoTypeType);
+      case BxmlPackage.IMPORTS_TYPE: {
+        ImportsType importsType = (ImportsType)theEObject;
+        T result = caseImportsType(importsType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.INCLUDES_TYPE: {
+        IncludesType includesType = (IncludesType)theEObject;
+        T result = caseIncludesType(includesType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.INITIALISATION_TYPE: {
+        InitialisationType initialisationType = (InitialisationType)theEObject;
+        T result = caseInitialisationType(initialisationType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -228,15 +354,27 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.LET_SUB_TYPE: {
-        LETSubType letSubType = (LETSubType)theEObject;
-        T result = caseLETSubType(letSubType);
+      case BxmlPackage.INPUT_PARAMETERS_TYPE1: {
+        InputParametersType1 inputParametersType1 = (InputParametersType1)theEObject;
+        T result = caseInputParametersType1(inputParametersType1);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.LITERAL_TYPE: {
-        LiteralType literalType = (LiteralType)theEObject;
-        T result = caseLiteralType(literalType);
+      case BxmlPackage.INTEGER_LITERAL_TYPE: {
+        IntegerLiteralType integerLiteralType = (IntegerLiteralType)theEObject;
+        T result = caseIntegerLiteralType(integerLiteralType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.INVARIANT_TYPE: {
+        InvariantType invariantType = (InvariantType)theEObject;
+        T result = caseInvariantType(invariantType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.LET_SUB_TYPE: {
+        LETSubType letSubType = (LETSubType)theEObject;
+        T result = caseLETSubType(letSubType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -246,9 +384,9 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.MACHINE_TYPE1: {
-        MachineType1 machineType1 = (MachineType1)theEObject;
-        T result = caseMachineType1(machineType1);
+      case BxmlPackage.MACHINE_TYPE: {
+        MachineType machineType = (MachineType)theEObject;
+        T result = caseMachineType(machineType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -264,15 +402,15 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.NARY_PREDICATE_TYPE: {
-        NaryPredicateType naryPredicateType = (NaryPredicateType)theEObject;
-        T result = caseNaryPredicateType(naryPredicateType);
+      case BxmlPackage.NARY_PRED_TYPE: {
+        NaryPredType naryPredType = (NaryPredType)theEObject;
+        T result = caseNaryPredType(naryPredType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.NARY_SUBSTITUTION_TYPE: {
-        NarySubstitutionType narySubstitutionType = (NarySubstitutionType)theEObject;
-        T result = caseNarySubstitutionType(narySubstitutionType);
+      case BxmlPackage.NARY_SUB_TYPE: {
+        NarySubType narySubType = (NarySubType)theEObject;
+        T result = caseNarySubType(narySubType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -300,6 +438,12 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BxmlPackage.OUTPUT_PARAMETERS_TYPE1: {
+        OutputParametersType1 outputParametersType1 = (OutputParametersType1)theEObject;
+        T result = caseOutputParametersType1(outputParametersType1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BxmlPackage.PARAMETERS_TYPE: {
         ParametersType parametersType = (ParametersType)theEObject;
         T result = caseParametersType(parametersType);
@@ -312,15 +456,33 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.PREDICATE_TYPE: {
-        PredicateType predicateType = (PredicateType)theEObject;
-        T result = casePredicateType(predicateType);
+      case BxmlPackage.PRECONDITION_TYPE: {
+        PreconditionType preconditionType = (PreconditionType)theEObject;
+        T result = casePreconditionType(preconditionType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.PRED_TYPE: {
+        PredType predType = (PredType)theEObject;
+        T result = casePredType(predType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.PROMOTED_OPERATION_TYPE: {
+        PromotedOperationType promotedOperationType = (PromotedOperationType)theEObject;
+        T result = casePromotedOperationType(promotedOperationType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case BxmlPackage.PROMOTES_TYPE: {
         PromotesType promotesType = (PromotesType)theEObject;
         T result = casePromotesType(promotesType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.PROPERTIES_TYPE: {
+        PropertiesType propertiesType = (PropertiesType)theEObject;
+        T result = casePropertiesType(propertiesType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -360,18 +522,6 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.REFERENCED_MACHINE_TYPE1: {
-        ReferencedMachineType1 referencedMachineType1 = (ReferencedMachineType1)theEObject;
-        T result = caseReferencedMachineType1(referencedMachineType1);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BxmlPackage.REFERENCED_MACHINE_TYPE2: {
-        ReferencedMachineType2 referencedMachineType2 = (ReferencedMachineType2)theEObject;
-        T result = caseReferencedMachineType2(referencedMachineType2);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case BxmlPackage.REFINES_TYPE: {
         RefinesType refinesType = (RefinesType)theEObject;
         T result = caseRefinesType(refinesType);
@@ -402,9 +552,21 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BxmlPackage.SET_TYPE1: {
+        SetType1 setType1 = (SetType1)theEObject;
+        T result = caseSetType1(setType1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.SKIP_TYPE: {
+        SkipType skipType = (SkipType)theEObject;
+        T result = caseSkipType(skipType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BxmlPackage.STRING_LITERAL_TYPE: {
-        StringLiteralType stringLiteralType = (StringLiteralType)theEObject;
-        T result = caseStringLiteralType(stringLiteralType);
+        STRINGLiteralType stringLiteralType = (STRINGLiteralType)theEObject;
+        T result = caseSTRINGLiteralType(stringLiteralType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -414,15 +576,15 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.SUBSTITUTION_TYPE: {
-        SubstitutionType substitutionType = (SubstitutionType)theEObject;
-        T result = caseSubstitutionType(substitutionType);
+      case BxmlPackage.THEN_TYPE: {
+        ThenType thenType = (ThenType)theEObject;
+        T result = caseThenType(thenType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.TERMINAL_TYPE: {
-        TerminalType terminalType = (TerminalType)theEObject;
-        T result = caseTerminalType(terminalType);
+      case BxmlPackage.TYPE_INFO: {
+        TypeInfo typeInfo = (TypeInfo)theEObject;
+        T result = caseTypeInfo(typeInfo);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -432,15 +594,27 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.UNARY_EXPRESSION_TYPE: {
-        UnaryExpressionType unaryExpressionType = (UnaryExpressionType)theEObject;
-        T result = caseUnaryExpressionType(unaryExpressionType);
+      case BxmlPackage.UNARY_EXP_TYPE: {
+        UnaryExpType unaryExpType = (UnaryExpType)theEObject;
+        T result = caseUnaryExpType(unaryExpType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BxmlPackage.UNARY_PREDICATE_TYPE: {
-        UnaryPredicateType unaryPredicateType = (UnaryPredicateType)theEObject;
-        T result = caseUnaryPredicateType(unaryPredicateType);
+      case BxmlPackage.UNARY_EXP_TYPE2: {
+        UnaryExpType2 unaryExpType2 = (UnaryExpType2)theEObject;
+        T result = caseUnaryExpType2(unaryExpType2);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.UNARY_PRED_TYPE: {
+        UnaryPredType unaryPredType = (UnaryPredType)theEObject;
+        T result = caseUnaryPredType(unaryPredType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.USES_TYPE: {
+        UsesType usesType = (UsesType)theEObject;
+        T result = caseUsesType(usesType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -474,6 +648,12 @@ public class BxmlSwitch<T> extends Switch<T> {
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BxmlPackage.VALUE_TYPE: {
+        ValueType valueType = (ValueType)theEObject;
+        T result = caseValueType(valueType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BxmlPackage.VARIABLES_TYPE: {
         VariablesType variablesType = (VariablesType)theEObject;
         T result = caseVariablesType(variablesType);
@@ -483,6 +663,12 @@ public class BxmlSwitch<T> extends Switch<T> {
       case BxmlPackage.VARIABLES_TYPE1: {
         VariablesType1 variablesType1 = (VariablesType1)theEObject;
         T result = caseVariablesType1(variablesType1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BxmlPackage.VARIANT_TYPE: {
+        VariantType variantType = (VariantType)theEObject;
+        T result = caseVariantType(variantType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -605,32 +791,32 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Assignement Substitution Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Assignement Sub Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Assignement Substitution Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Assignement Sub Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAssignementSubstitutionType(AssignementSubstitutionType object) {
+  public T caseAssignementSubType(AssignementSubType object) {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Attributes Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Attr Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Attributes Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Attr Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAttributesType(AttributesType object) {
+  public T caseAttrType(AttrType object) {
     return null;
   }
 
@@ -665,62 +851,197 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Binary Expression Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Binary Exp Type2</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Binary Expression Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Binary Exp Type2</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBinaryExpressionType(BinaryExpressionType object) {
+  public T caseBinaryExpType2(BinaryExpType2 object) {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Binary Predicate Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Binary Pred Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Binary Predicate Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Binary Pred Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBinaryPredicateType(BinaryPredicateType object) {
+  public T caseBinaryPredType(BinaryPredType object) {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Binary Sub Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Bloc Sub Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Binary Sub Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Bloc Sub Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBinarySubType(BinarySubType object) {
+  public T caseBlocSubType(BlocSubType object) {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Call Paramaters Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Body Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Call Paramaters Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Body Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseCallParamatersType(CallParamatersType object) {
+  public T caseBodyType(BodyType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Body Type1</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Body Type1</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBodyType1(BodyType1 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Body Type2</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Body Type2</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBodyType2(BodyType2 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Body Type3</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Body Type3</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBodyType3(BodyType3 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Body Type4</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Body Type4</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBodyType4(BodyType4 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Body Type5</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Body Type5</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBodyType5(BodyType5 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Body Type6</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Body Type6</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBodyType6(BodyType6 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Boolean Exp Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Boolean Exp Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBooleanExpType(BooleanExpType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Boolean Literal Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Boolean Literal Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBooleanLiteralType(BooleanLiteralType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bynary Exp Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bynary Exp Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBynaryExpType(BynaryExpType object) {
     return null;
   }
 
@@ -770,6 +1091,21 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Choice Type1</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Choice Type1</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseChoiceType1(ChoiceType1 object) {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Concrete Constants Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -800,6 +1136,36 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Condition Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Condition Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConditionType(ConditionType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Constraints Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Constraints Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConstraintsType(ConstraintsType object) {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Document Root</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -811,6 +1177,81 @@ public class BxmlSwitch<T> extends Switch<T> {
    * @generated
    */
   public T caseDocumentRoot(DocumentRoot object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Else Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Else Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseElseType(ElseType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Else Type1</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Else Type1</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseElseType1(ElseType1 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Else Type2</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Else Type2</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseElseType2(ElseType2 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Empty Seq Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Empty Seq Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEmptySeqType(EmptySeqType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Empty Set Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Empty Set Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEmptySetType(EmptySetType object) {
     return null;
   }
 
@@ -845,32 +1286,62 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Exp Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Extends Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Exp Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Extends Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseExpType(ExpType object) {
+  public T caseExtendsType(ExtendsType object) {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Identifier Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Guard Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Identifier Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Guard Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseIdentifierType(IdentifierType object) {
+  public T caseGuardType(GuardType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIdentifier(Identifier object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Id Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Id Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIdType(IdType object) {
     return null;
   }
 
@@ -890,17 +1361,47 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Info Type Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Imports Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Info Type Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Imports Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseInfoTypeType(InfoTypeType object) {
+  public T caseImportsType(ImportsType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Includes Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Includes Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIncludesType(IncludesType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Initialisation Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Initialisation Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInitialisationType(InitialisationType object) {
     return null;
   }
 
@@ -920,6 +1421,51 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Input Parameters Type1</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Input Parameters Type1</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInputParametersType1(InputParametersType1 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Integer Literal Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Integer Literal Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntegerLiteralType(IntegerLiteralType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Invariant Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Invariant Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInvariantType(InvariantType object) {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>LET Sub Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -931,21 +1477,6 @@ public class BxmlSwitch<T> extends Switch<T> {
    * @generated
    */
   public T caseLETSubType(LETSubType object) {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Literal Type</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Literal Type</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLiteralType(LiteralType object) {
     return null;
   }
 
@@ -965,17 +1496,17 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Machine Type1</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Machine Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Machine Type1</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Machine Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseMachineType1(MachineType1 object) {
+  public T caseMachineType(MachineType object) {
     return null;
   }
 
@@ -1010,32 +1541,32 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Nary Predicate Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Nary Pred Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Nary Predicate Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Nary Pred Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseNaryPredicateType(NaryPredicateType object) {
+  public T caseNaryPredType(NaryPredType object) {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Nary Substitution Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Nary Sub Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Nary Substitution Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Nary Sub Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseNarySubstitutionType(NarySubstitutionType object) {
+  public T caseNarySubType(NarySubType object) {
     return null;
   }
 
@@ -1100,6 +1631,21 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Output Parameters Type1</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Output Parameters Type1</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOutputParametersType1(OutputParametersType1 object) {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Parameters Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1130,17 +1676,47 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Predicate Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Precondition Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Predicate Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Precondition Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePredicateType(PredicateType object) {
+  public T casePreconditionType(PreconditionType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pred Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pred Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePredType(PredType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Promoted Operation Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Promoted Operation Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePromotedOperationType(PromotedOperationType object) {
     return null;
   }
 
@@ -1156,6 +1732,21 @@ public class BxmlSwitch<T> extends Switch<T> {
    * @generated
    */
   public T casePromotesType(PromotesType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Properties Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Properties Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePropertiesType(PropertiesType object) {
     return null;
   }
 
@@ -1250,36 +1841,6 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Referenced Machine Type1</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Referenced Machine Type1</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseReferencedMachineType1(ReferencedMachineType1 object) {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Referenced Machine Type2</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Referenced Machine Type2</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseReferencedMachineType2(ReferencedMachineType2 object) {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Refines Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1355,17 +1916,47 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>String Literal Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Set Type1</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>String Literal Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Set Type1</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStringLiteralType(StringLiteralType object) {
+  public T caseSetType1(SetType1 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Skip Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Skip Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSkipType(SkipType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>STRING Literal Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>STRING Literal Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSTRINGLiteralType(STRINGLiteralType object) {
     return null;
   }
 
@@ -1385,32 +1976,32 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Substitution Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Then Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Substitution Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Then Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSubstitutionType(SubstitutionType object) {
+  public T caseThenType(ThenType object) {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Terminal Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Type Info</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Terminal Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Type Info</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTerminalType(TerminalType object) {
+  public T caseTypeInfo(TypeInfo object) {
     return null;
   }
 
@@ -1430,32 +2021,62 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Unary Expression Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Unary Exp Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Unary Expression Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Unary Exp Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseUnaryExpressionType(UnaryExpressionType object) {
+  public T caseUnaryExpType(UnaryExpType object) {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Unary Predicate Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Unary Exp Type2</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Unary Predicate Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Unary Exp Type2</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseUnaryPredicateType(UnaryPredicateType object) {
+  public T caseUnaryExpType2(UnaryExpType2 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Unary Pred Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Unary Pred Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseUnaryPredType(UnaryPredType object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Uses Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Uses Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseUsesType(UsesType object) {
     return null;
   }
 
@@ -1535,6 +2156,21 @@ public class BxmlSwitch<T> extends Switch<T> {
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Value Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Value Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseValueType(ValueType object) {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Variables Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1561,6 +2197,21 @@ public class BxmlSwitch<T> extends Switch<T> {
    * @generated
    */
   public T caseVariablesType1(VariablesType1 object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Variant Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Variant Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVariantType(VariantType object) {
     return null;
   }
 

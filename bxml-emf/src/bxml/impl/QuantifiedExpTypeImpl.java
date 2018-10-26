@@ -2,13 +2,15 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
+import bxml.BodyType3;
 import bxml.BxmlPackage;
-import bxml.ExpType;
-import bxml.PredicateType;
-import bxml.QuantifiedExpOp;
+import bxml.PredType;
 import bxml.QuantifiedExpType;
+import bxml.TypeType2;
 import bxml.VariablesType1;
+
+import java.math.BigInteger;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -32,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link bxml.impl.QuantifiedExpTypeImpl#getPred <em>Pred</em>}</li>
  *   <li>{@link bxml.impl.QuantifiedExpTypeImpl#getBody <em>Body</em>}</li>
  *   <li>{@link bxml.impl.QuantifiedExpTypeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link bxml.impl.QuantifiedExpTypeImpl#getTypref <em>Typref</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,7 +48,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference.
@@ -65,7 +68,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected PredicateType pred;
+  protected PredType pred;
 
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
@@ -75,7 +78,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected ExpType body;
+  protected BodyType3 body;
 
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -85,7 +88,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected static final QuantifiedExpOp TYPE_EDEFAULT = QuantifiedExpOp.__;
+  protected static final TypeType2 TYPE_EDEFAULT = TypeType2.__;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -95,7 +98,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected QuantifiedExpOp type = TYPE_EDEFAULT;
+  protected TypeType2 type = TYPE_EDEFAULT;
 
   /**
    * This is true if the Type attribute has been set.
@@ -105,6 +108,26 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * @ordered
    */
   protected boolean typeESet;
+
+  /**
+   * The default value of the '{@link #getTypref() <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypref()
+   * @generated
+   * @ordered
+   */
+  protected static final BigInteger TYPREF_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getTypref() <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypref()
+   * @generated
+   * @ordered
+   */
+  protected BigInteger typref = TYPREF_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -130,7 +153,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -139,8 +162,8 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.QUANTIFIED_EXP_TYPE__ATTR, oldAttr, newAttr);
@@ -154,7 +177,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -216,7 +239,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getPred() {
+  public PredType getPred() {
     return pred;
   }
 
@@ -225,8 +248,8 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPred(PredicateType newPred, NotificationChain msgs) {
-    PredicateType oldPred = pred;
+  public NotificationChain basicSetPred(PredType newPred, NotificationChain msgs) {
+    PredType oldPred = pred;
     pred = newPred;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.QUANTIFIED_EXP_TYPE__PRED, oldPred, newPred);
@@ -240,7 +263,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPred(PredicateType newPred) {
+  public void setPred(PredType newPred) {
     if (newPred != pred) {
       NotificationChain msgs = null;
       if (pred != null)
@@ -259,7 +282,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public ExpType getBody() {
+  public BodyType3 getBody() {
     return body;
   }
 
@@ -268,8 +291,8 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBody(ExpType newBody, NotificationChain msgs) {
-    ExpType oldBody = body;
+  public NotificationChain basicSetBody(BodyType3 newBody, NotificationChain msgs) {
+    BodyType3 oldBody = body;
     body = newBody;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.QUANTIFIED_EXP_TYPE__BODY, oldBody, newBody);
@@ -283,7 +306,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBody(ExpType newBody) {
+  public void setBody(BodyType3 newBody) {
     if (newBody != body) {
       NotificationChain msgs = null;
       if (body != null)
@@ -302,7 +325,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public QuantifiedExpOp getType() {
+  public TypeType2 getType() {
     return type;
   }
 
@@ -311,8 +334,8 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(QuantifiedExpOp newType) {
-    QuantifiedExpOp oldType = type;
+  public void setType(TypeType2 newType) {
+    TypeType2 oldType = type;
     type = newType == null ? TYPE_EDEFAULT : newType;
     boolean oldTypeESet = typeESet;
     typeESet = true;
@@ -326,7 +349,7 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   public void unsetType() {
-    QuantifiedExpOp oldType = type;
+    TypeType2 oldType = type;
     boolean oldTypeESet = typeESet;
     type = TYPE_EDEFAULT;
     typeESet = false;
@@ -341,6 +364,27 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
    */
   public boolean isSetType() {
     return typeESet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BigInteger getTypref() {
+    return typref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTypref(BigInteger newTypref) {
+    BigInteger oldTypref = typref;
+    typref = newTypref;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.QUANTIFIED_EXP_TYPE__TYPREF, oldTypref, typref));
   }
 
   /**
@@ -381,6 +425,8 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
         return getBody();
       case BxmlPackage.QUANTIFIED_EXP_TYPE__TYPE:
         return getType();
+      case BxmlPackage.QUANTIFIED_EXP_TYPE__TYPREF:
+        return getTypref();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -394,19 +440,22 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.QUANTIFIED_EXP_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.QUANTIFIED_EXP_TYPE__VARIABLES:
         setVariables((VariablesType1)newValue);
         return;
       case BxmlPackage.QUANTIFIED_EXP_TYPE__PRED:
-        setPred((PredicateType)newValue);
+        setPred((PredType)newValue);
         return;
       case BxmlPackage.QUANTIFIED_EXP_TYPE__BODY:
-        setBody((ExpType)newValue);
+        setBody((BodyType3)newValue);
         return;
       case BxmlPackage.QUANTIFIED_EXP_TYPE__TYPE:
-        setType((QuantifiedExpOp)newValue);
+        setType((TypeType2)newValue);
+        return;
+      case BxmlPackage.QUANTIFIED_EXP_TYPE__TYPREF:
+        setTypref((BigInteger)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -421,19 +470,22 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.QUANTIFIED_EXP_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.QUANTIFIED_EXP_TYPE__VARIABLES:
         setVariables((VariablesType1)null);
         return;
       case BxmlPackage.QUANTIFIED_EXP_TYPE__PRED:
-        setPred((PredicateType)null);
+        setPred((PredType)null);
         return;
       case BxmlPackage.QUANTIFIED_EXP_TYPE__BODY:
-        setBody((ExpType)null);
+        setBody((BodyType3)null);
         return;
       case BxmlPackage.QUANTIFIED_EXP_TYPE__TYPE:
         unsetType();
+        return;
+      case BxmlPackage.QUANTIFIED_EXP_TYPE__TYPREF:
+        setTypref(TYPREF_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -457,6 +509,8 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
         return body != null;
       case BxmlPackage.QUANTIFIED_EXP_TYPE__TYPE:
         return isSetType();
+      case BxmlPackage.QUANTIFIED_EXP_TYPE__TYPREF:
+        return TYPREF_EDEFAULT == null ? typref != null : !TYPREF_EDEFAULT.equals(typref);
     }
     return super.eIsSet(featureID);
   }
@@ -473,6 +527,8 @@ public class QuantifiedExpTypeImpl extends MinimalEObjectImpl.Container implemen
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (type: ");
     if (typeESet) result.append(type); else result.append("<unset>");
+    result.append(", typref: ");
+    result.append(typref);
     result.append(')');
     return result.toString();
   }

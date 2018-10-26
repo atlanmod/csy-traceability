@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link bxml.ReferencedMachineType#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.ReferencedMachineType#getName <em>Name</em>}</li>
  *   <li>{@link bxml.ReferencedMachineType#getInstance <em>Instance</em>}</li>
  *   <li>{@link bxml.ReferencedMachineType#getParameters <em>Parameters</em>}</li>
- *   <li>{@link bxml.ReferencedMachineType#getPath <em>Path</em>}</li>
  * </ul>
  *
  * @see bxml.BxmlPackage#getReferencedMachineType()
@@ -24,6 +24,33 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ReferencedMachineType extends EObject {
+  /**
+   * Returns the value of the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Attr</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Attr</em>' containment reference.
+   * @see #setAttr(AttrType)
+   * @see bxml.BxmlPackage#getReferencedMachineType_Attr()
+   * @model containment="true"
+   *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
+   * @generated
+   */
+  AttrType getAttr();
+
+  /**
+   * Sets the value of the '{@link bxml.ReferencedMachineType#getAttr <em>Attr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Attr</em>' containment reference.
+   * @see #getAttr()
+   * @generated
+   */
+  void setAttr(AttrType value);
+
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -87,13 +114,13 @@ public interface ReferencedMachineType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Parameters</em>' containment reference.
-   * @see #setParameters(ParametersType)
+   * @see #setParameters(ParametersType1)
    * @see bxml.BxmlPackage#getReferencedMachineType_Parameters()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Parameters' namespace='##targetNamespace'"
    * @generated
    */
-  ParametersType getParameters();
+  ParametersType1 getParameters();
 
   /**
    * Sets the value of the '{@link bxml.ReferencedMachineType#getParameters <em>Parameters</em>}' containment reference.
@@ -103,33 +130,6 @@ public interface ReferencedMachineType extends EObject {
    * @see #getParameters()
    * @generated
    */
-  void setParameters(ParametersType value);
-
-  /**
-   * Returns the value of the '<em><b>Path</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Path</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Path</em>' attribute.
-   * @see #setPath(String)
-   * @see bxml.BxmlPackage#getReferencedMachineType_Path()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='path' namespace='##targetNamespace'"
-   * @generated
-   */
-  String getPath();
-
-  /**
-   * Sets the value of the '{@link bxml.ReferencedMachineType#getPath <em>Path</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Path</em>' attribute.
-   * @see #getPath()
-   * @generated
-   */
-  void setPath(String value);
+  void setParameters(ParametersType1 value);
 
 } // ReferencedMachineType

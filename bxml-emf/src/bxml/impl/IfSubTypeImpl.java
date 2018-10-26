@@ -2,11 +2,13 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BxmlPackage;
+import bxml.ConditionType;
+import bxml.ElseType2;
+import bxml.ElseifType;
 import bxml.IfSubType;
-import bxml.PredicateType;
-import bxml.SubstitutionType;
+import bxml.ThenType;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -43,7 +45,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
@@ -53,7 +55,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * @generated
    * @ordered
    */
-  protected PredicateType condition;
+  protected ConditionType condition;
 
   /**
    * The cached value of the '{@link #getThen() <em>Then</em>}' containment reference.
@@ -63,7 +65,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * @generated
    * @ordered
    */
-  protected SubstitutionType then;
+  protected ThenType then;
 
   /**
    * The cached value of the '{@link #getElse() <em>Else</em>}' containment reference.
@@ -73,7 +75,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * @generated
    * @ordered
    */
-  protected SubstitutionType else_;
+  protected ElseType2 else_;
 
   /**
    * The default value of the '{@link #getElseif() <em>Elseif</em>}' attribute.
@@ -83,7 +85,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * @generated
    * @ordered
    */
-  protected static final String ELSEIF_EDEFAULT = null;
+  protected static final ElseifType ELSEIF_EDEFAULT = ElseifType.YES;
 
   /**
    * The cached value of the '{@link #getElseif() <em>Elseif</em>}' attribute.
@@ -93,7 +95,16 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * @generated
    * @ordered
    */
-  protected String elseif = ELSEIF_EDEFAULT;
+  protected ElseifType elseif = ELSEIF_EDEFAULT;
+
+  /**
+   * This is true if the Elseif attribute has been set.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  protected boolean elseifESet;
 
   /**
    * <!-- begin-user-doc -->
@@ -119,7 +130,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -128,8 +139,8 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.IF_SUB_TYPE__ATTR, oldAttr, newAttr);
@@ -143,7 +154,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -162,7 +173,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getCondition() {
+  public ConditionType getCondition() {
     return condition;
   }
 
@@ -171,8 +182,8 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetCondition(PredicateType newCondition, NotificationChain msgs) {
-    PredicateType oldCondition = condition;
+  public NotificationChain basicSetCondition(ConditionType newCondition, NotificationChain msgs) {
+    ConditionType oldCondition = condition;
     condition = newCondition;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.IF_SUB_TYPE__CONDITION, oldCondition, newCondition);
@@ -186,7 +197,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setCondition(PredicateType newCondition) {
+  public void setCondition(ConditionType newCondition) {
     if (newCondition != condition) {
       NotificationChain msgs = null;
       if (condition != null)
@@ -205,7 +216,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubstitutionType getThen() {
+  public ThenType getThen() {
     return then;
   }
 
@@ -214,8 +225,8 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetThen(SubstitutionType newThen, NotificationChain msgs) {
-    SubstitutionType oldThen = then;
+  public NotificationChain basicSetThen(ThenType newThen, NotificationChain msgs) {
+    ThenType oldThen = then;
     then = newThen;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.IF_SUB_TYPE__THEN, oldThen, newThen);
@@ -229,7 +240,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setThen(SubstitutionType newThen) {
+  public void setThen(ThenType newThen) {
     if (newThen != then) {
       NotificationChain msgs = null;
       if (then != null)
@@ -248,7 +259,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubstitutionType getElse() {
+  public ElseType2 getElse() {
     return else_;
   }
 
@@ -257,8 +268,8 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetElse(SubstitutionType newElse, NotificationChain msgs) {
-    SubstitutionType oldElse = else_;
+  public NotificationChain basicSetElse(ElseType2 newElse, NotificationChain msgs) {
+    ElseType2 oldElse = else_;
     else_ = newElse;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.IF_SUB_TYPE__ELSE, oldElse, newElse);
@@ -272,7 +283,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setElse(SubstitutionType newElse) {
+  public void setElse(ElseType2 newElse) {
     if (newElse != else_) {
       NotificationChain msgs = null;
       if (else_ != null)
@@ -291,7 +302,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getElseif() {
+  public ElseifType getElseif() {
     return elseif;
   }
 
@@ -300,11 +311,36 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setElseif(String newElseif) {
-    String oldElseif = elseif;
-    elseif = newElseif;
+  public void setElseif(ElseifType newElseif) {
+    ElseifType oldElseif = elseif;
+    elseif = newElseif == null ? ELSEIF_EDEFAULT : newElseif;
+    boolean oldElseifESet = elseifESet;
+    elseifESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.IF_SUB_TYPE__ELSEIF, oldElseif, elseif));
+      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.IF_SUB_TYPE__ELSEIF, oldElseif, elseif, !oldElseifESet));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void unsetElseif() {
+    ElseifType oldElseif = elseif;
+    boolean oldElseifESet = elseifESet;
+    elseif = ELSEIF_EDEFAULT;
+    elseifESet = false;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.UNSET, BxmlPackage.IF_SUB_TYPE__ELSEIF, oldElseif, ELSEIF_EDEFAULT, oldElseifESet));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isSetElseif() {
+    return elseifESet;
   }
 
   /**
@@ -358,19 +394,19 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.IF_SUB_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.IF_SUB_TYPE__CONDITION:
-        setCondition((PredicateType)newValue);
+        setCondition((ConditionType)newValue);
         return;
       case BxmlPackage.IF_SUB_TYPE__THEN:
-        setThen((SubstitutionType)newValue);
+        setThen((ThenType)newValue);
         return;
       case BxmlPackage.IF_SUB_TYPE__ELSE:
-        setElse((SubstitutionType)newValue);
+        setElse((ElseType2)newValue);
         return;
       case BxmlPackage.IF_SUB_TYPE__ELSEIF:
-        setElseif((String)newValue);
+        setElseif((ElseifType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -385,19 +421,19 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.IF_SUB_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.IF_SUB_TYPE__CONDITION:
-        setCondition((PredicateType)null);
+        setCondition((ConditionType)null);
         return;
       case BxmlPackage.IF_SUB_TYPE__THEN:
-        setThen((SubstitutionType)null);
+        setThen((ThenType)null);
         return;
       case BxmlPackage.IF_SUB_TYPE__ELSE:
-        setElse((SubstitutionType)null);
+        setElse((ElseType2)null);
         return;
       case BxmlPackage.IF_SUB_TYPE__ELSEIF:
-        setElseif(ELSEIF_EDEFAULT);
+        unsetElseif();
         return;
     }
     super.eUnset(featureID);
@@ -420,7 +456,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
       case BxmlPackage.IF_SUB_TYPE__ELSE:
         return else_ != null;
       case BxmlPackage.IF_SUB_TYPE__ELSEIF:
-        return ELSEIF_EDEFAULT == null ? elseif != null : !ELSEIF_EDEFAULT.equals(elseif);
+        return isSetElseif();
     }
     return super.eIsSet(featureID);
   }
@@ -436,7 +472,7 @@ public class IfSubTypeImpl extends MinimalEObjectImpl.Container implements IfSub
 
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (elseif: ");
-    result.append(elseif);
+    if (elseifESet) result.append(elseif); else result.append("<unset>");
     result.append(')');
     return result.toString();
   }

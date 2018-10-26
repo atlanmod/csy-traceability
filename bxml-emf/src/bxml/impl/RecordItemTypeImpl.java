@@ -2,20 +2,23 @@
  */
 package bxml.impl;
 
-import bxml.BinaryExpressionType;
+import bxml.AttrType;
+import bxml.BooleanExpType;
+import bxml.BooleanLiteralType;
 import bxml.BxmlPackage;
-import bxml.IdentifierType;
-import bxml.LiteralType;
+import bxml.BynaryExpType;
+import bxml.EmptySeqType;
+import bxml.EmptySetType;
+import bxml.Identifier;
+import bxml.IntegerLiteralType;
 import bxml.NaryExpType;
-import bxml.PredicateType;
 import bxml.QuantifiedExpType;
 import bxml.QuantifiedSetType;
 import bxml.RecordItemType;
 import bxml.RecordType;
-import bxml.StringLiteralType;
+import bxml.STRINGLiteralType;
 import bxml.StructType;
-import bxml.TerminalType;
-import bxml.UnaryExpressionType;
+import bxml.UnaryExpType;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -34,6 +37,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link bxml.impl.RecordItemTypeImpl#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.impl.RecordItemTypeImpl#getBinaryExp <em>Binary Exp</em>}</li>
  *   <li>{@link bxml.impl.RecordItemTypeImpl#getNaryExp <em>Nary Exp</em>}</li>
  *   <li>{@link bxml.impl.RecordItemTypeImpl#getBooleanLiteral <em>Boolean Literal</em>}</li>
@@ -55,6 +59,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements RecordItemType {
   /**
+   * The cached value of the '{@link #getAttr() <em>Attr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAttr()
+   * @generated
+   * @ordered
+   */
+  protected AttrType attr;
+
+  /**
    * The cached value of the '{@link #getBinaryExp() <em>Binary Exp</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -62,7 +76,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected BinaryExpressionType binaryExp;
+  protected BynaryExpType binaryExp;
 
   /**
    * The cached value of the '{@link #getNaryExp() <em>Nary Exp</em>}' containment reference.
@@ -82,7 +96,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected IdentifierType booleanLiteral;
+  protected BooleanLiteralType booleanLiteral;
 
   /**
    * The cached value of the '{@link #getBooleanExp() <em>Boolean Exp</em>}' containment reference.
@@ -92,7 +106,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected PredicateType booleanExp;
+  protected BooleanExpType booleanExp;
 
   /**
    * The cached value of the '{@link #getEmptySet() <em>Empty Set</em>}' containment reference.
@@ -102,7 +116,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected TerminalType emptySet;
+  protected EmptySetType emptySet;
 
   /**
    * The cached value of the '{@link #getEmptySeq() <em>Empty Seq</em>}' containment reference.
@@ -112,7 +126,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected TerminalType emptySeq;
+  protected EmptySeqType emptySeq;
 
   /**
    * The cached value of the '{@link #getId() <em>Id</em>}' containment reference.
@@ -122,7 +136,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected IdentifierType id;
+  protected Identifier id;
 
   /**
    * The cached value of the '{@link #getIntegerLiteral() <em>Integer Literal</em>}' containment reference.
@@ -132,7 +146,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected LiteralType integerLiteral;
+  protected IntegerLiteralType integerLiteral;
 
   /**
    * The cached value of the '{@link #getQuantifiedExp() <em>Quantified Exp</em>}' containment reference.
@@ -162,7 +176,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected StringLiteralType sTRINGLiteral;
+  protected STRINGLiteralType sTRINGLiteral;
 
   /**
    * The cached value of the '{@link #getUnaryExp() <em>Unary Exp</em>}' containment reference.
@@ -172,7 +186,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected UnaryExpressionType unaryExp;
+  protected UnaryExpType unaryExp;
 
   /**
    * The cached value of the '{@link #getStruct() <em>Struct</em>}' containment reference.
@@ -202,7 +216,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected static final String LABEL_EDEFAULT = null;
+  protected static final Object LABEL_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
@@ -212,7 +226,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected String label = LABEL_EDEFAULT;
+  protected Object label = LABEL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -238,7 +252,50 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryExpressionType getBinaryExp() {
+  public AttrType getAttr() {
+    return attr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
+    attr = newAttr;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__ATTR, oldAttr, newAttr);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAttr(AttrType newAttr) {
+    if (newAttr != attr) {
+      NotificationChain msgs = null;
+      if (attr != null)
+        msgs = ((InternalEObject)attr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.RECORD_ITEM_TYPE__ATTR, null, msgs);
+      if (newAttr != null)
+        msgs = ((InternalEObject)newAttr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.RECORD_ITEM_TYPE__ATTR, null, msgs);
+      msgs = basicSetAttr(newAttr, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__ATTR, newAttr, newAttr));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BynaryExpType getBinaryExp() {
     return binaryExp;
   }
 
@@ -247,8 +304,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBinaryExp(BinaryExpressionType newBinaryExp, NotificationChain msgs) {
-    BinaryExpressionType oldBinaryExp = binaryExp;
+  public NotificationChain basicSetBinaryExp(BynaryExpType newBinaryExp, NotificationChain msgs) {
+    BynaryExpType oldBinaryExp = binaryExp;
     binaryExp = newBinaryExp;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__BINARY_EXP, oldBinaryExp, newBinaryExp);
@@ -262,7 +319,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBinaryExp(BinaryExpressionType newBinaryExp) {
+  public void setBinaryExp(BynaryExpType newBinaryExp) {
     if (newBinaryExp != binaryExp) {
       NotificationChain msgs = null;
       if (binaryExp != null)
@@ -324,7 +381,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierType getBooleanLiteral() {
+  public BooleanLiteralType getBooleanLiteral() {
     return booleanLiteral;
   }
 
@@ -333,8 +390,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBooleanLiteral(IdentifierType newBooleanLiteral, NotificationChain msgs) {
-    IdentifierType oldBooleanLiteral = booleanLiteral;
+  public NotificationChain basicSetBooleanLiteral(BooleanLiteralType newBooleanLiteral, NotificationChain msgs) {
+    BooleanLiteralType oldBooleanLiteral = booleanLiteral;
     booleanLiteral = newBooleanLiteral;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__BOOLEAN_LITERAL, oldBooleanLiteral, newBooleanLiteral);
@@ -348,7 +405,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBooleanLiteral(IdentifierType newBooleanLiteral) {
+  public void setBooleanLiteral(BooleanLiteralType newBooleanLiteral) {
     if (newBooleanLiteral != booleanLiteral) {
       NotificationChain msgs = null;
       if (booleanLiteral != null)
@@ -367,7 +424,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getBooleanExp() {
+  public BooleanExpType getBooleanExp() {
     return booleanExp;
   }
 
@@ -376,8 +433,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBooleanExp(PredicateType newBooleanExp, NotificationChain msgs) {
-    PredicateType oldBooleanExp = booleanExp;
+  public NotificationChain basicSetBooleanExp(BooleanExpType newBooleanExp, NotificationChain msgs) {
+    BooleanExpType oldBooleanExp = booleanExp;
     booleanExp = newBooleanExp;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__BOOLEAN_EXP, oldBooleanExp, newBooleanExp);
@@ -391,7 +448,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBooleanExp(PredicateType newBooleanExp) {
+  public void setBooleanExp(BooleanExpType newBooleanExp) {
     if (newBooleanExp != booleanExp) {
       NotificationChain msgs = null;
       if (booleanExp != null)
@@ -410,7 +467,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public TerminalType getEmptySet() {
+  public EmptySetType getEmptySet() {
     return emptySet;
   }
 
@@ -419,8 +476,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEmptySet(TerminalType newEmptySet, NotificationChain msgs) {
-    TerminalType oldEmptySet = emptySet;
+  public NotificationChain basicSetEmptySet(EmptySetType newEmptySet, NotificationChain msgs) {
+    EmptySetType oldEmptySet = emptySet;
     emptySet = newEmptySet;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__EMPTY_SET, oldEmptySet, newEmptySet);
@@ -434,7 +491,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEmptySet(TerminalType newEmptySet) {
+  public void setEmptySet(EmptySetType newEmptySet) {
     if (newEmptySet != emptySet) {
       NotificationChain msgs = null;
       if (emptySet != null)
@@ -453,7 +510,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public TerminalType getEmptySeq() {
+  public EmptySeqType getEmptySeq() {
     return emptySeq;
   }
 
@@ -462,8 +519,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEmptySeq(TerminalType newEmptySeq, NotificationChain msgs) {
-    TerminalType oldEmptySeq = emptySeq;
+  public NotificationChain basicSetEmptySeq(EmptySeqType newEmptySeq, NotificationChain msgs) {
+    EmptySeqType oldEmptySeq = emptySeq;
     emptySeq = newEmptySeq;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__EMPTY_SEQ, oldEmptySeq, newEmptySeq);
@@ -477,7 +534,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEmptySeq(TerminalType newEmptySeq) {
+  public void setEmptySeq(EmptySeqType newEmptySeq) {
     if (newEmptySeq != emptySeq) {
       NotificationChain msgs = null;
       if (emptySeq != null)
@@ -496,7 +553,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierType getId() {
+  public Identifier getId() {
     return id;
   }
 
@@ -505,8 +562,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetId(IdentifierType newId, NotificationChain msgs) {
-    IdentifierType oldId = id;
+  public NotificationChain basicSetId(Identifier newId, NotificationChain msgs) {
+    Identifier oldId = id;
     id = newId;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__ID, oldId, newId);
@@ -520,7 +577,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(IdentifierType newId) {
+  public void setId(Identifier newId) {
     if (newId != id) {
       NotificationChain msgs = null;
       if (id != null)
@@ -539,7 +596,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralType getIntegerLiteral() {
+  public IntegerLiteralType getIntegerLiteral() {
     return integerLiteral;
   }
 
@@ -548,8 +605,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIntegerLiteral(LiteralType newIntegerLiteral, NotificationChain msgs) {
-    LiteralType oldIntegerLiteral = integerLiteral;
+  public NotificationChain basicSetIntegerLiteral(IntegerLiteralType newIntegerLiteral, NotificationChain msgs) {
+    IntegerLiteralType oldIntegerLiteral = integerLiteral;
     integerLiteral = newIntegerLiteral;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__INTEGER_LITERAL, oldIntegerLiteral, newIntegerLiteral);
@@ -563,7 +620,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIntegerLiteral(LiteralType newIntegerLiteral) {
+  public void setIntegerLiteral(IntegerLiteralType newIntegerLiteral) {
     if (newIntegerLiteral != integerLiteral) {
       NotificationChain msgs = null;
       if (integerLiteral != null)
@@ -668,7 +725,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public StringLiteralType getSTRINGLiteral() {
+  public STRINGLiteralType getSTRINGLiteral() {
     return sTRINGLiteral;
   }
 
@@ -677,8 +734,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetSTRINGLiteral(StringLiteralType newSTRINGLiteral, NotificationChain msgs) {
-    StringLiteralType oldSTRINGLiteral = sTRINGLiteral;
+  public NotificationChain basicSetSTRINGLiteral(STRINGLiteralType newSTRINGLiteral, NotificationChain msgs) {
+    STRINGLiteralType oldSTRINGLiteral = sTRINGLiteral;
     sTRINGLiteral = newSTRINGLiteral;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__STRING_LITERAL, oldSTRINGLiteral, newSTRINGLiteral);
@@ -692,7 +749,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSTRINGLiteral(StringLiteralType newSTRINGLiteral) {
+  public void setSTRINGLiteral(STRINGLiteralType newSTRINGLiteral) {
     if (newSTRINGLiteral != sTRINGLiteral) {
       NotificationChain msgs = null;
       if (sTRINGLiteral != null)
@@ -711,7 +768,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryExpressionType getUnaryExp() {
+  public UnaryExpType getUnaryExp() {
     return unaryExp;
   }
 
@@ -720,8 +777,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetUnaryExp(UnaryExpressionType newUnaryExp, NotificationChain msgs) {
-    UnaryExpressionType oldUnaryExp = unaryExp;
+  public NotificationChain basicSetUnaryExp(UnaryExpType newUnaryExp, NotificationChain msgs) {
+    UnaryExpType oldUnaryExp = unaryExp;
     unaryExp = newUnaryExp;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__UNARY_EXP, oldUnaryExp, newUnaryExp);
@@ -735,7 +792,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setUnaryExp(UnaryExpressionType newUnaryExp) {
+  public void setUnaryExp(UnaryExpType newUnaryExp) {
     if (newUnaryExp != unaryExp) {
       NotificationChain msgs = null;
       if (unaryExp != null)
@@ -840,7 +897,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getLabel() {
+  public Object getLabel() {
     return label;
   }
 
@@ -849,8 +906,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLabel(String newLabel) {
-    String oldLabel = label;
+  public void setLabel(Object newLabel) {
+    Object oldLabel = label;
     label = newLabel;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.RECORD_ITEM_TYPE__LABEL, oldLabel, label));
@@ -864,6 +921,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
+      case BxmlPackage.RECORD_ITEM_TYPE__ATTR:
+        return basicSetAttr(null, msgs);
       case BxmlPackage.RECORD_ITEM_TYPE__BINARY_EXP:
         return basicSetBinaryExp(null, msgs);
       case BxmlPackage.RECORD_ITEM_TYPE__NARY_EXP:
@@ -904,6 +963,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
+      case BxmlPackage.RECORD_ITEM_TYPE__ATTR:
+        return getAttr();
       case BxmlPackage.RECORD_ITEM_TYPE__BINARY_EXP:
         return getBinaryExp();
       case BxmlPackage.RECORD_ITEM_TYPE__NARY_EXP:
@@ -946,29 +1007,32 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
+      case BxmlPackage.RECORD_ITEM_TYPE__ATTR:
+        setAttr((AttrType)newValue);
+        return;
       case BxmlPackage.RECORD_ITEM_TYPE__BINARY_EXP:
-        setBinaryExp((BinaryExpressionType)newValue);
+        setBinaryExp((BynaryExpType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__NARY_EXP:
         setNaryExp((NaryExpType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__BOOLEAN_LITERAL:
-        setBooleanLiteral((IdentifierType)newValue);
+        setBooleanLiteral((BooleanLiteralType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__BOOLEAN_EXP:
-        setBooleanExp((PredicateType)newValue);
+        setBooleanExp((BooleanExpType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__EMPTY_SET:
-        setEmptySet((TerminalType)newValue);
+        setEmptySet((EmptySetType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__EMPTY_SEQ:
-        setEmptySeq((TerminalType)newValue);
+        setEmptySeq((EmptySeqType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__ID:
-        setId((IdentifierType)newValue);
+        setId((Identifier)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__INTEGER_LITERAL:
-        setIntegerLiteral((LiteralType)newValue);
+        setIntegerLiteral((IntegerLiteralType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__QUANTIFIED_EXP:
         setQuantifiedExp((QuantifiedExpType)newValue);
@@ -977,10 +1041,10 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
         setQuantifiedSet((QuantifiedSetType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__STRING_LITERAL:
-        setSTRINGLiteral((StringLiteralType)newValue);
+        setSTRINGLiteral((STRINGLiteralType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__UNARY_EXP:
-        setUnaryExp((UnaryExpressionType)newValue);
+        setUnaryExp((UnaryExpType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__STRUCT:
         setStruct((StructType)newValue);
@@ -989,7 +1053,7 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
         setRecord((RecordType)newValue);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__LABEL:
-        setLabel((String)newValue);
+        setLabel(newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -1003,29 +1067,32 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
+      case BxmlPackage.RECORD_ITEM_TYPE__ATTR:
+        setAttr((AttrType)null);
+        return;
       case BxmlPackage.RECORD_ITEM_TYPE__BINARY_EXP:
-        setBinaryExp((BinaryExpressionType)null);
+        setBinaryExp((BynaryExpType)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__NARY_EXP:
         setNaryExp((NaryExpType)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__BOOLEAN_LITERAL:
-        setBooleanLiteral((IdentifierType)null);
+        setBooleanLiteral((BooleanLiteralType)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__BOOLEAN_EXP:
-        setBooleanExp((PredicateType)null);
+        setBooleanExp((BooleanExpType)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__EMPTY_SET:
-        setEmptySet((TerminalType)null);
+        setEmptySet((EmptySetType)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__EMPTY_SEQ:
-        setEmptySeq((TerminalType)null);
+        setEmptySeq((EmptySeqType)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__ID:
-        setId((IdentifierType)null);
+        setId((Identifier)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__INTEGER_LITERAL:
-        setIntegerLiteral((LiteralType)null);
+        setIntegerLiteral((IntegerLiteralType)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__QUANTIFIED_EXP:
         setQuantifiedExp((QuantifiedExpType)null);
@@ -1034,10 +1101,10 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
         setQuantifiedSet((QuantifiedSetType)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__STRING_LITERAL:
-        setSTRINGLiteral((StringLiteralType)null);
+        setSTRINGLiteral((STRINGLiteralType)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__UNARY_EXP:
-        setUnaryExp((UnaryExpressionType)null);
+        setUnaryExp((UnaryExpType)null);
         return;
       case BxmlPackage.RECORD_ITEM_TYPE__STRUCT:
         setStruct((StructType)null);
@@ -1060,6 +1127,8 @@ public class RecordItemTypeImpl extends MinimalEObjectImpl.Container implements 
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
+      case BxmlPackage.RECORD_ITEM_TYPE__ATTR:
+        return attr != null;
       case BxmlPackage.RECORD_ITEM_TYPE__BINARY_EXP:
         return binaryExp != null;
       case BxmlPackage.RECORD_ITEM_TYPE__NARY_EXP:

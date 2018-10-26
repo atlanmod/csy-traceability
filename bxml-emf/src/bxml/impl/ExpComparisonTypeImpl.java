@@ -2,22 +2,24 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
-import bxml.BinaryExpressionType;
+import bxml.AttrType;
+import bxml.BooleanExpType;
+import bxml.BooleanLiteralType;
 import bxml.BxmlPackage;
-import bxml.ComparisonOp;
+import bxml.BynaryExpType;
+import bxml.EmptySeqType;
+import bxml.EmptySetType;
 import bxml.ExpComparisonType;
-import bxml.IdentifierType;
-import bxml.LiteralType;
+import bxml.Identifier;
+import bxml.IntegerLiteralType;
 import bxml.NaryExpType;
-import bxml.PredicateType;
+import bxml.OpType3;
 import bxml.QuantifiedExpType;
 import bxml.QuantifiedSetType;
 import bxml.RecordType;
-import bxml.StringLiteralType;
+import bxml.STRINGLiteralType;
 import bxml.StructType;
-import bxml.TerminalType;
-import bxml.UnaryExpressionType;
+import bxml.UnaryExpType;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -79,7 +81,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getBinaryExp() <em>Binary Exp</em>}' containment reference.
@@ -89,7 +91,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected BinaryExpressionType binaryExp;
+  protected BynaryExpType binaryExp;
 
   /**
    * The cached value of the '{@link #getNaryExp() <em>Nary Exp</em>}' containment reference.
@@ -109,7 +111,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected IdentifierType booleanLiteral;
+  protected BooleanLiteralType booleanLiteral;
 
   /**
    * The cached value of the '{@link #getBooleanExp() <em>Boolean Exp</em>}' containment reference.
@@ -119,7 +121,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected PredicateType booleanExp;
+  protected BooleanExpType booleanExp;
 
   /**
    * The cached value of the '{@link #getEmptySet() <em>Empty Set</em>}' containment reference.
@@ -129,7 +131,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected TerminalType emptySet;
+  protected EmptySetType emptySet;
 
   /**
    * The cached value of the '{@link #getEmptySeq() <em>Empty Seq</em>}' containment reference.
@@ -139,7 +141,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected TerminalType emptySeq;
+  protected EmptySeqType emptySeq;
 
   /**
    * The cached value of the '{@link #getId() <em>Id</em>}' containment reference.
@@ -149,7 +151,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected IdentifierType id;
+  protected Identifier id;
 
   /**
    * The cached value of the '{@link #getIntegerLiteral() <em>Integer Literal</em>}' containment reference.
@@ -159,7 +161,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected LiteralType integerLiteral;
+  protected IntegerLiteralType integerLiteral;
 
   /**
    * The cached value of the '{@link #getQuantifiedExp() <em>Quantified Exp</em>}' containment reference.
@@ -189,7 +191,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected StringLiteralType sTRINGLiteral;
+  protected STRINGLiteralType sTRINGLiteral;
 
   /**
    * The cached value of the '{@link #getUnaryExp() <em>Unary Exp</em>}' containment reference.
@@ -199,7 +201,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected UnaryExpressionType unaryExp;
+  protected UnaryExpType unaryExp;
 
   /**
    * The cached value of the '{@link #getStruct() <em>Struct</em>}' containment reference.
@@ -229,7 +231,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected BinaryExpressionType binaryExp1;
+  protected BynaryExpType binaryExp1;
 
   /**
    * The cached value of the '{@link #getNaryExp1() <em>Nary Exp1</em>}' containment reference.
@@ -249,7 +251,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected IdentifierType booleanLiteral1;
+  protected BooleanLiteralType booleanLiteral1;
 
   /**
    * The cached value of the '{@link #getBooleanExp1() <em>Boolean Exp1</em>}' containment reference.
@@ -259,7 +261,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected PredicateType booleanExp1;
+  protected BooleanExpType booleanExp1;
 
   /**
    * The cached value of the '{@link #getEmptySet1() <em>Empty Set1</em>}' containment reference.
@@ -269,7 +271,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected TerminalType emptySet1;
+  protected EmptySetType emptySet1;
 
   /**
    * The cached value of the '{@link #getEmptySeq1() <em>Empty Seq1</em>}' containment reference.
@@ -279,7 +281,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected TerminalType emptySeq1;
+  protected EmptySeqType emptySeq1;
 
   /**
    * The cached value of the '{@link #getId1() <em>Id1</em>}' containment reference.
@@ -289,7 +291,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected IdentifierType id1;
+  protected Identifier id1;
 
   /**
    * The cached value of the '{@link #getIntegerLiteral1() <em>Integer Literal1</em>}' containment reference.
@@ -299,7 +301,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected LiteralType integerLiteral1;
+  protected IntegerLiteralType integerLiteral1;
 
   /**
    * The cached value of the '{@link #getQuantifiedExp1() <em>Quantified Exp1</em>}' containment reference.
@@ -329,7 +331,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected StringLiteralType sTRINGLiteral1;
+  protected STRINGLiteralType sTRINGLiteral1;
 
   /**
    * The cached value of the '{@link #getUnaryExp1() <em>Unary Exp1</em>}' containment reference.
@@ -339,7 +341,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected UnaryExpressionType unaryExp1;
+  protected UnaryExpType unaryExp1;
 
   /**
    * The cached value of the '{@link #getStruct1() <em>Struct1</em>}' containment reference.
@@ -369,7 +371,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected static final ComparisonOp OP_EDEFAULT = ComparisonOp.__;
+  protected static final OpType3 OP_EDEFAULT = OpType3.__;
 
   /**
    * The cached value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -379,7 +381,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected ComparisonOp op = OP_EDEFAULT;
+  protected OpType3 op = OP_EDEFAULT;
 
   /**
    * This is true if the Op attribute has been set.
@@ -414,7 +416,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -423,8 +425,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__ATTR, oldAttr, newAttr);
@@ -438,7 +440,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -457,7 +459,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryExpressionType getBinaryExp() {
+  public BynaryExpType getBinaryExp() {
     return binaryExp;
   }
 
@@ -466,8 +468,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBinaryExp(BinaryExpressionType newBinaryExp, NotificationChain msgs) {
-    BinaryExpressionType oldBinaryExp = binaryExp;
+  public NotificationChain basicSetBinaryExp(BynaryExpType newBinaryExp, NotificationChain msgs) {
+    BynaryExpType oldBinaryExp = binaryExp;
     binaryExp = newBinaryExp;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__BINARY_EXP, oldBinaryExp, newBinaryExp);
@@ -481,7 +483,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBinaryExp(BinaryExpressionType newBinaryExp) {
+  public void setBinaryExp(BynaryExpType newBinaryExp) {
     if (newBinaryExp != binaryExp) {
       NotificationChain msgs = null;
       if (binaryExp != null)
@@ -543,7 +545,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierType getBooleanLiteral() {
+  public BooleanLiteralType getBooleanLiteral() {
     return booleanLiteral;
   }
 
@@ -552,8 +554,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBooleanLiteral(IdentifierType newBooleanLiteral, NotificationChain msgs) {
-    IdentifierType oldBooleanLiteral = booleanLiteral;
+  public NotificationChain basicSetBooleanLiteral(BooleanLiteralType newBooleanLiteral, NotificationChain msgs) {
+    BooleanLiteralType oldBooleanLiteral = booleanLiteral;
     booleanLiteral = newBooleanLiteral;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_LITERAL, oldBooleanLiteral, newBooleanLiteral);
@@ -567,7 +569,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBooleanLiteral(IdentifierType newBooleanLiteral) {
+  public void setBooleanLiteral(BooleanLiteralType newBooleanLiteral) {
     if (newBooleanLiteral != booleanLiteral) {
       NotificationChain msgs = null;
       if (booleanLiteral != null)
@@ -586,7 +588,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getBooleanExp() {
+  public BooleanExpType getBooleanExp() {
     return booleanExp;
   }
 
@@ -595,8 +597,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBooleanExp(PredicateType newBooleanExp, NotificationChain msgs) {
-    PredicateType oldBooleanExp = booleanExp;
+  public NotificationChain basicSetBooleanExp(BooleanExpType newBooleanExp, NotificationChain msgs) {
+    BooleanExpType oldBooleanExp = booleanExp;
     booleanExp = newBooleanExp;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_EXP, oldBooleanExp, newBooleanExp);
@@ -610,7 +612,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBooleanExp(PredicateType newBooleanExp) {
+  public void setBooleanExp(BooleanExpType newBooleanExp) {
     if (newBooleanExp != booleanExp) {
       NotificationChain msgs = null;
       if (booleanExp != null)
@@ -629,7 +631,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public TerminalType getEmptySet() {
+  public EmptySetType getEmptySet() {
     return emptySet;
   }
 
@@ -638,8 +640,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEmptySet(TerminalType newEmptySet, NotificationChain msgs) {
-    TerminalType oldEmptySet = emptySet;
+  public NotificationChain basicSetEmptySet(EmptySetType newEmptySet, NotificationChain msgs) {
+    EmptySetType oldEmptySet = emptySet;
     emptySet = newEmptySet;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SET, oldEmptySet, newEmptySet);
@@ -653,7 +655,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEmptySet(TerminalType newEmptySet) {
+  public void setEmptySet(EmptySetType newEmptySet) {
     if (newEmptySet != emptySet) {
       NotificationChain msgs = null;
       if (emptySet != null)
@@ -672,7 +674,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public TerminalType getEmptySeq() {
+  public EmptySeqType getEmptySeq() {
     return emptySeq;
   }
 
@@ -681,8 +683,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEmptySeq(TerminalType newEmptySeq, NotificationChain msgs) {
-    TerminalType oldEmptySeq = emptySeq;
+  public NotificationChain basicSetEmptySeq(EmptySeqType newEmptySeq, NotificationChain msgs) {
+    EmptySeqType oldEmptySeq = emptySeq;
     emptySeq = newEmptySeq;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SEQ, oldEmptySeq, newEmptySeq);
@@ -696,7 +698,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEmptySeq(TerminalType newEmptySeq) {
+  public void setEmptySeq(EmptySeqType newEmptySeq) {
     if (newEmptySeq != emptySeq) {
       NotificationChain msgs = null;
       if (emptySeq != null)
@@ -715,7 +717,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierType getId() {
+  public Identifier getId() {
     return id;
   }
 
@@ -724,8 +726,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetId(IdentifierType newId, NotificationChain msgs) {
-    IdentifierType oldId = id;
+  public NotificationChain basicSetId(Identifier newId, NotificationChain msgs) {
+    Identifier oldId = id;
     id = newId;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__ID, oldId, newId);
@@ -739,7 +741,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(IdentifierType newId) {
+  public void setId(Identifier newId) {
     if (newId != id) {
       NotificationChain msgs = null;
       if (id != null)
@@ -758,7 +760,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralType getIntegerLiteral() {
+  public IntegerLiteralType getIntegerLiteral() {
     return integerLiteral;
   }
 
@@ -767,8 +769,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIntegerLiteral(LiteralType newIntegerLiteral, NotificationChain msgs) {
-    LiteralType oldIntegerLiteral = integerLiteral;
+  public NotificationChain basicSetIntegerLiteral(IntegerLiteralType newIntegerLiteral, NotificationChain msgs) {
+    IntegerLiteralType oldIntegerLiteral = integerLiteral;
     integerLiteral = newIntegerLiteral;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__INTEGER_LITERAL, oldIntegerLiteral, newIntegerLiteral);
@@ -782,7 +784,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIntegerLiteral(LiteralType newIntegerLiteral) {
+  public void setIntegerLiteral(IntegerLiteralType newIntegerLiteral) {
     if (newIntegerLiteral != integerLiteral) {
       NotificationChain msgs = null;
       if (integerLiteral != null)
@@ -887,7 +889,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public StringLiteralType getSTRINGLiteral() {
+  public STRINGLiteralType getSTRINGLiteral() {
     return sTRINGLiteral;
   }
 
@@ -896,8 +898,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetSTRINGLiteral(StringLiteralType newSTRINGLiteral, NotificationChain msgs) {
-    StringLiteralType oldSTRINGLiteral = sTRINGLiteral;
+  public NotificationChain basicSetSTRINGLiteral(STRINGLiteralType newSTRINGLiteral, NotificationChain msgs) {
+    STRINGLiteralType oldSTRINGLiteral = sTRINGLiteral;
     sTRINGLiteral = newSTRINGLiteral;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__STRING_LITERAL, oldSTRINGLiteral, newSTRINGLiteral);
@@ -911,7 +913,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSTRINGLiteral(StringLiteralType newSTRINGLiteral) {
+  public void setSTRINGLiteral(STRINGLiteralType newSTRINGLiteral) {
     if (newSTRINGLiteral != sTRINGLiteral) {
       NotificationChain msgs = null;
       if (sTRINGLiteral != null)
@@ -930,7 +932,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryExpressionType getUnaryExp() {
+  public UnaryExpType getUnaryExp() {
     return unaryExp;
   }
 
@@ -939,8 +941,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetUnaryExp(UnaryExpressionType newUnaryExp, NotificationChain msgs) {
-    UnaryExpressionType oldUnaryExp = unaryExp;
+  public NotificationChain basicSetUnaryExp(UnaryExpType newUnaryExp, NotificationChain msgs) {
+    UnaryExpType oldUnaryExp = unaryExp;
     unaryExp = newUnaryExp;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__UNARY_EXP, oldUnaryExp, newUnaryExp);
@@ -954,7 +956,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setUnaryExp(UnaryExpressionType newUnaryExp) {
+  public void setUnaryExp(UnaryExpType newUnaryExp) {
     if (newUnaryExp != unaryExp) {
       NotificationChain msgs = null;
       if (unaryExp != null)
@@ -1059,7 +1061,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryExpressionType getBinaryExp1() {
+  public BynaryExpType getBinaryExp1() {
     return binaryExp1;
   }
 
@@ -1068,8 +1070,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBinaryExp1(BinaryExpressionType newBinaryExp1, NotificationChain msgs) {
-    BinaryExpressionType oldBinaryExp1 = binaryExp1;
+  public NotificationChain basicSetBinaryExp1(BynaryExpType newBinaryExp1, NotificationChain msgs) {
+    BynaryExpType oldBinaryExp1 = binaryExp1;
     binaryExp1 = newBinaryExp1;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__BINARY_EXP1, oldBinaryExp1, newBinaryExp1);
@@ -1083,7 +1085,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBinaryExp1(BinaryExpressionType newBinaryExp1) {
+  public void setBinaryExp1(BynaryExpType newBinaryExp1) {
     if (newBinaryExp1 != binaryExp1) {
       NotificationChain msgs = null;
       if (binaryExp1 != null)
@@ -1145,7 +1147,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierType getBooleanLiteral1() {
+  public BooleanLiteralType getBooleanLiteral1() {
     return booleanLiteral1;
   }
 
@@ -1154,8 +1156,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBooleanLiteral1(IdentifierType newBooleanLiteral1, NotificationChain msgs) {
-    IdentifierType oldBooleanLiteral1 = booleanLiteral1;
+  public NotificationChain basicSetBooleanLiteral1(BooleanLiteralType newBooleanLiteral1, NotificationChain msgs) {
+    BooleanLiteralType oldBooleanLiteral1 = booleanLiteral1;
     booleanLiteral1 = newBooleanLiteral1;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_LITERAL1, oldBooleanLiteral1, newBooleanLiteral1);
@@ -1169,7 +1171,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBooleanLiteral1(IdentifierType newBooleanLiteral1) {
+  public void setBooleanLiteral1(BooleanLiteralType newBooleanLiteral1) {
     if (newBooleanLiteral1 != booleanLiteral1) {
       NotificationChain msgs = null;
       if (booleanLiteral1 != null)
@@ -1188,7 +1190,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getBooleanExp1() {
+  public BooleanExpType getBooleanExp1() {
     return booleanExp1;
   }
 
@@ -1197,8 +1199,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBooleanExp1(PredicateType newBooleanExp1, NotificationChain msgs) {
-    PredicateType oldBooleanExp1 = booleanExp1;
+  public NotificationChain basicSetBooleanExp1(BooleanExpType newBooleanExp1, NotificationChain msgs) {
+    BooleanExpType oldBooleanExp1 = booleanExp1;
     booleanExp1 = newBooleanExp1;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_EXP1, oldBooleanExp1, newBooleanExp1);
@@ -1212,7 +1214,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBooleanExp1(PredicateType newBooleanExp1) {
+  public void setBooleanExp1(BooleanExpType newBooleanExp1) {
     if (newBooleanExp1 != booleanExp1) {
       NotificationChain msgs = null;
       if (booleanExp1 != null)
@@ -1231,7 +1233,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public TerminalType getEmptySet1() {
+  public EmptySetType getEmptySet1() {
     return emptySet1;
   }
 
@@ -1240,8 +1242,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEmptySet1(TerminalType newEmptySet1, NotificationChain msgs) {
-    TerminalType oldEmptySet1 = emptySet1;
+  public NotificationChain basicSetEmptySet1(EmptySetType newEmptySet1, NotificationChain msgs) {
+    EmptySetType oldEmptySet1 = emptySet1;
     emptySet1 = newEmptySet1;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SET1, oldEmptySet1, newEmptySet1);
@@ -1255,7 +1257,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEmptySet1(TerminalType newEmptySet1) {
+  public void setEmptySet1(EmptySetType newEmptySet1) {
     if (newEmptySet1 != emptySet1) {
       NotificationChain msgs = null;
       if (emptySet1 != null)
@@ -1274,7 +1276,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public TerminalType getEmptySeq1() {
+  public EmptySeqType getEmptySeq1() {
     return emptySeq1;
   }
 
@@ -1283,8 +1285,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEmptySeq1(TerminalType newEmptySeq1, NotificationChain msgs) {
-    TerminalType oldEmptySeq1 = emptySeq1;
+  public NotificationChain basicSetEmptySeq1(EmptySeqType newEmptySeq1, NotificationChain msgs) {
+    EmptySeqType oldEmptySeq1 = emptySeq1;
     emptySeq1 = newEmptySeq1;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SEQ1, oldEmptySeq1, newEmptySeq1);
@@ -1298,7 +1300,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEmptySeq1(TerminalType newEmptySeq1) {
+  public void setEmptySeq1(EmptySeqType newEmptySeq1) {
     if (newEmptySeq1 != emptySeq1) {
       NotificationChain msgs = null;
       if (emptySeq1 != null)
@@ -1317,7 +1319,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierType getId1() {
+  public Identifier getId1() {
     return id1;
   }
 
@@ -1326,8 +1328,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetId1(IdentifierType newId1, NotificationChain msgs) {
-    IdentifierType oldId1 = id1;
+  public NotificationChain basicSetId1(Identifier newId1, NotificationChain msgs) {
+    Identifier oldId1 = id1;
     id1 = newId1;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__ID1, oldId1, newId1);
@@ -1341,7 +1343,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId1(IdentifierType newId1) {
+  public void setId1(Identifier newId1) {
     if (newId1 != id1) {
       NotificationChain msgs = null;
       if (id1 != null)
@@ -1360,7 +1362,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralType getIntegerLiteral1() {
+  public IntegerLiteralType getIntegerLiteral1() {
     return integerLiteral1;
   }
 
@@ -1369,8 +1371,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIntegerLiteral1(LiteralType newIntegerLiteral1, NotificationChain msgs) {
-    LiteralType oldIntegerLiteral1 = integerLiteral1;
+  public NotificationChain basicSetIntegerLiteral1(IntegerLiteralType newIntegerLiteral1, NotificationChain msgs) {
+    IntegerLiteralType oldIntegerLiteral1 = integerLiteral1;
     integerLiteral1 = newIntegerLiteral1;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__INTEGER_LITERAL1, oldIntegerLiteral1, newIntegerLiteral1);
@@ -1384,7 +1386,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIntegerLiteral1(LiteralType newIntegerLiteral1) {
+  public void setIntegerLiteral1(IntegerLiteralType newIntegerLiteral1) {
     if (newIntegerLiteral1 != integerLiteral1) {
       NotificationChain msgs = null;
       if (integerLiteral1 != null)
@@ -1489,7 +1491,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public StringLiteralType getSTRINGLiteral1() {
+  public STRINGLiteralType getSTRINGLiteral1() {
     return sTRINGLiteral1;
   }
 
@@ -1498,8 +1500,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetSTRINGLiteral1(StringLiteralType newSTRINGLiteral1, NotificationChain msgs) {
-    StringLiteralType oldSTRINGLiteral1 = sTRINGLiteral1;
+  public NotificationChain basicSetSTRINGLiteral1(STRINGLiteralType newSTRINGLiteral1, NotificationChain msgs) {
+    STRINGLiteralType oldSTRINGLiteral1 = sTRINGLiteral1;
     sTRINGLiteral1 = newSTRINGLiteral1;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__STRING_LITERAL1, oldSTRINGLiteral1, newSTRINGLiteral1);
@@ -1513,7 +1515,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSTRINGLiteral1(StringLiteralType newSTRINGLiteral1) {
+  public void setSTRINGLiteral1(STRINGLiteralType newSTRINGLiteral1) {
     if (newSTRINGLiteral1 != sTRINGLiteral1) {
       NotificationChain msgs = null;
       if (sTRINGLiteral1 != null)
@@ -1532,7 +1534,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryExpressionType getUnaryExp1() {
+  public UnaryExpType getUnaryExp1() {
     return unaryExp1;
   }
 
@@ -1541,8 +1543,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetUnaryExp1(UnaryExpressionType newUnaryExp1, NotificationChain msgs) {
-    UnaryExpressionType oldUnaryExp1 = unaryExp1;
+  public NotificationChain basicSetUnaryExp1(UnaryExpType newUnaryExp1, NotificationChain msgs) {
+    UnaryExpType oldUnaryExp1 = unaryExp1;
     unaryExp1 = newUnaryExp1;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.EXP_COMPARISON_TYPE__UNARY_EXP1, oldUnaryExp1, newUnaryExp1);
@@ -1556,7 +1558,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setUnaryExp1(UnaryExpressionType newUnaryExp1) {
+  public void setUnaryExp1(UnaryExpType newUnaryExp1) {
     if (newUnaryExp1 != unaryExp1) {
       NotificationChain msgs = null;
       if (unaryExp1 != null)
@@ -1661,7 +1663,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public ComparisonOp getOp() {
+  public OpType3 getOp() {
     return op;
   }
 
@@ -1670,8 +1672,8 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOp(ComparisonOp newOp) {
-    ComparisonOp oldOp = op;
+  public void setOp(OpType3 newOp) {
+    OpType3 oldOp = op;
     op = newOp == null ? OP_EDEFAULT : newOp;
     boolean oldOpESet = opESet;
     opESet = true;
@@ -1685,7 +1687,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   public void unsetOp() {
-    ComparisonOp oldOp = op;
+    OpType3 oldOp = op;
     boolean oldOpESet = opESet;
     op = OP_EDEFAULT;
     opESet = false;
@@ -1853,31 +1855,31 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.EXP_COMPARISON_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BINARY_EXP:
-        setBinaryExp((BinaryExpressionType)newValue);
+        setBinaryExp((BynaryExpType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__NARY_EXP:
         setNaryExp((NaryExpType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_LITERAL:
-        setBooleanLiteral((IdentifierType)newValue);
+        setBooleanLiteral((BooleanLiteralType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_EXP:
-        setBooleanExp((PredicateType)newValue);
+        setBooleanExp((BooleanExpType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SET:
-        setEmptySet((TerminalType)newValue);
+        setEmptySet((EmptySetType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SEQ:
-        setEmptySeq((TerminalType)newValue);
+        setEmptySeq((EmptySeqType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__ID:
-        setId((IdentifierType)newValue);
+        setId((Identifier)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__INTEGER_LITERAL:
-        setIntegerLiteral((LiteralType)newValue);
+        setIntegerLiteral((IntegerLiteralType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__QUANTIFIED_EXP:
         setQuantifiedExp((QuantifiedExpType)newValue);
@@ -1886,10 +1888,10 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
         setQuantifiedSet((QuantifiedSetType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__STRING_LITERAL:
-        setSTRINGLiteral((StringLiteralType)newValue);
+        setSTRINGLiteral((STRINGLiteralType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__UNARY_EXP:
-        setUnaryExp((UnaryExpressionType)newValue);
+        setUnaryExp((UnaryExpType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__STRUCT:
         setStruct((StructType)newValue);
@@ -1898,28 +1900,28 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
         setRecord((RecordType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BINARY_EXP1:
-        setBinaryExp1((BinaryExpressionType)newValue);
+        setBinaryExp1((BynaryExpType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__NARY_EXP1:
         setNaryExp1((NaryExpType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_LITERAL1:
-        setBooleanLiteral1((IdentifierType)newValue);
+        setBooleanLiteral1((BooleanLiteralType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_EXP1:
-        setBooleanExp1((PredicateType)newValue);
+        setBooleanExp1((BooleanExpType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SET1:
-        setEmptySet1((TerminalType)newValue);
+        setEmptySet1((EmptySetType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SEQ1:
-        setEmptySeq1((TerminalType)newValue);
+        setEmptySeq1((EmptySeqType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__ID1:
-        setId1((IdentifierType)newValue);
+        setId1((Identifier)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__INTEGER_LITERAL1:
-        setIntegerLiteral1((LiteralType)newValue);
+        setIntegerLiteral1((IntegerLiteralType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__QUANTIFIED_EXP1:
         setQuantifiedExp1((QuantifiedExpType)newValue);
@@ -1928,10 +1930,10 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
         setQuantifiedSet1((QuantifiedSetType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__STRING_LITERAL1:
-        setSTRINGLiteral1((StringLiteralType)newValue);
+        setSTRINGLiteral1((STRINGLiteralType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__UNARY_EXP1:
-        setUnaryExp1((UnaryExpressionType)newValue);
+        setUnaryExp1((UnaryExpType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__STRUCT1:
         setStruct1((StructType)newValue);
@@ -1940,7 +1942,7 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
         setRecord1((RecordType)newValue);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__OP:
-        setOp((ComparisonOp)newValue);
+        setOp((OpType3)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -1955,31 +1957,31 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.EXP_COMPARISON_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BINARY_EXP:
-        setBinaryExp((BinaryExpressionType)null);
+        setBinaryExp((BynaryExpType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__NARY_EXP:
         setNaryExp((NaryExpType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_LITERAL:
-        setBooleanLiteral((IdentifierType)null);
+        setBooleanLiteral((BooleanLiteralType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_EXP:
-        setBooleanExp((PredicateType)null);
+        setBooleanExp((BooleanExpType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SET:
-        setEmptySet((TerminalType)null);
+        setEmptySet((EmptySetType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SEQ:
-        setEmptySeq((TerminalType)null);
+        setEmptySeq((EmptySeqType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__ID:
-        setId((IdentifierType)null);
+        setId((Identifier)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__INTEGER_LITERAL:
-        setIntegerLiteral((LiteralType)null);
+        setIntegerLiteral((IntegerLiteralType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__QUANTIFIED_EXP:
         setQuantifiedExp((QuantifiedExpType)null);
@@ -1988,10 +1990,10 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
         setQuantifiedSet((QuantifiedSetType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__STRING_LITERAL:
-        setSTRINGLiteral((StringLiteralType)null);
+        setSTRINGLiteral((STRINGLiteralType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__UNARY_EXP:
-        setUnaryExp((UnaryExpressionType)null);
+        setUnaryExp((UnaryExpType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__STRUCT:
         setStruct((StructType)null);
@@ -2000,28 +2002,28 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
         setRecord((RecordType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BINARY_EXP1:
-        setBinaryExp1((BinaryExpressionType)null);
+        setBinaryExp1((BynaryExpType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__NARY_EXP1:
         setNaryExp1((NaryExpType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_LITERAL1:
-        setBooleanLiteral1((IdentifierType)null);
+        setBooleanLiteral1((BooleanLiteralType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__BOOLEAN_EXP1:
-        setBooleanExp1((PredicateType)null);
+        setBooleanExp1((BooleanExpType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SET1:
-        setEmptySet1((TerminalType)null);
+        setEmptySet1((EmptySetType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__EMPTY_SEQ1:
-        setEmptySeq1((TerminalType)null);
+        setEmptySeq1((EmptySeqType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__ID1:
-        setId1((IdentifierType)null);
+        setId1((Identifier)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__INTEGER_LITERAL1:
-        setIntegerLiteral1((LiteralType)null);
+        setIntegerLiteral1((IntegerLiteralType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__QUANTIFIED_EXP1:
         setQuantifiedExp1((QuantifiedExpType)null);
@@ -2030,10 +2032,10 @@ public class ExpComparisonTypeImpl extends MinimalEObjectImpl.Container implemen
         setQuantifiedSet1((QuantifiedSetType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__STRING_LITERAL1:
-        setSTRINGLiteral1((StringLiteralType)null);
+        setSTRINGLiteral1((STRINGLiteralType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__UNARY_EXP1:
-        setUnaryExp1((UnaryExpressionType)null);
+        setUnaryExp1((UnaryExpType)null);
         return;
       case BxmlPackage.EXP_COMPARISON_TYPE__STRUCT1:
         setStruct1((StructType)null);

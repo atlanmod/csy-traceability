@@ -2,9 +2,10 @@
  */
 package bxml.impl;
 
+import bxml.AttrType;
 import bxml.BxmlPackage;
-import bxml.PredicateType;
-import bxml.SubstitutionType;
+import bxml.ConditionType;
+import bxml.ThenType;
 import bxml.WhenType;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link bxml.impl.WhenTypeImpl#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.impl.WhenTypeImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link bxml.impl.WhenTypeImpl#getThen <em>Then</em>}</li>
  * </ul>
@@ -32,6 +34,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenType {
   /**
+   * The cached value of the '{@link #getAttr() <em>Attr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAttr()
+   * @generated
+   * @ordered
+   */
+  protected AttrType attr;
+
+  /**
    * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -39,7 +51,7 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
    * @generated
    * @ordered
    */
-  protected PredicateType condition;
+  protected ConditionType condition;
 
   /**
    * The cached value of the '{@link #getThen() <em>Then</em>}' containment reference.
@@ -49,7 +61,7 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
    * @generated
    * @ordered
    */
-  protected SubstitutionType then;
+  protected ThenType then;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,7 +87,50 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getCondition() {
+  public AttrType getAttr() {
+    return attr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
+    attr = newAttr;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.WHEN_TYPE__ATTR, oldAttr, newAttr);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAttr(AttrType newAttr) {
+    if (newAttr != attr) {
+      NotificationChain msgs = null;
+      if (attr != null)
+        msgs = ((InternalEObject)attr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.WHEN_TYPE__ATTR, null, msgs);
+      if (newAttr != null)
+        msgs = ((InternalEObject)newAttr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.WHEN_TYPE__ATTR, null, msgs);
+      msgs = basicSetAttr(newAttr, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.WHEN_TYPE__ATTR, newAttr, newAttr));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConditionType getCondition() {
     return condition;
   }
 
@@ -84,8 +139,8 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetCondition(PredicateType newCondition, NotificationChain msgs) {
-    PredicateType oldCondition = condition;
+  public NotificationChain basicSetCondition(ConditionType newCondition, NotificationChain msgs) {
+    ConditionType oldCondition = condition;
     condition = newCondition;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.WHEN_TYPE__CONDITION, oldCondition, newCondition);
@@ -99,7 +154,7 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setCondition(PredicateType newCondition) {
+  public void setCondition(ConditionType newCondition) {
     if (newCondition != condition) {
       NotificationChain msgs = null;
       if (condition != null)
@@ -118,7 +173,7 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubstitutionType getThen() {
+  public ThenType getThen() {
     return then;
   }
 
@@ -127,8 +182,8 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetThen(SubstitutionType newThen, NotificationChain msgs) {
-    SubstitutionType oldThen = then;
+  public NotificationChain basicSetThen(ThenType newThen, NotificationChain msgs) {
+    ThenType oldThen = then;
     then = newThen;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.WHEN_TYPE__THEN, oldThen, newThen);
@@ -142,7 +197,7 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setThen(SubstitutionType newThen) {
+  public void setThen(ThenType newThen) {
     if (newThen != then) {
       NotificationChain msgs = null;
       if (then != null)
@@ -164,6 +219,8 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
+      case BxmlPackage.WHEN_TYPE__ATTR:
+        return basicSetAttr(null, msgs);
       case BxmlPackage.WHEN_TYPE__CONDITION:
         return basicSetCondition(null, msgs);
       case BxmlPackage.WHEN_TYPE__THEN:
@@ -180,6 +237,8 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
+      case BxmlPackage.WHEN_TYPE__ATTR:
+        return getAttr();
       case BxmlPackage.WHEN_TYPE__CONDITION:
         return getCondition();
       case BxmlPackage.WHEN_TYPE__THEN:
@@ -196,11 +255,14 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
+      case BxmlPackage.WHEN_TYPE__ATTR:
+        setAttr((AttrType)newValue);
+        return;
       case BxmlPackage.WHEN_TYPE__CONDITION:
-        setCondition((PredicateType)newValue);
+        setCondition((ConditionType)newValue);
         return;
       case BxmlPackage.WHEN_TYPE__THEN:
-        setThen((SubstitutionType)newValue);
+        setThen((ThenType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -214,11 +276,14 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
+      case BxmlPackage.WHEN_TYPE__ATTR:
+        setAttr((AttrType)null);
+        return;
       case BxmlPackage.WHEN_TYPE__CONDITION:
-        setCondition((PredicateType)null);
+        setCondition((ConditionType)null);
         return;
       case BxmlPackage.WHEN_TYPE__THEN:
-        setThen((SubstitutionType)null);
+        setThen((ThenType)null);
         return;
     }
     super.eUnset(featureID);
@@ -232,6 +297,8 @@ public class WhenTypeImpl extends MinimalEObjectImpl.Container implements WhenTy
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
+      case BxmlPackage.WHEN_TYPE__ATTR:
+        return attr != null;
       case BxmlPackage.WHEN_TYPE__CONDITION:
         return condition != null;
       case BxmlPackage.WHEN_TYPE__THEN:

@@ -2,14 +2,14 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
+import bxml.BodyType1;
 import bxml.BxmlPackage;
 import bxml.InputParametersType;
 import bxml.OperationType;
 import bxml.OutputParametersType;
-import bxml.PredicateType;
+import bxml.PreconditionType;
 import bxml.RefinesType;
-import bxml.SubstitutionType;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -48,7 +48,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getRefines() <em>Refines</em>}' containment reference.
@@ -88,7 +88,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * @generated
    * @ordered
    */
-  protected PredicateType precondition;
+  protected PreconditionType precondition;
 
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
@@ -98,7 +98,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * @generated
    * @ordered
    */
-  protected SubstitutionType body;
+  protected BodyType1 body;
 
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -108,7 +108,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final Object NAME_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -118,7 +118,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected Object name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -144,7 +144,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -153,8 +153,8 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.OPERATION_TYPE__ATTR, oldAttr, newAttr);
@@ -168,7 +168,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -316,7 +316,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getPrecondition() {
+  public PreconditionType getPrecondition() {
     return precondition;
   }
 
@@ -325,8 +325,8 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPrecondition(PredicateType newPrecondition, NotificationChain msgs) {
-    PredicateType oldPrecondition = precondition;
+  public NotificationChain basicSetPrecondition(PreconditionType newPrecondition, NotificationChain msgs) {
+    PreconditionType oldPrecondition = precondition;
     precondition = newPrecondition;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.OPERATION_TYPE__PRECONDITION, oldPrecondition, newPrecondition);
@@ -340,7 +340,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPrecondition(PredicateType newPrecondition) {
+  public void setPrecondition(PreconditionType newPrecondition) {
     if (newPrecondition != precondition) {
       NotificationChain msgs = null;
       if (precondition != null)
@@ -359,7 +359,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubstitutionType getBody() {
+  public BodyType1 getBody() {
     return body;
   }
 
@@ -368,8 +368,8 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBody(SubstitutionType newBody, NotificationChain msgs) {
-    SubstitutionType oldBody = body;
+  public NotificationChain basicSetBody(BodyType1 newBody, NotificationChain msgs) {
+    BodyType1 oldBody = body;
     body = newBody;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.OPERATION_TYPE__BODY, oldBody, newBody);
@@ -383,7 +383,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBody(SubstitutionType newBody) {
+  public void setBody(BodyType1 newBody) {
     if (newBody != body) {
       NotificationChain msgs = null;
       if (body != null)
@@ -402,7 +402,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName() {
+  public Object getName() {
     return name;
   }
 
@@ -411,8 +411,8 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName) {
-    String oldName = name;
+  public void setName(Object newName) {
+    Object oldName = name;
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.OPERATION_TYPE__NAME, oldName, name));
@@ -477,7 +477,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.OPERATION_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.OPERATION_TYPE__REFINES:
         setRefines((RefinesType)newValue);
@@ -489,13 +489,13 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
         setInputParameters((InputParametersType)newValue);
         return;
       case BxmlPackage.OPERATION_TYPE__PRECONDITION:
-        setPrecondition((PredicateType)newValue);
+        setPrecondition((PreconditionType)newValue);
         return;
       case BxmlPackage.OPERATION_TYPE__BODY:
-        setBody((SubstitutionType)newValue);
+        setBody((BodyType1)newValue);
         return;
       case BxmlPackage.OPERATION_TYPE__NAME:
-        setName((String)newValue);
+        setName(newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -510,7 +510,7 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.OPERATION_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.OPERATION_TYPE__REFINES:
         setRefines((RefinesType)null);
@@ -522,10 +522,10 @@ public class OperationTypeImpl extends MinimalEObjectImpl.Container implements O
         setInputParameters((InputParametersType)null);
         return;
       case BxmlPackage.OPERATION_TYPE__PRECONDITION:
-        setPrecondition((PredicateType)null);
+        setPrecondition((PreconditionType)null);
         return;
       case BxmlPackage.OPERATION_TYPE__BODY:
-        setBody((SubstitutionType)null);
+        setBody((BodyType1)null);
         return;
       case BxmlPackage.OPERATION_TYPE__NAME:
         setName(NAME_EDEFAULT);

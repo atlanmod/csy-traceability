@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link bxml.PromotesType#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.PromotesType#getPromotedOperation <em>Promoted Operation</em>}</li>
  * </ul>
  *
@@ -24,20 +25,47 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface PromotesType extends EObject {
   /**
-   * Returns the value of the '<em><b>Promoted Operation</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Promoted Operation</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Attr</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Promoted Operation</em>' attribute list.
+   * @return the value of the '<em>Attr</em>' containment reference.
+   * @see #setAttr(AttrType)
+   * @see bxml.BxmlPackage#getPromotesType_Attr()
+   * @model containment="true"
+   *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
+   * @generated
+   */
+  AttrType getAttr();
+
+  /**
+   * Sets the value of the '{@link bxml.PromotesType#getAttr <em>Attr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Attr</em>' containment reference.
+   * @see #getAttr()
+   * @generated
+   */
+  void setAttr(AttrType value);
+
+  /**
+   * Returns the value of the '<em><b>Promoted Operation</b></em>' containment reference list.
+   * The list contents are of type {@link bxml.PromotedOperationType}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Promoted Operation</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Promoted Operation</em>' containment reference list.
    * @see bxml.BxmlPackage#getPromotesType_PromotedOperation()
-   * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
+   * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Promoted_Operation' namespace='##targetNamespace'"
    * @generated
    */
-  EList<String> getPromotedOperation();
+  EList<PromotedOperationType> getPromotedOperation();
 
 } // PromotesType

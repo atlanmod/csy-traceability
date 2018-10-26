@@ -32,13 +32,13 @@ public interface AssertSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getAssertSubType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.AssertSubType#getAttr <em>Attr</em>}' containment reference.
@@ -48,7 +48,7 @@ public interface AssertSubType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Guard</b></em>' containment reference.
@@ -59,13 +59,13 @@ public interface AssertSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Guard</em>' containment reference.
-   * @see #setGuard(PredicateType)
+   * @see #setGuard(GuardType)
    * @see bxml.BxmlPackage#getAssertSubType_Guard()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Guard' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getGuard();
+  GuardType getGuard();
 
   /**
    * Sets the value of the '{@link bxml.AssertSubType#getGuard <em>Guard</em>}' containment reference.
@@ -75,7 +75,7 @@ public interface AssertSubType extends EObject {
    * @see #getGuard()
    * @generated
    */
-  void setGuard(PredicateType value);
+  void setGuard(GuardType value);
 
   /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference.
@@ -86,13 +86,13 @@ public interface AssertSubType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Body</em>' containment reference.
-   * @see #setBody(SubstitutionType)
+   * @see #setBody(BodyType2)
    * @see bxml.BxmlPackage#getAssertSubType_Body()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Body' namespace='##targetNamespace'"
    * @generated
    */
-  SubstitutionType getBody();
+  BodyType2 getBody();
 
   /**
    * Sets the value of the '{@link bxml.AssertSubType#getBody <em>Body</em>}' containment reference.
@@ -102,6 +102,6 @@ public interface AssertSubType extends EObject {
    * @see #getBody()
    * @generated
    */
-  void setBody(SubstitutionType value);
+  void setBody(BodyType2 value);
 
 } // AssertSubType

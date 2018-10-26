@@ -2,11 +2,12 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
+import bxml.BodyType5;
 import bxml.BxmlPackage;
-import bxml.ExpType;
-import bxml.PredicateType;
-import bxml.SubstitutionType;
+import bxml.ConditionType;
+import bxml.InvariantType;
+import bxml.VariantType;
 import bxml.WhileType;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -44,7 +45,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
@@ -54,7 +55,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * @generated
    * @ordered
    */
-  protected PredicateType condition;
+  protected ConditionType condition;
 
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
@@ -64,7 +65,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * @generated
    * @ordered
    */
-  protected SubstitutionType body;
+  protected BodyType5 body;
 
   /**
    * The cached value of the '{@link #getInvariant() <em>Invariant</em>}' containment reference.
@@ -74,7 +75,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * @generated
    * @ordered
    */
-  protected PredicateType invariant;
+  protected InvariantType invariant;
 
   /**
    * The cached value of the '{@link #getVariant() <em>Variant</em>}' containment reference.
@@ -84,7 +85,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * @generated
    * @ordered
    */
-  protected ExpType variant;
+  protected VariantType variant;
 
   /**
    * <!-- begin-user-doc -->
@@ -110,7 +111,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -119,8 +120,8 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.WHILE_TYPE__ATTR, oldAttr, newAttr);
@@ -134,7 +135,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -153,7 +154,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getCondition() {
+  public ConditionType getCondition() {
     return condition;
   }
 
@@ -162,8 +163,8 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetCondition(PredicateType newCondition, NotificationChain msgs) {
-    PredicateType oldCondition = condition;
+  public NotificationChain basicSetCondition(ConditionType newCondition, NotificationChain msgs) {
+    ConditionType oldCondition = condition;
     condition = newCondition;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.WHILE_TYPE__CONDITION, oldCondition, newCondition);
@@ -177,7 +178,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setCondition(PredicateType newCondition) {
+  public void setCondition(ConditionType newCondition) {
     if (newCondition != condition) {
       NotificationChain msgs = null;
       if (condition != null)
@@ -196,7 +197,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubstitutionType getBody() {
+  public BodyType5 getBody() {
     return body;
   }
 
@@ -205,8 +206,8 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBody(SubstitutionType newBody, NotificationChain msgs) {
-    SubstitutionType oldBody = body;
+  public NotificationChain basicSetBody(BodyType5 newBody, NotificationChain msgs) {
+    BodyType5 oldBody = body;
     body = newBody;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.WHILE_TYPE__BODY, oldBody, newBody);
@@ -220,7 +221,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBody(SubstitutionType newBody) {
+  public void setBody(BodyType5 newBody) {
     if (newBody != body) {
       NotificationChain msgs = null;
       if (body != null)
@@ -239,7 +240,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getInvariant() {
+  public InvariantType getInvariant() {
     return invariant;
   }
 
@@ -248,8 +249,8 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetInvariant(PredicateType newInvariant, NotificationChain msgs) {
-    PredicateType oldInvariant = invariant;
+  public NotificationChain basicSetInvariant(InvariantType newInvariant, NotificationChain msgs) {
+    InvariantType oldInvariant = invariant;
     invariant = newInvariant;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.WHILE_TYPE__INVARIANT, oldInvariant, newInvariant);
@@ -263,7 +264,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setInvariant(PredicateType newInvariant) {
+  public void setInvariant(InvariantType newInvariant) {
     if (newInvariant != invariant) {
       NotificationChain msgs = null;
       if (invariant != null)
@@ -282,7 +283,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public ExpType getVariant() {
+  public VariantType getVariant() {
     return variant;
   }
 
@@ -291,8 +292,8 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVariant(ExpType newVariant, NotificationChain msgs) {
-    ExpType oldVariant = variant;
+  public NotificationChain basicSetVariant(VariantType newVariant, NotificationChain msgs) {
+    VariantType oldVariant = variant;
     variant = newVariant;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.WHILE_TYPE__VARIANT, oldVariant, newVariant);
@@ -306,7 +307,7 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVariant(ExpType newVariant) {
+  public void setVariant(VariantType newVariant) {
     if (newVariant != variant) {
       NotificationChain msgs = null;
       if (variant != null)
@@ -373,19 +374,19 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.WHILE_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.WHILE_TYPE__CONDITION:
-        setCondition((PredicateType)newValue);
+        setCondition((ConditionType)newValue);
         return;
       case BxmlPackage.WHILE_TYPE__BODY:
-        setBody((SubstitutionType)newValue);
+        setBody((BodyType5)newValue);
         return;
       case BxmlPackage.WHILE_TYPE__INVARIANT:
-        setInvariant((PredicateType)newValue);
+        setInvariant((InvariantType)newValue);
         return;
       case BxmlPackage.WHILE_TYPE__VARIANT:
-        setVariant((ExpType)newValue);
+        setVariant((VariantType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -400,19 +401,19 @@ public class WhileTypeImpl extends MinimalEObjectImpl.Container implements While
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.WHILE_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.WHILE_TYPE__CONDITION:
-        setCondition((PredicateType)null);
+        setCondition((ConditionType)null);
         return;
       case BxmlPackage.WHILE_TYPE__BODY:
-        setBody((SubstitutionType)null);
+        setBody((BodyType5)null);
         return;
       case BxmlPackage.WHILE_TYPE__INVARIANT:
-        setInvariant((PredicateType)null);
+        setInvariant((InvariantType)null);
         return;
       case BxmlPackage.WHILE_TYPE__VARIANT:
-        setVariant((ExpType)null);
+        setVariant((VariantType)null);
         return;
     }
     super.eUnset(featureID);

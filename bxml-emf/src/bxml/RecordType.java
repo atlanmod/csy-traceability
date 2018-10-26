@@ -2,6 +2,8 @@
  */
 package bxml;
 
+import java.math.BigInteger;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -17,10 +19,11 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link bxml.RecordType#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.RecordType#getRecordItem <em>Record Item</em>}</li>
+ *   <li>{@link bxml.RecordType#getTypref <em>Typref</em>}</li>
  * </ul>
  *
  * @see bxml.BxmlPackage#getRecordType()
- * @model extendedMetaData="name='Record_._type' kind='elementOnly'"
+ * @model extendedMetaData="name='Record_type' kind='elementOnly'"
  * @generated
  */
 public interface RecordType extends EObject {
@@ -33,13 +36,13 @@ public interface RecordType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getRecordType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.RecordType#getAttr <em>Attr</em>}' containment reference.
@@ -49,7 +52,7 @@ public interface RecordType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Record Item</b></em>' containment reference list.
@@ -67,5 +70,32 @@ public interface RecordType extends EObject {
    * @generated
    */
   EList<RecordItemType> getRecordItem();
+
+  /**
+   * Returns the value of the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Typref</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Typref</em>' attribute.
+   * @see #setTypref(BigInteger)
+   * @see bxml.BxmlPackage#getRecordType_Typref()
+   * @model dataType="org.eclipse.emf.ecore.xml.type.Integer"
+   *        extendedMetaData="kind='attribute' name='typref' namespace='##targetNamespace'"
+   * @generated
+   */
+  BigInteger getTypref();
+
+  /**
+   * Sets the value of the '{@link bxml.RecordType#getTypref <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Typref</em>' attribute.
+   * @see #getTypref()
+   * @generated
+   */
+  void setTypref(BigInteger value);
 
 } // RecordType

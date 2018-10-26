@@ -2,20 +2,25 @@
  */
 package bxml.impl;
 
-import bxml.BinaryExpressionType;
+import bxml.AttrType;
+import bxml.BooleanExpType;
+import bxml.BooleanLiteralType;
 import bxml.BxmlPackage;
-import bxml.IdentifierType;
-import bxml.LiteralType;
+import bxml.BynaryExpType;
+import bxml.EmptySeqType;
+import bxml.EmptySetType;
+import bxml.Identifier;
+import bxml.IntegerLiteralType;
 import bxml.NaryExpType;
-import bxml.PredicateType;
 import bxml.QuantifiedExpType;
 import bxml.QuantifiedSetType;
 import bxml.RecordType;
-import bxml.StringLiteralType;
+import bxml.STRINGLiteralType;
 import bxml.StructType;
-import bxml.TerminalType;
-import bxml.UnaryExpressionType;
+import bxml.UnaryExpType;
 import bxml.ValuationType;
+
+import java.math.BigInteger;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -34,6 +39,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link bxml.impl.ValuationTypeImpl#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.impl.ValuationTypeImpl#getBinaryExp <em>Binary Exp</em>}</li>
  *   <li>{@link bxml.impl.ValuationTypeImpl#getNaryExp <em>Nary Exp</em>}</li>
  *   <li>{@link bxml.impl.ValuationTypeImpl#getBooleanLiteral <em>Boolean Literal</em>}</li>
@@ -49,11 +55,22 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link bxml.impl.ValuationTypeImpl#getStruct <em>Struct</em>}</li>
  *   <li>{@link bxml.impl.ValuationTypeImpl#getRecord <em>Record</em>}</li>
  *   <li>{@link bxml.impl.ValuationTypeImpl#getIdent <em>Ident</em>}</li>
+ *   <li>{@link bxml.impl.ValuationTypeImpl#getTypref <em>Typref</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements ValuationType {
+  /**
+   * The cached value of the '{@link #getAttr() <em>Attr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAttr()
+   * @generated
+   * @ordered
+   */
+  protected AttrType attr;
+
   /**
    * The cached value of the '{@link #getBinaryExp() <em>Binary Exp</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -62,7 +79,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected BinaryExpressionType binaryExp;
+  protected BynaryExpType binaryExp;
 
   /**
    * The cached value of the '{@link #getNaryExp() <em>Nary Exp</em>}' containment reference.
@@ -82,7 +99,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected IdentifierType booleanLiteral;
+  protected BooleanLiteralType booleanLiteral;
 
   /**
    * The cached value of the '{@link #getBooleanExp() <em>Boolean Exp</em>}' containment reference.
@@ -92,7 +109,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected PredicateType booleanExp;
+  protected BooleanExpType booleanExp;
 
   /**
    * The cached value of the '{@link #getEmptySet() <em>Empty Set</em>}' containment reference.
@@ -102,7 +119,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected TerminalType emptySet;
+  protected EmptySetType emptySet;
 
   /**
    * The cached value of the '{@link #getEmptySeq() <em>Empty Seq</em>}' containment reference.
@@ -112,7 +129,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected TerminalType emptySeq;
+  protected EmptySeqType emptySeq;
 
   /**
    * The cached value of the '{@link #getId() <em>Id</em>}' containment reference.
@@ -122,7 +139,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected IdentifierType id;
+  protected Identifier id;
 
   /**
    * The cached value of the '{@link #getIntegerLiteral() <em>Integer Literal</em>}' containment reference.
@@ -132,7 +149,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected LiteralType integerLiteral;
+  protected IntegerLiteralType integerLiteral;
 
   /**
    * The cached value of the '{@link #getQuantifiedExp() <em>Quantified Exp</em>}' containment reference.
@@ -162,7 +179,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected StringLiteralType sTRINGLiteral;
+  protected STRINGLiteralType sTRINGLiteral;
 
   /**
    * The cached value of the '{@link #getUnaryExp() <em>Unary Exp</em>}' containment reference.
@@ -172,7 +189,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected UnaryExpressionType unaryExp;
+  protected UnaryExpType unaryExp;
 
   /**
    * The cached value of the '{@link #getStruct() <em>Struct</em>}' containment reference.
@@ -202,7 +219,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected static final String IDENT_EDEFAULT = null;
+  protected static final Object IDENT_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getIdent() <em>Ident</em>}' attribute.
@@ -212,7 +229,27 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    * @ordered
    */
-  protected String ident = IDENT_EDEFAULT;
+  protected Object ident = IDENT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getTypref() <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypref()
+   * @generated
+   * @ordered
+   */
+  protected static final BigInteger TYPREF_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getTypref() <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTypref()
+   * @generated
+   * @ordered
+   */
+  protected BigInteger typref = TYPREF_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -238,7 +275,50 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryExpressionType getBinaryExp() {
+  public AttrType getAttr() {
+    return attr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
+    attr = newAttr;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__ATTR, oldAttr, newAttr);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAttr(AttrType newAttr) {
+    if (newAttr != attr) {
+      NotificationChain msgs = null;
+      if (attr != null)
+        msgs = ((InternalEObject)attr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.VALUATION_TYPE__ATTR, null, msgs);
+      if (newAttr != null)
+        msgs = ((InternalEObject)newAttr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BxmlPackage.VALUATION_TYPE__ATTR, null, msgs);
+      msgs = basicSetAttr(newAttr, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__ATTR, newAttr, newAttr));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BynaryExpType getBinaryExp() {
     return binaryExp;
   }
 
@@ -247,8 +327,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBinaryExp(BinaryExpressionType newBinaryExp, NotificationChain msgs) {
-    BinaryExpressionType oldBinaryExp = binaryExp;
+  public NotificationChain basicSetBinaryExp(BynaryExpType newBinaryExp, NotificationChain msgs) {
+    BynaryExpType oldBinaryExp = binaryExp;
     binaryExp = newBinaryExp;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__BINARY_EXP, oldBinaryExp, newBinaryExp);
@@ -262,7 +342,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBinaryExp(BinaryExpressionType newBinaryExp) {
+  public void setBinaryExp(BynaryExpType newBinaryExp) {
     if (newBinaryExp != binaryExp) {
       NotificationChain msgs = null;
       if (binaryExp != null)
@@ -324,7 +404,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierType getBooleanLiteral() {
+  public BooleanLiteralType getBooleanLiteral() {
     return booleanLiteral;
   }
 
@@ -333,8 +413,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBooleanLiteral(IdentifierType newBooleanLiteral, NotificationChain msgs) {
-    IdentifierType oldBooleanLiteral = booleanLiteral;
+  public NotificationChain basicSetBooleanLiteral(BooleanLiteralType newBooleanLiteral, NotificationChain msgs) {
+    BooleanLiteralType oldBooleanLiteral = booleanLiteral;
     booleanLiteral = newBooleanLiteral;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__BOOLEAN_LITERAL, oldBooleanLiteral, newBooleanLiteral);
@@ -348,7 +428,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBooleanLiteral(IdentifierType newBooleanLiteral) {
+  public void setBooleanLiteral(BooleanLiteralType newBooleanLiteral) {
     if (newBooleanLiteral != booleanLiteral) {
       NotificationChain msgs = null;
       if (booleanLiteral != null)
@@ -367,7 +447,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getBooleanExp() {
+  public BooleanExpType getBooleanExp() {
     return booleanExp;
   }
 
@@ -376,8 +456,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBooleanExp(PredicateType newBooleanExp, NotificationChain msgs) {
-    PredicateType oldBooleanExp = booleanExp;
+  public NotificationChain basicSetBooleanExp(BooleanExpType newBooleanExp, NotificationChain msgs) {
+    BooleanExpType oldBooleanExp = booleanExp;
     booleanExp = newBooleanExp;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__BOOLEAN_EXP, oldBooleanExp, newBooleanExp);
@@ -391,7 +471,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBooleanExp(PredicateType newBooleanExp) {
+  public void setBooleanExp(BooleanExpType newBooleanExp) {
     if (newBooleanExp != booleanExp) {
       NotificationChain msgs = null;
       if (booleanExp != null)
@@ -410,7 +490,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public TerminalType getEmptySet() {
+  public EmptySetType getEmptySet() {
     return emptySet;
   }
 
@@ -419,8 +499,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEmptySet(TerminalType newEmptySet, NotificationChain msgs) {
-    TerminalType oldEmptySet = emptySet;
+  public NotificationChain basicSetEmptySet(EmptySetType newEmptySet, NotificationChain msgs) {
+    EmptySetType oldEmptySet = emptySet;
     emptySet = newEmptySet;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__EMPTY_SET, oldEmptySet, newEmptySet);
@@ -434,7 +514,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEmptySet(TerminalType newEmptySet) {
+  public void setEmptySet(EmptySetType newEmptySet) {
     if (newEmptySet != emptySet) {
       NotificationChain msgs = null;
       if (emptySet != null)
@@ -453,7 +533,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public TerminalType getEmptySeq() {
+  public EmptySeqType getEmptySeq() {
     return emptySeq;
   }
 
@@ -462,8 +542,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetEmptySeq(TerminalType newEmptySeq, NotificationChain msgs) {
-    TerminalType oldEmptySeq = emptySeq;
+  public NotificationChain basicSetEmptySeq(EmptySeqType newEmptySeq, NotificationChain msgs) {
+    EmptySeqType oldEmptySeq = emptySeq;
     emptySeq = newEmptySeq;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__EMPTY_SEQ, oldEmptySeq, newEmptySeq);
@@ -477,7 +557,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEmptySeq(TerminalType newEmptySeq) {
+  public void setEmptySeq(EmptySeqType newEmptySeq) {
     if (newEmptySeq != emptySeq) {
       NotificationChain msgs = null;
       if (emptySeq != null)
@@ -496,7 +576,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierType getId() {
+  public Identifier getId() {
     return id;
   }
 
@@ -505,8 +585,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetId(IdentifierType newId, NotificationChain msgs) {
-    IdentifierType oldId = id;
+  public NotificationChain basicSetId(Identifier newId, NotificationChain msgs) {
+    Identifier oldId = id;
     id = newId;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__ID, oldId, newId);
@@ -520,7 +600,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(IdentifierType newId) {
+  public void setId(Identifier newId) {
     if (newId != id) {
       NotificationChain msgs = null;
       if (id != null)
@@ -539,7 +619,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralType getIntegerLiteral() {
+  public IntegerLiteralType getIntegerLiteral() {
     return integerLiteral;
   }
 
@@ -548,8 +628,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIntegerLiteral(LiteralType newIntegerLiteral, NotificationChain msgs) {
-    LiteralType oldIntegerLiteral = integerLiteral;
+  public NotificationChain basicSetIntegerLiteral(IntegerLiteralType newIntegerLiteral, NotificationChain msgs) {
+    IntegerLiteralType oldIntegerLiteral = integerLiteral;
     integerLiteral = newIntegerLiteral;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__INTEGER_LITERAL, oldIntegerLiteral, newIntegerLiteral);
@@ -563,7 +643,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIntegerLiteral(LiteralType newIntegerLiteral) {
+  public void setIntegerLiteral(IntegerLiteralType newIntegerLiteral) {
     if (newIntegerLiteral != integerLiteral) {
       NotificationChain msgs = null;
       if (integerLiteral != null)
@@ -668,7 +748,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public StringLiteralType getSTRINGLiteral() {
+  public STRINGLiteralType getSTRINGLiteral() {
     return sTRINGLiteral;
   }
 
@@ -677,8 +757,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetSTRINGLiteral(StringLiteralType newSTRINGLiteral, NotificationChain msgs) {
-    StringLiteralType oldSTRINGLiteral = sTRINGLiteral;
+  public NotificationChain basicSetSTRINGLiteral(STRINGLiteralType newSTRINGLiteral, NotificationChain msgs) {
+    STRINGLiteralType oldSTRINGLiteral = sTRINGLiteral;
     sTRINGLiteral = newSTRINGLiteral;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__STRING_LITERAL, oldSTRINGLiteral, newSTRINGLiteral);
@@ -692,7 +772,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSTRINGLiteral(StringLiteralType newSTRINGLiteral) {
+  public void setSTRINGLiteral(STRINGLiteralType newSTRINGLiteral) {
     if (newSTRINGLiteral != sTRINGLiteral) {
       NotificationChain msgs = null;
       if (sTRINGLiteral != null)
@@ -711,7 +791,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryExpressionType getUnaryExp() {
+  public UnaryExpType getUnaryExp() {
     return unaryExp;
   }
 
@@ -720,8 +800,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetUnaryExp(UnaryExpressionType newUnaryExp, NotificationChain msgs) {
-    UnaryExpressionType oldUnaryExp = unaryExp;
+  public NotificationChain basicSetUnaryExp(UnaryExpType newUnaryExp, NotificationChain msgs) {
+    UnaryExpType oldUnaryExp = unaryExp;
     unaryExp = newUnaryExp;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__UNARY_EXP, oldUnaryExp, newUnaryExp);
@@ -735,7 +815,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setUnaryExp(UnaryExpressionType newUnaryExp) {
+  public void setUnaryExp(UnaryExpType newUnaryExp) {
     if (newUnaryExp != unaryExp) {
       NotificationChain msgs = null;
       if (unaryExp != null)
@@ -840,7 +920,7 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getIdent() {
+  public Object getIdent() {
     return ident;
   }
 
@@ -849,8 +929,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIdent(String newIdent) {
-    String oldIdent = ident;
+  public void setIdent(Object newIdent) {
+    Object oldIdent = ident;
     ident = newIdent;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__IDENT, oldIdent, ident));
@@ -861,9 +941,32 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
+  public BigInteger getTypref() {
+    return typref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTypref(BigInteger newTypref) {
+    BigInteger oldTypref = typref;
+    typref = newTypref;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BxmlPackage.VALUATION_TYPE__TYPREF, oldTypref, typref));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
+      case BxmlPackage.VALUATION_TYPE__ATTR:
+        return basicSetAttr(null, msgs);
       case BxmlPackage.VALUATION_TYPE__BINARY_EXP:
         return basicSetBinaryExp(null, msgs);
       case BxmlPackage.VALUATION_TYPE__NARY_EXP:
@@ -904,6 +1007,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
+      case BxmlPackage.VALUATION_TYPE__ATTR:
+        return getAttr();
       case BxmlPackage.VALUATION_TYPE__BINARY_EXP:
         return getBinaryExp();
       case BxmlPackage.VALUATION_TYPE__NARY_EXP:
@@ -934,6 +1039,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
         return getRecord();
       case BxmlPackage.VALUATION_TYPE__IDENT:
         return getIdent();
+      case BxmlPackage.VALUATION_TYPE__TYPREF:
+        return getTypref();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -946,29 +1053,32 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
+      case BxmlPackage.VALUATION_TYPE__ATTR:
+        setAttr((AttrType)newValue);
+        return;
       case BxmlPackage.VALUATION_TYPE__BINARY_EXP:
-        setBinaryExp((BinaryExpressionType)newValue);
+        setBinaryExp((BynaryExpType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__NARY_EXP:
         setNaryExp((NaryExpType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__BOOLEAN_LITERAL:
-        setBooleanLiteral((IdentifierType)newValue);
+        setBooleanLiteral((BooleanLiteralType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__BOOLEAN_EXP:
-        setBooleanExp((PredicateType)newValue);
+        setBooleanExp((BooleanExpType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__EMPTY_SET:
-        setEmptySet((TerminalType)newValue);
+        setEmptySet((EmptySetType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__EMPTY_SEQ:
-        setEmptySeq((TerminalType)newValue);
+        setEmptySeq((EmptySeqType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__ID:
-        setId((IdentifierType)newValue);
+        setId((Identifier)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__INTEGER_LITERAL:
-        setIntegerLiteral((LiteralType)newValue);
+        setIntegerLiteral((IntegerLiteralType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__QUANTIFIED_EXP:
         setQuantifiedExp((QuantifiedExpType)newValue);
@@ -977,10 +1087,10 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
         setQuantifiedSet((QuantifiedSetType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__STRING_LITERAL:
-        setSTRINGLiteral((StringLiteralType)newValue);
+        setSTRINGLiteral((STRINGLiteralType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__UNARY_EXP:
-        setUnaryExp((UnaryExpressionType)newValue);
+        setUnaryExp((UnaryExpType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__STRUCT:
         setStruct((StructType)newValue);
@@ -989,7 +1099,10 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
         setRecord((RecordType)newValue);
         return;
       case BxmlPackage.VALUATION_TYPE__IDENT:
-        setIdent((String)newValue);
+        setIdent(newValue);
+        return;
+      case BxmlPackage.VALUATION_TYPE__TYPREF:
+        setTypref((BigInteger)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -1003,29 +1116,32 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
+      case BxmlPackage.VALUATION_TYPE__ATTR:
+        setAttr((AttrType)null);
+        return;
       case BxmlPackage.VALUATION_TYPE__BINARY_EXP:
-        setBinaryExp((BinaryExpressionType)null);
+        setBinaryExp((BynaryExpType)null);
         return;
       case BxmlPackage.VALUATION_TYPE__NARY_EXP:
         setNaryExp((NaryExpType)null);
         return;
       case BxmlPackage.VALUATION_TYPE__BOOLEAN_LITERAL:
-        setBooleanLiteral((IdentifierType)null);
+        setBooleanLiteral((BooleanLiteralType)null);
         return;
       case BxmlPackage.VALUATION_TYPE__BOOLEAN_EXP:
-        setBooleanExp((PredicateType)null);
+        setBooleanExp((BooleanExpType)null);
         return;
       case BxmlPackage.VALUATION_TYPE__EMPTY_SET:
-        setEmptySet((TerminalType)null);
+        setEmptySet((EmptySetType)null);
         return;
       case BxmlPackage.VALUATION_TYPE__EMPTY_SEQ:
-        setEmptySeq((TerminalType)null);
+        setEmptySeq((EmptySeqType)null);
         return;
       case BxmlPackage.VALUATION_TYPE__ID:
-        setId((IdentifierType)null);
+        setId((Identifier)null);
         return;
       case BxmlPackage.VALUATION_TYPE__INTEGER_LITERAL:
-        setIntegerLiteral((LiteralType)null);
+        setIntegerLiteral((IntegerLiteralType)null);
         return;
       case BxmlPackage.VALUATION_TYPE__QUANTIFIED_EXP:
         setQuantifiedExp((QuantifiedExpType)null);
@@ -1034,10 +1150,10 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
         setQuantifiedSet((QuantifiedSetType)null);
         return;
       case BxmlPackage.VALUATION_TYPE__STRING_LITERAL:
-        setSTRINGLiteral((StringLiteralType)null);
+        setSTRINGLiteral((STRINGLiteralType)null);
         return;
       case BxmlPackage.VALUATION_TYPE__UNARY_EXP:
-        setUnaryExp((UnaryExpressionType)null);
+        setUnaryExp((UnaryExpType)null);
         return;
       case BxmlPackage.VALUATION_TYPE__STRUCT:
         setStruct((StructType)null);
@@ -1047,6 +1163,9 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
         return;
       case BxmlPackage.VALUATION_TYPE__IDENT:
         setIdent(IDENT_EDEFAULT);
+        return;
+      case BxmlPackage.VALUATION_TYPE__TYPREF:
+        setTypref(TYPREF_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -1060,6 +1179,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
+      case BxmlPackage.VALUATION_TYPE__ATTR:
+        return attr != null;
       case BxmlPackage.VALUATION_TYPE__BINARY_EXP:
         return binaryExp != null;
       case BxmlPackage.VALUATION_TYPE__NARY_EXP:
@@ -1090,6 +1211,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
         return record != null;
       case BxmlPackage.VALUATION_TYPE__IDENT:
         return IDENT_EDEFAULT == null ? ident != null : !IDENT_EDEFAULT.equals(ident);
+      case BxmlPackage.VALUATION_TYPE__TYPREF:
+        return TYPREF_EDEFAULT == null ? typref != null : !TYPREF_EDEFAULT.equals(typref);
     }
     return super.eIsSet(featureID);
   }
@@ -1106,6 +1229,8 @@ public class ValuationTypeImpl extends MinimalEObjectImpl.Container implements V
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (ident: ");
     result.append(ident);
+    result.append(", typref: ");
+    result.append(typref);
     result.append(')');
     return result.toString();
   }

@@ -3,10 +3,10 @@
 package bxml.impl;
 
 import bxml.AssertSubType;
-import bxml.AttributesType;
+import bxml.AttrType;
+import bxml.BodyType2;
 import bxml.BxmlPackage;
-import bxml.PredicateType;
-import bxml.SubstitutionType;
+import bxml.GuardType;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -41,7 +41,7 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getGuard() <em>Guard</em>}' containment reference.
@@ -51,7 +51,7 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * @generated
    * @ordered
    */
-  protected PredicateType guard;
+  protected GuardType guard;
 
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
@@ -61,7 +61,7 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * @generated
    * @ordered
    */
-  protected SubstitutionType body;
+  protected BodyType2 body;
 
   /**
    * <!-- begin-user-doc -->
@@ -87,7 +87,7 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -96,8 +96,8 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.ASSERT_SUB_TYPE__ATTR, oldAttr, newAttr);
@@ -111,7 +111,7 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -130,7 +130,7 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
    * @generated
    */
-  public PredicateType getGuard() {
+  public GuardType getGuard() {
     return guard;
   }
 
@@ -139,8 +139,8 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetGuard(PredicateType newGuard, NotificationChain msgs) {
-    PredicateType oldGuard = guard;
+  public NotificationChain basicSetGuard(GuardType newGuard, NotificationChain msgs) {
+    GuardType oldGuard = guard;
     guard = newGuard;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.ASSERT_SUB_TYPE__GUARD, oldGuard, newGuard);
@@ -154,7 +154,7 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setGuard(PredicateType newGuard) {
+  public void setGuard(GuardType newGuard) {
     if (newGuard != guard) {
       NotificationChain msgs = null;
       if (guard != null)
@@ -173,7 +173,7 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubstitutionType getBody() {
+  public BodyType2 getBody() {
     return body;
   }
 
@@ -182,8 +182,8 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBody(SubstitutionType newBody, NotificationChain msgs) {
-    SubstitutionType oldBody = body;
+  public NotificationChain basicSetBody(BodyType2 newBody, NotificationChain msgs) {
+    BodyType2 oldBody = body;
     body = newBody;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.ASSERT_SUB_TYPE__BODY, oldBody, newBody);
@@ -197,7 +197,7 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBody(SubstitutionType newBody) {
+  public void setBody(BodyType2 newBody) {
     if (newBody != body) {
       NotificationChain msgs = null;
       if (body != null)
@@ -256,13 +256,13 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.ASSERT_SUB_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.ASSERT_SUB_TYPE__GUARD:
-        setGuard((PredicateType)newValue);
+        setGuard((GuardType)newValue);
         return;
       case BxmlPackage.ASSERT_SUB_TYPE__BODY:
-        setBody((SubstitutionType)newValue);
+        setBody((BodyType2)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -277,13 +277,13 @@ public class AssertSubTypeImpl extends MinimalEObjectImpl.Container implements A
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.ASSERT_SUB_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.ASSERT_SUB_TYPE__GUARD:
-        setGuard((PredicateType)null);
+        setGuard((GuardType)null);
         return;
       case BxmlPackage.ASSERT_SUB_TYPE__BODY:
-        setBody((SubstitutionType)null);
+        setBody((BodyType2)null);
         return;
     }
     super.eUnset(featureID);

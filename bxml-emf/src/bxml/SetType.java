@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see bxml.BxmlPackage#getSetType()
- * @model extendedMetaData="name='Set_type' kind='elementOnly'"
+ * @model extendedMetaData="name='Set_._type' kind='elementOnly'"
  * @generated
  */
 public interface SetType extends EObject {
@@ -32,13 +32,13 @@ public interface SetType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getSetType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.SetType#getAttr <em>Attr</em>}' containment reference.
@@ -48,7 +48,7 @@ public interface SetType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Id</b></em>' containment reference.
@@ -59,13 +59,13 @@ public interface SetType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Id</em>' containment reference.
-   * @see #setId(IdentifierType)
+   * @see #setId(Identifier)
    * @see bxml.BxmlPackage#getSetType_Id()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Id' namespace='##targetNamespace'"
    * @generated
    */
-  IdentifierType getId();
+  Identifier getId();
 
   /**
    * Sets the value of the '{@link bxml.SetType#getId <em>Id</em>}' containment reference.
@@ -75,7 +75,7 @@ public interface SetType extends EObject {
    * @see #getId()
    * @generated
    */
-  void setId(IdentifierType value);
+  void setId(Identifier value);
 
   /**
    * Returns the value of the '<em><b>Enumerated Values</b></em>' containment reference.

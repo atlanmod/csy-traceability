@@ -11,7 +11,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated bxml -->
       <package
-            uri="platform:/resource/bxml-emf/xml/bxml.xsd"
+            uri="platform:/resource/csy-traceability/bxsd/bxml.xsd"
             class="bxml.BxmlPackage"
             genModel="metamodel/bxml.genmodel"/>
    </extension>

@@ -92,12 +92,12 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createAssertSubTypeAdapter();
       }
       @Override
-      public Adapter caseAssignementSubstitutionType(AssignementSubstitutionType object) {
-        return createAssignementSubstitutionTypeAdapter();
+      public Adapter caseAssignementSubType(AssignementSubType object) {
+        return createAssignementSubTypeAdapter();
       }
       @Override
-      public Adapter caseAttributesType(AttributesType object) {
-        return createAttributesTypeAdapter();
+      public Adapter caseAttrType(AttrType object) {
+        return createAttrTypeAdapter();
       }
       @Override
       public Adapter caseBecomesInType(BecomesInType object) {
@@ -108,20 +108,56 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createBecomesSuchThatTypeAdapter();
       }
       @Override
-      public Adapter caseBinaryExpressionType(BinaryExpressionType object) {
-        return createBinaryExpressionTypeAdapter();
+      public Adapter caseBinaryExpType2(BinaryExpType2 object) {
+        return createBinaryExpType2Adapter();
       }
       @Override
-      public Adapter caseBinaryPredicateType(BinaryPredicateType object) {
-        return createBinaryPredicateTypeAdapter();
+      public Adapter caseBinaryPredType(BinaryPredType object) {
+        return createBinaryPredTypeAdapter();
       }
       @Override
-      public Adapter caseBinarySubType(BinarySubType object) {
-        return createBinarySubTypeAdapter();
+      public Adapter caseBlocSubType(BlocSubType object) {
+        return createBlocSubTypeAdapter();
       }
       @Override
-      public Adapter caseCallParamatersType(CallParamatersType object) {
-        return createCallParamatersTypeAdapter();
+      public Adapter caseBodyType(BodyType object) {
+        return createBodyTypeAdapter();
+      }
+      @Override
+      public Adapter caseBodyType1(BodyType1 object) {
+        return createBodyType1Adapter();
+      }
+      @Override
+      public Adapter caseBodyType2(BodyType2 object) {
+        return createBodyType2Adapter();
+      }
+      @Override
+      public Adapter caseBodyType3(BodyType3 object) {
+        return createBodyType3Adapter();
+      }
+      @Override
+      public Adapter caseBodyType4(BodyType4 object) {
+        return createBodyType4Adapter();
+      }
+      @Override
+      public Adapter caseBodyType5(BodyType5 object) {
+        return createBodyType5Adapter();
+      }
+      @Override
+      public Adapter caseBodyType6(BodyType6 object) {
+        return createBodyType6Adapter();
+      }
+      @Override
+      public Adapter caseBooleanExpType(BooleanExpType object) {
+        return createBooleanExpTypeAdapter();
+      }
+      @Override
+      public Adapter caseBooleanLiteralType(BooleanLiteralType object) {
+        return createBooleanLiteralTypeAdapter();
+      }
+      @Override
+      public Adapter caseBynaryExpType(BynaryExpType object) {
+        return createBynaryExpTypeAdapter();
       }
       @Override
       public Adapter caseCaseSubType(CaseSubType object) {
@@ -136,6 +172,10 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createChoiceTypeAdapter();
       }
       @Override
+      public Adapter caseChoiceType1(ChoiceType1 object) {
+        return createChoiceType1Adapter();
+      }
+      @Override
       public Adapter caseConcreteConstantsType(ConcreteConstantsType object) {
         return createConcreteConstantsTypeAdapter();
       }
@@ -144,8 +184,36 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createConcreteVariablesTypeAdapter();
       }
       @Override
+      public Adapter caseConditionType(ConditionType object) {
+        return createConditionTypeAdapter();
+      }
+      @Override
+      public Adapter caseConstraintsType(ConstraintsType object) {
+        return createConstraintsTypeAdapter();
+      }
+      @Override
       public Adapter caseDocumentRoot(DocumentRoot object) {
         return createDocumentRootAdapter();
+      }
+      @Override
+      public Adapter caseElseType(ElseType object) {
+        return createElseTypeAdapter();
+      }
+      @Override
+      public Adapter caseElseType1(ElseType1 object) {
+        return createElseType1Adapter();
+      }
+      @Override
+      public Adapter caseElseType2(ElseType2 object) {
+        return createElseType2Adapter();
+      }
+      @Override
+      public Adapter caseEmptySeqType(EmptySeqType object) {
+        return createEmptySeqTypeAdapter();
+      }
+      @Override
+      public Adapter caseEmptySetType(EmptySetType object) {
+        return createEmptySetTypeAdapter();
       }
       @Override
       public Adapter caseEnumeratedValuesType(EnumeratedValuesType object) {
@@ -156,40 +224,64 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createExpComparisonTypeAdapter();
       }
       @Override
-      public Adapter caseExpType(ExpType object) {
-        return createExpTypeAdapter();
+      public Adapter caseExtendsType(ExtendsType object) {
+        return createExtendsTypeAdapter();
       }
       @Override
-      public Adapter caseIdentifierType(IdentifierType object) {
-        return createIdentifierTypeAdapter();
+      public Adapter caseGuardType(GuardType object) {
+        return createGuardTypeAdapter();
+      }
+      @Override
+      public Adapter caseIdentifier(Identifier object) {
+        return createIdentifierAdapter();
+      }
+      @Override
+      public Adapter caseIdType(IdType object) {
+        return createIdTypeAdapter();
       }
       @Override
       public Adapter caseIfSubType(IfSubType object) {
         return createIfSubTypeAdapter();
       }
       @Override
-      public Adapter caseInfoTypeType(InfoTypeType object) {
-        return createInfoTypeTypeAdapter();
+      public Adapter caseImportsType(ImportsType object) {
+        return createImportsTypeAdapter();
+      }
+      @Override
+      public Adapter caseIncludesType(IncludesType object) {
+        return createIncludesTypeAdapter();
+      }
+      @Override
+      public Adapter caseInitialisationType(InitialisationType object) {
+        return createInitialisationTypeAdapter();
       }
       @Override
       public Adapter caseInputParametersType(InputParametersType object) {
         return createInputParametersTypeAdapter();
       }
       @Override
-      public Adapter caseLETSubType(LETSubType object) {
-        return createLETSubTypeAdapter();
+      public Adapter caseInputParametersType1(InputParametersType1 object) {
+        return createInputParametersType1Adapter();
       }
       @Override
-      public Adapter caseLiteralType(LiteralType object) {
-        return createLiteralTypeAdapter();
+      public Adapter caseIntegerLiteralType(IntegerLiteralType object) {
+        return createIntegerLiteralTypeAdapter();
+      }
+      @Override
+      public Adapter caseInvariantType(InvariantType object) {
+        return createInvariantTypeAdapter();
+      }
+      @Override
+      public Adapter caseLETSubType(LETSubType object) {
+        return createLETSubTypeAdapter();
       }
       @Override
       public Adapter caseLocalOperationsType(LocalOperationsType object) {
         return createLocalOperationsTypeAdapter();
       }
       @Override
-      public Adapter caseMachineType1(MachineType1 object) {
-        return createMachineType1Adapter();
+      public Adapter caseMachineType(MachineType object) {
+        return createMachineTypeAdapter();
       }
       @Override
       public Adapter caseNameType(NameType object) {
@@ -200,12 +292,12 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createNaryExpTypeAdapter();
       }
       @Override
-      public Adapter caseNaryPredicateType(NaryPredicateType object) {
-        return createNaryPredicateTypeAdapter();
+      public Adapter caseNaryPredType(NaryPredType object) {
+        return createNaryPredTypeAdapter();
       }
       @Override
-      public Adapter caseNarySubstitutionType(NarySubstitutionType object) {
-        return createNarySubstitutionTypeAdapter();
+      public Adapter caseNarySubType(NarySubType object) {
+        return createNarySubTypeAdapter();
       }
       @Override
       public Adapter caseOperationCallType(OperationCallType object) {
@@ -224,6 +316,10 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createOutputParametersTypeAdapter();
       }
       @Override
+      public Adapter caseOutputParametersType1(OutputParametersType1 object) {
+        return createOutputParametersType1Adapter();
+      }
+      @Override
       public Adapter caseParametersType(ParametersType object) {
         return createParametersTypeAdapter();
       }
@@ -232,12 +328,24 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createParametersType1Adapter();
       }
       @Override
-      public Adapter casePredicateType(PredicateType object) {
-        return createPredicateTypeAdapter();
+      public Adapter casePreconditionType(PreconditionType object) {
+        return createPreconditionTypeAdapter();
+      }
+      @Override
+      public Adapter casePredType(PredType object) {
+        return createPredTypeAdapter();
+      }
+      @Override
+      public Adapter casePromotedOperationType(PromotedOperationType object) {
+        return createPromotedOperationTypeAdapter();
       }
       @Override
       public Adapter casePromotesType(PromotesType object) {
         return createPromotesTypeAdapter();
+      }
+      @Override
+      public Adapter casePropertiesType(PropertiesType object) {
+        return createPropertiesTypeAdapter();
       }
       @Override
       public Adapter caseQuantifiedExpType(QuantifiedExpType object) {
@@ -264,14 +372,6 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createReferencedMachineTypeAdapter();
       }
       @Override
-      public Adapter caseReferencedMachineType1(ReferencedMachineType1 object) {
-        return createReferencedMachineType1Adapter();
-      }
-      @Override
-      public Adapter caseReferencedMachineType2(ReferencedMachineType2 object) {
-        return createReferencedMachineType2Adapter();
-      }
-      @Override
       public Adapter caseRefinesType(RefinesType object) {
         return createRefinesTypeAdapter();
       }
@@ -292,32 +392,48 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createSetTypeAdapter();
       }
       @Override
-      public Adapter caseStringLiteralType(StringLiteralType object) {
-        return createStringLiteralTypeAdapter();
+      public Adapter caseSetType1(SetType1 object) {
+        return createSetType1Adapter();
+      }
+      @Override
+      public Adapter caseSkipType(SkipType object) {
+        return createSkipTypeAdapter();
+      }
+      @Override
+      public Adapter caseSTRINGLiteralType(STRINGLiteralType object) {
+        return createSTRINGLiteralTypeAdapter();
       }
       @Override
       public Adapter caseStructType(StructType object) {
         return createStructTypeAdapter();
       }
       @Override
-      public Adapter caseSubstitutionType(SubstitutionType object) {
-        return createSubstitutionTypeAdapter();
+      public Adapter caseThenType(ThenType object) {
+        return createThenTypeAdapter();
       }
       @Override
-      public Adapter caseTerminalType(TerminalType object) {
-        return createTerminalTypeAdapter();
+      public Adapter caseTypeInfo(TypeInfo object) {
+        return createTypeInfoAdapter();
       }
       @Override
       public Adapter caseTypeInfosType(TypeInfosType object) {
         return createTypeInfosTypeAdapter();
       }
       @Override
-      public Adapter caseUnaryExpressionType(UnaryExpressionType object) {
-        return createUnaryExpressionTypeAdapter();
+      public Adapter caseUnaryExpType(UnaryExpType object) {
+        return createUnaryExpTypeAdapter();
       }
       @Override
-      public Adapter caseUnaryPredicateType(UnaryPredicateType object) {
-        return createUnaryPredicateTypeAdapter();
+      public Adapter caseUnaryExpType2(UnaryExpType2 object) {
+        return createUnaryExpType2Adapter();
+      }
+      @Override
+      public Adapter caseUnaryPredType(UnaryPredType object) {
+        return createUnaryPredTypeAdapter();
+      }
+      @Override
+      public Adapter caseUsesType(UsesType object) {
+        return createUsesTypeAdapter();
       }
       @Override
       public Adapter caseValuationType(ValuationType object) {
@@ -340,12 +456,20 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
         return createValuesType2Adapter();
       }
       @Override
+      public Adapter caseValueType(ValueType object) {
+        return createValueTypeAdapter();
+      }
+      @Override
       public Adapter caseVariablesType(VariablesType object) {
         return createVariablesTypeAdapter();
       }
       @Override
       public Adapter caseVariablesType1(VariablesType1 object) {
         return createVariablesType1Adapter();
+      }
+      @Override
+      public Adapter caseVariantType(VariantType object) {
+        return createVariantTypeAdapter();
       }
       @Override
       public Adapter caseVARINType(VARINType object) {
@@ -468,30 +592,30 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.AssignementSubstitutionType <em>Assignement Substitution Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.AssignementSubType <em>Assignement Sub Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.AssignementSubstitutionType
+   * @see bxml.AssignementSubType
    * @generated
    */
-  public Adapter createAssignementSubstitutionTypeAdapter() {
+  public Adapter createAssignementSubTypeAdapter() {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.AttributesType <em>Attributes Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.AttrType <em>Attr Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.AttributesType
+   * @see bxml.AttrType
    * @generated
    */
-  public Adapter createAttributesTypeAdapter() {
+  public Adapter createAttrTypeAdapter() {
     return null;
   }
 
@@ -524,58 +648,184 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.BinaryExpressionType <em>Binary Expression Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.BinaryExpType2 <em>Binary Exp Type2</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.BinaryExpressionType
+   * @see bxml.BinaryExpType2
    * @generated
    */
-  public Adapter createBinaryExpressionTypeAdapter() {
+  public Adapter createBinaryExpType2Adapter() {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.BinaryPredicateType <em>Binary Predicate Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.BinaryPredType <em>Binary Pred Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.BinaryPredicateType
+   * @see bxml.BinaryPredType
    * @generated
    */
-  public Adapter createBinaryPredicateTypeAdapter() {
+  public Adapter createBinaryPredTypeAdapter() {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.BinarySubType <em>Binary Sub Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.BlocSubType <em>Bloc Sub Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.BinarySubType
+   * @see bxml.BlocSubType
    * @generated
    */
-  public Adapter createBinarySubTypeAdapter() {
+  public Adapter createBlocSubTypeAdapter() {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.CallParamatersType <em>Call Paramaters Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.BodyType <em>Body Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.CallParamatersType
+   * @see bxml.BodyType
    * @generated
    */
-  public Adapter createCallParamatersTypeAdapter() {
+  public Adapter createBodyTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.BodyType1 <em>Body Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.BodyType1
+   * @generated
+   */
+  public Adapter createBodyType1Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.BodyType2 <em>Body Type2</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.BodyType2
+   * @generated
+   */
+  public Adapter createBodyType2Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.BodyType3 <em>Body Type3</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.BodyType3
+   * @generated
+   */
+  public Adapter createBodyType3Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.BodyType4 <em>Body Type4</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.BodyType4
+   * @generated
+   */
+  public Adapter createBodyType4Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.BodyType5 <em>Body Type5</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.BodyType5
+   * @generated
+   */
+  public Adapter createBodyType5Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.BodyType6 <em>Body Type6</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.BodyType6
+   * @generated
+   */
+  public Adapter createBodyType6Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.BooleanExpType <em>Boolean Exp Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.BooleanExpType
+   * @generated
+   */
+  public Adapter createBooleanExpTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.BooleanLiteralType <em>Boolean Literal Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.BooleanLiteralType
+   * @generated
+   */
+  public Adapter createBooleanLiteralTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.BynaryExpType <em>Bynary Exp Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.BynaryExpType
+   * @generated
+   */
+  public Adapter createBynaryExpTypeAdapter() {
     return null;
   }
 
@@ -622,6 +872,20 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link bxml.ChoiceType1 <em>Choice Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.ChoiceType1
+   * @generated
+   */
+  public Adapter createChoiceType1Adapter() {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link bxml.ConcreteConstantsType <em>Concrete Constants Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -650,6 +914,34 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link bxml.ConditionType <em>Condition Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.ConditionType
+   * @generated
+   */
+  public Adapter createConditionTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.ConstraintsType <em>Constraints Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.ConstraintsType
+   * @generated
+   */
+  public Adapter createConstraintsTypeAdapter() {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link bxml.DocumentRoot <em>Document Root</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -660,6 +952,76 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createDocumentRootAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.ElseType <em>Else Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.ElseType
+   * @generated
+   */
+  public Adapter createElseTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.ElseType1 <em>Else Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.ElseType1
+   * @generated
+   */
+  public Adapter createElseType1Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.ElseType2 <em>Else Type2</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.ElseType2
+   * @generated
+   */
+  public Adapter createElseType2Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.EmptySeqType <em>Empty Seq Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.EmptySeqType
+   * @generated
+   */
+  public Adapter createEmptySeqTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.EmptySetType <em>Empty Set Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.EmptySetType
+   * @generated
+   */
+  public Adapter createEmptySetTypeAdapter() {
     return null;
   }
 
@@ -692,30 +1054,58 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.ExpType <em>Exp Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.ExtendsType <em>Extends Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.ExpType
+   * @see bxml.ExtendsType
    * @generated
    */
-  public Adapter createExpTypeAdapter() {
+  public Adapter createExtendsTypeAdapter() {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.IdentifierType <em>Identifier Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.GuardType <em>Guard Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.IdentifierType
+   * @see bxml.GuardType
    * @generated
    */
-  public Adapter createIdentifierTypeAdapter() {
+  public Adapter createGuardTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.Identifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.Identifier
+   * @generated
+   */
+  public Adapter createIdentifierAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.IdType <em>Id Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.IdType
+   * @generated
+   */
+  public Adapter createIdTypeAdapter() {
     return null;
   }
 
@@ -734,16 +1124,44 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.InfoTypeType <em>Info Type Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.ImportsType <em>Imports Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.InfoTypeType
+   * @see bxml.ImportsType
    * @generated
    */
-  public Adapter createInfoTypeTypeAdapter() {
+  public Adapter createImportsTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.IncludesType <em>Includes Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.IncludesType
+   * @generated
+   */
+  public Adapter createIncludesTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.InitialisationType <em>Initialisation Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.InitialisationType
+   * @generated
+   */
+  public Adapter createInitialisationTypeAdapter() {
     return null;
   }
 
@@ -762,6 +1180,48 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link bxml.InputParametersType1 <em>Input Parameters Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.InputParametersType1
+   * @generated
+   */
+  public Adapter createInputParametersType1Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.IntegerLiteralType <em>Integer Literal Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.IntegerLiteralType
+   * @generated
+   */
+  public Adapter createIntegerLiteralTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.InvariantType <em>Invariant Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.InvariantType
+   * @generated
+   */
+  public Adapter createInvariantTypeAdapter() {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link bxml.LETSubType <em>LET Sub Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -772,20 +1232,6 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createLETSubTypeAdapter() {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link bxml.LiteralType <em>Literal Type</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see bxml.LiteralType
-   * @generated
-   */
-  public Adapter createLiteralTypeAdapter() {
     return null;
   }
 
@@ -804,16 +1250,16 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.MachineType1 <em>Machine Type1</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.MachineType <em>Machine Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.MachineType1
+   * @see bxml.MachineType
    * @generated
    */
-  public Adapter createMachineType1Adapter() {
+  public Adapter createMachineTypeAdapter() {
     return null;
   }
 
@@ -846,30 +1292,30 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.NaryPredicateType <em>Nary Predicate Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.NaryPredType <em>Nary Pred Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.NaryPredicateType
+   * @see bxml.NaryPredType
    * @generated
    */
-  public Adapter createNaryPredicateTypeAdapter() {
+  public Adapter createNaryPredTypeAdapter() {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.NarySubstitutionType <em>Nary Substitution Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.NarySubType <em>Nary Sub Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.NarySubstitutionType
+   * @see bxml.NarySubType
    * @generated
    */
-  public Adapter createNarySubstitutionTypeAdapter() {
+  public Adapter createNarySubTypeAdapter() {
     return null;
   }
 
@@ -930,6 +1376,20 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link bxml.OutputParametersType1 <em>Output Parameters Type1</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.OutputParametersType1
+   * @generated
+   */
+  public Adapter createOutputParametersType1Adapter() {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link bxml.ParametersType <em>Parameters Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -958,16 +1418,44 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.PredicateType <em>Predicate Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.PreconditionType <em>Precondition Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.PredicateType
+   * @see bxml.PreconditionType
    * @generated
    */
-  public Adapter createPredicateTypeAdapter() {
+  public Adapter createPreconditionTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.PredType <em>Pred Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.PredType
+   * @generated
+   */
+  public Adapter createPredTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.PromotedOperationType <em>Promoted Operation Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.PromotedOperationType
+   * @generated
+   */
+  public Adapter createPromotedOperationTypeAdapter() {
     return null;
   }
 
@@ -982,6 +1470,20 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createPromotesTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.PropertiesType <em>Properties Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.PropertiesType
+   * @generated
+   */
+  public Adapter createPropertiesTypeAdapter() {
     return null;
   }
 
@@ -1070,34 +1572,6 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.ReferencedMachineType1 <em>Referenced Machine Type1</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see bxml.ReferencedMachineType1
-   * @generated
-   */
-  public Adapter createReferencedMachineType1Adapter() {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link bxml.ReferencedMachineType2 <em>Referenced Machine Type2</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see bxml.ReferencedMachineType2
-   * @generated
-   */
-  public Adapter createReferencedMachineType2Adapter() {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link bxml.RefinesType <em>Refines Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1168,16 +1642,44 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.StringLiteralType <em>String Literal Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.SetType1 <em>Set Type1</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.StringLiteralType
+   * @see bxml.SetType1
    * @generated
    */
-  public Adapter createStringLiteralTypeAdapter() {
+  public Adapter createSetType1Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.SkipType <em>Skip Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.SkipType
+   * @generated
+   */
+  public Adapter createSkipTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.STRINGLiteralType <em>STRING Literal Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.STRINGLiteralType
+   * @generated
+   */
+  public Adapter createSTRINGLiteralTypeAdapter() {
     return null;
   }
 
@@ -1196,30 +1698,30 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.SubstitutionType <em>Substitution Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.ThenType <em>Then Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.SubstitutionType
+   * @see bxml.ThenType
    * @generated
    */
-  public Adapter createSubstitutionTypeAdapter() {
+  public Adapter createThenTypeAdapter() {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.TerminalType <em>Terminal Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.TypeInfo <em>Type Info</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.TerminalType
+   * @see bxml.TypeInfo
    * @generated
    */
-  public Adapter createTerminalTypeAdapter() {
+  public Adapter createTypeInfoAdapter() {
     return null;
   }
 
@@ -1238,30 +1740,58 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.UnaryExpressionType <em>Unary Expression Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.UnaryExpType <em>Unary Exp Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.UnaryExpressionType
+   * @see bxml.UnaryExpType
    * @generated
    */
-  public Adapter createUnaryExpressionTypeAdapter() {
+  public Adapter createUnaryExpTypeAdapter() {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link bxml.UnaryPredicateType <em>Unary Predicate Type</em>}'.
+   * Creates a new adapter for an object of class '{@link bxml.UnaryExpType2 <em>Unary Exp Type2</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see bxml.UnaryPredicateType
+   * @see bxml.UnaryExpType2
    * @generated
    */
-  public Adapter createUnaryPredicateTypeAdapter() {
+  public Adapter createUnaryExpType2Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.UnaryPredType <em>Unary Pred Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.UnaryPredType
+   * @generated
+   */
+  public Adapter createUnaryPredTypeAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.UsesType <em>Uses Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.UsesType
+   * @generated
+   */
+  public Adapter createUsesTypeAdapter() {
     return null;
   }
 
@@ -1336,6 +1866,20 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link bxml.ValueType <em>Value Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.ValueType
+   * @generated
+   */
+  public Adapter createValueTypeAdapter() {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link bxml.VariablesType <em>Variables Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1360,6 +1904,20 @@ public class BxmlAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createVariablesType1Adapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link bxml.VariantType <em>Variant Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see bxml.VariantType
+   * @generated
+   */
+  public Adapter createVariantTypeAdapter() {
     return null;
   }
 

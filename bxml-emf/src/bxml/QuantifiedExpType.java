@@ -2,6 +2,8 @@
  */
 package bxml;
 
+import java.math.BigInteger;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,10 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link bxml.QuantifiedExpType#getPred <em>Pred</em>}</li>
  *   <li>{@link bxml.QuantifiedExpType#getBody <em>Body</em>}</li>
  *   <li>{@link bxml.QuantifiedExpType#getType <em>Type</em>}</li>
+ *   <li>{@link bxml.QuantifiedExpType#getTypref <em>Typref</em>}</li>
  * </ul>
  *
  * @see bxml.BxmlPackage#getQuantifiedExpType()
- * @model extendedMetaData="name='Quantified_Exp_._type' kind='elementOnly'"
+ * @model extendedMetaData="name='Quantified_Exp_type' kind='elementOnly'"
  * @generated
  */
 public interface QuantifiedExpType extends EObject {
@@ -34,13 +37,13 @@ public interface QuantifiedExpType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getQuantifiedExpType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.QuantifiedExpType#getAttr <em>Attr</em>}' containment reference.
@@ -50,7 +53,7 @@ public interface QuantifiedExpType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Variables</b></em>' containment reference.
@@ -88,13 +91,13 @@ public interface QuantifiedExpType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Pred</em>' containment reference.
-   * @see #setPred(PredicateType)
+   * @see #setPred(PredType)
    * @see bxml.BxmlPackage#getQuantifiedExpType_Pred()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Pred' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getPred();
+  PredType getPred();
 
   /**
    * Sets the value of the '{@link bxml.QuantifiedExpType#getPred <em>Pred</em>}' containment reference.
@@ -104,7 +107,7 @@ public interface QuantifiedExpType extends EObject {
    * @see #getPred()
    * @generated
    */
-  void setPred(PredicateType value);
+  void setPred(PredType value);
 
   /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference.
@@ -115,13 +118,13 @@ public interface QuantifiedExpType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Body</em>' containment reference.
-   * @see #setBody(ExpType)
+   * @see #setBody(BodyType3)
    * @see bxml.BxmlPackage#getQuantifiedExpType_Body()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Body' namespace='##targetNamespace'"
    * @generated
    */
-  ExpType getBody();
+  BodyType3 getBody();
 
   /**
    * Sets the value of the '{@link bxml.QuantifiedExpType#getBody <em>Body</em>}' containment reference.
@@ -131,11 +134,11 @@ public interface QuantifiedExpType extends EObject {
    * @see #getBody()
    * @generated
    */
-  void setBody(ExpType value);
+  void setBody(BodyType3 value);
 
   /**
    * Returns the value of the '<em><b>Type</b></em>' attribute.
-   * The literals are from the enumeration {@link bxml.QuantifiedExpOp}.
+   * The literals are from the enumeration {@link bxml.TypeType2}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Type</em>' attribute isn't clear,
@@ -143,29 +146,29 @@ public interface QuantifiedExpType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Type</em>' attribute.
-   * @see bxml.QuantifiedExpOp
+   * @see bxml.TypeType2
    * @see #isSetType()
    * @see #unsetType()
-   * @see #setType(QuantifiedExpOp)
+   * @see #setType(TypeType2)
    * @see bxml.BxmlPackage#getQuantifiedExpType_Type()
-   * @model unsettable="true"
+   * @model unsettable="true" required="true"
    *        extendedMetaData="kind='attribute' name='type' namespace='##targetNamespace'"
    * @generated
    */
-  QuantifiedExpOp getType();
+  TypeType2 getType();
 
   /**
    * Sets the value of the '{@link bxml.QuantifiedExpType#getType <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Type</em>' attribute.
-   * @see bxml.QuantifiedExpOp
+   * @see bxml.TypeType2
    * @see #isSetType()
    * @see #unsetType()
    * @see #getType()
    * @generated
    */
-  void setType(QuantifiedExpOp value);
+  void setType(TypeType2 value);
 
   /**
    * Unsets the value of the '{@link bxml.QuantifiedExpType#getType <em>Type</em>}' attribute.
@@ -173,7 +176,7 @@ public interface QuantifiedExpType extends EObject {
    * <!-- end-user-doc -->
    * @see #isSetType()
    * @see #getType()
-   * @see #setType(QuantifiedExpOp)
+   * @see #setType(TypeType2)
    * @generated
    */
   void unsetType();
@@ -185,9 +188,36 @@ public interface QuantifiedExpType extends EObject {
    * @return whether the value of the '<em>Type</em>' attribute is set.
    * @see #unsetType()
    * @see #getType()
-   * @see #setType(QuantifiedExpOp)
+   * @see #setType(TypeType2)
    * @generated
    */
   boolean isSetType();
+
+  /**
+   * Returns the value of the '<em><b>Typref</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Typref</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Typref</em>' attribute.
+   * @see #setTypref(BigInteger)
+   * @see bxml.BxmlPackage#getQuantifiedExpType_Typref()
+   * @model dataType="org.eclipse.emf.ecore.xml.type.Integer"
+   *        extendedMetaData="kind='attribute' name='typref' namespace='##targetNamespace'"
+   * @generated
+   */
+  BigInteger getTypref();
+
+  /**
+   * Sets the value of the '{@link bxml.QuantifiedExpType#getTypref <em>Typref</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Typref</em>' attribute.
+   * @see #getTypref()
+   * @generated
+   */
+  void setTypref(BigInteger value);
 
 } // QuantifiedExpType

@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link bxml.ChoicesType#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.ChoicesType#getChoice <em>Choice</em>}</li>
  * </ul>
  *
@@ -24,8 +25,35 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ChoicesType extends EObject {
   /**
+   * Returns the value of the '<em><b>Attr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Attr</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Attr</em>' containment reference.
+   * @see #setAttr(AttrType)
+   * @see bxml.BxmlPackage#getChoicesType_Attr()
+   * @model containment="true"
+   *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
+   * @generated
+   */
+  AttrType getAttr();
+
+  /**
+   * Sets the value of the '{@link bxml.ChoicesType#getAttr <em>Attr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Attr</em>' containment reference.
+   * @see #getAttr()
+   * @generated
+   */
+  void setAttr(AttrType value);
+
+  /**
    * Returns the value of the '<em><b>Choice</b></em>' containment reference list.
-   * The list contents are of type {@link bxml.ChoiceType}.
+   * The list contents are of type {@link bxml.ChoiceType1}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Choice</em>' containment reference list isn't clear,
@@ -38,6 +66,6 @@ public interface ChoicesType extends EObject {
    *        extendedMetaData="kind='element' name='Choice' namespace='##targetNamespace'"
    * @generated
    */
-  EList<ChoiceType> getChoice();
+  EList<ChoiceType1> getChoice();
 
 } // ChoicesType

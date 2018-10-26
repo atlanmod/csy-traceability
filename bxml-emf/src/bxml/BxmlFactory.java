@@ -76,22 +76,22 @@ public interface BxmlFactory extends EFactory {
   AssertSubType createAssertSubType();
 
   /**
-   * Returns a new object of class '<em>Assignement Substitution Type</em>'.
+   * Returns a new object of class '<em>Assignement Sub Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Assignement Substitution Type</em>'.
+   * @return a new object of class '<em>Assignement Sub Type</em>'.
    * @generated
    */
-  AssignementSubstitutionType createAssignementSubstitutionType();
+  AssignementSubType createAssignementSubType();
 
   /**
-   * Returns a new object of class '<em>Attributes Type</em>'.
+   * Returns a new object of class '<em>Attr Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Attributes Type</em>'.
+   * @return a new object of class '<em>Attr Type</em>'.
    * @generated
    */
-  AttributesType createAttributesType();
+  AttrType createAttrType();
 
   /**
    * Returns a new object of class '<em>Becomes In Type</em>'.
@@ -112,40 +112,121 @@ public interface BxmlFactory extends EFactory {
   BecomesSuchThatType createBecomesSuchThatType();
 
   /**
-   * Returns a new object of class '<em>Binary Expression Type</em>'.
+   * Returns a new object of class '<em>Binary Exp Type2</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Binary Expression Type</em>'.
+   * @return a new object of class '<em>Binary Exp Type2</em>'.
    * @generated
    */
-  BinaryExpressionType createBinaryExpressionType();
+  BinaryExpType2 createBinaryExpType2();
 
   /**
-   * Returns a new object of class '<em>Binary Predicate Type</em>'.
+   * Returns a new object of class '<em>Binary Pred Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Binary Predicate Type</em>'.
+   * @return a new object of class '<em>Binary Pred Type</em>'.
    * @generated
    */
-  BinaryPredicateType createBinaryPredicateType();
+  BinaryPredType createBinaryPredType();
 
   /**
-   * Returns a new object of class '<em>Binary Sub Type</em>'.
+   * Returns a new object of class '<em>Bloc Sub Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Binary Sub Type</em>'.
+   * @return a new object of class '<em>Bloc Sub Type</em>'.
    * @generated
    */
-  BinarySubType createBinarySubType();
+  BlocSubType createBlocSubType();
 
   /**
-   * Returns a new object of class '<em>Call Paramaters Type</em>'.
+   * Returns a new object of class '<em>Body Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Call Paramaters Type</em>'.
+   * @return a new object of class '<em>Body Type</em>'.
    * @generated
    */
-  CallParamatersType createCallParamatersType();
+  BodyType createBodyType();
+
+  /**
+   * Returns a new object of class '<em>Body Type1</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Type1</em>'.
+   * @generated
+   */
+  BodyType1 createBodyType1();
+
+  /**
+   * Returns a new object of class '<em>Body Type2</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Type2</em>'.
+   * @generated
+   */
+  BodyType2 createBodyType2();
+
+  /**
+   * Returns a new object of class '<em>Body Type3</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Type3</em>'.
+   * @generated
+   */
+  BodyType3 createBodyType3();
+
+  /**
+   * Returns a new object of class '<em>Body Type4</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Type4</em>'.
+   * @generated
+   */
+  BodyType4 createBodyType4();
+
+  /**
+   * Returns a new object of class '<em>Body Type5</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Type5</em>'.
+   * @generated
+   */
+  BodyType5 createBodyType5();
+
+  /**
+   * Returns a new object of class '<em>Body Type6</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Type6</em>'.
+   * @generated
+   */
+  BodyType6 createBodyType6();
+
+  /**
+   * Returns a new object of class '<em>Boolean Exp Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Boolean Exp Type</em>'.
+   * @generated
+   */
+  BooleanExpType createBooleanExpType();
+
+  /**
+   * Returns a new object of class '<em>Boolean Literal Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Boolean Literal Type</em>'.
+   * @generated
+   */
+  BooleanLiteralType createBooleanLiteralType();
+
+  /**
+   * Returns a new object of class '<em>Bynary Exp Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bynary Exp Type</em>'.
+   * @generated
+   */
+  BynaryExpType createBynaryExpType();
 
   /**
    * Returns a new object of class '<em>Case Sub Type</em>'.
@@ -175,6 +256,15 @@ public interface BxmlFactory extends EFactory {
   ChoiceType createChoiceType();
 
   /**
+   * Returns a new object of class '<em>Choice Type1</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Choice Type1</em>'.
+   * @generated
+   */
+  ChoiceType1 createChoiceType1();
+
+  /**
    * Returns a new object of class '<em>Concrete Constants Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -193,6 +283,24 @@ public interface BxmlFactory extends EFactory {
   ConcreteVariablesType createConcreteVariablesType();
 
   /**
+   * Returns a new object of class '<em>Condition Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Condition Type</em>'.
+   * @generated
+   */
+  ConditionType createConditionType();
+
+  /**
+   * Returns a new object of class '<em>Constraints Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Constraints Type</em>'.
+   * @generated
+   */
+  ConstraintsType createConstraintsType();
+
+  /**
    * Returns a new object of class '<em>Document Root</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -200,6 +308,51 @@ public interface BxmlFactory extends EFactory {
    * @generated
    */
   DocumentRoot createDocumentRoot();
+
+  /**
+   * Returns a new object of class '<em>Else Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Else Type</em>'.
+   * @generated
+   */
+  ElseType createElseType();
+
+  /**
+   * Returns a new object of class '<em>Else Type1</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Else Type1</em>'.
+   * @generated
+   */
+  ElseType1 createElseType1();
+
+  /**
+   * Returns a new object of class '<em>Else Type2</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Else Type2</em>'.
+   * @generated
+   */
+  ElseType2 createElseType2();
+
+  /**
+   * Returns a new object of class '<em>Empty Seq Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Empty Seq Type</em>'.
+   * @generated
+   */
+  EmptySeqType createEmptySeqType();
+
+  /**
+   * Returns a new object of class '<em>Empty Set Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Empty Set Type</em>'.
+   * @generated
+   */
+  EmptySetType createEmptySetType();
 
   /**
    * Returns a new object of class '<em>Enumerated Values Type</em>'.
@@ -220,22 +373,40 @@ public interface BxmlFactory extends EFactory {
   ExpComparisonType createExpComparisonType();
 
   /**
-   * Returns a new object of class '<em>Exp Type</em>'.
+   * Returns a new object of class '<em>Extends Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exp Type</em>'.
+   * @return a new object of class '<em>Extends Type</em>'.
    * @generated
    */
-  ExpType createExpType();
+  ExtendsType createExtendsType();
 
   /**
-   * Returns a new object of class '<em>Identifier Type</em>'.
+   * Returns a new object of class '<em>Guard Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Identifier Type</em>'.
+   * @return a new object of class '<em>Guard Type</em>'.
    * @generated
    */
-  IdentifierType createIdentifierType();
+  GuardType createGuardType();
+
+  /**
+   * Returns a new object of class '<em>Identifier</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Identifier</em>'.
+   * @generated
+   */
+  Identifier createIdentifier();
+
+  /**
+   * Returns a new object of class '<em>Id Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Id Type</em>'.
+   * @generated
+   */
+  IdType createIdType();
 
   /**
    * Returns a new object of class '<em>If Sub Type</em>'.
@@ -247,13 +418,31 @@ public interface BxmlFactory extends EFactory {
   IfSubType createIfSubType();
 
   /**
-   * Returns a new object of class '<em>Info Type Type</em>'.
+   * Returns a new object of class '<em>Imports Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Info Type Type</em>'.
+   * @return a new object of class '<em>Imports Type</em>'.
    * @generated
    */
-  InfoTypeType createInfoTypeType();
+  ImportsType createImportsType();
+
+  /**
+   * Returns a new object of class '<em>Includes Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Includes Type</em>'.
+   * @generated
+   */
+  IncludesType createIncludesType();
+
+  /**
+   * Returns a new object of class '<em>Initialisation Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Initialisation Type</em>'.
+   * @generated
+   */
+  InitialisationType createInitialisationType();
 
   /**
    * Returns a new object of class '<em>Input Parameters Type</em>'.
@@ -265,6 +454,33 @@ public interface BxmlFactory extends EFactory {
   InputParametersType createInputParametersType();
 
   /**
+   * Returns a new object of class '<em>Input Parameters Type1</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Input Parameters Type1</em>'.
+   * @generated
+   */
+  InputParametersType1 createInputParametersType1();
+
+  /**
+   * Returns a new object of class '<em>Integer Literal Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Integer Literal Type</em>'.
+   * @generated
+   */
+  IntegerLiteralType createIntegerLiteralType();
+
+  /**
+   * Returns a new object of class '<em>Invariant Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Invariant Type</em>'.
+   * @generated
+   */
+  InvariantType createInvariantType();
+
+  /**
    * Returns a new object of class '<em>LET Sub Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -272,15 +488,6 @@ public interface BxmlFactory extends EFactory {
    * @generated
    */
   LETSubType createLETSubType();
-
-  /**
-   * Returns a new object of class '<em>Literal Type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Type</em>'.
-   * @generated
-   */
-  LiteralType createLiteralType();
 
   /**
    * Returns a new object of class '<em>Local Operations Type</em>'.
@@ -292,13 +499,13 @@ public interface BxmlFactory extends EFactory {
   LocalOperationsType createLocalOperationsType();
 
   /**
-   * Returns a new object of class '<em>Machine Type1</em>'.
+   * Returns a new object of class '<em>Machine Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Machine Type1</em>'.
+   * @return a new object of class '<em>Machine Type</em>'.
    * @generated
    */
-  MachineType1 createMachineType1();
+  MachineType createMachineType();
 
   /**
    * Returns a new object of class '<em>Name Type</em>'.
@@ -319,22 +526,22 @@ public interface BxmlFactory extends EFactory {
   NaryExpType createNaryExpType();
 
   /**
-   * Returns a new object of class '<em>Nary Predicate Type</em>'.
+   * Returns a new object of class '<em>Nary Pred Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Nary Predicate Type</em>'.
+   * @return a new object of class '<em>Nary Pred Type</em>'.
    * @generated
    */
-  NaryPredicateType createNaryPredicateType();
+  NaryPredType createNaryPredType();
 
   /**
-   * Returns a new object of class '<em>Nary Substitution Type</em>'.
+   * Returns a new object of class '<em>Nary Sub Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Nary Substitution Type</em>'.
+   * @return a new object of class '<em>Nary Sub Type</em>'.
    * @generated
    */
-  NarySubstitutionType createNarySubstitutionType();
+  NarySubType createNarySubType();
 
   /**
    * Returns a new object of class '<em>Operation Call Type</em>'.
@@ -373,6 +580,15 @@ public interface BxmlFactory extends EFactory {
   OutputParametersType createOutputParametersType();
 
   /**
+   * Returns a new object of class '<em>Output Parameters Type1</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Output Parameters Type1</em>'.
+   * @generated
+   */
+  OutputParametersType1 createOutputParametersType1();
+
+  /**
    * Returns a new object of class '<em>Parameters Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -391,13 +607,31 @@ public interface BxmlFactory extends EFactory {
   ParametersType1 createParametersType1();
 
   /**
-   * Returns a new object of class '<em>Predicate Type</em>'.
+   * Returns a new object of class '<em>Precondition Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Predicate Type</em>'.
+   * @return a new object of class '<em>Precondition Type</em>'.
    * @generated
    */
-  PredicateType createPredicateType();
+  PreconditionType createPreconditionType();
+
+  /**
+   * Returns a new object of class '<em>Pred Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pred Type</em>'.
+   * @generated
+   */
+  PredType createPredType();
+
+  /**
+   * Returns a new object of class '<em>Promoted Operation Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Promoted Operation Type</em>'.
+   * @generated
+   */
+  PromotedOperationType createPromotedOperationType();
 
   /**
    * Returns a new object of class '<em>Promotes Type</em>'.
@@ -407,6 +641,15 @@ public interface BxmlFactory extends EFactory {
    * @generated
    */
   PromotesType createPromotesType();
+
+  /**
+   * Returns a new object of class '<em>Properties Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Properties Type</em>'.
+   * @generated
+   */
+  PropertiesType createPropertiesType();
 
   /**
    * Returns a new object of class '<em>Quantified Exp Type</em>'.
@@ -463,24 +706,6 @@ public interface BxmlFactory extends EFactory {
   ReferencedMachineType createReferencedMachineType();
 
   /**
-   * Returns a new object of class '<em>Referenced Machine Type1</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Referenced Machine Type1</em>'.
-   * @generated
-   */
-  ReferencedMachineType1 createReferencedMachineType1();
-
-  /**
-   * Returns a new object of class '<em>Referenced Machine Type2</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Referenced Machine Type2</em>'.
-   * @generated
-   */
-  ReferencedMachineType2 createReferencedMachineType2();
-
-  /**
    * Returns a new object of class '<em>Refines Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -526,13 +751,31 @@ public interface BxmlFactory extends EFactory {
   SetType createSetType();
 
   /**
-   * Returns a new object of class '<em>String Literal Type</em>'.
+   * Returns a new object of class '<em>Set Type1</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>String Literal Type</em>'.
+   * @return a new object of class '<em>Set Type1</em>'.
    * @generated
    */
-  StringLiteralType createStringLiteralType();
+  SetType1 createSetType1();
+
+  /**
+   * Returns a new object of class '<em>Skip Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Skip Type</em>'.
+   * @generated
+   */
+  SkipType createSkipType();
+
+  /**
+   * Returns a new object of class '<em>STRING Literal Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>STRING Literal Type</em>'.
+   * @generated
+   */
+  STRINGLiteralType createSTRINGLiteralType();
 
   /**
    * Returns a new object of class '<em>Struct Type</em>'.
@@ -544,22 +787,22 @@ public interface BxmlFactory extends EFactory {
   StructType createStructType();
 
   /**
-   * Returns a new object of class '<em>Substitution Type</em>'.
+   * Returns a new object of class '<em>Then Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Substitution Type</em>'.
+   * @return a new object of class '<em>Then Type</em>'.
    * @generated
    */
-  SubstitutionType createSubstitutionType();
+  ThenType createThenType();
 
   /**
-   * Returns a new object of class '<em>Terminal Type</em>'.
+   * Returns a new object of class '<em>Type Info</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Terminal Type</em>'.
+   * @return a new object of class '<em>Type Info</em>'.
    * @generated
    */
-  TerminalType createTerminalType();
+  TypeInfo createTypeInfo();
 
   /**
    * Returns a new object of class '<em>Type Infos Type</em>'.
@@ -571,22 +814,40 @@ public interface BxmlFactory extends EFactory {
   TypeInfosType createTypeInfosType();
 
   /**
-   * Returns a new object of class '<em>Unary Expression Type</em>'.
+   * Returns a new object of class '<em>Unary Exp Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Unary Expression Type</em>'.
+   * @return a new object of class '<em>Unary Exp Type</em>'.
    * @generated
    */
-  UnaryExpressionType createUnaryExpressionType();
+  UnaryExpType createUnaryExpType();
 
   /**
-   * Returns a new object of class '<em>Unary Predicate Type</em>'.
+   * Returns a new object of class '<em>Unary Exp Type2</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Unary Predicate Type</em>'.
+   * @return a new object of class '<em>Unary Exp Type2</em>'.
    * @generated
    */
-  UnaryPredicateType createUnaryPredicateType();
+  UnaryExpType2 createUnaryExpType2();
+
+  /**
+   * Returns a new object of class '<em>Unary Pred Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Unary Pred Type</em>'.
+   * @generated
+   */
+  UnaryPredType createUnaryPredType();
+
+  /**
+   * Returns a new object of class '<em>Uses Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Uses Type</em>'.
+   * @generated
+   */
+  UsesType createUsesType();
 
   /**
    * Returns a new object of class '<em>Valuation Type</em>'.
@@ -634,6 +895,15 @@ public interface BxmlFactory extends EFactory {
   ValuesType2 createValuesType2();
 
   /**
+   * Returns a new object of class '<em>Value Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Value Type</em>'.
+   * @generated
+   */
+  ValueType createValueType();
+
+  /**
    * Returns a new object of class '<em>Variables Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -650,6 +920,15 @@ public interface BxmlFactory extends EFactory {
    * @generated
    */
   VariablesType1 createVariablesType1();
+
+  /**
+   * Returns a new object of class '<em>Variant Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Variant Type</em>'.
+   * @generated
+   */
+  VariantType createVariantType();
 
   /**
    * Returns a new object of class '<em>VARIN Type</em>'.

@@ -2,8 +2,6 @@
  */
 package bxml;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link bxml.ChoiceType#getValue <em>Value</em>}</li>
+ *   <li>{@link bxml.ChoiceType#getAttr <em>Attr</em>}</li>
  *   <li>{@link bxml.ChoiceType#getThen <em>Then</em>}</li>
  * </ul>
  *
@@ -25,21 +23,31 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ChoiceType extends EObject {
   /**
-   * Returns the value of the '<em><b>Value</b></em>' containment reference list.
-   * The list contents are of type {@link bxml.ExpType}.
+   * Returns the value of the '<em><b>Attr</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Value</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Attr</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Value</em>' containment reference list.
-   * @see bxml.BxmlPackage#getChoiceType_Value()
-   * @model containment="true" required="true"
-   *        extendedMetaData="kind='element' name='Value' namespace='##targetNamespace'"
+   * @return the value of the '<em>Attr</em>' containment reference.
+   * @see #setAttr(AttrType)
+   * @see bxml.BxmlPackage#getChoiceType_Attr()
+   * @model containment="true"
+   *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  EList<ExpType> getValue();
+  AttrType getAttr();
+
+  /**
+   * Sets the value of the '{@link bxml.ChoiceType#getAttr <em>Attr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Attr</em>' containment reference.
+   * @see #getAttr()
+   * @generated
+   */
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Then</b></em>' containment reference.
@@ -50,13 +58,13 @@ public interface ChoiceType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Then</em>' containment reference.
-   * @see #setThen(SubstitutionType)
+   * @see #setThen(ThenType)
    * @see bxml.BxmlPackage#getChoiceType_Then()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Then' namespace='##targetNamespace'"
    * @generated
    */
-  SubstitutionType getThen();
+  ThenType getThen();
 
   /**
    * Sets the value of the '{@link bxml.ChoiceType#getThen <em>Then</em>}' containment reference.
@@ -66,6 +74,6 @@ public interface ChoiceType extends EObject {
    * @see #getThen()
    * @generated
    */
-  void setThen(SubstitutionType value);
+  void setThen(ThenType value);
 
 } // ChoiceType

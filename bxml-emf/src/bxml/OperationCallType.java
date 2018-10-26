@@ -17,11 +17,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link bxml.OperationCallType#getName <em>Name</em>}</li>
  *   <li>{@link bxml.OperationCallType#getInputParameters <em>Input Parameters</em>}</li>
  *   <li>{@link bxml.OperationCallType#getOutputParameters <em>Output Parameters</em>}</li>
- *   <li>{@link bxml.OperationCallType#getOperation <em>Operation</em>}</li>
  * </ul>
  *
  * @see bxml.BxmlPackage#getOperationCallType()
- * @model extendedMetaData="name='Operation_Call_type' kind='elementOnly'"
+ * @model extendedMetaData="name='Operation_Call_._type' kind='elementOnly'"
  * @generated
  */
 public interface OperationCallType extends EObject {
@@ -34,13 +33,13 @@ public interface OperationCallType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getOperationCallType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.OperationCallType#getAttr <em>Attr</em>}' containment reference.
@@ -50,7 +49,7 @@ public interface OperationCallType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Name</b></em>' containment reference.
@@ -88,13 +87,13 @@ public interface OperationCallType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Input Parameters</em>' containment reference.
-   * @see #setInputParameters(CallParamatersType)
+   * @see #setInputParameters(InputParametersType1)
    * @see bxml.BxmlPackage#getOperationCallType_InputParameters()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Input_Parameters' namespace='##targetNamespace'"
    * @generated
    */
-  CallParamatersType getInputParameters();
+  InputParametersType1 getInputParameters();
 
   /**
    * Sets the value of the '{@link bxml.OperationCallType#getInputParameters <em>Input Parameters</em>}' containment reference.
@@ -104,7 +103,7 @@ public interface OperationCallType extends EObject {
    * @see #getInputParameters()
    * @generated
    */
-  void setInputParameters(CallParamatersType value);
+  void setInputParameters(InputParametersType1 value);
 
   /**
    * Returns the value of the '<em><b>Output Parameters</b></em>' containment reference.
@@ -115,13 +114,13 @@ public interface OperationCallType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Output Parameters</em>' containment reference.
-   * @see #setOutputParameters(CallParamatersType)
+   * @see #setOutputParameters(OutputParametersType1)
    * @see bxml.BxmlPackage#getOperationCallType_OutputParameters()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Output_Parameters' namespace='##targetNamespace'"
    * @generated
    */
-  CallParamatersType getOutputParameters();
+  OutputParametersType1 getOutputParameters();
 
   /**
    * Sets the value of the '{@link bxml.OperationCallType#getOutputParameters <em>Output Parameters</em>}' containment reference.
@@ -131,33 +130,6 @@ public interface OperationCallType extends EObject {
    * @see #getOutputParameters()
    * @generated
    */
-  void setOutputParameters(CallParamatersType value);
-
-  /**
-   * Returns the value of the '<em><b>Operation</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Operation</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Operation</em>' containment reference.
-   * @see #setOperation(OperationType)
-   * @see bxml.BxmlPackage#getOperationCallType_Operation()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='Operation' namespace='##targetNamespace'"
-   * @generated
-   */
-  OperationType getOperation();
-
-  /**
-   * Sets the value of the '{@link bxml.OperationCallType#getOperation <em>Operation</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Operation</em>' containment reference.
-   * @see #getOperation()
-   * @generated
-   */
-  void setOperation(OperationType value);
+  void setOutputParameters(OutputParametersType1 value);
 
 } // OperationCallType

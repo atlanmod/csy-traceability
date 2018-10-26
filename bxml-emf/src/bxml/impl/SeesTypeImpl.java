@@ -2,9 +2,9 @@
  */
 package bxml.impl;
 
-import bxml.AttributesType;
+import bxml.AttrType;
 import bxml.BxmlPackage;
-import bxml.ReferencedMachineType1;
+import bxml.ReferencedMachineType;
 import bxml.SeesType;
 
 import java.util.Collection;
@@ -46,7 +46,7 @@ public class SeesTypeImpl extends MinimalEObjectImpl.Container implements SeesTy
    * @generated
    * @ordered
    */
-  protected AttributesType attr;
+  protected AttrType attr;
 
   /**
    * The cached value of the '{@link #getReferencedMachine() <em>Referenced Machine</em>}' containment reference list.
@@ -56,7 +56,7 @@ public class SeesTypeImpl extends MinimalEObjectImpl.Container implements SeesTy
    * @generated
    * @ordered
    */
-  protected EList<ReferencedMachineType1> referencedMachine;
+  protected EList<ReferencedMachineType> referencedMachine;
 
   /**
    * <!-- begin-user-doc -->
@@ -82,7 +82,7 @@ public class SeesTypeImpl extends MinimalEObjectImpl.Container implements SeesTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributesType getAttr() {
+  public AttrType getAttr() {
     return attr;
   }
 
@@ -91,8 +91,8 @@ public class SeesTypeImpl extends MinimalEObjectImpl.Container implements SeesTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAttr(AttributesType newAttr, NotificationChain msgs) {
-    AttributesType oldAttr = attr;
+  public NotificationChain basicSetAttr(AttrType newAttr, NotificationChain msgs) {
+    AttrType oldAttr = attr;
     attr = newAttr;
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BxmlPackage.SEES_TYPE__ATTR, oldAttr, newAttr);
@@ -106,7 +106,7 @@ public class SeesTypeImpl extends MinimalEObjectImpl.Container implements SeesTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAttr(AttributesType newAttr) {
+  public void setAttr(AttrType newAttr) {
     if (newAttr != attr) {
       NotificationChain msgs = null;
       if (attr != null)
@@ -125,9 +125,9 @@ public class SeesTypeImpl extends MinimalEObjectImpl.Container implements SeesTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ReferencedMachineType1> getReferencedMachine() {
+  public EList<ReferencedMachineType> getReferencedMachine() {
     if (referencedMachine == null) {
-      referencedMachine = new EObjectContainmentEList<ReferencedMachineType1>(ReferencedMachineType1.class, this, BxmlPackage.SEES_TYPE__REFERENCED_MACHINE);
+      referencedMachine = new EObjectContainmentEList<ReferencedMachineType>(ReferencedMachineType.class, this, BxmlPackage.SEES_TYPE__REFERENCED_MACHINE);
     }
     return referencedMachine;
   }
@@ -174,11 +174,11 @@ public class SeesTypeImpl extends MinimalEObjectImpl.Container implements SeesTy
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
       case BxmlPackage.SEES_TYPE__ATTR:
-        setAttr((AttributesType)newValue);
+        setAttr((AttrType)newValue);
         return;
       case BxmlPackage.SEES_TYPE__REFERENCED_MACHINE:
         getReferencedMachine().clear();
-        getReferencedMachine().addAll((Collection<? extends ReferencedMachineType1>)newValue);
+        getReferencedMachine().addAll((Collection<? extends ReferencedMachineType>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -193,7 +193,7 @@ public class SeesTypeImpl extends MinimalEObjectImpl.Container implements SeesTy
   public void eUnset(int featureID) {
     switch (featureID) {
       case BxmlPackage.SEES_TYPE__ATTR:
-        setAttr((AttributesType)null);
+        setAttr((AttrType)null);
         return;
       case BxmlPackage.SEES_TYPE__REFERENCED_MACHINE:
         getReferencedMachine().clear();

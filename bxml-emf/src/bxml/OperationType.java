@@ -36,13 +36,13 @@ public interface OperationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getOperationType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.OperationType#getAttr <em>Attr</em>}' containment reference.
@@ -52,7 +52,7 @@ public interface OperationType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Refines</b></em>' containment reference.
@@ -144,13 +144,13 @@ public interface OperationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Precondition</em>' containment reference.
-   * @see #setPrecondition(PredicateType)
+   * @see #setPrecondition(PreconditionType)
    * @see bxml.BxmlPackage#getOperationType_Precondition()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Precondition' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getPrecondition();
+  PreconditionType getPrecondition();
 
   /**
    * Sets the value of the '{@link bxml.OperationType#getPrecondition <em>Precondition</em>}' containment reference.
@@ -160,7 +160,7 @@ public interface OperationType extends EObject {
    * @see #getPrecondition()
    * @generated
    */
-  void setPrecondition(PredicateType value);
+  void setPrecondition(PreconditionType value);
 
   /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference.
@@ -171,13 +171,13 @@ public interface OperationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Body</em>' containment reference.
-   * @see #setBody(SubstitutionType)
+   * @see #setBody(BodyType1)
    * @see bxml.BxmlPackage#getOperationType_Body()
    * @model containment="true" required="true"
    *        extendedMetaData="kind='element' name='Body' namespace='##targetNamespace'"
    * @generated
    */
-  SubstitutionType getBody();
+  BodyType1 getBody();
 
   /**
    * Sets the value of the '{@link bxml.OperationType#getBody <em>Body</em>}' containment reference.
@@ -187,7 +187,7 @@ public interface OperationType extends EObject {
    * @see #getBody()
    * @generated
    */
-  void setBody(SubstitutionType value);
+  void setBody(BodyType1 value);
 
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -198,13 +198,13 @@ public interface OperationType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
+   * @see #setName(Object)
    * @see bxml.BxmlPackage#getOperationType_Name()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.AnySimpleType" required="true"
    *        extendedMetaData="kind='attribute' name='name' namespace='##targetNamespace'"
    * @generated
    */
-  String getName();
+  Object getName();
 
   /**
    * Sets the value of the '{@link bxml.OperationType#getName <em>Name</em>}' attribute.
@@ -214,6 +214,6 @@ public interface OperationType extends EObject {
    * @see #getName()
    * @generated
    */
-  void setName(String value);
+  void setName(Object value);
 
 } // OperationType

@@ -46,7 +46,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see bxml.BxmlPackage#getExpComparisonType()
- * @model extendedMetaData="name='Exp_Comparison_type' kind='elementOnly'"
+ * @model extendedMetaData="name='Exp_Comparison_._type' kind='elementOnly'"
  * @generated
  */
 public interface ExpComparisonType extends EObject {
@@ -59,13 +59,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attr</em>' containment reference.
-   * @see #setAttr(AttributesType)
+   * @see #setAttr(AttrType)
    * @see bxml.BxmlPackage#getExpComparisonType_Attr()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Attr' namespace='##targetNamespace'"
    * @generated
    */
-  AttributesType getAttr();
+  AttrType getAttr();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getAttr <em>Attr</em>}' containment reference.
@@ -75,7 +75,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getAttr()
    * @generated
    */
-  void setAttr(AttributesType value);
+  void setAttr(AttrType value);
 
   /**
    * Returns the value of the '<em><b>Binary Exp</b></em>' containment reference.
@@ -86,13 +86,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Binary Exp</em>' containment reference.
-   * @see #setBinaryExp(BinaryExpressionType)
+   * @see #setBinaryExp(BynaryExpType)
    * @see bxml.BxmlPackage#getExpComparisonType_BinaryExp()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Binary_Exp' namespace='##targetNamespace'"
    * @generated
    */
-  BinaryExpressionType getBinaryExp();
+  BynaryExpType getBinaryExp();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getBinaryExp <em>Binary Exp</em>}' containment reference.
@@ -102,7 +102,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getBinaryExp()
    * @generated
    */
-  void setBinaryExp(BinaryExpressionType value);
+  void setBinaryExp(BynaryExpType value);
 
   /**
    * Returns the value of the '<em><b>Nary Exp</b></em>' containment reference.
@@ -140,13 +140,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Boolean Literal</em>' containment reference.
-   * @see #setBooleanLiteral(IdentifierType)
+   * @see #setBooleanLiteral(BooleanLiteralType)
    * @see bxml.BxmlPackage#getExpComparisonType_BooleanLiteral()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Boolean_Literal' namespace='##targetNamespace'"
    * @generated
    */
-  IdentifierType getBooleanLiteral();
+  BooleanLiteralType getBooleanLiteral();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getBooleanLiteral <em>Boolean Literal</em>}' containment reference.
@@ -156,7 +156,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getBooleanLiteral()
    * @generated
    */
-  void setBooleanLiteral(IdentifierType value);
+  void setBooleanLiteral(BooleanLiteralType value);
 
   /**
    * Returns the value of the '<em><b>Boolean Exp</b></em>' containment reference.
@@ -167,13 +167,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Boolean Exp</em>' containment reference.
-   * @see #setBooleanExp(PredicateType)
+   * @see #setBooleanExp(BooleanExpType)
    * @see bxml.BxmlPackage#getExpComparisonType_BooleanExp()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Boolean_Exp' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getBooleanExp();
+  BooleanExpType getBooleanExp();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getBooleanExp <em>Boolean Exp</em>}' containment reference.
@@ -183,7 +183,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getBooleanExp()
    * @generated
    */
-  void setBooleanExp(PredicateType value);
+  void setBooleanExp(BooleanExpType value);
 
   /**
    * Returns the value of the '<em><b>Empty Set</b></em>' containment reference.
@@ -194,13 +194,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Empty Set</em>' containment reference.
-   * @see #setEmptySet(TerminalType)
+   * @see #setEmptySet(EmptySetType)
    * @see bxml.BxmlPackage#getExpComparisonType_EmptySet()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='EmptySet' namespace='##targetNamespace'"
    * @generated
    */
-  TerminalType getEmptySet();
+  EmptySetType getEmptySet();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getEmptySet <em>Empty Set</em>}' containment reference.
@@ -210,7 +210,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getEmptySet()
    * @generated
    */
-  void setEmptySet(TerminalType value);
+  void setEmptySet(EmptySetType value);
 
   /**
    * Returns the value of the '<em><b>Empty Seq</b></em>' containment reference.
@@ -221,13 +221,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Empty Seq</em>' containment reference.
-   * @see #setEmptySeq(TerminalType)
+   * @see #setEmptySeq(EmptySeqType)
    * @see bxml.BxmlPackage#getExpComparisonType_EmptySeq()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='EmptySeq' namespace='##targetNamespace'"
    * @generated
    */
-  TerminalType getEmptySeq();
+  EmptySeqType getEmptySeq();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getEmptySeq <em>Empty Seq</em>}' containment reference.
@@ -237,7 +237,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getEmptySeq()
    * @generated
    */
-  void setEmptySeq(TerminalType value);
+  void setEmptySeq(EmptySeqType value);
 
   /**
    * Returns the value of the '<em><b>Id</b></em>' containment reference.
@@ -248,13 +248,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Id</em>' containment reference.
-   * @see #setId(IdentifierType)
+   * @see #setId(Identifier)
    * @see bxml.BxmlPackage#getExpComparisonType_Id()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Id' namespace='##targetNamespace'"
    * @generated
    */
-  IdentifierType getId();
+  Identifier getId();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getId <em>Id</em>}' containment reference.
@@ -264,7 +264,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getId()
    * @generated
    */
-  void setId(IdentifierType value);
+  void setId(Identifier value);
 
   /**
    * Returns the value of the '<em><b>Integer Literal</b></em>' containment reference.
@@ -275,13 +275,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Integer Literal</em>' containment reference.
-   * @see #setIntegerLiteral(LiteralType)
+   * @see #setIntegerLiteral(IntegerLiteralType)
    * @see bxml.BxmlPackage#getExpComparisonType_IntegerLiteral()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Integer_Literal' namespace='##targetNamespace'"
    * @generated
    */
-  LiteralType getIntegerLiteral();
+  IntegerLiteralType getIntegerLiteral();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getIntegerLiteral <em>Integer Literal</em>}' containment reference.
@@ -291,7 +291,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getIntegerLiteral()
    * @generated
    */
-  void setIntegerLiteral(LiteralType value);
+  void setIntegerLiteral(IntegerLiteralType value);
 
   /**
    * Returns the value of the '<em><b>Quantified Exp</b></em>' containment reference.
@@ -356,13 +356,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>STRING Literal</em>' containment reference.
-   * @see #setSTRINGLiteral(StringLiteralType)
+   * @see #setSTRINGLiteral(STRINGLiteralType)
    * @see bxml.BxmlPackage#getExpComparisonType_STRINGLiteral()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='STRING_Literal' namespace='##targetNamespace'"
    * @generated
    */
-  StringLiteralType getSTRINGLiteral();
+  STRINGLiteralType getSTRINGLiteral();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getSTRINGLiteral <em>STRING Literal</em>}' containment reference.
@@ -372,7 +372,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getSTRINGLiteral()
    * @generated
    */
-  void setSTRINGLiteral(StringLiteralType value);
+  void setSTRINGLiteral(STRINGLiteralType value);
 
   /**
    * Returns the value of the '<em><b>Unary Exp</b></em>' containment reference.
@@ -383,13 +383,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Unary Exp</em>' containment reference.
-   * @see #setUnaryExp(UnaryExpressionType)
+   * @see #setUnaryExp(UnaryExpType)
    * @see bxml.BxmlPackage#getExpComparisonType_UnaryExp()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Unary_Exp' namespace='##targetNamespace'"
    * @generated
    */
-  UnaryExpressionType getUnaryExp();
+  UnaryExpType getUnaryExp();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getUnaryExp <em>Unary Exp</em>}' containment reference.
@@ -399,7 +399,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getUnaryExp()
    * @generated
    */
-  void setUnaryExp(UnaryExpressionType value);
+  void setUnaryExp(UnaryExpType value);
 
   /**
    * Returns the value of the '<em><b>Struct</b></em>' containment reference.
@@ -464,13 +464,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Binary Exp1</em>' containment reference.
-   * @see #setBinaryExp1(BinaryExpressionType)
+   * @see #setBinaryExp1(BynaryExpType)
    * @see bxml.BxmlPackage#getExpComparisonType_BinaryExp1()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Binary_Exp' namespace='##targetNamespace'"
    * @generated
    */
-  BinaryExpressionType getBinaryExp1();
+  BynaryExpType getBinaryExp1();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getBinaryExp1 <em>Binary Exp1</em>}' containment reference.
@@ -480,7 +480,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getBinaryExp1()
    * @generated
    */
-  void setBinaryExp1(BinaryExpressionType value);
+  void setBinaryExp1(BynaryExpType value);
 
   /**
    * Returns the value of the '<em><b>Nary Exp1</b></em>' containment reference.
@@ -518,13 +518,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Boolean Literal1</em>' containment reference.
-   * @see #setBooleanLiteral1(IdentifierType)
+   * @see #setBooleanLiteral1(BooleanLiteralType)
    * @see bxml.BxmlPackage#getExpComparisonType_BooleanLiteral1()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Boolean_Literal' namespace='##targetNamespace'"
    * @generated
    */
-  IdentifierType getBooleanLiteral1();
+  BooleanLiteralType getBooleanLiteral1();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getBooleanLiteral1 <em>Boolean Literal1</em>}' containment reference.
@@ -534,7 +534,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getBooleanLiteral1()
    * @generated
    */
-  void setBooleanLiteral1(IdentifierType value);
+  void setBooleanLiteral1(BooleanLiteralType value);
 
   /**
    * Returns the value of the '<em><b>Boolean Exp1</b></em>' containment reference.
@@ -545,13 +545,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Boolean Exp1</em>' containment reference.
-   * @see #setBooleanExp1(PredicateType)
+   * @see #setBooleanExp1(BooleanExpType)
    * @see bxml.BxmlPackage#getExpComparisonType_BooleanExp1()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Boolean_Exp' namespace='##targetNamespace'"
    * @generated
    */
-  PredicateType getBooleanExp1();
+  BooleanExpType getBooleanExp1();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getBooleanExp1 <em>Boolean Exp1</em>}' containment reference.
@@ -561,7 +561,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getBooleanExp1()
    * @generated
    */
-  void setBooleanExp1(PredicateType value);
+  void setBooleanExp1(BooleanExpType value);
 
   /**
    * Returns the value of the '<em><b>Empty Set1</b></em>' containment reference.
@@ -572,13 +572,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Empty Set1</em>' containment reference.
-   * @see #setEmptySet1(TerminalType)
+   * @see #setEmptySet1(EmptySetType)
    * @see bxml.BxmlPackage#getExpComparisonType_EmptySet1()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='EmptySet' namespace='##targetNamespace'"
    * @generated
    */
-  TerminalType getEmptySet1();
+  EmptySetType getEmptySet1();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getEmptySet1 <em>Empty Set1</em>}' containment reference.
@@ -588,7 +588,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getEmptySet1()
    * @generated
    */
-  void setEmptySet1(TerminalType value);
+  void setEmptySet1(EmptySetType value);
 
   /**
    * Returns the value of the '<em><b>Empty Seq1</b></em>' containment reference.
@@ -599,13 +599,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Empty Seq1</em>' containment reference.
-   * @see #setEmptySeq1(TerminalType)
+   * @see #setEmptySeq1(EmptySeqType)
    * @see bxml.BxmlPackage#getExpComparisonType_EmptySeq1()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='EmptySeq' namespace='##targetNamespace'"
    * @generated
    */
-  TerminalType getEmptySeq1();
+  EmptySeqType getEmptySeq1();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getEmptySeq1 <em>Empty Seq1</em>}' containment reference.
@@ -615,7 +615,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getEmptySeq1()
    * @generated
    */
-  void setEmptySeq1(TerminalType value);
+  void setEmptySeq1(EmptySeqType value);
 
   /**
    * Returns the value of the '<em><b>Id1</b></em>' containment reference.
@@ -626,13 +626,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Id1</em>' containment reference.
-   * @see #setId1(IdentifierType)
+   * @see #setId1(Identifier)
    * @see bxml.BxmlPackage#getExpComparisonType_Id1()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Id' namespace='##targetNamespace'"
    * @generated
    */
-  IdentifierType getId1();
+  Identifier getId1();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getId1 <em>Id1</em>}' containment reference.
@@ -642,7 +642,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getId1()
    * @generated
    */
-  void setId1(IdentifierType value);
+  void setId1(Identifier value);
 
   /**
    * Returns the value of the '<em><b>Integer Literal1</b></em>' containment reference.
@@ -653,13 +653,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Integer Literal1</em>' containment reference.
-   * @see #setIntegerLiteral1(LiteralType)
+   * @see #setIntegerLiteral1(IntegerLiteralType)
    * @see bxml.BxmlPackage#getExpComparisonType_IntegerLiteral1()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Integer_Literal' namespace='##targetNamespace'"
    * @generated
    */
-  LiteralType getIntegerLiteral1();
+  IntegerLiteralType getIntegerLiteral1();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getIntegerLiteral1 <em>Integer Literal1</em>}' containment reference.
@@ -669,7 +669,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getIntegerLiteral1()
    * @generated
    */
-  void setIntegerLiteral1(LiteralType value);
+  void setIntegerLiteral1(IntegerLiteralType value);
 
   /**
    * Returns the value of the '<em><b>Quantified Exp1</b></em>' containment reference.
@@ -734,13 +734,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>STRING Literal1</em>' containment reference.
-   * @see #setSTRINGLiteral1(StringLiteralType)
+   * @see #setSTRINGLiteral1(STRINGLiteralType)
    * @see bxml.BxmlPackage#getExpComparisonType_STRINGLiteral1()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='STRING_Literal' namespace='##targetNamespace'"
    * @generated
    */
-  StringLiteralType getSTRINGLiteral1();
+  STRINGLiteralType getSTRINGLiteral1();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getSTRINGLiteral1 <em>STRING Literal1</em>}' containment reference.
@@ -750,7 +750,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getSTRINGLiteral1()
    * @generated
    */
-  void setSTRINGLiteral1(StringLiteralType value);
+  void setSTRINGLiteral1(STRINGLiteralType value);
 
   /**
    * Returns the value of the '<em><b>Unary Exp1</b></em>' containment reference.
@@ -761,13 +761,13 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Unary Exp1</em>' containment reference.
-   * @see #setUnaryExp1(UnaryExpressionType)
+   * @see #setUnaryExp1(UnaryExpType)
    * @see bxml.BxmlPackage#getExpComparisonType_UnaryExp1()
    * @model containment="true"
    *        extendedMetaData="kind='element' name='Unary_Exp' namespace='##targetNamespace'"
    * @generated
    */
-  UnaryExpressionType getUnaryExp1();
+  UnaryExpType getUnaryExp1();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getUnaryExp1 <em>Unary Exp1</em>}' containment reference.
@@ -777,7 +777,7 @@ public interface ExpComparisonType extends EObject {
    * @see #getUnaryExp1()
    * @generated
    */
-  void setUnaryExp1(UnaryExpressionType value);
+  void setUnaryExp1(UnaryExpType value);
 
   /**
    * Returns the value of the '<em><b>Struct1</b></em>' containment reference.
@@ -835,7 +835,7 @@ public interface ExpComparisonType extends EObject {
 
   /**
    * Returns the value of the '<em><b>Op</b></em>' attribute.
-   * The literals are from the enumeration {@link bxml.ComparisonOp}.
+   * The literals are from the enumeration {@link bxml.OpType3}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Op</em>' attribute isn't clear,
@@ -843,29 +843,29 @@ public interface ExpComparisonType extends EObject {
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Op</em>' attribute.
-   * @see bxml.ComparisonOp
+   * @see bxml.OpType3
    * @see #isSetOp()
    * @see #unsetOp()
-   * @see #setOp(ComparisonOp)
+   * @see #setOp(OpType3)
    * @see bxml.BxmlPackage#getExpComparisonType_Op()
-   * @model unsettable="true"
+   * @model unsettable="true" required="true"
    *        extendedMetaData="kind='attribute' name='op' namespace='##targetNamespace'"
    * @generated
    */
-  ComparisonOp getOp();
+  OpType3 getOp();
 
   /**
    * Sets the value of the '{@link bxml.ExpComparisonType#getOp <em>Op</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Op</em>' attribute.
-   * @see bxml.ComparisonOp
+   * @see bxml.OpType3
    * @see #isSetOp()
    * @see #unsetOp()
    * @see #getOp()
    * @generated
    */
-  void setOp(ComparisonOp value);
+  void setOp(OpType3 value);
 
   /**
    * Unsets the value of the '{@link bxml.ExpComparisonType#getOp <em>Op</em>}' attribute.
@@ -873,7 +873,7 @@ public interface ExpComparisonType extends EObject {
    * <!-- end-user-doc -->
    * @see #isSetOp()
    * @see #getOp()
-   * @see #setOp(ComparisonOp)
+   * @see #setOp(OpType3)
    * @generated
    */
   void unsetOp();
@@ -885,7 +885,7 @@ public interface ExpComparisonType extends EObject {
    * @return whether the value of the '<em>Op</em>' attribute is set.
    * @see #unsetOp()
    * @see #getOp()
-   * @see #setOp(ComparisonOp)
+   * @see #setOp(OpType3)
    * @generated
    */
   boolean isSetOp();
