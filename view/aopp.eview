@@ -1,0 +1,4 @@
+viewpoint=aopp.eviewpoint
+matchingModel=aopp.ecl
+contributingModels=../logs-metamodel/models/hackathon.xmi,\
+                   ../b-source/Treatment_i.imp

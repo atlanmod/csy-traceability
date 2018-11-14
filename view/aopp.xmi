@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<virtualLinks:WeavingModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:virtualLinks="http://www.atlanmod.org/emfviews/virtuallinks/0.3.0"
+    name="aopp">
+  <virtualLinks
+      xsi:type="virtualLinks:VirtualAssociation"
+      name="identifiers"
+      source="//@contributingModels.1/@concreteElements.0"
+      target="//@contributingModels.0/@concreteElements.0"
+      upperBound="-1"
+      opposite="//@virtualLinks.1"/>
+  <virtualLinks
+      xsi:type="virtualLinks:VirtualAssociation"
+      name="traces"
+      source="//@contributingModels.0/@concreteElements.0"
+      target="//@contributingModels.1/@concreteElements.0"
+      upperBound="-1"
+      opposite="//@virtualLinks.0"/>
+  <contributingModels
+      URI="http://www.clearsy.com/B">
+    <concreteElements
+        xsi:type="virtualLinks:ConcreteConcept"
+        path="Variable"/>
+  </contributingModels>
+  <contributingModels
+      URI="Log">
+    <concreteElements
+        xsi:type="virtualLinks:ConcreteConcept"
+        path="Trace"/>
+  </contributingModels>
+</virtualLinks:WeavingModel>

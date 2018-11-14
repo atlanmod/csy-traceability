@@ -1,0 +1,3 @@
+contributingMetamodels=../logs-metamodel/metamodels/Log.ecore,\
+                       http://www.clearsy.com/B
+weavingModel=aopp.xmi
