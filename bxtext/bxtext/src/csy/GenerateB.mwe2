@@ -34,7 +34,7 @@ Workflow {
 			fileExtensions = "imp,mch"
 			
 			parserGenerator = {
-			  debugGrammar = true
+			  debugGrammar = false
 			  options = {
 			    backtrack = false
 			  }

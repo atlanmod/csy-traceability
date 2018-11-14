@@ -211,6 +211,7 @@ Body:
 
 Expr:
   Call
+  | Assign
   | Return
   | Case
   | Var
@@ -298,8 +299,7 @@ Begin:
 ;
 
 BeginBody:
-  Seq
-  | FinalExpr
+  Seq | FinalExpr
 ;
 
 Assign:
@@ -307,8 +307,7 @@ Assign:
 ;
 
 Return:  
-  {ReturnSimple} var=[Variable] ':=' value=ReturnExpr
-  | {ReturnTuple} vars+=[Variable] (',' vars+=[Variable])* ':(' value=LogicalExpr ')'
+  {ReturnTuple} vars+=[Variable] (',' vars+=[Variable])* ':(' value=LogicalExpr ')'
   | ReturnTypeExpr
 ;
 
@@ -350,7 +349,7 @@ FinalExpr:
   If
   | Case
   | Var
-  | ReturnTypeExpr
+  | Return
 ;
 
 Call:
