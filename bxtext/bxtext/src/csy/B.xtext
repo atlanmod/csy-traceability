@@ -1,0 +1,383 @@
+grammar csy.B with org.eclipse.xtext.common.Terminals
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate b "http://www.clearsy.com/B"
+
+Abstraction:
+  Machine | Implementation
+;
+
+Machine: 
+  'MACHINE' name=ID
+  (sees=Sees? &
+   concreteVariables=ConcreteVariables? &
+   concreteConstants=ConcreteConstants? &  
+   invariant=Invariant? &
+   initialisation=Initialisation? &
+   definitions=Definitions? &
+   properties=Properties? &
+   assertions=Assertions? &
+   operations=Operations? &
+   sets=Sets?)
+  'END'
+;
+
+Implementation: 
+  'IMPLEMENTATION' name=ID
+  'REFINES' refine=[Machine]
+  (sees=Sees? &
+   imports=Imports? &
+   concreteConstants=ConcreteConstants? &
+   properties=Properties? &  
+   values=Values? &
+   definitions=Definitions? &
+   localOperations=LocalOperations? &
+   operations=Operations?)
+  'END'
+;
+
+Sees:
+  'SEES'
+  seens+=[Abstraction] (',' seens+=[Abstraction])*  
+;
+
+Imports:
+  'IMPORTS'
+  imports+=[Abstraction] (',' imports+=[Abstraction])*
+;
+
+Values:
+  'VALUES'
+  exprs+=ValueExpr (';' exprs+=ValueExpr)*
+;
+
+ValueExpr:
+  constant=[Variable] '=' value=ConstantLiteral
+;
+
+ConstantLiteral:
+  INT
+;
+
+ConcreteVariables:
+  'CONCRETE_VARIABLES'
+  variables+=Variable (',' variables+=Variable)*
+;
+
+Variable: name=ID;
+
+ConcreteConstants:
+  'CONCRETE_CONSTANTS'
+  constants+=Variable (',' constants+=Variable)*
+;
+
+Invariant:
+  'INVARIANT'
+  exprs+=InvariantExpr ('&' exprs+=InvariantExpr)*
+;
+
+InvariantExpr:
+  variable=[Variable] ':' type=Type 
+;
+
+Type:
+  {PrimitiveType} type=PrimitiveTypeEnum
+  | {Ref} type=[Variable]
+;
+
+enum PrimitiveTypeEnum :
+  BOOL | INT | NAT | NAT1 | STRING
+;
+
+Initialisation:
+  'INITIALISATION'
+  exprs+=InitialisationExpr ('||' exprs+=InitialisationExpr)*
+;
+
+InitialisationExpr:
+  variable=[Variable] '::' type=Type
+;
+
+Properties:
+  'PROPERTIES'
+  exprs+=PropertyExpr ('&' expr+=PropertyExpr)*
+;
+
+PropertyExpr:
+  {PropertyTyped} constant=[Variable] ':' type=Type
+  | {PropertyRange} constant=[Variable] '=' range=Range
+;
+
+Range:
+  lowerBound=INT '..' upperBound=[Variable]
+;
+
+Assertions:
+  'ASSERTIONS'
+  exprs+=AssertionExpr ('&' exprs+=AssertionExpr)*
+;
+
+AssertionExpr:
+  constant=[Variable] '<:' type=Type
+;
+
+Definitions:
+  'DEFINITIONS'
+  exprs+=Definition (',' exprs+=Definition)*
+;
+
+Definition:
+  name=ID '(' (args+=Variable (',' args+=Variable)*)? ')' '==' expr=LogicalExpr
+;
+
+LogicalExpr:
+  ImplyExpr ({AndExpr.exprs+=current} ('&' exprs+=ImplyExpr)+)?
+;
+
+ImplyExpr returns LogicalExpr:
+  InequalityExpr ({ImplyExpr.left=current} '=>' right=InequalityExpr)?
+;
+
+InequalityExpr returns LogicalExpr:
+  EqualExpr ({InequalityExpr.left=current} op=InequalityOp right=EqualExpr)?
+;
+
+enum InequalityOp:
+  LESS='<' | LESS_EQ='<=' | GREATER='>' | GREATER_EQ='>='
+;
+
+EqualExpr returns LogicalExpr:
+  UnaryExpr ({EqualExpr.left=current} '=' right=UnaryExpr)?
+;
+
+UnaryExpr returns LogicalExpr:
+  {NegExpr} '-' expr=UnaryExpr
+  | TerminalExpr
+;
+
+TerminalExpr returns LogicalExpr:
+  {BoolTest} 'bool' '(' expr=LogicalExpr ')'
+  | '(' LogicalExpr ')'
+  | {TypeConstraint} var=[Variable] ':' type=Type
+  | {Ref} var=[Variable]
+  | {ConstantExpr} constant=BoolLiteralEnum
+  | IntLiteral
+  | DefinitionCall
+;
+
+DefinitionCall:
+  def=[Definition] '(' args+=Arg (',' args+=Arg)* ')'  
+;
+
+IntLiteral:
+  value=INT
+;
+
+enum BoolLiteralEnum:
+  TRUE | FALSE
+;
+
+Sets:
+  'SETS'
+  exprs+=Set (';' exprs+=Set)*
+;
+
+Set:
+  name=Variable '=' '{'
+    elems+=Variable (',' elems+=Variable)*
+  '}'
+;
+
+Operations:
+  'OPERATIONS'
+  operations+=Operation (';' operations+=Operation)*
+;
+
+Operation:
+  (outputs+=Variable (',' outputs+=Variable)* '<--')?
+  name=ID ('(' args+=Variable (',' args+=Variable)* ')')?
+  '=' body=Body
+;
+
+Body:
+  Seq
+  | If
+  | Pre
+  | Var
+  | Begin
+  | Skip
+;
+
+Expr:
+  Call
+  | Return
+  | Case
+  | Var
+  | If
+  | Skip
+;
+
+Skip:
+  {Skip} 'skip'
+;
+
+Statement:
+  Call
+  | Assign
+;
+
+If:
+  'IF'
+  exprs+=IfCond
+  ('ELSIF'
+  exprs+=IfCond)*
+  'ELSE'
+  else=Expr
+  'END' 
+;
+
+IfCond:
+  condition=Condition 
+  'THEN'
+  then=Expr
+;
+
+Condition:
+  CondEq ({CondAnd.exprs+=current} ('&' exprs+=CondEq)+)?
+;
+
+CondEq returns Condition:
+  CondLessThan ({CondEq.left=current} '=' right=CondLessThan)? 
+;
+
+CondLessThan returns Condition:
+  CondMinus ({CondLessThan.left=current} '<' right=CondMinus)?
+;
+
+CondMinus returns Condition:
+  CondUnary ({CondMinus.left=current} '-' right=CondUnary)?
+;
+
+CondUnary returns Condition:
+  {CondNeg} '-' expr=CondUnary
+  | CondTerm
+;
+
+CondTerm returns Condition:
+  '(' Condition ')'
+  | {Ref} var=[Variable]
+  | {IntLiteral} value=INT
+  | {BoolLiteral} value=BoolLiteralEnum
+;
+
+Pre:
+  'PRE'
+  exprs+= PreExpr ('&' exprs+=PreExpr)*
+  'THEN'
+  expr=Expr
+  'END'
+;
+
+PreExpr:
+  var=[Variable] ':' type=Type
+;
+
+Var:
+  'VAR'
+  vars+=Variable (',' vars+=Variable)*
+  'IN'
+  in=Seq
+  'END'
+;
+
+Begin:
+  'BEGIN'
+  expr=BeginBody
+  'END'  
+;
+
+BeginBody:
+  Seq
+  | FinalExpr
+;
+
+Assign:
+  var=[Variable] ':=' value=ReturnExpr
+;
+
+Return:  
+  {ReturnSimple} var=[Variable] ':=' value=ReturnExpr
+  | {ReturnTuple} vars+=[Variable] (',' vars+=[Variable])* ':(' value=LogicalExpr ')'
+  | ReturnTypeExpr
+;
+
+ReturnTypeExpr:
+  ReturnType ({ReturnOr.exprs+=current} ('||' exprs+=ReturnType)+)?
+;
+
+ReturnType returns ReturnTypeExpr:
+  var=[Variable] '::' type=Type
+;
+
+ReturnExpr:
+  {Neg} '-' expr=ReturnExpr
+  | ReturnExprTerm
+;
+  
+ReturnExprTerm returns ReturnExpr:
+  {Ref} var=[Variable]
+  | {BoolTest} 'bool' '(' expr=LogicalExpr ')'
+  | {BoolLiteral} constant=BoolLiteralEnum
+;
+
+Case:
+  'CASE' var=[Variable] 'OF'
+  'EITHER' cases+=CaseExpr
+  ('OR' cases+=CaseExpr)+ 
+  'END'
+;
+
+CaseExpr:
+  test=[Variable] 'THEN' expr=Expr
+;
+
+Seq:
+  (exprs+=Statement ';')+ exprs+=FinalExpr
+;
+
+FinalExpr:
+  If
+  | Case
+  | Var
+  | ReturnTypeExpr
+;
+
+Call:
+  (rets+=[Variable] (',' rets+=[Variable])* =>'<--')? op=[Operation] ('(' args+=Arg (',' args+=Arg)* ')')?
+;
+
+
+SimpleCall:
+  op=[Operation] '(' args+=Arg (',' args+=Arg)* ')'
+;
+
+// For some reason I can't determine, using Condition as an unassigned rule 
+// call for Arg here will lead to a non-LL decision.  I can't find the left recursion, 
+// but using Arg instead of Condition and *not* allowing parens Arg fixes the issue.
+// (It's *not* a recursion, since we are consuming an opening paren, but...)  
+Arg:
+  ArgTerm ({ArgMinus.left=current} '-' right=ArgTerm)?
+;
+
+ArgTerm returns Arg:
+  {Ref} var=[Variable]
+  | {IntLiteral} value=INT
+  | {BoolLiteral} value=BoolLiteralEnum
+  | {StringLiteral} value=STRING
+;
+
+LocalOperations:
+  'LOCAL_OPERATIONS'
+  operations+=Operation (';' operations+=Operation)*
+;

@@ -6,3 +6,14 @@
 .metadata/
 .settings/
 bin/
+
+# Xtext
+src-gen/
+xtend-gen/
+**/model/generated/
+*_gen
+*.xtendbin
+*._trace
+
+# Prevent root from being an Eclipse project
+/.project
