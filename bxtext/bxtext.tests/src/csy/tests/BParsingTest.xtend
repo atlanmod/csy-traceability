@@ -11,21 +11,40 @@ import org.eclipse.xtext.testing.util.ParseHelper
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.eclipse.emf.ecore.EObject
 
 @RunWith(XtextRunner)
 @InjectWith(BInjectorProvider)
 class BParsingTest {
-	@Inject
-	ParseHelper<Abstraction> parseHelper
+	@Inject	ParseHelper<Abstraction> parseHelper
+	
+	def <T extends EObject> void assertNoErrors(T result) {
+	  Assert.assertNotNull("Result is null", result)
+    val errors = result.eResource.errors
+    Assert.assertTrue('''Unexpected errors: «errors.join(", ")»''', errors.isEmpty)
+	}
 	
 	@Test
-	def void loadModel() {
+	def void emptyMachine() {
 		val result = parseHelper.parse('''
 			MACHINE A
 			END
 		''')
-		Assert.assertNotNull(result)
-		val errors = result.eResource.errors
-		Assert.assertTrue('''Unexpected errors: «errors.join(", ")»''', errors.isEmpty)
+		assertNoErrors(result)
 	}
+	
+	@Test
+	def void begin() {
+	  val result = parseHelper.parse('''
+	  MACHINE A
+	  OPERATIONS
+	  ret <-- op =
+	    BEGIN
+	      ret :: INT
+	    END
+	  END
+	  ''')
+	  assertNoErrors(result)
+	}
+	
 }
