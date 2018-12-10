@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ASCII"?>
+<b:Machine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:b="http://www.clearsy.com/B" name="Doors">
+  <sees>
+    <seens href="Inputs.xmi#/"/>
+  </sees>
+  <definitions>
+    <exprs name="DOOR_SENSOR_CONSISTENT">
+      <args name="visible"/>
+      <args name="opening"/>
+      <args name="closed"/>
+      <args name="closing"/>
+      <expr xsi:type="b:AndExpr">
+        <exprs xsi:type="b:ImplyExpr">
+          <left xsi:type="b:EqualExpr">
+            <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.0"/>
+            <right xsi:type="b:ConstantExpr" constant="FALSE"/>
+          </left>
+          <right xsi:type="b:AndExpr">
+            <exprs xsi:type="b:EqualExpr">
+              <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.1"/>
+              <right xsi:type="b:ConstantExpr" constant="FALSE"/>
+            </exprs>
+            <exprs xsi:type="b:EqualExpr">
+              <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.2"/>
+              <right xsi:type="b:ConstantExpr" constant="FALSE"/>
+            </exprs>
+            <exprs xsi:type="b:EqualExpr">
+              <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.3"/>
+              <right xsi:type="b:ConstantExpr" constant="FALSE"/>
+            </exprs>
+          </right>
+        </exprs>
+        <exprs xsi:type="b:ImplyExpr">
+          <left xsi:type="b:EqualExpr">
+            <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.1"/>
+            <right xsi:type="b:ConstantExpr"/>
+          </left>
+          <right xsi:type="b:AndExpr">
+            <exprs xsi:type="b:EqualExpr">
+              <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.2"/>
+              <right xsi:type="b:ConstantExpr" constant="FALSE"/>
+            </exprs>
+            <exprs xsi:type="b:EqualExpr">
+              <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.3"/>
+              <right xsi:type="b:ConstantExpr" constant="FALSE"/>
+            </exprs>
+          </right>
+        </exprs>
+        <exprs xsi:type="b:ImplyExpr">
+          <left xsi:type="b:EqualExpr">
+            <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.2"/>
+            <right xsi:type="b:ConstantExpr"/>
+          </left>
+          <right xsi:type="b:AndExpr">
+            <exprs xsi:type="b:EqualExpr">
+              <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.1"/>
+              <right xsi:type="b:ConstantExpr" constant="FALSE"/>
+            </exprs>
+            <exprs xsi:type="b:EqualExpr">
+              <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.3"/>
+              <right xsi:type="b:ConstantExpr" constant="FALSE"/>
+            </exprs>
+          </right>
+        </exprs>
+        <exprs xsi:type="b:ImplyExpr">
+          <left xsi:type="b:EqualExpr">
+            <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.3"/>
+            <right xsi:type="b:ConstantExpr"/>
+          </left>
+          <right xsi:type="b:AndExpr">
+            <exprs xsi:type="b:EqualExpr">
+              <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.1"/>
+              <right xsi:type="b:ConstantExpr" constant="FALSE"/>
+            </exprs>
+            <exprs xsi:type="b:EqualExpr">
+              <left xsi:type="b:Ref" var="//@definitions/@exprs.0/@args.2"/>
+              <right xsi:type="b:ConstantExpr" constant="FALSE"/>
+            </exprs>
+          </right>
+        </exprs>
+      </expr>
+    </exprs>
+  </definitions>
+  <operations>
+    <operations name="are_doors_opening">
+      <outputs name="opening"/>
+      <body xsi:type="b:Begin">
+        <expr xsi:type="b:ReturnTuple" vars="//@operations/@operations.0/@outputs.0">
+          <value xsi:type="b:AndExpr">
+            <exprs xsi:type="b:TypeConstraint" var="//@operations/@operations.0/@outputs.0">
+              <type xsi:type="b:PrimitiveType"/>
+            </exprs>
+            <exprs xsi:type="b:ImplyExpr">
+              <left xsi:type="b:EqualExpr">
+                <left xsi:type="b:Ref" var="//@operations/@operations.0/@outputs.0"/>
+                <right xsi:type="b:ConstantExpr"/>
+              </left>
+              <right xsi:type="b:AndExpr">
+                <exprs xsi:type="b:DefinitionCall" def="//@definitions/@exprs.0">
+                  <args xsi:type="b:Ref">
+                    <var href="Inputs.xmi#//@concreteVariables/@variables.2"/>
+                  </args>
+                  <args xsi:type="b:Ref">
+                    <var href="Inputs.xmi#//@concreteVariables/@variables.3"/>
+                  </args>
+                  <args xsi:type="b:Ref">
+                    <var href="Inputs.xmi#//@concreteVariables/@variables.5"/>
+                  </args>
+                  <args xsi:type="b:Ref">
+                    <var href="Inputs.xmi#//@concreteVariables/@variables.4"/>
+                  </args>
+                </exprs>
+                <exprs xsi:type="b:DefinitionCall" def="//@definitions/@exprs.0">
+                  <args xsi:type="b:Ref">
+                    <var href="Inputs.xmi#//@concreteVariables/@variables.6"/>
+                  </args>
+                  <args xsi:type="b:Ref">
+                    <var href="Inputs.xmi#//@concreteVariables/@variables.7"/>
+                  </args>
+                  <args xsi:type="b:Ref">
+                    <var href="Inputs.xmi#//@concreteVariables/@variables.9"/>
+                  </args>
+                  <args xsi:type="b:Ref">
+                    <var href="Inputs.xmi#//@concreteVariables/@variables.8"/>
+                  </args>
+                </exprs>
+              </right>
+            </exprs>
+          </value>
+        </expr>
+      </body>
+    </operations>
+  </operations>
+</b:Machine>

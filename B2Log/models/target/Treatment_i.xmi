@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ASCII"?>
+<b:Implementation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:b="http://www.clearsy.com/B" name="Treatment_i">
+  <operations>
+    <operations name="aopp_authorization">
+      <outputs name="aopp"/>
+      <outputs name="fallback"/>
+      <body xsi:type="b:Var">
+        <vars name="train_in_par"/>
+        <vars name="train_stopped"/>
+        <vars name="doors_opening"/>
+        <in>
+          <exprs xsi:type="b:Call" rets="//@operations/@operations.0/@body/@vars.0">
+            <op href="Train.mch#//@operations/@operations.0"/>
+          </exprs>
+          <exprs xsi:type="b:Call" rets="//@operations/@operations.0/@body/@vars.1">
+            <op href="Train.mch#//@operations/@operations.1"/>
+          </exprs>
+          <exprs xsi:type="b:Call" rets="//@operations/@operations.0/@body/@vars.2">
+            <op href="Doors.mch#//@operations/@operations.0"/>
+          </exprs>
+          <exprs xsi:type="b:Assign" var="//@operations/@operations.0/@outputs.0">
+            <value xsi:type="b:BoolTest">
+              <expr xsi:type="b:AndExpr">
+                <exprs xsi:type="b:EqualExpr">
+                  <left xsi:type="b:Ref" var="//@operations/@operations.0/@body/@vars.0"/>
+                  <right xsi:type="b:Ref">
+                    <var href="Train.mch#//@sets/@exprs.0/@elems.0"/>
+                  </right>
+                </exprs>
+                <exprs xsi:type="b:EqualExpr">
+                  <left xsi:type="b:Ref" var="//@operations/@operations.0/@body/@vars.1"/>
+                  <right xsi:type="b:Ref">
+                    <var href="Train.mch#//@sets/@exprs.1/@elems.0"/>
+                  </right>
+                </exprs>
+                <exprs xsi:type="b:EqualExpr">
+                  <left xsi:type="b:Ref" var="//@operations/@operations.0/@body/@vars.2"/>
+                  <right xsi:type="b:ConstantExpr"/>
+                </exprs>
+              </expr>
+            </value>
+          </exprs>
+          <exprs xsi:type="b:If">
+            <exprs>
+              <condition xsi:type="b:CondEq">
+                <left xsi:type="b:Ref" var="//@operations/@operations.0/@body/@vars.0"/>
+                <right xsi:type="b:Ref">
+                  <var href="Train.mch#//@sets/@exprs.0/@elems.2"/>
+                </right>
+              </condition>
+              <then xsi:type="b:Assign" var="//@operations/@operations.0/@outputs.1">
+                <value xsi:type="b:Ref">
+                  <var href="Treatment.mch#//@sets/@exprs.0/@elems.0"/>
+                </value>
+              </then>
+            </exprs>
+            <exprs>
+              <condition xsi:type="b:CondEq">
+                <left xsi:type="b:Ref" var="//@operations/@operations.0/@body/@vars.1"/>
+                <right xsi:type="b:Ref">
+                  <var href="Train.mch#//@sets/@exprs.1/@elems.2"/>
+                </right>
+              </condition>
+              <then xsi:type="b:Assign" var="//@operations/@operations.0/@outputs.1">
+                <value xsi:type="b:Ref">
+                  <var href="Treatment.mch#//@sets/@exprs.0/@elems.1"/>
+                </value>
+              </then>
+            </exprs>
+            <else xsi:type="b:Assign" var="//@operations/@operations.0/@outputs.1">
+              <value xsi:type="b:Ref">
+                <var href="Treatment.mch#//@sets/@exprs.0/@elems.2"/>
+              </value>
+            </else>
+          </exprs>
+        </in>
+      </body>
+    </operations>
+  </operations>
+  <refine href="Treatment.mch#/"/>
+  <imports>
+    <imports href="Train.mch#/"/>
+    <imports href="Doors.mch#/"/>
+  </imports>
+</b:Implementation>

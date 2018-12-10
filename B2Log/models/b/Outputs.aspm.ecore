@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ASPM:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ASPM="http://jtl.univaq.it/aspm"
+    ID="x_m1" name="x_b">
+  <nodes ID="1" IDtrace="x_/" name="x_Machine"/>
+  <nodes ID="6" IDtrace="x_//@operations/@operations.0/@body" name="x_Pre"/>
+  <nodes ID="8" IDtrace="x_//@operations/@operations.0/@body/@expr" name="x_Assign"/>
+  <nodes ID="12" IDtrace="x_//@operations/@operations.0/@body/@exprs.0/@type" name="x_PrimitiveType"/>
+  <nodes ID="13" IDtrace="x_//@invariant/@exprs.0/@type" name="x_PrimitiveType"/>
+  <nodes ID="14" IDtrace="x_//@initialisation/@exprs.0/@type" name="x_PrimitiveType"/>
+  <nodes ID="11" IDtrace="x_//@operations/@operations.0/@body/@expr/@value" name="x_Ref"/>
+  <edges ID="102" IDtrace="x_/101" name="x_operations" source="1" sourceTrace="x_/"
+      targetTrace="x_//@operations"/>
+  <edges ID="104" IDtrace="x_/103" name="x_concreteVariables" source="1" sourceTrace="x_/"
+      targetTrace="x_//@concreteVariables"/>
+  <edges ID="106" IDtrace="x_/105" name="x_invariant" source="1" sourceTrace="x_/"
+      targetTrace="x_//@invariant"/>
+  <edges ID="108" IDtrace="x_/107" name="x_initialisation" source="1" sourceTrace="x_/"
+      targetTrace="x_//@initialisation"/>
+  <edges ID="6012" IDtrace="x_//@operations/@operations.0/@body6011" name="x_exprs"
+      source="6" sourceTrace="x_//@operations/@operations.0/@body" targetTrace="x_//@operations/@operations.0/@body/@exprs.0"/>
+  <edges ID="6014" IDtrace="x_//@operations/@operations.0/@body6013" name="x_expr"
+      source="6" sourceTrace="x_//@operations/@operations.0/@body" target="8" targetTrace="x_//@operations/@operations.0/@body/@expr"/>
+  <edges ID="8016" IDtrace="x_//@operations/@operations.0/@body/@expr8015" name="x_var"
+      source="8" sourceTrace="x_//@operations/@operations.0/@body/@expr" targetTrace="x_//@concreteVariables/@variables.0"/>
+  <edges ID="8018" IDtrace="x_//@operations/@operations.0/@body/@expr8017" name="x_value"
+      source="8" sourceTrace="x_//@operations/@operations.0/@body/@expr" target="11"
+      targetTrace="x_//@operations/@operations.0/@body/@expr/@value"/>
+  <edges ID="11026" IDtrace="x_//@operations/@operations.0/@body/@expr/@value11025"
+      name="x_var" source="11" sourceTrace="x_//@operations/@operations.0/@body/@expr/@value"
+      targetTrace="x_//@operations/@operations.0/@args.0"/>
+  <props ID="1010" IDtrace="x_/109" name="x_name" value="x_Outputs" owner="1" ownerTrace="x_/"/>
+  <props ID="12020" IDtrace="x_//@operations/@operations.0/@body/@exprs.0/@type12019"
+      name="x_type" value="x_b!BOOL" owner="12" ownerTrace="x_//@operations/@operations.0/@body/@exprs.0/@type"/>
+  <props ID="13022" IDtrace="x_//@invariant/@exprs.0/@type13021" name="x_type" value="x_b!BOOL"
+      owner="13" ownerTrace="x_//@invariant/@exprs.0/@type"/>
+  <props ID="14024" IDtrace="x_//@initialisation/@exprs.0/@type14023" name="x_type"
+      value="x_b!BOOL" owner="14" ownerTrace="x_//@initialisation/@exprs.0/@type"/>
+</ASPM:Model>

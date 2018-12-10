@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ASCII"?>
+<b:Machine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:b="http://www.clearsy.com/B" name="Treatment">
+  <operations>
+    <operations name="aopp_authorization">
+      <outputs name="aopp"/>
+      <outputs name="fallback"/>
+      <body xsi:type="b:Begin">
+        <expr xsi:type="b:ReturnTuple" vars="//@operations/@operations.0/@outputs.0 //@operations/@operations.0/@outputs.1">
+          <value xsi:type="b:AndExpr">
+            <exprs xsi:type="b:TypeConstraint" var="//@operations/@operations.0/@outputs.0">
+              <type xsi:type="b:PrimitiveType"/>
+            </exprs>
+            <exprs xsi:type="b:TypeConstraint" var="//@operations/@operations.0/@outputs.1">
+              <type xsi:type="b:Ref" type="//@sets/@exprs.0/@name"/>
+            </exprs>
+            <exprs xsi:type="b:ImplyExpr">
+              <left xsi:type="b:EqualExpr">
+                <left xsi:type="b:Ref" var="//@operations/@operations.0/@outputs.0"/>
+                <right xsi:type="b:ConstantExpr"/>
+              </left>
+              <right xsi:type="b:EqualExpr">
+                <left xsi:type="b:Ref" var="//@operations/@operations.0/@outputs.1"/>
+                <right xsi:type="b:Ref" var="//@sets/@exprs.0/@elems.2"/>
+              </right>
+            </exprs>
+          </value>
+        </expr>
+      </body>
+    </operations>
+  </operations>
+  <sets>
+    <exprs>
+      <name name="FALLBACKS"/>
+      <elems name="INCONSISTENT_POSITION"/>
+      <elems name="INCONSISTENT_SPEED"/>
+      <elems name="NOMINAL"/>
+    </exprs>
+  </sets>
+</b:Machine>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<b:Implementation
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:b="http://www.clearsy.com/B"
+    name="Treatment_i">
+  <operations>
+    <operations
+        name="aopp_authorization">
+      <outputs
+          name="aopp"/>
+      <outputs
+          name="fallback"/>
+      <body
+          xsi:type="b:Var">
+        <vars
+            name="train_in_par"/>
+        <vars
+            name="train_stopped"/>
+        <vars
+            name="doors_opening"/>
+      </body>
+    </operations>
+  </operations>
+</b:Implementation>

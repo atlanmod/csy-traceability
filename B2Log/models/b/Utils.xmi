@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ASCII"?>
+<b:Machine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:b="http://www.clearsy.com/B" name="Utils">
+  <concreteConstants>
+    <constants name="UINT16_MAX"/>
+    <constants name="uint16_t"/>
+  </concreteConstants>
+  <properties>
+    <exprs xsi:type="b:PropertyTyped" constant="//@concreteConstants/@constants.0">
+      <type xsi:type="b:PrimitiveType" type="NAT1"/>
+    </exprs>
+    <expr xsi:type="b:PropertyRange" constant="//@concreteConstants/@constants.1">
+      <range upperBound="//@concreteConstants/@constants.0"/>
+    </expr>
+  </properties>
+  <operations>
+    <operations name="print">
+      <args name="sensor"/>
+      <args name="variable"/>
+      <args name="value"/>
+      <body xsi:type="b:Pre">
+        <exprs var="//@operations/@operations.0/@args.0">
+          <type xsi:type="b:PrimitiveType" type="STRING"/>
+        </exprs>
+        <exprs var="//@operations/@operations.0/@args.1">
+          <type xsi:type="b:PrimitiveType" type="STRING"/>
+        </exprs>
+        <exprs var="//@operations/@operations.0/@args.2">
+          <type xsi:type="b:PrimitiveType" type="STRING"/>
+        </exprs>
+        <expr xsi:type="b:Skip"/>
+      </body>
+    </operations>
+    <operations name="urgent_print">
+      <args name="sensor"/>
+      <args name="variable"/>
+      <args name="value"/>
+      <body xsi:type="b:Pre">
+        <exprs var="//@operations/@operations.1/@args.0">
+          <type xsi:type="b:PrimitiveType" type="STRING"/>
+        </exprs>
+        <exprs var="//@operations/@operations.1/@args.1">
+          <type xsi:type="b:PrimitiveType" type="STRING"/>
+        </exprs>
+        <exprs var="//@operations/@operations.1/@args.2">
+          <type xsi:type="b:PrimitiveType" type="STRING"/>
+        </exprs>
+        <expr xsi:type="b:Skip"/>
+      </body>
+    </operations>
+    <operations name="flush">
+      <body xsi:type="b:Skip"/>
+    </operations>
+  </operations>
+  <concreteVariables>
+    <variables name="current_date"/>
+    <variables name="current_time"/>
+    <variables name="toprint"/>
+  </concreteVariables>
+  <invariant>
+    <exprs variable="//@concreteVariables/@variables.0">
+      <type xsi:type="b:PrimitiveType" type="INT"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.1">
+      <type xsi:type="b:PrimitiveType" type="INT"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.2">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+  </invariant>
+  <initialisation>
+    <exprs variable="//@concreteVariables/@variables.0">
+      <type xsi:type="b:PrimitiveType" type="INT"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.1">
+      <type xsi:type="b:PrimitiveType" type="INT"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.2">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+  </initialisation>
+  <assertions>
+    <exprs constant="//@concreteConstants/@constants.1">
+      <type xsi:type="b:PrimitiveType" type="INT"/>
+    </exprs>
+  </assertions>
+</b:Machine>

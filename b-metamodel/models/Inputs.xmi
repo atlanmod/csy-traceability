@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ASCII"?>
+<b:Machine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:b="http://www.clearsy.com/B" name="Inputs">
+  <sees>
+    <seens href="Utils.mch#/"/>
+  </sees>
+  <operations>
+    <operations name="get_inputs">
+      <body xsi:type="b:Begin">
+        <expr xsi:type="b:ReturnOr">
+          <exprs var="//@concreteVariables/@variables.0">
+            <type xsi:type="b:Ref">
+              <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+            </type>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.1">
+            <type xsi:type="b:Ref">
+              <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+            </type>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.2">
+            <type xsi:type="b:PrimitiveType"/>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.3">
+            <type xsi:type="b:PrimitiveType"/>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.4">
+            <type xsi:type="b:PrimitiveType"/>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.5">
+            <type xsi:type="b:PrimitiveType"/>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.6">
+            <type xsi:type="b:PrimitiveType"/>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.7">
+            <type xsi:type="b:PrimitiveType"/>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.8">
+            <type xsi:type="b:PrimitiveType"/>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.9">
+            <type xsi:type="b:PrimitiveType"/>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.10">
+            <type xsi:type="b:Ref">
+              <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+            </type>
+          </exprs>
+          <exprs var="//@concreteVariables/@variables.11">
+            <type xsi:type="b:Ref">
+              <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+            </type>
+          </exprs>
+        </expr>
+      </body>
+    </operations>
+  </operations>
+  <concreteVariables>
+    <variables name="M21_Position"/>
+    <variables name="M21_Speed"/>
+    <variables name="M22_DoorsVisible"/>
+    <variables name="M22_DoorsOpening"/>
+    <variables name="M22_DoorsClosing"/>
+    <variables name="M22_DoorsClosed"/>
+    <variables name="M23_DoorsVisible"/>
+    <variables name="M23_DoorsOpening"/>
+    <variables name="M23_DoorsClosing"/>
+    <variables name="M23_DoorsClosed"/>
+    <variables name="M24_Position"/>
+    <variables name="M24_Speed"/>
+  </concreteVariables>
+  <invariant>
+    <exprs variable="//@concreteVariables/@variables.0">
+      <type xsi:type="b:Ref">
+        <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+      </type>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.1">
+      <type xsi:type="b:Ref">
+        <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+      </type>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.2">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.3">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.4">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.5">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.6">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.7">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.8">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.9">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.10">
+      <type xsi:type="b:Ref">
+        <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+      </type>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.11">
+      <type xsi:type="b:Ref">
+        <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+      </type>
+    </exprs>
+  </invariant>
+  <initialisation>
+    <exprs variable="//@concreteVariables/@variables.0">
+      <type xsi:type="b:Ref">
+        <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+      </type>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.1">
+      <type xsi:type="b:Ref">
+        <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+      </type>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.2">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.3">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.4">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.5">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.6">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.7">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.8">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.9">
+      <type xsi:type="b:PrimitiveType"/>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.10">
+      <type xsi:type="b:Ref">
+        <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+      </type>
+    </exprs>
+    <exprs variable="//@concreteVariables/@variables.11">
+      <type xsi:type="b:Ref">
+        <type href="Utils.mch#//@concreteConstants/@constants.1"/>
+      </type>
+    </exprs>
+  </initialisation>
+</b:Machine>
