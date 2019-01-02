@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TraceMetamodel:TraceModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:TraceMetamodel="TraceMetamodel"
+    xsi:schemaLocation="TraceMetamodel ../../../plugin/JTL.atl/metamodels/TraceMetamodel.ecore">
+  <traceLinks>
+    <rightLinkEnd
+        name="M23_DoorsClosing">
+      <traceElement
+          href="../models/Treatment_i.xmi#//@implementation.0/@operations/@operations.0/@body/@in/@exprs.4/@exprs.0/@condition/@left"/>
+    </rightLinkEnd>
+    <leftLinkEnd
+        name="M23_DoorsClosing"
+        type="">
+      <traceElement
+          href="../models/Treatment_i.xmi#//@machines.1/@operations/@operations.0/@body/@expr/@value/@exprs.1/@right/@exprs.0/@args.3"/>
+    </leftLinkEnd>
+  </traceLinks>
+  <traceLinks>
+    <rightLinkEnd
+        name="M23_DoorsClosing">
+      <traceElement
+          href="../models/Treatment_i.xmi#//@implementation.0/@operations/@operations.0/@body/@in/@exprs.4/@exprs.0/@condition/@left"/>
+    </rightLinkEnd>
+    <leftLinkEnd
+        name="M23_DoorsClosing"
+        type="">
+      <traceElement
+          href="../models/Treatment_i.xmi#//@machines.1/@operations/@operations.0/@body/@expr/@value/@exprs.1/@right/@exprs.1/@args.3"/>
+    </leftLinkEnd>
+  </traceLinks>
+</TraceMetamodel:TraceModel>
