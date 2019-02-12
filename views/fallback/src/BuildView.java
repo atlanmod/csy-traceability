@@ -57,11 +57,9 @@ public class BuildView {
     return va;
   }
 
-  static Optional<VirtualAssociation> getLastSensor(String sensor,
-                                                    List<EObject> events,
-                                                    EObject fallbackTrace,
-                                                    Resource log,
-                                                    ContributingModel cmodel) {
+  static Optional<EObject> getLastSensor(String sensor,
+                                         List<EObject> events,
+                                         EObject fallbackTrace) {
     var current = events.indexOf(fallbackTrace.eContainer());
 
     var last_sensors = events.stream()
@@ -71,14 +69,9 @@ public class BuildView {
                     && "Position".equals(eGet(trace, "variable")))
       .collect(Collectors.toList());
 
-    // Take the last one
+    // Take and return the last one
     if (last_sensors.size() > 0) {
-      var last = last_sensors.get(last_sensors.size() - 1);
-
-      // Add it to the weaving model
-      var link = createLink(sensor, fallbackTrace, last, log, cmodel);
-
-      return Optional.of(link);
+      return Optional.of(last_sensors.get(last_sensors.size() - 1));
     }
 
     return Optional.empty();
@@ -91,7 +84,7 @@ public class BuildView {
 
     // Load Log metamodel and register it
     var LogResource = new ResourceSetImpl()
-      .getResource(resourceURI("/../../logs-metamodel/metamodels/Log.ecore"), true);
+      .getResource(resourceURI("/Log.ecore"), true);
     var Log = (EPackage) LogResource.getContents().get(0);
     EPackage.Registry.INSTANCE.put(Log.getNsURI(), Log);
 
@@ -123,12 +116,33 @@ public class BuildView {
       wm.getVirtualLinks().add(createLink("fallbacks", root, f, log, cmodel));
 
       // Find the nearest M24 sensor trace and add it to the weaving model
-      getLastSensor("M24", events, f, log, cmodel)
-        .ifPresent(va ->  wm.getVirtualLinks().add(va));
+      var m24 = getLastSensor("M24", events, f);
+      m24.map(sensor -> createLink("M24", f, sensor, log, cmodel))
+        .ifPresent(link -> wm.getVirtualLinks().add(link));
 
       // Same for M21
-      getLastSensor("M21", events, f, log, cmodel)
-        .ifPresent(va ->  wm.getVirtualLinks().add(va));
+      var m21 = getLastSensor("M21", events, f);
+      m21.map(sensor -> createLink("M21", f, sensor, log, cmodel))
+        .ifPresent(link -> wm.getVirtualLinks().add(link));
+
+      // If both are present, add their difference to the virtual property
+      if (m24.isPresent() && m21.isPresent()) {
+        var diff = Math.abs(Integer.parseInt((String) eGet(m24.get(), "value"))
+          - Integer.parseInt((String) eGet(m21.get(), "value")));
+
+        // Add a concept for this fallback
+        var concept = factory.createConcreteConcept();
+        cmodel.getConcreteElements().add(concept);
+        concept.setPath(log.getURIFragment(f));
+
+        var prop = factory.createVirtualProperty();
+        prop.setName("sensors_diff");
+        prop.setParent(concept);
+        prop.setType(diff + "");
+
+        wm.getVirtualLinks().add(prop);
+      }
+
     }
 
     out.save(null);
