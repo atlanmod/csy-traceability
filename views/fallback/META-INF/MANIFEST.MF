@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fallback-view
+Bundle-SymbolicName: fallback-view
+Bundle-Version: 1.0.0.qualifier
+Export-Package: .
+Require-Bundle: org.eclipse.emf.common,
+ org.eclipse.emf.ecore
+Import-Package: org.atlanmod.emfviews.core,
+ org.atlanmod.emfviews.virtuallinks,
+ org.atlanmod.sexp2emf,
+ org.eclipse.emf.ecore.resource,
+ org.eclipse.emf.ecore.resource.impl,
+ org.eclipse.emf.ecore.xmi.impl

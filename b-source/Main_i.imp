@@ -48,7 +48,6 @@ OPERATIONS
             OR     INCONSISTENT_POSITION THEN print("M11", "fallback", "1")
             OR     INCONSISTENT_SPEED    THEN print("M11", "fallback", "2")
             END
-            END
         END
     END
 

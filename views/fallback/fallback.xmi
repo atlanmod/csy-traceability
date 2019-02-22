@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<virtualLinks:WeavingModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:virtualLinks="http://www.atlanmod.org/emfviews/virtuallinks/0.3.0"
+    name="aopp">
+  <virtualLinks
+      xsi:type="virtualLinks:VirtualAssociation"
+      name="M24"
+      source="//@contributingModels.0/@concreteElements.0"
+      target="//@contributingModels.0/@concreteElements.0"
+      upperBound="-1"/>
+  <virtualLinks
+      xsi:type="virtualLinks:VirtualAssociation"
+      name="M21"
+      source="//@contributingModels.0/@concreteElements.0"
+      target="//@contributingModels.0/@concreteElements.0"
+      upperBound="-1"/>
+  <virtualLinks
+      xsi:type="virtualLinks:VirtualAssociation"
+      name="fallbacks"
+      source="//@contributingModels.0/@concreteElements.1"
+      target="//@contributingModels.0/@concreteElements.0"
+      upperBound="-1"/>
+  <virtualLinks
+      xsi:type="virtualLinks:VirtualProperty"
+      name="sensors_diff"
+      parent="//@contributingModels.0/@concreteElements.0"
+      type="int"
+      optional="true"/>
+  <contributingModels
+      URI="Log">
+    <concreteElements
+        xsi:type="virtualLinks:ConcreteConcept"
+        path="Trace"/>
+    <concreteElements
+        xsi:type="virtualLinks:ConcreteConcept"
+        path="Log"/>
+  </contributingModels>
+</virtualLinks:WeavingModel>
