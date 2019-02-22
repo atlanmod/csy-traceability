@@ -10,8 +10,14 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>ASPM.resource.aspm.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>JTL.resource.jtl.nature</nature>
+		<nature>ASPM.resource.aspm.nature</nature>
 	</natures>
 </projectDescription>

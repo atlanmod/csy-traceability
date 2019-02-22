@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TraceMetamodel:TraceModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:TraceMetamodel="TraceMetamodel"
+    xsi:schemaLocation="TraceMetamodel /jtl.log2b-extended/metamodels/TraceMetamodel.ecore">
+  <traceLinks>
+    <rightLinkEnd/>
+    <leftLinkEnd
+        name="Event fallback"
+        type="">
+      <traceElement
+          href="../models/shortoutputs_sample.xmi#//@events.11"/>
+    </leftLinkEnd>
+    <leftLinkEnd
+        name="Trace fallback">
+      <traceElement
+          href="../models/shortoutputs_sample.xmi#//@events.11/@traces.2"/>
+    </leftLinkEnd>
+    <leftLinkEnd
+        name="Trace fallback Position">
+      <traceElement
+          href="../models/shortoutputs_sample.xmi#//@events.11/@traces.1"/>
+    </leftLinkEnd>
+    <leftLinkEnd
+        name="Event sensor M21">
+      <traceElement
+          href="../models/shortoutputs_sample.xmi#//@events.5"/>
+    </leftLinkEnd>
+    <leftLinkEnd
+        name="Trace sensor M21 Position">
+      <traceElement
+          href="../models/shortoutputs_sample.xmi#//@events.5/@traces.3"/>
+    </leftLinkEnd>
+    <leftLinkEnd
+        name="Event sensor M24">
+      <traceElement
+          href="../models/shortoutputs_sample.xmi#//@events.10"/>
+    </leftLinkEnd>
+    <leftLinkEnd
+        name="Trace sensor M24 Position"
+        type="">
+      <traceElement
+          href="../models/shortoutputs_sample.xmi#//@events.10/@traces.2"/>
+    </leftLinkEnd>
+  </traceLinks>
+</TraceMetamodel:TraceModel>
