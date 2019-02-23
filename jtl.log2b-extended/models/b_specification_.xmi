@@ -655,16 +655,32 @@
           <vars name="M23_cons"/>
           <in>
             <exprs xsi:type="b:Call" rets="//@implementations.1/@operations/@operations.1/@body/@vars.0" op="//@implementations.1/@operations/@operations.0">
-              <args xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.2"/>
-              <args xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.3"/>
-              <args xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.5"/>
-              <args xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.4"/>
+              <args xsi:type="b:Ref">
+                <var href="//@machines.3/@concreteVariables/@variables.2"/>
+              </args>
+              <args xsi:type="b:Ref">
+                <var href="//@machines.3/@concreteVariables/@variables.3"/>
+              </args>
+              <args xsi:type="b:Ref">
+                <var href="//@machines.3/@concreteVariables/@variables.5"/>
+              </args>
+              <args xsi:type="b:Ref">
+                <var href="//@machines.3/@concreteVariables/@variables.4"/>
+              </args>
             </exprs>
             <exprs xsi:type="b:Call" rets="//@implementations.1/@operations/@operations.1/@body/@vars.1" op="//@implementations.1/@operations/@operations.0">
-              <args xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.6"/>
-              <args xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.7"/>
-              <args xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.9"/>
-              <args xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.8"/>
+              <args xsi:type="b:Ref">
+                <var href="//@machines.3/@concreteVariables/@variables.6"/>
+              </args>
+              <args xsi:type="b:Ref">
+                <var href="//@machines.3/@concreteVariables/@variables.7"/>
+              </args>
+              <args xsi:type="b:Ref">
+                <var href="//@machines.3/@concreteVariables/@variables.9"/>
+              </args>
+              <args xsi:type="b:Ref">
+                <var href="//@machines.3/@concreteVariables/@variables.8"/>
+              </args>
             </exprs>
             <exprs xsi:type="b:If">
               <exprs>
@@ -682,11 +698,15 @@
                   <exprs>
                     <condition xsi:type="b:CondAnd">
                       <exprs xsi:type="b:CondEq">
-                        <left xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.3"/>
+                        <left xsi:type="b:Ref">
+                          <var href="//@machines.3/@concreteVariables/@variables.3"/>
+                        </left>
                         <right xsi:type="b:BoolLiteral"/>
                       </exprs>
                       <exprs xsi:type="b:CondEq">
-                        <left xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.7"/>
+                        <left xsi:type="b:Ref">
+                          <var href="//@machines.3/@concreteVariables/@variables.7"/>
+                        </left>
                         <right xsi:type="b:BoolLiteral"/>
                       </exprs>
                     </condition>
@@ -754,45 +774,57 @@
       <operations name="do_cycle">
         <body xsi:type="b:Begin">
           <expr xsi:type="b:Seq">
-            <exprs xsi:type="b:Call" op="//@machines.3/@operations/@operations.0"/>
+            <exprs xsi:type="b:Call">
+              <op href="//@machines.3/@operations/@operations.0"/>
+            </exprs>
             <exprs xsi:type="b:Var">
               <vars name="aopp"/>
               <vars name="fb"/>
               <in>
-                <exprs xsi:type="b:Call" rets="//@implementations.2/@operations/@operations.0/@body/@expr/@exprs.1/@vars.0 //@implementations.2/@operations/@operations.0/@body/@expr/@exprs.1/@vars.1" op="//@machines.2/@operations/@operations.0"/>
-                <exprs xsi:type="b:Call" op="//@machines.6/@operations/@operations.0">
+                <exprs xsi:type="b:Call" rets="//@implementations.2/@operations/@operations.0/@body/@expr/@exprs.1/@vars.0 //@implementations.2/@operations/@operations.0/@body/@expr/@exprs.1/@vars.1">
+                  <op href="//@machines.2/@operations/@operations.0"/>
+                </exprs>
+                <exprs xsi:type="b:Call">
+                  <op href="//@machines.6/@operations/@operations.0"/>
                   <args xsi:type="b:Ref" var="//@implementations.2/@operations/@operations.0/@body/@expr/@exprs.1/@vars.0"/>
                 </exprs>
                 <exprs xsi:type="b:Case" var="//@implementations.2/@operations/@operations.0/@body/@expr/@exprs.1/@vars.1">
-                  <cases test="//@machines.2/@sets/@exprs.0/@elems.2">
+                  <cases>
+                    <test href="//@machines.2/@sets/@exprs.0/@elems.2"/>
                     <expr xsi:type="b:If">
                       <exprs>
                         <condition xsi:type="b:CondEq">
                           <left xsi:type="b:Ref" var="//@implementations.2/@operations/@operations.0/@body/@expr/@exprs.1/@vars.0"/>
                           <right xsi:type="b:BoolLiteral"/>
                         </condition>
-                        <then xsi:type="b:Call" op="//@machines.4/@operations/@operations.0">
+                        <then xsi:type="b:Call">
+                          <op href="//@machines.4/@operations/@operations.0"/>
                           <args xsi:type="b:StringLiteral" value="M11"/>
                           <args xsi:type="b:StringLiteral" value="aopp"/>
                           <args xsi:type="b:StringLiteral" value="2"/>
                         </then>
                       </exprs>
-                      <else xsi:type="b:Call" op="//@machines.4/@operations/@operations.0">
+                      <else xsi:type="b:Call">
+                        <op href="//@machines.4/@operations/@operations.0"/>
                         <args xsi:type="b:StringLiteral" value="M11"/>
                         <args xsi:type="b:StringLiteral" value="aopp"/>
                         <args xsi:type="b:StringLiteral" value="1"/>
                       </else>
                     </expr>
                   </cases>
-                  <cases test="//@machines.2/@sets/@exprs.0/@elems.0">
-                    <expr xsi:type="b:Call" op="//@machines.4/@operations/@operations.0">
+                  <cases>
+                    <test href="//@machines.2/@sets/@exprs.0/@elems.0"/>
+                    <expr xsi:type="b:Call">
+                      <op href="//@machines.4/@operations/@operations.0"/>
                       <args xsi:type="b:StringLiteral" value="M11"/>
                       <args xsi:type="b:StringLiteral" value="fallback"/>
                       <args xsi:type="b:StringLiteral" value="1"/>
                     </expr>
                   </cases>
-                  <cases test="//@machines.2/@sets/@exprs.0/@elems.1">
-                    <expr xsi:type="b:Call" op="//@machines.4/@operations/@operations.0">
+                  <cases>
+                    <test href="//@machines.2/@sets/@exprs.0/@elems.1"/>
+                    <expr xsi:type="b:Call">
+                      <op href="//@machines.4/@operations/@operations.0"/>
                       <args xsi:type="b:StringLiteral" value="M11"/>
                       <args xsi:type="b:StringLiteral" value="fallback"/>
                       <args xsi:type="b:StringLiteral" value="2"/>
@@ -806,6 +838,8 @@
       </operations>
     </operations>
   </implementations>
+  
+  
   <implementations name="Train_i">
     <concreteConstants>
       <constants name="POSITION_DELTA"/>
@@ -851,8 +885,12 @@
           <in>
             <exprs xsi:type="b:Call" rets="//@implementations.3/@operations/@operations.1/@body/@vars.0" op="//@implementations.3/@operations/@operations.0">
               <args xsi:type="b:ArgMinus">
-                <left xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.0"/>
-                <right xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.10"/>
+                <left xsi:type="b:Ref">
+                  <var href="//@machines.3/@concreteVariables/@variables.0"/>
+                </left>
+                <right xsi:type="b:Ref">
+                  <var href="//@machines.3/@concreteVariables/@variables.10"/>
+                </right>
               </args>
             </exprs>
             <exprs xsi:type="b:If">
@@ -867,13 +905,17 @@
                   <in>
                     <exprs xsi:type="b:Call" rets="//@implementations.3/@operations/@operations.1/@body/@in/@exprs.1/@exprs.0/@then/@vars.0" op="//@implementations.3/@operations/@operations.0">
                       <args xsi:type="b:ArgMinus">
-                        <left xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.0"/>
+                        <left xsi:type="b:Ref">
+                          <var href="//@machines.3/@concreteVariables/@variables.0"/>
+                        </left>
                         <right xsi:type="b:Ref" var="//@implementations.3/@concreteConstants/@constants.2"/>
                       </args>
                     </exprs>
                     <exprs xsi:type="b:Call" rets="//@implementations.3/@operations/@operations.1/@body/@in/@exprs.1/@exprs.0/@then/@vars.1" op="//@implementations.3/@operations/@operations.0">
                       <args xsi:type="b:ArgMinus">
-                        <left xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.10"/>
+                        <left xsi:type="b:Ref">
+                          <var href="//@machines.3/@concreteVariables/@variables.10"/>
+                        </left>
                         <right xsi:type="b:Ref" var="//@implementations.3/@concreteConstants/@constants.2"/>
                       </args>
                     </exprs>
@@ -890,18 +932,24 @@
                           </exprs>
                         </condition>
                         <then xsi:type="b:Assign" var="//@implementations.3/@operations/@operations.1/@outputs.0">
-                          <value xsi:type="b:Ref" var="//@machines.0/@sets/@exprs.0/@elems.0"/>
+                          <value xsi:type="b:Ref">
+                            <var href="//@machines.0/@sets/@exprs.0/@elems.0"/>
+                          </value>
                         </then>
                       </exprs>
                       <else xsi:type="b:Assign" var="//@implementations.3/@operations/@operations.1/@outputs.0">
-                        <value xsi:type="b:Ref" var="//@machines.0/@sets/@exprs.0/@elems.1"/>
+                        <value xsi:type="b:Ref">
+                          <var href="//@machines.0/@sets/@exprs.0/@elems.1"/>
+                        </value>
                       </else>
                     </exprs>
                   </in>
                 </then>
               </exprs>
               <else xsi:type="b:Assign" var="//@implementations.3/@operations/@operations.1/@outputs.0">
-                <value xsi:type="b:Ref" var="//@machines.0/@sets/@exprs.0/@elems.2"/>
+                <value xsi:type="b:Ref">
+                  <var href="//@machines.0/@sets/@exprs.0/@elems.2"/>
+                </value>
               </else>
             </exprs>
           </in>
@@ -914,8 +962,12 @@
           <in>
             <exprs xsi:type="b:Call" rets="//@implementations.3/@operations/@operations.2/@body/@vars.0" op="//@implementations.3/@operations/@operations.0">
               <args xsi:type="b:ArgMinus">
-                <left xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.1"/>
-                <right xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.11"/>
+                <left xsi:type="b:Ref">
+                  <var href="//@machines.3/@concreteVariables/@variables.1"/>
+                </left>
+                <right xsi:type="b:Ref">
+                  <var href="//@machines.3/@concreteVariables/@variables.11"/>
+                </right>
               </args>
             </exprs>
             <exprs xsi:type="b:If">
@@ -928,25 +980,35 @@
                   <exprs>
                     <condition xsi:type="b:CondAnd">
                       <exprs xsi:type="b:CondLessThan">
-                        <left xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.1"/>
+                        <left xsi:type="b:Ref">
+                          <var href="//@machines.3/@concreteVariables/@variables.1"/>
+                        </left>
                         <right xsi:type="b:Ref" var="//@implementations.3/@concreteConstants/@constants.1"/>
                       </exprs>
                       <exprs xsi:type="b:CondLessThan">
-                        <left xsi:type="b:Ref" var="//@machines.3/@concreteVariables/@variables.11"/>
+                        <left xsi:type="b:Ref">
+                          <var href="//@machines.3/@concreteVariables/@variables.11"/>
+                        </left>
                         <right xsi:type="b:Ref" var="//@implementations.3/@concreteConstants/@constants.1"/>
                       </exprs>
                     </condition>
                     <then xsi:type="b:Assign" var="//@implementations.3/@operations/@operations.2/@outputs.0">
-                      <value xsi:type="b:Ref" var="//@machines.0/@sets/@exprs.1/@elems.0"/>
+                      <value xsi:type="b:Ref">
+                        <var href="//@machines.0/@sets/@exprs.1/@elems.0"/>
+                      </value>
                     </then>
                   </exprs>
                   <else xsi:type="b:Assign" var="//@implementations.3/@operations/@operations.2/@outputs.0">
-                    <value xsi:type="b:Ref" var="//@machines.0/@sets/@exprs.1/@elems.1"/>
+                    <value xsi:type="b:Ref">
+                      <var href="//@machines.0/@sets/@exprs.1/@elems.1"/>
+                    </value>
                   </else>
                 </then>
               </exprs>
               <else xsi:type="b:Assign" var="//@implementations.3/@operations/@operations.2/@outputs.0">
-                <value xsi:type="b:Ref" var="//@machines.0/@sets/@exprs.1/@elems.2"/>
+                <value xsi:type="b:Ref">
+                  <var href="//@machines.0/@sets/@exprs.1/@elems.2"/>
+                </value>
               </else>
             </exprs>
           </in>
