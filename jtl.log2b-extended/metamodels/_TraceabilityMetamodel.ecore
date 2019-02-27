@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="TraceabilityMetamodel" nsURI="http://TraceabilityMetamodel"
+      nsPrefix="TraceabilityMetamodel">
+    <eClassifiers xsi:type="ecore:EClass" name="TraceModel">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#/1/String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="traceLinks" upperBound="-1"
+          eType="#/0/TraceLink" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="traceableArtefacts" upperBound="-1"
+          eType="#/0/TraceableArtefact" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TraceLink">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#/1/Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#/1/String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="#/1/String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rightLinkEnd" upperBound="-1"
+          eType="#/0/TraceLinkEnd" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="leftLinkEnd" upperBound="-1"
+          eType="#/0/TraceLinkEnd" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="traceContext" eType="#/0/TraceContext"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TraceLinkEnd">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#/1/String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="traceableArtefacts" lowerBound="1"
+          eType="#/0/TraceableArtefact"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TraceableArtefactsRef" eSuperTypes="#/0/TraceableArtefact">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="Ref" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TraceableArtefact">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#/1/String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#/1/String"
+          iD="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TraceableArtefactsURI" eSuperTypes="#/0/TraceableArtefact">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="URI" eType="#/1/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TraceContext">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#/1/String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="#/1/String"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="traceContextData" upperBound="-1"
+          eType="#/0/TraceContextData" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TraceContextData">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#/1/String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="#/1/String"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="PrimitiveTypes" nsURI="ASPm-PrimitiveTypes" nsPrefix="pt">
+    <eClassifiers xsi:type="ecore:EDataType" name="Boolean" instanceClassName="boolean"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Double" instanceClassName="double"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Integer" instanceClassName="int"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String"/>
+  </ecore:EPackage>
+</xmi:XMI>
