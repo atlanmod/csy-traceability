@@ -40,10 +40,11 @@ ASSERTIONS
     uint16_t <: INT
 
 OPERATIONS
-    print(sensor, variable, value) =
+    
+    print(sensor, var, value) =
     PRE
         sensor : STRING &
-        variable : STRING &
+        var : STRING &
         value : STRING
     THEN
         skip
@@ -59,7 +60,6 @@ OPERATIONS
         skip
     END
     ;
-
 
     flush = skip
     

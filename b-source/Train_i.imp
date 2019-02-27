@@ -34,8 +34,8 @@ PROPERTIES
     PAR_POSITION: NAT1
 
 VALUES
-    // 10 cm
-    POSITION_DELTA = 100;
+    // 37.2cm, magic value to balance between the two fallback positions
+    POSITION_DELTA = 372;
     // 1 km/h
     SPEED_DELTA = 100;
 
@@ -67,15 +67,15 @@ OPERATIONS
     VAR
         dd
     IN
-        dd <-- abs(M21_Position - M24_Position);
+        dd <-- abs(Position_M21 - Position_M24);
         IF
             dd < POSITION_DELTA
         THEN
             VAR
                 par1, par2
             IN
-                par1 <-- abs(M21_Position - PAR_POSITION);
-                par2 <-- abs(M24_Position - PAR_POSITION);
+                par1 <-- abs(Position_M21 - PAR_POSITION);
+                par2 <-- abs(Position_M24 - PAR_POSITION);
                 IF
                     par1 < POSITION_DELTA & par2 < POSITION_DELTA
                 THEN
@@ -95,12 +95,12 @@ OPERATIONS
     VAR
         dd
     IN
-        dd <-- abs(M21_Speed - M24_Speed);
+        dd <-- abs(Speed_M21 - Speed_M24);
         IF
             dd < SPEED_DELTA
         THEN
             IF
-                M21_Speed < SPEED_DELTA & M24_Speed < SPEED_DELTA
+                Speed_M21 < SPEED_DELTA & Speed_M24 < SPEED_DELTA
             THEN
                 stopped := STOPPED
             ELSE

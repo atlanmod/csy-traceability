@@ -41,12 +41,13 @@ OPERATIONS
                 IF
                     aopp = TRUE
                 THEN
-                    print("M11", "aopp", "2")
+                    print("M11", "aopp", "open")
                 ELSE
-                    print("M11", "aopp", "1")
+                    print("M11", "aopp", "close")
                 END
-            OR     INCONSISTENT_POSITION THEN print("M11", "fallback", "1")
-            OR     INCONSISTENT_SPEED    THEN print("M11", "fallback", "2")
+            OR     INCONSISTENT_POSITION THEN print("M11", "fallback", "inconsistent_position")
+            OR     INCONSISTENT_SPEED    THEN print("M11", "fallback", "inconsistent_speed")
+            END
             END
         END
     END

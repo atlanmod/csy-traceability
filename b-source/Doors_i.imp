@@ -69,14 +69,14 @@ OPERATIONS
     VAR
         M22_cons, M23_cons
     IN
-        M22_cons <-- door_consistency(M22_DoorsVisible, M22_DoorsOpening, M22_DoorsClosed, M22_DoorsClosing);
-        M23_cons <-- door_consistency(M23_DoorsVisible, M23_DoorsOpening, M23_DoorsClosed, M23_DoorsClosing);
+        M22_cons <-- door_consistency(PorteVisible_M22, OuverturePorte_M22, FermeturePorte_M22, PorteFerme_M22);
+        M23_cons <-- door_consistency(PorteVisible_M23, OuverturePorte_M23, FermeturePorte_M23, PorteFerme_M23);
 
         IF
             M22_cons = TRUE & M23_cons = TRUE
         THEN
             IF
-                M22_DoorsOpening = TRUE & M23_DoorsOpening = TRUE
+                OuverturePorte_M22 = TRUE & OuverturePorte_M23 = TRUE
             THEN
                 opening := TRUE
             ELSE

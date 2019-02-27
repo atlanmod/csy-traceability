@@ -1,21 +1,3 @@
-<!--
-  Copyright (C) 2018 Clearsy
-
-  This file is part of MockPilot.
-
-  MockPilot is free software; you can redistribute it and/or modify it
-  under the terms of the GNU General Public License as published by
-  the Free Software Foundation; either version 3 of the License, or
-  (at your option) any later version.
-
-  MockPilot is distributed in the hope that it will be useful, but WITHOUT
-  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
-  License for more details.
-
-  You should have received a copy of the GNU General Public License
-  along with this program.  If not, see <http://www.gnu.org/licenses/>.
--->
 <Machine name='Train_i' type='implementation'>
   <Abstraction>Train</Abstraction>
   <Sees>
@@ -28,7 +10,7 @@
   </Sees>
   <Values>
     <Valuation ident='POSITION_DELTA' typref='2701647786'>
-      <Integer_Literal value='100' typref='2701647786'/>
+      <Integer_Literal value='372' typref='2701647786'/>
     </Valuation>
     <Valuation ident='SPEED_DELTA' typref='2701647786'>
       <Integer_Literal value='100' typref='2701647786'/>
@@ -172,8 +154,8 @@
                 </Name>
                 <Input_Parameters>
                   <Binary_Exp op='-' typref='2701647786'>
-                    <Id value='M21_Position' typref='2701647786'/>
-                    <Id value='M24_Position' typref='2701647786'/>
+                    <Id value='Position_M21' typref='2701647786'/>
+                    <Id value='Position_M24' typref='2701647786'/>
                   </Binary_Exp>
                 </Input_Parameters>
                 <Output_Parameters>
@@ -201,7 +183,7 @@
                           </Name>
                           <Input_Parameters>
                             <Binary_Exp op='-' typref='2701647786'>
-                              <Id value='M21_Position' typref='2701647786'/>
+                              <Id value='Position_M21' typref='2701647786'/>
                               <Id value='PAR_POSITION' typref='2701647786'/>
                             </Binary_Exp>
                           </Input_Parameters>
@@ -215,7 +197,7 @@
                           </Name>
                           <Input_Parameters>
                             <Binary_Exp op='-' typref='2701647786'>
-                              <Id value='M24_Position' typref='2701647786'/>
+                              <Id value='Position_M24' typref='2701647786'/>
                               <Id value='PAR_POSITION' typref='2701647786'/>
                             </Binary_Exp>
                           </Input_Parameters>
@@ -294,8 +276,8 @@
                 </Name>
                 <Input_Parameters>
                   <Binary_Exp op='-' typref='2701647786'>
-                    <Id value='M21_Speed' typref='2701647786'/>
-                    <Id value='M24_Speed' typref='2701647786'/>
+                    <Id value='Speed_M21' typref='2701647786'/>
+                    <Id value='Speed_M24' typref='2701647786'/>
                   </Binary_Exp>
                 </Input_Parameters>
                 <Output_Parameters>
@@ -314,11 +296,11 @@
                     <Condition>
                       <Nary_Pred op='&amp;'>
                         <Exp_Comparison op='&lt;'>
-                          <Id value='M21_Speed' typref='2701647786'/>
+                          <Id value='Speed_M21' typref='2701647786'/>
                           <Id value='SPEED_DELTA' typref='2701647786'/>
                         </Exp_Comparison>
                         <Exp_Comparison op='&lt;'>
-                          <Id value='M24_Speed' typref='2701647786'/>
+                          <Id value='Speed_M24' typref='2701647786'/>
                           <Id value='SPEED_DELTA' typref='2701647786'/>
                         </Exp_Comparison>
                       </Nary_Pred>
@@ -378,5 +360,5 @@
     <Id value='SPEED_RESULT'/>
     </Type>
 </TypeInfos>
-
+  
 </Machine>

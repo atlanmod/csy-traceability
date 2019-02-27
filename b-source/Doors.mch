@@ -33,7 +33,7 @@ OPERATIONS
     // doors cannot open when sensors data are not consistent
     opening <-- are_doors_opening =
     BEGIN
-        opening :( opening: BOOL & ((opening = TRUE) => (DOOR_SENSOR_CONSISTENT(M22_DoorsVisible, M22_DoorsOpening, M22_DoorsClosed, M22_DoorsClosing) & DOOR_SENSOR_CONSISTENT(M23_DoorsVisible, M23_DoorsOpening, M23_DoorsClosed, M23_DoorsClosing))) )
+        opening :( opening: BOOL & ((opening = TRUE) => (DOOR_SENSOR_CONSISTENT(PorteVisible_M22, OuverturePorte_M22, FermeturePorte_M22, PorteFerme_M22) & DOOR_SENSOR_CONSISTENT(PorteVisible_M23, OuverturePorte_M23, FermeturePorte_M23, PorteFerme_M23))) )
     END
 
 END

@@ -1,21 +1,3 @@
-<!--
-  Copyright (C) 2018 Clearsy
-
-  This file is part of MockPilot.
-
-  MockPilot is free software; you can redistribute it and/or modify it
-  under the terms of the GNU General Public License as published by
-  the Free Software Foundation; either version 3 of the License, or
-  (at your option) any later version.
-
-  MockPilot is distributed in the hope that it will be useful, but WITHOUT
-  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
-  License for more details.
-
-  You should have received a copy of the GNU General Public License
-  along with this program.  If not, see <http://www.gnu.org/licenses/>.
--->
 <Machine name='Doors_i' type='implementation'>
   <Abstraction>Doors</Abstraction>
   <Sees>
@@ -288,10 +270,10 @@
                   <Id value='door_consistency'/>
                 </Name>
                 <Input_Parameters>
-                  <Id value='M22_DoorsVisible' typref='2043437594'/>
-                  <Id value='M22_DoorsOpening' typref='2043437594'/>
-                  <Id value='M22_DoorsClosed' typref='2043437594'/>
-                  <Id value='M22_DoorsClosing' typref='2043437594'/>
+                  <Id value='PorteVisible_M22' typref='2043437594'/>
+                  <Id value='OuverturePorte_M22' typref='2043437594'/>
+                  <Id value='FermeturePorte_M22' typref='2043437594'/>
+                  <Id value='PorteFerme_M22' typref='2043437594'/>
                 </Input_Parameters>
                 <Output_Parameters>
                   <Id value='M22_cons' typref='2043437594'/>
@@ -302,10 +284,10 @@
                   <Id value='door_consistency'/>
                 </Name>
                 <Input_Parameters>
-                  <Id value='M23_DoorsVisible' typref='2043437594'/>
-                  <Id value='M23_DoorsOpening' typref='2043437594'/>
-                  <Id value='M23_DoorsClosed' typref='2043437594'/>
-                  <Id value='M23_DoorsClosing' typref='2043437594'/>
+                  <Id value='PorteVisible_M23' typref='2043437594'/>
+                  <Id value='OuverturePorte_M23' typref='2043437594'/>
+                  <Id value='FermeturePorte_M23' typref='2043437594'/>
+                  <Id value='PorteFerme_M23' typref='2043437594'/>
                 </Input_Parameters>
                 <Output_Parameters>
                   <Id value='M23_cons' typref='2043437594'/>
@@ -329,11 +311,11 @@
                     <Condition>
                       <Nary_Pred op='&amp;'>
                         <Exp_Comparison op='='>
-                          <Id value='M22_DoorsOpening' typref='2043437594'/>
+                          <Id value='OuverturePorte_M22' typref='2043437594'/>
                           <Boolean_Literal value='TRUE' typref='2043437594'/>
                         </Exp_Comparison>
                         <Exp_Comparison op='='>
-                          <Id value='M23_DoorsOpening' typref='2043437594'/>
+                          <Id value='OuverturePorte_M23' typref='2043437594'/>
                           <Boolean_Literal value='TRUE' typref='2043437594'/>
                         </Exp_Comparison>
                       </Nary_Pred>
@@ -387,5 +369,5 @@
 </Unary_Exp>
     </Type>
 </TypeInfos>
-
+  
 </Machine>

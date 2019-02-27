@@ -23,73 +23,73 @@ SEES
 
 CONCRETE_VARIABLES
     /* the input variables from sensors */
-    M21_Position,    // in mm
-    M21_Speed,       // in 1/100 km/h 
+    Position_M21,    // in mm
+    Speed_M21,       // in 1/100 km/h 
     
-    M22_DoorsVisible,
-    M22_DoorsOpening,
-    M22_DoorsClosing,
-    M22_DoorsClosed,
+    PorteVisible_M22,
+    OuverturePorte_M22,
+    FermeturePorte_M22,
+    PorteFerme_M22,
     
-    M23_DoorsVisible,
-    M23_DoorsOpening,
-    M23_DoorsClosing,
-    M23_DoorsClosed,
+    PorteVisible_M23,
+    OuverturePorte_M23,
+    FermeturePorte_M23,
+    PorteFerme_M23,
     
-    M24_Position,
-    M24_Speed
+    Position_M24,
+    Speed_M24
 
 INVARIANT
-    M21_Position: uint16_t &
-    M21_Speed: uint16_t &
+    Position_M21: uint16_t &
+    Speed_M21: uint16_t &
     
-    M22_DoorsVisible: BOOL &
-    M22_DoorsOpening: BOOL &
-    M22_DoorsClosing: BOOL &
-    M22_DoorsClosed: BOOL &
+    PorteVisible_M22: BOOL &
+    OuverturePorte_M22: BOOL &
+    FermeturePorte_M22: BOOL &
+    PorteFerme_M22: BOOL &
     
-    M23_DoorsVisible: BOOL &
-    M23_DoorsOpening: BOOL &
-    M23_DoorsClosing: BOOL &
-    M23_DoorsClosed: BOOL &
+    PorteVisible_M23: BOOL &
+    OuverturePorte_M23: BOOL &
+    FermeturePorte_M23: BOOL &
+    PorteFerme_M23: BOOL &
     
-    M24_Position: uint16_t &
-    M24_Speed: uint16_t
+    Position_M24: uint16_t &
+    Speed_M24: uint16_t
     
 INITIALISATION
-    M21_Position :: uint16_t ||
-    M21_Speed :: uint16_t ||
+    Position_M21 :: uint16_t ||
+    Speed_M21 :: uint16_t ||
     
-    M22_DoorsVisible :: BOOL ||
-    M22_DoorsOpening :: BOOL ||
-    M22_DoorsClosing :: BOOL ||
-    M22_DoorsClosed :: BOOL ||
+    PorteVisible_M22 :: BOOL ||
+    OuverturePorte_M22 :: BOOL ||
+    FermeturePorte_M22 :: BOOL ||
+    PorteFerme_M22 :: BOOL ||
     
-    M23_DoorsVisible :: BOOL ||
-    M23_DoorsOpening :: BOOL ||
-    M23_DoorsClosing :: BOOL ||
-    M23_DoorsClosed :: BOOL ||
+    PorteVisible_M23 :: BOOL ||
+    OuverturePorte_M23 :: BOOL ||
+    FermeturePorte_M23 :: BOOL ||
+    PorteFerme_M23 :: BOOL ||
     
-    M24_Position :: uint16_t ||
-    M24_Speed :: uint16_t
+    Position_M24 :: uint16_t ||
+    Speed_M24 :: uint16_t
     
 OPERATIONS
     get_inputs =
     BEGIN
-        M21_Position :: uint16_t ||
-        M21_Speed :: uint16_t ||
+        Position_M21 :: uint16_t ||
+        Speed_M21 :: uint16_t ||
         
-        M22_DoorsVisible :: BOOL ||
-        M22_DoorsOpening :: BOOL ||
-        M22_DoorsClosing :: BOOL ||
-        M22_DoorsClosed :: BOOL ||
+        PorteVisible_M22 :: BOOL ||
+        OuverturePorte_M22 :: BOOL ||
+        FermeturePorte_M22 :: BOOL ||
+        PorteFerme_M22 :: BOOL ||
         
-        M23_DoorsVisible :: BOOL ||
-        M23_DoorsOpening :: BOOL ||
-        M23_DoorsClosing :: BOOL ||
-        M23_DoorsClosed :: BOOL ||
+        PorteVisible_M23 :: BOOL ||
+        OuverturePorte_M23 :: BOOL ||
+        FermeturePorte_M23 :: BOOL ||
+        PorteFerme_M23 :: BOOL ||
         
-        M24_Position :: uint16_t ||
-        M24_Speed :: uint16_t
+        Position_M24 :: uint16_t ||
+        Speed_M24 :: uint16_t
     END
 END
