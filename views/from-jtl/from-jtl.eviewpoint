@@ -1,0 +1,4 @@
+contributingMetamodels=../../jtl.log2b-extended/metamodels/B.ecore,\
+                       ../../jtl.log2b-extended/metamodels/Log.ecore,\
+                       ../../jtl.log2b-extended/metamodels/TraceabilityMetamodel.ecore
+weavingModel=weaving.xmi
