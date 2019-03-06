@@ -2,13 +2,57 @@
 transformation Log2B (log:Log, b:B) { 
 
 	top relation Trace2Variable{
-		n : String;
-		checkonly domain log t: Log::Trace {
-		      variable = n
-		    };
-		checkonly domain b v: B::Variable { 
-			name = n
+		v : String;
+		s : String;
+		checkonly domain log trace: Log::Trace {
+			variable = v,
+		    sensor = s
+		};
+		checkonly domain b var: B::Variable { 
+			name = s  v
+		};
+	}
+	
+	top relation Trace2Ref{
+		v : String;
+		s : String;
+		checkonly domain log trace: Log::Trace {
+		    variable = v,
+		    sensor = s
+	    };
+		checkonly domain b ref: B::Ref { 
+			var = var: B::Variable { 
+				name = s  v
+			}
+		};
+	}
+	
+	top relation Trace2Print{
+		var : String;
+		sen : String;
+		val: String; 
+		 
+		checkonly domain log trace: Log::Trace {
+		    variable = var,
+		    sensor = sen,
+		    value = val
+		};
+		checkonly domain b ref: B::Call { 
+			op = op: B::Operation {
+				name = print
+			}
+			args = a1: B::StringLiteral {
+				value = sen
+			}
+			args = a2: B::StringLiteral {
+				value = var
+			} 
+			args = a2: B::StringLiteral {
+				value = val
+			} 
 		};
 	}
 
 }
+
+
