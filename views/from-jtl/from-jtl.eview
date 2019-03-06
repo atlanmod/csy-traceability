@@ -1,5 +1,6 @@
 viewpoint=from-jtl.eviewpoint
 contributingModels=../../jtl.log2b-extended/models/b_specification.xmi,\
 				   ../../jtl.log2b-extended/models/shortoutputs_sample.xmi,\
-				   ../../jtl.log2b-extended/target/TraceabilityModel.xmi
+				   ../../jtl.log2b-extended/target/TraceabilityModel.xmi,\
+				   ../../jtl.log2b-extended/models/components.xmi
 matchingModel=matching.ecl

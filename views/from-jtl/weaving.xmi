@@ -18,6 +18,20 @@
       target="//@contributingModels.3/@concreteElements.0"
       upperBound="-1"/>
   <virtualLinks
+      xsi:type="virtualLinks:VirtualAssociation"
+      name="designComponent"
+      source="//@contributingModels.0/@concreteElements.0"
+      target="//@contributingModels.4/@concreteElements.0"
+      upperBound="1"
+      opposite="//@virtualLinks.3"/>
+  <virtualLinks
+      xsi:type="virtualLinks:VirtualAssociation"
+      name="traces"
+      source="//@contributingModels.4/@concreteElements.0"
+      target="//@contributingModels.0/@concreteElements.0"
+      upperBound="-1"
+      opposite="//@virtualLinks.2"/>
+  <virtualLinks
       xsi:type="virtualLinks:Filter"
       name="leftLink"
       target="//@contributingModels.2/@concreteElements.1"/>
@@ -57,5 +71,11 @@
     <concreteElements
         xsi:type="virtualLinks:ConcreteConcept"
         path="EObject"/>
+  </contributingModels>
+  <contributingModels
+      URI="http://SimpleUMLComponents">
+    <concreteElements
+        xsi:type="virtualLinks:ConcreteConcept"
+        path="Component"/>
   </contributingModels>
 </virtualLinks:WeavingModel>
