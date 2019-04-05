@@ -15,9 +15,21 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>ASP.resource.asp.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>ASPT.resource.aspt.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>JTL.resource.jtl.nature</nature>
 		<nature>ASPM.resource.aspm.nature</nature>
+		<nature>ASP.resource.asp.nature</nature>
+		<nature>ASPT.resource.aspt.nature</nature>
 	</natures>
 </projectDescription>

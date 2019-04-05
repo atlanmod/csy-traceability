@@ -34,6 +34,11 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#/1/String"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#/1/String"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="">
+      <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
+        <details key="archetype" value="MomentInterval"/>
+      </eAnnotations>
+    </eClassifiers>
   </ecore:EPackage>
   <ecore:EPackage name="PrimitiveTypes" nsURI="ASPm-PrimitiveTypes" nsPrefix="pt">
     <eClassifiers xsi:type="ecore:EDataType" name="Boolean" instanceClassName="boolean"/>
