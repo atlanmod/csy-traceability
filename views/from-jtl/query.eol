@@ -1,0 +1,5 @@
+TraceabilityLink.all
+  .select(t | t.name = 'Fallback Position')
+  .collect(t | t.events.first().timestamp + ': ' + t.traceabilityContext.name + ' : ' +
+               t.events.select(e | e.isTypeOf(Trace)).select(t | t.name.indexOf('setsM') > 0)
+                .collect(t | t.designComponent.name + ' : ' + t.value).concat(', ')).println();

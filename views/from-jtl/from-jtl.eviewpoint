@@ -3,3 +3,4 @@ contributingMetamodels=../../jtl.log2b-extended/metamodels/B.ecore,\
                        ../../jtl.log2b-extended/metamodels/TraceabilityMetamodel.ecore,\
                        ../../jtl.log2b-extended/metamodels/SimpleUMLComponents.ecore
 weavingModel=weaving.xmi
+saveInRegistry
