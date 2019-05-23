@@ -1,0 +1,26 @@
+var i=0;
+var m24_values = Sequence {};
+var m21_values = Sequence {};
+
+for (t in Trace.all) {
+  if (t.sensor == 'M24' and t.variable == 'Vitesse')
+    m24_values.add(t.value);
+  if (t.sensor == 'M21' and t.variable == 'Vitesse')
+    m21_values.add(t.value);  
+}
+
+var avg_m24 = 0;
+for (x in m24_values) {
+  avg_m24 += x.asReal();
+}
+avg_m24 /= m24_values.size();
+"M24 Speed".println();
+avg_m24.println();
+
+var avg_m21 = 0;
+for (x in m21_values) {
+  avg_m21 += x.asReal();
+}
+avg_m21 /= m21_values.size();
+"M21 Speed".println();
+avg_m21.println();

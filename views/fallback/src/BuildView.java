@@ -90,7 +90,7 @@ public class BuildView {
 
     // Load log model
     var log = new ResourceSetImpl()
-      .getResource(resourceURI("/../../logs-metamodel/models/shortoutputs.xmi"), true);
+      .getResource(resourceURI("/../../logs-metamodel/models/shiftoutputs.xmi"), true);
 
     // Create weaving model
     var factory = VirtualLinksFactory.eINSTANCE;

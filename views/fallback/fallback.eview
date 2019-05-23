@@ -1,3 +1,3 @@
 viewpoint=fallback.eviewpoint
 weavingModel=fallback-weaving.xmi
-contributingModels=../../logs-metamodel/models/shortoutputs.xmi
+contributingModels=../../logs-metamodel/models/shiftoutputs.xmi

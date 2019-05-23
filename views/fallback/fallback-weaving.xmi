@@ -5,20 +5,68 @@
   <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="fallbacks" source="//@contributingModels.0/@concreteElements.4" target="//@contributingModels.0/@concreteElements.5"/>
   <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M24" source="//@contributingModels.0/@concreteElements.6" target="//@contributingModels.0/@concreteElements.7"/>
   <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M21" source="//@contributingModels.0/@concreteElements.8" target="//@contributingModels.0/@concreteElements.9"/>
-  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.10" type="373"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.10" type="372"/>
   <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="fallbacks" source="//@contributingModels.0/@concreteElements.11" target="//@contributingModels.0/@concreteElements.12"/>
   <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M24" source="//@contributingModels.0/@concreteElements.13" target="//@contributingModels.0/@concreteElements.14"/>
   <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M21" source="//@contributingModels.0/@concreteElements.15" target="//@contributingModels.0/@concreteElements.16"/>
-  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.17" type="22"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.17" type="370"/>
   <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="fallbacks" source="//@contributingModels.0/@concreteElements.18" target="//@contributingModels.0/@concreteElements.19"/>
   <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M24" source="//@contributingModels.0/@concreteElements.20" target="//@contributingModels.0/@concreteElements.21"/>
   <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M21" source="//@contributingModels.0/@concreteElements.22" target="//@contributingModels.0/@concreteElements.23"/>
-  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.24" type="348"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.24" type="372"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="fallbacks" source="//@contributingModels.0/@concreteElements.25" target="//@contributingModels.0/@concreteElements.26"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M24" source="//@contributingModels.0/@concreteElements.27" target="//@contributingModels.0/@concreteElements.28"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M21" source="//@contributingModels.0/@concreteElements.29" target="//@contributingModels.0/@concreteElements.30"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.31" type="374"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="fallbacks" source="//@contributingModels.0/@concreteElements.32" target="//@contributingModels.0/@concreteElements.33"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M24" source="//@contributingModels.0/@concreteElements.34" target="//@contributingModels.0/@concreteElements.35"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M21" source="//@contributingModels.0/@concreteElements.36" target="//@contributingModels.0/@concreteElements.37"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.38" type="717"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="fallbacks" source="//@contributingModels.0/@concreteElements.39" target="//@contributingModels.0/@concreteElements.40"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M24" source="//@contributingModels.0/@concreteElements.41" target="//@contributingModels.0/@concreteElements.42"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M21" source="//@contributingModels.0/@concreteElements.43" target="//@contributingModels.0/@concreteElements.44"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.45" type="366"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="fallbacks" source="//@contributingModels.0/@concreteElements.46" target="//@contributingModels.0/@concreteElements.47"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M24" source="//@contributingModels.0/@concreteElements.48" target="//@contributingModels.0/@concreteElements.49"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M21" source="//@contributingModels.0/@concreteElements.50" target="//@contributingModels.0/@concreteElements.51"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.52" type="4"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="fallbacks" source="//@contributingModels.0/@concreteElements.53" target="//@contributingModels.0/@concreteElements.54"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M24" source="//@contributingModels.0/@concreteElements.55" target="//@contributingModels.0/@concreteElements.56"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualAssociation" name="M21" source="//@contributingModels.0/@concreteElements.57" target="//@contributingModels.0/@concreteElements.58"/>
+  <virtualLinks xsi:type="virtualLinks:VirtualProperty" name="sensors_diff" parent="//@contributingModels.0/@concreteElements.59" type="371"/>
   <contributingModels URI="Log">
     <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="/"/>
     <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.1/@traces.2"/>
     <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.1/@traces.2"/>
     <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.0/@traces.0"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="/"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.6/@traces.2"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.6/@traces.2"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.5/@traces.0"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.6/@traces.2"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.5/@traces.2"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.6/@traces.2"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="/"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.13/@traces.4"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.13/@traces.4"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.11/@traces.3"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.13/@traces.4"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.12/@traces.1"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.13/@traces.4"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="/"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.31/@traces.3"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.31/@traces.3"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.30/@traces.0"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.31/@traces.3"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.28/@traces.0"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.31/@traces.3"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="/"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.66/@traces.4"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.66/@traces.4"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.64/@traces.0"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.66/@traces.4"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.65/@traces.1"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.66/@traces.4"/>
     <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="/"/>
     <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.94/@traces.2"/>
     <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.94/@traces.2"/>
@@ -40,5 +88,12 @@
     <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.421/@traces.2"/>
     <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.420/@traces.1"/>
     <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.421/@traces.2"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="/"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.483/@traces.3"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.483/@traces.3"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.481/@traces.0"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.483/@traces.3"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.482/@traces.0"/>
+    <concreteElements xsi:type="virtualLinks:ConcreteConcept" path="//@events.483/@traces.3"/>
   </contributingModels>
 </virtualLinks:WeavingModel>

@@ -1,0 +1,40 @@
+var time_window = 5000;
+
+"const fallbacks = [".println();
+
+for (t in Trace.all) {
+  if (t.variable = 'fallback') {
+    var events = Event.allInstances.sortBy(e | e.timestamp);
+    var end = events.asSequence().indexOf(t.eContainer)-1;
+    var time_stop = t.eContainer.timestamp.asInteger() - time_window;
+    var m24 = Sequence {};
+    var m21 = Sequence {};
+    var i = end;
+    while (i >= 0 and events.at(i).timestamp.asInteger() > time_stop) {
+      m24.addAll(events.at(i).traces.select(t | t.sensor = 'M24' and t.variable = 'Vitesse'));
+      m21.addAll(events.at(i).traces.select(t | t.sensor = 'M21' and t.variable = 'Vitesse'));
+      i -= 1;
+    }
+    "{m24:[".print();
+    for (t in m24.sortBy(t | t.eContainer.timestamp)) {
+      "{t: ".print();
+      t.eContainer.timestamp.print();
+      ", speed:".print();
+      t.value.print();
+      "},".print();
+    }
+    "],".print();
+    
+    "m21:[".print();
+    for (t in m21.sortBy(t | t.eContainer.timestamp)) {
+      "{t: ".print();
+      t.eContainer.timestamp.print();
+      ", speed:".print();
+      t.value.print();
+      "},".print();
+    }
+    "]},".println();
+  }
+}
+
+"]".println();

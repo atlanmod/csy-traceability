@@ -1,0 +1,42 @@
+for (t in Trace.all) {
+  if (t.variable = 'fallback') {
+    var events = Event.allInstances.sortBy(e | e.timestamp);
+    var end = events.asSequence().indexOf(t.eContainer)-1;
+    var previous = Set {};
+    for (i in Sequence {end..1}) {
+      var sensors = events.at(i).traces.select(t | t.sensor = 'M24' and t.variable = 'Position');
+      if (not sensors.isEmpty()) {
+        sensors.last().println();
+        break;
+      }
+    }
+  }
+}
+
+
+
+
+var i=0;
+var m24_values = Sequence {};
+var m21_values = Sequence {};
+
+for (t in Trace.all) {
+  if (t.sensor == 'M24' and t.variable == 'Position')
+    m24_values.add(t.value);
+  if (t.sensor == 'M21' and t.variable == 'Position')
+    m21_values.add(t.value);  
+}
+
+var avg_m24 = 0;
+for (x in m24_values) {
+  avg_m24 += x.asReal();
+}
+avg_m24 /= m24_values.size();
+avg_m24.println();
+
+var avg_m21 = 0;
+for (x in m21_values) {
+  avg_m21 += x.asReal();
+}
+avg_m21 /= m21_values.size();
+avg_m21.println();
