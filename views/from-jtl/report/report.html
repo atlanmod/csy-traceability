@@ -1,0 +1,136 @@
+<head>
+  <meta charset="utf-8">
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+
+<main>
+
+
+<section>
+<h2>Fallbacks</h2>
+<ul>
+<li class="fallback" data-events="
+231136480
+::
+231136106
+::
+231136377
+">
+<h3>Inconsistent position M21-M24</h3>
+<span>Difference between M21 and M24 positions: 373mm</span>
+<details>
+<summary>B specification source</summary>
+<div>
+Treatment_i.imp:37--40:
+<pre><code><span class="kw">IF</span>
+  train_in_par = INCONS_POSITION
+<span class="kw">THEN</span>
+  <span class="var">fallback</span> := INCONSISTENT_POSITION</code></pre>
+</div>
+<div>
+Train_i.imp:66--90:
+<pre><code>in_par <-- is_train_in_par =
+<span class="kw">VAR</span>
+  dd
+<span class="kw">IN</span>
+  dd <-- abs(Position_M21 - Position_M24);
+  <span class="kw">IF</span>
+    dd < POSITION_DELTA
+  <span class="kw">THEN</span>
+    <span class="kw">VAR</span>
+      par1, par2
+    <span class="kw">IN</span>
+      par1 <-- abs(Position_M21 - PAR_POSITION);
+      par2 <-- abs(Position_M24 - PAR_POSITION);
+      <span class="kw">IF</span>
+        par1 < POSITION_DELTA & par2 < POSITION_DELTA
+      <span class="kw">THEN</span>
+        in_par := IN_PAR
+      <span class="kw">ELSE</span>
+        in_par := NOT_IN_PAR
+      <span class="kw">END</span>
+    <span class="kw">END</span>
+  <span class="kw">ELSE</span>
+      in_par := INCONS_POSITION
+  <span class="kw">END</span>
+<span class="kw">END</span></code></pre>
+</div>
+</details>
+</li>
+
+</ul>
+</section>
+
+<section>
+<h2>Timestamp</h2>
+<ul>
+  <li id="231131709">231131709</li>
+  <li id="231135969">231135969</li>
+  <li id="231136025">231136025</li>
+  <li id="231136077">231136077</li>
+  <li id="231136106">231136106</li>
+  <li id="231136181">231136181</li>
+  <li id="231136227">231136227</li>
+  <li id="231136256">231136256</li>
+  <li id="231136331">231136331</li>
+  <li id="231136377">231136377</li>
+  <li id="231136480">231136480</li>
+  <li id="231150677">231150677</li>
+  <li id="231150719">231150719</li>
+  <li id="231150774">231150774</li>
+  <li id="231150828">231150828</li>
+  <li id="231150872">231150872</li>
+  <li id="231150931">231150931</li>
+</ul>
+</section>
+
+<section>
+<h2>M21</h2>
+<ul>
+  <li>33142</li>
+  <li>33136</li>
+  <li></li>
+  <li>33137</li>
+  <li>33139</li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li>33136</li>
+  <li></li>
+  <li>33138</li>
+  <li>33139</li>
+  <li>33137</li>
+  <li>33138</li>
+</ul>
+</section>
+
+<section>
+<h2>M24</h2>
+<ul>
+  <li></li>
+  <li></li>
+  <li>33117</li>
+  <li></li>
+  <li>33116</li>
+  <li>33117</li>
+  <li>33118</li>
+  <li></li>
+  <li>33116</li>
+  <li>32766</li>
+  <li>33117</li>
+  <li></li>
+  <li>33117</li>
+  <li></li>
+  <li>33115</li>
+  <li></li>
+  <li>32766</li>
+</ul>
+</section>
+
+</main>
+
+<script src="assets/jquery.min.js"></script>
+<script src="assets/graph.js"></script>

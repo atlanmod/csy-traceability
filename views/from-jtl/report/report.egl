@@ -1,0 +1,100 @@
+<head>
+  <meta charset="utf-8">
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+
+<main>
+
+[%
+  var allEvents = Event.all;
+  allEvents.remove(allEvents.first());
+%]
+
+<section>
+<h2>Fallbacks</h2>
+<ul>
+[% for (f in TraceabilityLink.all.select(t | t.name = 'Fallback Position')) { %]
+<li class="fallback" data-events="
+[%=f.events.select(t | t.isTypeOf(Trace) and t.variable = 'fallback').first().eContainer.timestamp%]
+::
+[%=f.events.select(t | t.isTypeOf(Trace) and t.name.endsWith('setsM21')).first().eContainer.timestamp%]
+::
+[%=f.events.select(t | t.isTypeOf(Trace) and t.name.endsWith('setsM24')).first().eContainer.timestamp%]
+">
+<h3>[%=f.traceabilityContext.name%]</h3>
+<span>[%=f.traceabilityContext.description%]: [%=f.traceabilityContext.traceabilityContextData.value.concat("")%]mm</span>
+<details>
+<summary>B specification source</summary>
+<div>
+Treatment_i.imp:37--40:
+<pre><code><span class="kw">IF</span>
+  train_in_par = INCONS_POSITION
+<span class="kw">THEN</span>
+  <span class="var">fallback</span> := INCONSISTENT_POSITION</code></pre>
+</div>
+<div>
+Train_i.imp:66--90:
+<pre><code>in_par <-- is_train_in_par =
+<span class="kw">VAR</span>
+  dd
+<span class="kw">IN</span>
+  dd <-- abs(Position_M21 - Position_M24);
+  <span class="kw">IF</span>
+    dd < POSITION_DELTA
+  <span class="kw">THEN</span>
+    <span class="kw">VAR</span>
+      par1, par2
+    <span class="kw">IN</span>
+      par1 <-- abs(Position_M21 - PAR_POSITION);
+      par2 <-- abs(Position_M24 - PAR_POSITION);
+      <span class="kw">IF</span>
+        par1 < POSITION_DELTA & par2 < POSITION_DELTA
+      <span class="kw">THEN</span>
+        in_par := IN_PAR
+      <span class="kw">ELSE</span>
+        in_par := NOT_IN_PAR
+      <span class="kw">END</span>
+    <span class="kw">END</span>
+  <span class="kw">ELSE</span>
+      in_par := INCONS_POSITION
+  <span class="kw">END</span>
+<span class="kw">END</span></code></pre>
+</div>
+</details>
+</li>
+[% } %]
+
+</ul>
+</section>
+
+<section>
+<h2>Timestamp</h2>
+<ul>
+[% for (e in allEvents) { %]
+  <li id="[%=e.timestamp%]">[%=e.timestamp%]</li>
+[% } %]
+</ul>
+</section>
+
+<section>
+<h2>M21</h2>
+<ul>
+[% for (e in allEvents) { %]
+  <li>[%=e.traces.select(t | t.sensor = 'M21' and t.variable = 'Position').collect(t | t.value).concat(" ")%]</li>
+[% } %]
+</ul>
+</section>
+
+<section>
+<h2>M24</h2>
+<ul>
+[% for (e in allEvents) { %]
+  <li>[%=e.traces.select(t | t.sensor = 'M24' and t.variable = 'Position').collect(t | t.value).concat(" ")%]</li>
+[% } %]
+</ul>
+</section>
+
+</main>
+
+<script src="assets/jquery.min.js"></script>
+<script src="assets/graph.js"></script>
